@@ -34,6 +34,27 @@ python crawler.py serve         # open the dashboard at http://localhost:8765
 If a company's website wasn't found, set it by hand and re-enrich:
 `python directory.py site <CIN> https://example.com`
 
+## Emailing companies (CV + cover letter)
+
+On the website:
+1. **Companies** tab: tap ☆ to save companies (tip: filter by *Has email*). Tap a name for its details:
+   what they do, contacts, map, Google and LinkedIn links, notes.
+2. **✉ Email** tab: fill in your details once, edit the template (placeholders like `{company}` and
+   `{about}` are filled in for each company), add a personal line per company if you like.
+3. Either click **Open in Gmail** for each company (then attach your CV with 📎 and send), or
+   click **Download selected for the Gmail drafts tool** and on the laptop run:
+   ```
+   python mailer.py emails-to-draft.csv --cv "My_CV.pdf" --cover-template cover_letter.txt --dry-run
+   python mailer.py emails-to-draft.csv --cv "My_CV.pdf" --cover-template cover_letter.txt
+   ```
+   The first command makes sample emails in `outbox/` to check. The second puts every email, with the
+   CV and a personalised cover-letter PDF attached, into **Gmail → Drafts**. Nothing is sent
+   automatically: open each draft, check it, press Send. Gmail needs an App Password
+   (Google Account → Security → 2-Step Verification → App passwords). Edit `cover_letter.txt` first.
+
+Saved companies, notes and your details stay in your browser only. CVs, cover letters and email
+lists are never uploaded to GitHub (they're in `.gitignore`).
+
 ## How to read the data
 
 - **Size** comes from paid-up capital in the registry (the registry has no headcount):

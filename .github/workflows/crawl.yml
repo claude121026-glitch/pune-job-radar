@@ -54,6 +54,7 @@ jobs:
         run: |
           if [ -f data/companies.sqlite ]; then
             if [ -n "$SIZES" ]; then python directory.py enrich "$LIMIT" --sizes "$SIZES"; else python directory.py enrich "$LIMIT"; fi
+            python directory.py about 1500
             python directory.py build
           fi
       - name: Save results

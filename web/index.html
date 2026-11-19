@@ -5,32 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pune Job Radar</title>
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--ink:#16181d;--mute:#626a77;--line:#e3e6eb;--acc:#2456d6;--accbg:#e8eefc;--new:#0f8a4b;--newbg:#e3f5ea;--warn:#b5520b;--warnbg:#fcefe3}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a20;--ink:#e8eaee;--mute:#99a1ad;--line:#2a2f38;--acc:#7da2ff;--accbg:#1c2640;--new:#4fd18b;--newbg:#15301f;--warn:#f0a35e;--warnbg:#33230f}}
+:root{--bg:#f6f7f9;--card:#fff;--ink:#16181d;--mute:#626a77;--line:#e3e6eb;--acc:#2456d6;--accbg:#e8eefc;--new:#0f8a4b;--newbg:#e3f5ea;--warn:#b5520b;--warnbg:#fcefe3;--star:#d99a00;--shade:rgba(10,12,16,.45)}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a20;--ink:#e8eaee;--mute:#99a1ad;--line:#2a2f38;--acc:#7da2ff;--accbg:#1c2640;--new:#4fd18b;--newbg:#15301f;--warn:#f0a35e;--warnbg:#33230f;--star:#f2c14e;--shade:rgba(0,0,0,.6)}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-header{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 16px 10px}
+header{position:sticky;top:0;z-index:3;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 16px 10px}
 .wrap{max-width:1100px;margin:0 auto}
 .top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 h1{font-size:18px;margin:0}
-.tabs{display:flex;gap:4px}
+h2{font-size:15px;margin:0 0 8px}
+.tabs{display:flex;gap:4px;flex-wrap:wrap}
 .tabs button{border-radius:99px;padding:5px 14px}
+.dl{margin-left:auto;font-size:13px;color:var(--acc)}
 .sub{color:var(--mute);font-size:12.5px;margin-top:4px}
 .bar{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-input,select,button{font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+input,select,button,textarea{font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+textarea{width:100%;resize:vertical}
 input[type=search]{flex:1 1 240px;min-width:0}
 label.chk{display:flex;align-items:center;gap:6px;padding:0 4px;color:var(--mute)}
 button{cursor:pointer}
 button.on{background:var(--accbg);border-color:var(--acc);color:var(--acc)}
+button.primary{background:var(--acc);border-color:var(--acc);color:#fff}
 main{padding:12px 16px 40px}
 .stats{display:flex;gap:16px;flex-wrap:wrap;color:var(--mute);font-size:12.5px;margin:2px 0 10px;align-items:center}
 .stats b{color:var(--ink)}
 .stats button{margin-left:auto;padding:4px 10px;font-size:12.5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.chips button{font-size:12px;padding:3px 10px;border-radius:99px}
+.chips button span{color:var(--mute);margin-left:4px}
 .card{display:grid;grid-template-columns:1fr auto;gap:4px 12px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:8px}
 .card.closed{opacity:.55}
 .card.applied{border-left:3px solid var(--acc)}
 .t{font-weight:600;font-size:15px;color:var(--ink);text-decoration:none}
-a.t:hover{text-decoration:underline}
+a.t:hover,button.t:hover{text-decoration:underline}
+button.t{background:none;border:0;padding:0;text-align:left;cursor:pointer}
+.about{color:var(--ink);opacity:.85;font-size:13px;margin:2px 0}
 .meta{color:var(--mute);font-size:12.5px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
 .meta a{color:var(--acc)}
 .co{color:var(--ink);font-weight:500}
@@ -40,24 +49,43 @@ a.t:hover{text-decoration:underline}
 .tag.size{background:transparent;border:1px solid var(--line);color:var(--mute)}
 .acts{display:flex;gap:6px;align-items:start;flex-wrap:wrap;justify-content:flex-end}
 .acts button,.acts select{padding:4px 9px;font-size:12px}
+.star{color:var(--mute);font-size:16px;line-height:1;padding:3px 8px!important}
+.star.on{color:var(--star);border-color:var(--star);background:transparent}
 .note{grid-column:1/-1}
 .note input{width:100%;padding:5px 9px;font-size:12.5px}
 .pager{display:flex;gap:8px;justify-content:center;align-items:center;margin-top:12px;color:var(--mute)}
 details{margin-top:18px;color:var(--mute);font-size:12.5px}
 table{border-collapse:collapse;width:100%;margin-top:6px}
 td,th{text-align:left;padding:4px 8px;border-bottom:1px solid var(--line)}
-.empty{padding:40px;text-align:center;color:var(--mute);background:var(--card);border:1px dashed var(--line);border-radius:10px}
+.empty{padding:32px;text-align:center;color:var(--mute);background:var(--card);border:1px dashed var(--line);border-radius:10px}
 .empty code{background:var(--accbg);padding:2px 6px;border-radius:5px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.grid2 input{width:100%}
+.hint{color:var(--mute);font-size:12.5px;margin:6px 0 0}
+.hint code{background:var(--accbg);color:var(--acc);padding:1px 5px;border-radius:5px;cursor:pointer}
+.mrow{display:grid;grid-template-columns:auto 1fr auto;gap:6px 10px;align-items:start;border-top:1px solid var(--line);padding:10px 0}
+.mrow:first-of-type{border-top:0}
+.mrow .fields{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.mrow .fields input,.mrow .fields select{font-size:12.5px;padding:5px 8px;flex:1 1 200px}
+.preview{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;font-size:13px;margin-top:8px}
+.drawer{position:fixed;inset:0;z-index:5;display:flex;justify-content:flex-end;background:var(--shade)}
+.drawer .box{background:var(--card);width:min(520px,100%);height:100%;overflow:auto;padding:18px 18px 40px;border-left:1px solid var(--line)}
+.drawer .close{float:right}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:6px 10px;font-size:13px;margin:12px 0}
+.kv div:nth-child(odd){color:var(--mute)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.links a{font-size:13px;color:var(--acc)}
 [hidden]{display:none!important}
-@media (max-width:640px){.card{grid-template-columns:1fr}.acts{justify-content:flex-start}}
+@media (max-width:640px){header{position:static}.bar select{flex:1 1 45%}.card{grid-template-columns:1fr}.acts{justify-content:flex-start}.grid2{grid-template-columns:1fr}.dl{margin-left:0}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
   <div class="top">
     <h1>Pune Job Radar</h1>
-    <div class="tabs"><button id="tabJobs" class="on">Jobs</button><button id="tabCos">Companies</button></div>
-    <a href="pune-companies-with-contacts.csv" download style="margin-left:auto;font-size:13px;color:var(--acc)">⬇ Companies with phone/email (Excel/CSV)</a>
+    <div class="tabs"><button id="tabJobs" class="on">Jobs</button><button id="tabCos">Companies</button><button id="tabMail">✉ Email <span id="mailCount"></span></button></div>
+    <a class="dl" href="pune-companies-with-contacts.csv" download>⬇ Companies with phone/email (Excel/CSV)</a>
   </div>
   <div class="sub" id="updated">Loading…</div>
 
@@ -71,10 +99,10 @@ td,th{text-align:left;padding:4px 8px;border-bottom:1px solid var(--line)}
   </div>
 
   <div class="bar" id="coBar" hidden>
-    <input type="search" id="cq" placeholder="Search companies: name, industry, area pincode…">
+    <input type="search" id="cq" placeholder="Search companies: name, what they do, area pincode…">
     <select id="csize"><option value="">All sizes</option><option value="large">Large</option><option value="mid">Mid</option><option value="small">Small</option><option value="micro">Micro</option><option value="llp">LLP (partnership)</option></select>
     <select id="csector"><option value="">All industries</option></select>
-    <select id="cfilter"><option value="">Everyone</option><option value="hiring">Hiring for marketing now</option><option value="phone">Has phone number</option><option value="contact">Has phone or email</option></select>
+    <select id="cfilter"><option value="">Everyone</option><option value="starred">★ Saved</option><option value="hiring">Hiring for marketing now</option><option value="phone">Has phone number</option><option value="contact">Has phone or email</option><option value="email">Has email</option><option value="about">Has description</option></select>
     <select id="cstatus"><option value="">Any status</option><option value="todo">To contact</option><option value="contacted">Contacted</option><option value="applied">Applied</option><option value="no">Not interested</option></select>
     <select id="csort"><option value="fit">Best marketing fit</option><option value="size">Biggest first</option><option value="new">Newest companies</option><option value="name">A–Z</option></select>
   </div>
@@ -86,12 +114,58 @@ td,th{text-align:left;padding:4px 8px;border-bottom:1px solid var(--line)}
     <div id="list"></div>
     <details><summary>Job sources and crawl health</summary><table id="src"></table></details>
   </section>
+
   <section id="cosView" hidden>
+    <div class="chips" id="chips"></div>
     <div class="stats" id="cstats"></div>
     <div id="clist"></div>
     <div class="pager" id="pager"></div>
   </section>
+
+  <section id="mailView" hidden>
+    <div class="panel">
+      <h2>1. Your details</h2>
+      <div class="grid2">
+        <input id="p_name" placeholder="Your full name">
+        <input id="p_role" placeholder="Role you want (e.g. Digital Marketing Executive)">
+        <input id="p_phone" placeholder="Phone">
+        <input id="p_email" placeholder="Email">
+        <input id="p_linkedin" placeholder="LinkedIn or portfolio link (optional)">
+        <input id="p_cv" placeholder="CV file name, e.g. Priya_CV.pdf (for your reference)">
+      </div>
+      <p class="hint">Saved only in this browser on this device.</p>
+    </div>
+
+    <div class="panel">
+      <h2>2. Email template</h2>
+      <input id="t_subject" style="width:100%;margin-bottom:8px" placeholder="Subject">
+      <textarea id="t_body" rows="14"></textarea>
+      <p class="hint">Click to insert:
+        <code data-ph="{company}">{company}</code> <code data-ph="{industry}">{industry}</code> <code data-ph="{about}">{about}</code>
+        <code data-ph="{personal}">{personal}</code> <code data-ph="{role}">{role}</code> <code data-ph="{my_name}">{my_name}</code>
+        <code data-ph="{my_phone}">{my_phone}</code> <code data-ph="{my_email}">{my_email}</code> <code data-ph="{my_linkedin}">{my_linkedin}</code>
+        · <a href="#" id="t_reset">reset to default</a></p>
+      <p class="hint"><b>{about}</b> becomes what the company says about itself (from its website), when known.
+        <b>{personal}</b> is the line you write for each company below; leave it blank to skip.</p>
+    </div>
+
+    <div class="panel">
+      <h2>3. Companies to email</h2>
+      <div class="stats" id="mstats"></div>
+      <div id="mlist"></div>
+      <div class="bar">
+        <button class="primary" id="m_export">⬇ Download selected for the Gmail drafts tool (attaches CV automatically)</button>
+        <button id="m_sentall">Mark selected as sent</button>
+      </div>
+      <p class="hint"><b>Attaching your CV:</b> “Open in Gmail” fills in the address, subject and text. Gmail links can't attach files,
+        so add your CV with the 📎 button before sending. To create many drafts with the CV and cover letter already attached,
+        download the list above and run <code>python mailer.py</code> on the laptop (see README): it puts every email in your Gmail
+        <i>Drafts</i> folder so you can check each one and press Send.</p>
+    </div>
+  </section>
 </div></main>
+
+<div class="drawer" id="drawer" hidden><div class="box" id="dbox"></div></div>
 
 <script>
 const $ = id => document.getElementById(id);
@@ -108,24 +182,41 @@ function ago(iso) {
   return Math.round(m / 1440) + "d ago";
 }
 const crore = n => n >= 1e7 ? "₹" + (n / 1e7).toFixed(n >= 1e9 ? 0 : 1) + " Cr" : n >= 1e5 ? "₹" + (n / 1e5).toFixed(0) + " L" : n ? "₹" + n : "";
+const SIZE_LABEL = {large: "Large company", mid: "Mid-size company", small: "Small company", micro: "Micro company", llp: "Partnership firm (LLP)", unknown: "Company"};
+// "ACUMEN ADVERTISING PRIVATE LIMITED" -> "Acumen Advertising"
+function nice(name) {
+  const s = String(name || "").replace(/\((OPC|INDIA)\)/gi, " ").replace(/\b(PRIVATE|PVT\.?|LIMITED|LTD\.?|LLP|LIMITED LIABILITY PARTNERSHIP)\b\.?/gi, " ")
+    .replace(/\s+/g, " ").trim();
+  return s.toLowerCase().replace(/\b([a-z])/g, c => c.toUpperCase()).replace(/\b(It|Pr|Hr|Ai|Llp|Ev|Bpo|Kpo)\b/g, w => w.toUpperCase());
+}
+function oneLiner(c) {   // a plain-language summary when the company's own description is unknown
+  const since = (c.registered || "").slice(0, 4);
+  return `${SIZE_LABEL[c.size] || "Company"} in ${c.sector.toLowerCase()}` + (since ? `, registered ${since}` : "") +
+    (c.pincode ? `, Pune ${c.pincode}` : "") + ".";
+}
 
-let data = {jobs: [], sources: []}, cos = [], F = [], page = 0, cosUpdated = null;
+let data = {jobs: [], sources: []}, cos = [], byCin = {}, F = [], page = 0, cosUpdated = null;
 let marks = store.get("marks", {});        // job id -> saved | applied | hidden
-let cmarks = store.get("cmarks", {});      // cin -> {s: status, n: note}
+let cmarks = store.get("cmarks", {});      // cin -> {s: status, n: note, star, sel, to, personal, sent}
+const saveC = () => store.set("cmarks", cmarks);
+const cm = cin => (cmarks[cin] = cmarks[cin] || {});
 const lastVisit = store.get("lastVisit", null);
 store.set("lastVisit", new Date().toISOString());
 
 // ---------- tabs ----------
 function tab(which) {
-  const jobs = which === "jobs";
-  $("tabJobs").classList.toggle("on", jobs); $("tabCos").classList.toggle("on", !jobs);
-  $("jobBar").hidden = $("jobsView").hidden = !jobs;
-  $("coBar").hidden = $("cosView").hidden = jobs;
+  for (const [t, v, b] of [["jobs", "jobsView", "jobBar"], ["cos", "cosView", "coBar"], ["mail", "mailView", null]]) {
+    $("tab" + {jobs: "Jobs", cos: "Cos", mail: "Mail"}[t]).classList.toggle("on", t === which);
+    $(v).hidden = t !== which;
+    if (b) $(b).hidden = t !== which;
+  }
   store.set("tab", which);
   updatedLine();
+  if (which === "mail") renderMail();
 }
 $("tabJobs").onclick = () => tab("jobs");
 $("tabCos").onclick = () => tab("cos");
+$("tabMail").onclick = () => tab("mail");
 
 for (const id of ["q", "mkt", "age", "company", "where", "view", "cq", "csize", "csector", "cfilter", "cstatus", "csort"]) {
   const el = $(id), isChk = el.type === "checkbox";
@@ -140,12 +231,16 @@ for (const id of ["q", "mkt", "age", "company", "where", "view", "cq", "csize", 
 function updatedLine() {
   if (!$("jobsView").hidden) {
     const bad = data.sources.filter(s => !s.ok).length;
-    $("updated").textContent = data.updated ? `Jobs last crawled ${ago(data.updated)} · ${data.sources.length} sources` +
-      (bad ? ` · ${bad} failed this round` : "") : "No jobs yet — run: python crawler.py";
+    $("updated").textContent = data.updated ? `Jobs last checked ${ago(data.updated)} · ${data.sources.length} sources` +
+      (bad ? ` · ${bad} failed this round` : "") : "No jobs yet";
+  } else if (!$("cosView").hidden) {
+    $("updated").textContent = cos.length ? `${cos.length.toLocaleString()} active companies registered in Pune · updated ${ago(cosUpdated)}`
+      : "Loading company directory…";
   } else {
-    $("updated").textContent = cos.length ? `${cos.length.toLocaleString()} active companies registered in Pune · directory built ${ago(cosUpdated)}`
-      : "Company directory not built yet";
+    $("updated").textContent = "Write one template, personalise it for each saved company, then open each email in Gmail.";
   }
+  const n = Object.values(cmarks).filter(m => m.star).length;
+  $("mailCount").textContent = n ? `(${n})` : "";
 }
 
 // ---------- jobs ----------
@@ -195,7 +290,7 @@ function renderJobs() {
       <div class="acts">${["saved", "applied", "hidden"].map(k =>
         `<button data-id="${esc(j.id)}" data-m="${k}" class="${m === k ? "on" : ""}">${{saved: "Save", applied: "Applied", hidden: "Hide"}[k]}</button>`).join("")}</div></div>`;
   }).join("") : `<div class="empty">No jobs match these filters.${mkt && !openM.length ?
-     "<br><br>Most marketing openings come from the Adzuna feed — add a free key (see README) to switch it on." : ""}</div>`;
+     "<br><br>Most marketing openings will come from the Adzuna job feed once it is switched on." : ""}</div>`;
 }
 
 $("list").addEventListener("click", e => {
@@ -207,20 +302,33 @@ $("list").addEventListener("click", e => {
 });
 
 // ---------- companies ----------
-const FIELDS = ["cin", "name", "size", "sector", "pincode", "registered", "paidup", "website", "phones", "emails", "jobs", "mkt_jobs", "fit", "address"];
+const FIELDS = ["cin", "name", "size", "sector", "pincode", "registered", "paidup", "website", "phones", "emails", "jobs", "mkt_jobs", "fit", "address", "about"];
 async function loadCos() {
   try {
     const d = await (await fetch("companies.json?t=" + Date.now())).json();
     const idx = Object.fromEntries(d.fields.map((f, i) => [f, i]));
-    cos = d.companies.map(r => Object.fromEntries(FIELDS.map(f => [f, r[idx[f]]])));
+    cos = d.companies.map(r => Object.fromEntries(FIELDS.map(f => [f, idx[f] === undefined ? "" : r[idx[f]]])));
+    for (const c of cos) { c.phones = c.phones || []; c.emails = c.emails || []; c.nice = nice(c.name); byCin[c.cin] = c; }
     cosUpdated = d.updated;
   } catch { cos = []; }
-  const sectors = [...new Set(cos.map(c => c.sector))].sort();
+  const counts = {};
+  for (const c of cos) counts[c.sector] = (counts[c.sector] || 0) + 1;
+  const sectors = Object.keys(counts).sort();
   const cur = store.get("f_csector", "");
   $("csector").innerHTML = '<option value="">All industries</option>' +
     sectors.map(s => `<option${s === cur ? " selected" : ""}>${esc(s)}</option>`).join("");
-  updatedLine(); renderCos();
+  const top = ["Advertising & market research", "Media & entertainment", "Education", "Food & beverages (FMCG)", "Retail",
+               "Hospitality & food", "Real estate", "Healthcare", "Finance & insurance", "IT & software", "Telecom", "Publishing"];
+  $("chips").innerHTML = top.filter(s => counts[s]).map(s =>
+    `<button data-sector="${esc(s)}">${esc(s)}<span>${counts[s].toLocaleString()}</span></button>`).join("");
+  updatedLine(); renderCos(); if (!$("mailView").hidden) renderMail();
 }
+$("chips").addEventListener("click", e => {
+  const b = e.target.closest("[data-sector]");
+  if (!b) return;
+  $("csector").value = $("csector").value === b.dataset.sector ? "" : b.dataset.sector;
+  $("csector").dispatchEvent(new Event("input"));
+});
 
 function filterCos() {
   const q = $("cq").value.trim().toLowerCase().split(/\s+/).filter(Boolean);
@@ -228,11 +336,15 @@ function filterCos() {
   const out = cos.filter(c => {
     if (size && c.size !== size) return false;
     if (sec && c.sector !== sec) return false;
+    if (f === "starred" && !cmarks[c.cin]?.star) return false;
     if (f === "hiring" && !c.mkt_jobs) return false;
     if (f === "phone" && !c.phones.length) return false;
+    if (f === "email" && !c.emails.length) return false;
+    if (f === "about" && !c.about) return false;
     if (f === "contact" && !c.phones.length && !c.emails.length) return false;
     if (st && (cmarks[c.cin]?.s || "") !== st) return false;
-    const hay = (c.name + " " + c.sector + " " + c.pincode + " " + c.address).toLowerCase();
+    if (!q.length) return true;
+    const hay = (c.name + " " + c.sector + " " + c.pincode + " " + c.address + " " + c.about).toLowerCase();
     return q.every(w => hay.includes(w));
   });
   const s = $("csort").value;
@@ -243,80 +355,272 @@ function filterCos() {
 }
 
 function renderCos() {
+  for (const b of $("chips").children) b.classList.toggle("on", b.dataset.sector === $("csector").value);
   if (!cos.length) {
-    $("cstats").innerHTML = "";
-    $("clist").innerHTML = `<div class="empty">The company directory isn't built yet.<br><br>
-      Get a free API key at data.gov.in, then run<br><br><code>python directory.py import-api</code>
-      &nbsp;<code>python directory.py enrich 300</code>&nbsp;<code>python directory.py build</code></div>`;
-    $("pager").innerHTML = ""; return;
+    $("cstats").innerHTML = ""; $("clist").innerHTML = '<div class="empty">Loading company directory…</div>'; $("pager").innerHTML = ""; return;
   }
   F = filterCos();
   const per = 50, pages = Math.ceil(F.length / per);
   page = Math.min(page, Math.max(0, pages - 1));
-  const tracked = Object.values(cmarks).filter(m => m.s).length;
   $("cstats").innerHTML = `<span><b>${F.length.toLocaleString()}</b> companies match</span>` +
-    `<span><b>${cos.filter(c => c.mkt_jobs).length}</b> hiring for marketing now</span>` +
-    `<span><b>${cos.filter(c => c.phones.length).length.toLocaleString()}</b> with phone numbers</span>` +
-    `<span><b>${tracked}</b> tracked</span><button id="csv">Download list (CSV)</button>`;
+    `<span><b>${cos.filter(c => c.phones.length || c.emails.length).length.toLocaleString()}</b> with phone or email</span>` +
+    `<span><b>${Object.values(cmarks).filter(m => m.star).length}</b> ★ saved</span>` +
+    `<span><b>${cos.filter(c => c.mkt_jobs).length}</b> hiring for marketing now</span><button id="csv">Download this list (CSV)</button>`;
   $("csv").onclick = downloadCsv;
   $("clist").innerHTML = F.slice(page * per, page * per + per).map(c => {
     const m = cmarks[c.cin] || {};
-    const since = (c.registered || "").slice(0, 4);
     return `<div class="card${m.s === "applied" ? " applied" : ""}">
-      <div><span class="t">${esc(c.name)}</span>
+      <div><button class="t" data-open="${esc(c.cin)}">${esc(c.nice || c.name)}</button>
+        <div class="about">${esc(c.about || oneLiner(c))}</div>
         <div class="meta"><span class="tag size">${esc(c.size)}${c.paidup ? " · " + crore(c.paidup) + " capital" : ""}</span>
           <span class="co">${esc(c.sector)}</span>${c.pincode ? `<span>Pune ${esc(c.pincode)}</span>` : ""}
-          ${since ? `<span>since ${since}</span>` : ""}
-          ${c.mkt_jobs ? `<a href="#" class="tag new" data-jobs="${esc(c.name)}">${c.mkt_jobs} marketing opening${c.mkt_jobs > 1 ? "s" : ""}</a>` : ""}
-          ${c.jobs && !c.mkt_jobs ? `<a href="#" class="tag" data-jobs="${esc(c.name)}">${c.jobs} other opening${c.jobs > 1 ? "s" : ""}</a>` : ""}</div>
-        <div class="meta">${c.phones.map(p => `<a href="tel:${esc(p.replace(/\s/g, ""))}">📞 ${esc(p)}</a>`).join("")}
-          ${c.emails.map(e => `<a href="mailto:${esc(e)}">✉ ${esc(e)}</a>`).join("")}
-          ${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website.replace(/^https?:\/\/(www\.)?/, ""))}</a>` : ""}
-          ${!c.phones.length && !c.emails.length && !c.website ? `<span>${esc(c.address)}</span>` : ""}</div></div>
-      <div class="acts"><select data-cin="${esc(c.cin)}">
+          ${c.mkt_jobs ? `<span class="tag new">${c.mkt_jobs} marketing opening${c.mkt_jobs > 1 ? "s" : ""}</span>` : ""}
+          ${c.phones.slice(0, 2).map(p => `<a href="tel:${esc(p.replace(/\s/g, ""))}">📞 ${esc(p)}</a>`).join("")}
+          ${c.emails.slice(0, 1).map(e => `<a href="mailto:${esc(e)}">✉ ${esc(e)}</a>`).join("")}
+          ${m.sent ? `<span class="tag new">emailed ${esc(m.sent)}</span>` : ""}</div></div>
+      <div class="acts"><button class="star${m.star ? " on" : ""}" data-star="${esc(c.cin)}" title="Save">${m.star ? "★" : "☆"}</button>
+        <select data-cin="${esc(c.cin)}">
         ${[["", "Track…"], ["todo", "To contact"], ["contacted", "Contacted"], ["applied", "Applied"], ["no", "Not interested"]]
           .map(([v, l]) => `<option value="${v}"${(m.s || "") === v ? " selected" : ""}>${l}</option>`).join("")}</select></div>
-      ${m.s ? `<div class="note"><input data-note="${esc(c.cin)}" placeholder="Notes (who you spoke to, follow-up date…)" value="${esc(m.n || "")}"></div>` : ""}
     </div>`;
   }).join("") || '<div class="empty">No companies match these filters.</div>';
   $("pager").innerHTML = pages > 1 ? `<button ${page ? "" : "disabled"} id="prev">← Prev</button>
-    <span>Page ${page + 1} of ${pages}</span><button ${page < pages - 1 ? "" : "disabled"} id="next">Next →</button>` : "";
+    <span>Page ${page + 1} of ${pages.toLocaleString()}</span><button ${page < pages - 1 ? "" : "disabled"} id="next">Next →</button>` : "";
   if ($("prev")) $("prev").onclick = () => { page--; renderCos(); scrollTo(0, 0); };
   if ($("next")) $("next").onclick = () => { page++; renderCos(); scrollTo(0, 0); };
 }
 
+function toggleStar(cin) {
+  const m = cm(cin);
+  m.star = !m.star;
+  if (m.star && m.sel === undefined) m.sel = true;
+  saveC(); updatedLine();
+}
+$("clist").addEventListener("click", e => {
+  const s = e.target.closest("[data-star]");
+  if (s) { toggleStar(s.dataset.star); renderCos(); return; }
+  const o = e.target.closest("[data-open]");
+  if (o) openDrawer(o.dataset.open);
+});
 $("clist").addEventListener("change", e => {
   const cin = e.target.dataset.cin;
   if (!cin) return;
-  cmarks[cin] = {...(cmarks[cin] || {}), s: e.target.value};
-  store.set("cmarks", cmarks); renderCos();
+  cm(cin).s = e.target.value; saveC(); renderCos();
 });
-$("clist").addEventListener("input", e => {
-  const cin = e.target.dataset.note;
-  if (!cin) return;
-  cmarks[cin] = {...(cmarks[cin] || {}), n: e.target.value};
-  store.set("cmarks", cmarks);
-});
-$("clist").addEventListener("click", e => {
-  const a = e.target.closest("[data-jobs]");
-  if (!a) return;
-  e.preventDefault();
-  const name = a.dataset.jobs.toLowerCase().replace(/\b(private|pvt|limited|ltd|llp|india)\b/g, "").trim();
-  const match = [...$("company").options].find(o => o.value && (o.value.toLowerCase().includes(name) || name.includes(o.value.toLowerCase())));
-  $("company").value = match ? match.value : "";
-  $("mkt").checked = false; $("view").value = "open";
-  tab("jobs"); renderJobs();
-});
+
+// ---------- company details panel ----------
+function openDrawer(cin) {
+  const c = byCin[cin];
+  if (!c) return;
+  const m = cmarks[cin] || {};
+  const q = encodeURIComponent(c.nice + " Pune");
+  const jobs = data.jobs.filter(j => !j.closed && c.nice && j.company.toLowerCase().includes(c.nice.toLowerCase().split(" ")[0]) &&
+    c.nice.toLowerCase().includes(j.company.toLowerCase().split(" ")[0]));
+  $("dbox").innerHTML = `<button class="close" id="dclose">✕</button>
+    <h2 style="font-size:18px;margin-right:40px">${esc(c.nice)}</h2>
+    <div class="meta">${esc(c.name)}</div>
+    <p class="about" style="font-size:14px">${esc(c.about || oneLiner(c))}</p>
+    ${c.about ? "" : '<p class="hint">No description found on a company website yet; use the links below to look them up.</p>'}
+    <div class="kv">
+      <div>Industry</div><div>${esc(c.sector)}</div>
+      <div>Size</div><div>${esc(SIZE_LABEL[c.size] || c.size)}${c.paidup ? " · " + crore(c.paidup) + " paid-up capital" : ""}</div>
+      <div>Registered</div><div>${esc((c.registered || "").slice(0, 10) || "—")}</div>
+      <div>Address</div><div>${esc(c.address || "—")}</div>
+      <div>Phone</div><div>${c.phones.map(p => `<a href="tel:${esc(p.replace(/\s/g, ""))}">${esc(p)}</a>`).join("<br>") || "—"}</div>
+      <div>Email</div><div>${c.emails.map(e => `<a href="mailto:${esc(e)}">${esc(e)}</a>`).join("<br>") || "—"}</div>
+      <div>Website</div><div>${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website.replace(/^https?:\/\//, ""))}</a>` : "—"}</div>
+      <div>Company ID</div><div>${esc(c.cin)}</div>
+    </div>
+    <div class="links">
+      <a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener">Google</a>
+      <a href="https://www.linkedin.com/search/results/companies/?keywords=${encodeURIComponent(c.nice)}" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.google.com/maps/search/${encodeURIComponent(c.address || c.nice + " Pune")}" target="_blank" rel="noopener">Map</a>
+      <a href="https://www.google.com/search?q=${encodeURIComponent(c.nice + " Pune marketing jobs")}" target="_blank" rel="noopener">Search their jobs</a>
+    </div>
+    ${jobs.length ? `<h2>Open jobs</h2>${jobs.slice(0, 8).map(j => `<div><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a> <span class="hint">${esc(j.location)}</span></div>`).join("")}` : ""}
+    <div class="bar">
+      <button class="star${m.star ? " on" : ""}" id="dstar">${m.star ? "★ Saved" : "☆ Save"}</button>
+      <button class="primary" id="dmail">✉ Write email</button>
+      <select id="dstatus">${[["", "Track…"], ["todo", "To contact"], ["contacted", "Contacted"], ["applied", "Applied"], ["no", "Not interested"]]
+        .map(([v, l]) => `<option value="${v}"${(m.s || "") === v ? " selected" : ""}>${l}</option>`).join("")}</select>
+    </div>
+    <h2 style="margin-top:14px">Notes</h2>
+    <textarea id="dnote" rows="4" placeholder="Who you spoke to, follow-up date…">${esc(m.n || "")}</textarea>`;
+  $("drawer").hidden = false;
+  $("dclose").onclick = closeDrawer;
+  $("dstar").onclick = () => { toggleStar(cin); openDrawer(cin); renderCos(); };
+  $("dstatus").onchange = e => { cm(cin).s = e.target.value; saveC(); renderCos(); };
+  $("dnote").oninput = e => { cm(cin).n = e.target.value; saveC(); };
+  $("dmail").onclick = () => { const mm = cm(cin); mm.star = true; mm.sel = true; saveC(); closeDrawer(); tab("mail"); };
+}
+function closeDrawer() { $("drawer").hidden = true; }
+$("drawer").addEventListener("click", e => { if (e.target.id === "drawer") closeDrawer(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeDrawer(); });
 
 function downloadCsv() {
   const cell = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
-  const rows = [["Company", "Size", "Industry", "Pincode", "Phones", "Emails", "Website", "Marketing openings", "Status", "Notes", "Address", "CIN"]]
-    .concat(F.map(c => [c.name, c.size, c.sector, c.pincode, c.phones.join(" / "), c.emails.join(" / "), c.website,
-      c.mkt_jobs, cmarks[c.cin]?.s || "", cmarks[c.cin]?.n || "", c.address, c.cin]));
-  const blob = new Blob(["﻿" + rows.map(r => r.map(cell).join(",")).join("\n")], {type: "text/csv"});
-  const a = Object.assign(document.createElement("a"), {href: URL.createObjectURL(blob), download: "pune-companies.csv"});
-  a.click(); URL.revokeObjectURL(a.href);
+  const rows = [["Company", "What they do", "Size", "Industry", "Pincode", "Phones", "Emails", "Website", "Marketing openings", "Saved", "Status", "Notes", "Address", "CIN"]]
+    .concat(F.map(c => [c.nice, c.about, c.size, c.sector, c.pincode, c.phones.join(" / "), c.emails.join(" / "), c.website,
+      c.mkt_jobs, cmarks[c.cin]?.star ? "yes" : "", cmarks[c.cin]?.s || "", cmarks[c.cin]?.n || "", c.address, c.cin]));
+  saveFile("pune-companies.csv", rows.map(r => r.map(cell).join(",")).join("\n"));
 }
+function saveFile(name, text) {
+  const blob = new Blob(["﻿" + text], {type: "text/csv"});
+  const a = Object.assign(document.createElement("a"), {href: URL.createObjectURL(blob), download: name});
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+// ---------- email kit ----------
+const DEFAULT_SUBJECT = "Application for {role} roles at {company}";
+const DEFAULT_BODY = `Dear Hiring Team at {company},
+
+I'm {my_name}, a marketing professional based in Pune, and I'm writing to ask about {role} opportunities at {company}.
+
+{personal}
+
+[Two or three lines about your experience: campaigns you ran, tools you know (social media, SEO, Google Ads, content), and a result you're proud of.]
+
+I've attached my CV and cover letter. I'd be glad to talk about any current or upcoming openings in marketing, brand or digital roles, and I'm available to start soon.
+
+Thank you for your time.
+
+Best regards,
+{my_name}
+{my_phone}
+{my_email}
+{my_linkedin}`;
+
+const P_FIELDS = ["name", "role", "phone", "email", "linkedin", "cv"];
+let profile = store.get("profile", {});
+let tpl = store.get("template", {subject: DEFAULT_SUBJECT, body: DEFAULT_BODY});
+for (const f of P_FIELDS) {
+  $("p_" + f).value = profile[f] || "";
+  $("p_" + f).addEventListener("input", e => { profile[f] = e.target.value; store.set("profile", profile); renderMail(); });
+}
+$("t_subject").value = tpl.subject; $("t_body").value = tpl.body;
+for (const id of ["t_subject", "t_body"]) $(id).addEventListener("input", () => {
+  tpl = {subject: $("t_subject").value, body: $("t_body").value}; store.set("template", tpl); renderMail();
+});
+let lastField = $("t_body");
+$("t_subject").addEventListener("focus", () => lastField = $("t_subject"));
+$("t_body").addEventListener("focus", () => lastField = $("t_body"));
+document.querySelectorAll("[data-ph]").forEach(el => el.onclick = () => {
+  const f = lastField, ph = el.dataset.ph, s = f.selectionStart ?? f.value.length;
+  f.value = f.value.slice(0, s) + ph + f.value.slice(f.selectionEnd ?? s);
+  f.focus(); f.selectionStart = f.selectionEnd = s + ph.length; f.dispatchEvent(new Event("input"));
+});
+$("t_reset").onclick = e => { e.preventDefault(); $("t_subject").value = DEFAULT_SUBJECT; $("t_body").value = DEFAULT_BODY; $("t_body").dispatchEvent(new Event("input")); };
+
+function fill(text, c, m) {
+  const about = c.about ? c.about.replace(/\s*[|–-]\s*[^|–-]*$/, "").trim() : "";
+  const vals = {
+    company: c.nice, industry: c.sector.toLowerCase(), about: about || `your work in ${c.sector.toLowerCase()}`,
+    personal: (m.personal || "").trim(), role: profile.role || "marketing", my_name: profile.name || "[your name]",
+    my_phone: profile.phone || "", my_email: profile.email || "", my_linkedin: profile.linkedin || "",
+  };
+  return text.replace(/\{(\w+)\}/g, (all, k) => k in vals ? vals[k] : all)
+    .replace(/\n{3,}/g, "\n\n").replace(/[ \t]+\n/g, "\n").trim();
+}
+function emailFor(cin) {
+  const c = byCin[cin], m = cmarks[cin] || {};
+  return {c, m, to: (m.to || c.emails[0] || "").trim(), subject: fill(tpl.subject, c, m), body: fill(tpl.body, c, m)};
+}
+
+function renderMail() {
+  updatedLine();
+  if (!cos.length) { $("mlist").innerHTML = '<div class="empty">Loading companies…</div>'; return; }
+  const saved = Object.keys(cmarks).filter(cin => cmarks[cin].star && byCin[cin]);
+  const sel = saved.filter(cin => cmarks[cin].sel !== false);
+  const ready = sel.filter(cin => emailFor(cin).to);
+  $("mstats").innerHTML = `<span><b>${saved.length}</b> saved</span><span><b>${sel.length}</b> selected</span>` +
+    `<span><b>${ready.length}</b> selected with an email address</span><span><b>${saved.filter(cin => cmarks[cin].sent).length}</b> emailed</span>`;
+  if (!saved.length) {
+    $("mlist").innerHTML = `<div class="empty">No saved companies yet.<br><br>In the <b>Companies</b> tab, tap ☆ on the companies you like
+      (tip: filter by <b>Has email</b>). They'll appear here, ready to email.</div>`;
+    return;
+  }
+  $("mlist").innerHTML = saved.map(cin => {
+    const {c, m, to, subject, body} = emailFor(cin);
+    return `<div class="mrow" data-row="${esc(cin)}">
+      <input type="checkbox" data-sel="${esc(cin)}" ${m.sel !== false ? "checked" : ""} title="Include">
+      <div><button class="t" data-open="${esc(cin)}">${esc(c.nice)}</button>
+        ${m.sent ? `<span class="tag new">emailed ${esc(m.sent)}</span>` : ""}
+        <div class="about">${esc(c.about || oneLiner(c))}</div>
+        <div class="fields">
+          ${c.emails.length > 1 || (c.emails.length && !m.to) ? `<select data-to="${esc(cin)}">${c.emails.map(e => `<option${e === to ? " selected" : ""}>${esc(e)}</option>`).join("")}<option value="__other">Other address…</option></select>` : ""}
+          ${!c.emails.length || (m.to && !c.emails.includes(m.to)) ? `<input data-toinput="${esc(cin)}" type="email" placeholder="Email address (none found — check their website)" value="${esc(m.to || "")}">` : ""}
+          <input data-personal="${esc(cin)}" placeholder="Personal line for {personal}, e.g. I loved your recent campaign for…" value="${esc(m.personal || "")}">
+        </div>
+        <details data-prev="${esc(cin)}"><summary>Preview</summary><div class="preview"><b>To:</b> ${esc(to || "—")}\n<b>Subject:</b> ${esc(subject)}\n\n${esc(body)}</div></details>
+      </div>
+      <div class="acts">
+        <button class="primary" data-gmail="${esc(cin)}" ${to ? "" : "disabled"}>Open in Gmail</button>
+        <button data-mailto="${esc(cin)}" ${to ? "" : "disabled"}>Email app</button>
+        <button data-copy="${esc(cin)}">Copy text</button>
+        <button data-sent="${esc(cin)}">${m.sent ? "Unmark sent" : "Mark sent"}</button>
+        <button data-unstar="${esc(cin)}" title="Remove from list">✕</button>
+      </div></div>`;
+  }).join("");
+}
+
+const today = () => new Date().toISOString().slice(0, 10);
+function markSent(cin, on = true) {
+  const m = cm(cin);
+  if (on) { m.sent = today(); if (!m.s || m.s === "todo") m.s = "contacted"; } else delete m.sent;
+  saveC();
+}
+$("mlist").addEventListener("click", async e => {
+  const t = e.target.closest("button, [data-open]");
+  if (!t) return;
+  const d = t.dataset;
+  if (d.open) return openDrawer(d.open);
+  const cin = d.gmail || d.mailto || d.copy || d.sent || d.unstar;
+  if (!cin) return;
+  const {to, subject, body} = emailFor(cin);
+  if (d.gmail) {
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank", "noopener");
+    if (confirm("Gmail opened in a new tab. Remember to attach your CV.\n\nMark this company as emailed?")) markSent(cin);
+  } else if (d.mailto) {
+    location.href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  } else if (d.copy) {
+    try { await navigator.clipboard.writeText(`To: ${to}\nSubject: ${subject}\n\n${body}`); t.textContent = "Copied ✓"; setTimeout(renderMail, 1200); return; }
+    catch { alert("Copy didn't work here — open Preview and copy the text by hand."); }
+  } else if (d.sent) {
+    markSent(cin, !cmarks[cin]?.sent);
+  } else if (d.unstar) {
+    cm(cin).star = false; saveC();
+  }
+  renderMail(); renderCos();
+});
+$("mlist").addEventListener("change", e => {
+  const d = e.target.dataset;
+  if (d.sel) { cm(d.sel).sel = e.target.checked; saveC(); renderMail(); }
+  if (d.to) { if (e.target.value === "__other") { cm(d.to).to = " "; } else cm(d.to).to = e.target.value; saveC(); renderMail(); }
+});
+$("mlist").addEventListener("input", e => {
+  const d = e.target.dataset;
+  if (d.personal) { cm(d.personal).personal = e.target.value; saveC(); refreshPreview(d.personal); }
+  if (d.toinput) { cm(d.toinput).to = e.target.value; saveC(); refreshPreview(d.toinput); }
+});
+function refreshPreview(cin) {   // update one preview without re-rendering (keeps typing focus)
+  const box = document.querySelector(`[data-prev="${CSS.escape(cin)}"] .preview`);
+  const {to, subject, body} = emailFor(cin);
+  if (box) box.innerHTML = `<b>To:</b> ${esc(to || "—")}\n<b>Subject:</b> ${esc(subject)}\n\n${esc(body)}`;
+  const row = document.querySelector(`[data-row="${CSS.escape(cin)}"]`);
+  row?.querySelectorAll("[data-gmail],[data-mailto]").forEach(b => b.disabled = !to);
+}
+$("m_export").onclick = () => {
+  const sel = Object.keys(cmarks).filter(cin => cmarks[cin].star && cmarks[cin].sel !== false && byCin[cin]);
+  const rows = sel.map(emailFor).filter(x => x.to);
+  if (!rows.length) return alert("No selected companies have an email address yet.");
+  const cell = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
+  const lines = [["to", "subject", "body", "company", "cin"]].concat(rows.map(r => [r.to, r.subject, r.body, r.c.nice, r.c.cin]));
+  saveFile("emails-to-draft.csv", lines.map(r => r.map(cell).join(",")).join("\n"));
+};
+$("m_sentall").onclick = () => {
+  const sel = Object.keys(cmarks).filter(cin => cmarks[cin].star && cmarks[cin].sel !== false);
+  if (sel.length && confirm(`Mark ${sel.length} selected companies as emailed today?`)) { sel.forEach(cin => markSent(cin)); renderMail(); renderCos(); }
+};
 
 tab(store.get("tab", "jobs"));
 loadJobs(); loadCos();

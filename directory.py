@@ -174,6 +174,8 @@ def db():
         cin TEXT PRIMARY KEY, name TEXT, status TEXT, class TEXT, category TEXT,
         registered TEXT, paidup REAL, address TEXT, pincode TEXT, email TEXT,
         website TEXT, phones TEXT, emails TEXT, enriched TEXT, enrich_note TEXT)""")
+    if "about" not in [r[1] for r in con.execute("PRAGMA table_info(company)")]:
+        con.execute("ALTER TABLE company ADD COLUMN about TEXT")
     return con
 
 
@@ -445,10 +447,56 @@ def enrich_one(row):
             except Exception:
                 pass
         root = urllib.parse.urlparse(final)
+        ABOUT[cin] = describe(home)
         return cin, f"{root.scheme}://{root.netloc}", list(dict.fromkeys(phones))[:4], \
             sorted(set(emails))[:4], "ok"
     except Exception as e:
         return cin, site, [], [], f"site error: {type(e).__name__}"
+
+
+ABOUT = {}  # cin -> short description found on the company's homepage
+ABOUT_PATTERNS = [
+    r"""<meta[^>]+name=["']description["'][^>]*content=["']([^"']{20,600})""",
+    r"""<meta[^>]+content=["']([^"']{20,600})["'][^>]*name=["']description""",
+    r"""<meta[^>]+property=["']og:description["'][^>]*content=["']([^"']{20,600})""",
+    r"""<title[^>]*>([^<]{15,200})</title>""",
+]
+ABOUT_JUNK = re.compile(r"just another wordpress|coming soon|under construction|index of /|\b40[34]\b|page not found", re.I)
+
+
+def describe(home):
+    """The site's own one-line summary: meta description, og:description, else the page title."""
+    for pat in ABOUT_PATTERNS:
+        m = re.search(pat, home or "", re.I | re.S)
+        if m:
+            text = re.sub(r"\s+", " ", html.unescape(m.group(1))).strip()
+            if not ABOUT_JUNK.search(text):
+                return text[:300]
+    return ""
+
+
+def about_one(row):
+    cin, site = row
+    try:
+        home, _ = page(site)
+        return cin, describe(home) if home else ""
+    except Exception:
+        return cin, ""
+
+
+def backfill_about(limit=2000):
+    """Fetch the homepage summary for companies already checked that have a website."""
+    con = db()
+    rows = con.execute("""SELECT cin, website FROM company WHERE website <> '' AND website IS NOT NULL
+        AND about IS NULL LIMIT ?""", (limit,)).fetchall()
+    print(f"  reading 'about' text for {len(rows)} company websites…")
+    n = 0
+    with ThreadPoolExecutor(8) as ex:
+        for cin, text in ex.map(about_one, rows):
+            con.execute("UPDATE company SET about=? WHERE cin=?", (text, cin))
+            n += bool(text)
+    con.commit()
+    print(f"  done: {n} descriptions found")
 
 
 def company_sector(cin, name):
@@ -456,7 +504,7 @@ def company_sector(cin, name):
     return name_sector(name) if sec == "Unknown" else sec
 
 
-def enrich(limit=300, industry=None, sizes=None):
+def enrich(limit=300, industry=None, size_filter=None):
     con = db()
     # best marketing prospects first: industry likelihood + size, skipping holding/investment shells
     sizes = {"large": 3, "mid": 2, "small": 1, "micro": 0, "llp": 0, "unknown": 0}
@@ -464,8 +512,8 @@ def enrich(limit=300, industry=None, sizes=None):
         WHERE enriched IS NULL AND status LIKE 'activ%'""").fetchall()
     if industry:  # e.g. enrich 700 --industry "Advertising & market research"
         cand = [r for r in cand if company_sector(r[0], r[1]).lower() == industry.lower()]
-    if sizes:  # e.g. enrich 9800 --sizes large,mid,small
-        want = {s.strip().lower() for s in sizes.split(",") if s.strip()}
+    if size_filter:  # e.g. enrich 9800 --sizes large,mid,small
+        want = {s.strip().lower() for s in size_filter.split(",") if s.strip()}
         cand = [r for r in cand if size_band(r[4], r[0]) in want]
     shell = re.compile(r"holding|investment|finvest|\btrust\b|properties|estates?\b", re.I)
     cand.sort(key=lambda r: (-(MKT_SECTOR.get(sector(r[0], r[1]), 1) + sizes[size_band(r[4], r[0])]
@@ -476,8 +524,9 @@ def enrich(limit=300, industry=None, sizes=None):
     done = found = 0
     with ThreadPoolExecutor(8) as ex:
         for cin, site, phones, emails, note in ex.map(enrich_one, rows):
-            con.execute("UPDATE company SET website=?, phones=?, emails=?, enriched=?, enrich_note=? WHERE cin=?",
-                        (site, json.dumps(phones), json.dumps(emails), ts, note, cin))
+            con.execute("UPDATE company SET website=?, phones=?, emails=?, enriched=?, enrich_note=?, about=? "
+                        "WHERE cin=?", (site, json.dumps(phones), json.dumps(emails), ts, note,
+                                        ABOUT.pop(cin, "") if site else None, cin))
             done += 1
             found += bool(phones)
     con.commit()
@@ -504,8 +553,9 @@ def build():
             open_jobs.setdefault(norm_name(j["company"]), []).append(j)
     sizes = {"large": 3, "mid": 2, "small": 1, "micro": 0, "llp": 0, "unknown": 0}
     out = []
-    for (cin, name, status, cls, cat, reg, paidup, addr, pin, email, site, phones, emails,
-         enriched, note) in con.execute("SELECT * FROM company WHERE status LIKE 'activ%'"):
+    for (cin, name, reg, paidup, addr, pin, email, site, phones, emails, about) in con.execute(
+            """SELECT cin, name, registered, paidup, address, pincode, email, website, phones, emails, about
+               FROM company WHERE status LIKE 'activ%'"""):
         sec, size = sector(cin, name), size_band(paidup, cin)
         if sec == "Unknown":
             sec = name_sector(name)  # LLPs and foreign companies carry no activity code
@@ -519,11 +569,11 @@ def build():
         em = json.loads(emails or "[]") or ([email] if email else [])
         out.append([cin, name, size, sec, pin, (reg or "")[:10], paidup or 0, site or "",
                     json.loads(phones or "[]"), em, len(js), len(mkt_jobs), min(score, 10),
-                    re.sub(r"\s+", " ", addr or "")[:160]])
+                    re.sub(r"\s+", " ", addr or "")[:160], about or ""])
     out.sort(key=lambda r: (-r[12], -r[6]))
     data = {"updated": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
             "fields": ["cin", "name", "size", "sector", "pincode", "registered", "paidup", "website",
-                       "phones", "emails", "jobs", "mkt_jobs", "fit", "address"],
+                       "phones", "emails", "jobs", "mkt_jobs", "fit", "address", "about"],
             "companies": out}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
@@ -532,10 +582,11 @@ def build():
     rows = [r for r in out if r[8] or r[9]]
     with open(os.path.join(ROOT, "web", "pune-companies-with-contacts.csv"), "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["Company", "Industry", "Size", "Phones", "Emails", "Website", "Open marketing jobs",
-                    "Pincode", "Registered", "Address", "CIN"])
+        w.writerow(["Company", "What they do", "Industry", "Size", "Phones", "Emails", "Website",
+                    "Open marketing jobs", "Pincode", "Registered", "Address", "CIN"])
         for r in rows:
-            w.writerow([r[1], r[3], r[2], " / ".join(r[8]), " / ".join(r[9]), r[7], r[11], r[4], r[5][:4], r[13], r[0]])
+            w.writerow([r[1], r[14], r[3], r[2], " / ".join(r[8]), " / ".join(r[9]), r[7], r[11], r[4],
+                        r[5][:4], r[13], r[0]])
     print(f"  wrote {len(rows)} companies with contacts to web/pune-companies-with-contacts.csv")
 
 
@@ -553,6 +604,9 @@ if __name__ == "__main__":
         enrich(int(nums[0]) if nums else 300, ind, sz)
     elif cmd == "site" and len(a) > 2:
         set_site(a[1], a[2])
+    elif cmd == "about":
+        nums = [x for x in a[1:] if x.isdigit()]
+        backfill_about(int(nums[0]) if nums else 2000)
     elif cmd == "build":
         build()
     else:

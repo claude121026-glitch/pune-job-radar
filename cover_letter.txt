@@ -1,0 +1,23 @@
+{date}
+
+The Hiring Manager
+{company}
+Pune
+
+Dear Hiring Manager,
+
+I am writing to apply for a marketing role at {company}. [One line on why this company: their brand, clients, products or a campaign you admired.]
+
+[Paragraph about your experience: the kind of marketing you have done (social media, content, SEO, performance ads, events, brand), tools you use, and one or two results with numbers, e.g. "grew Instagram followers by 40% in six months".]
+
+[Paragraph about what you would bring to {company}: skills that match their work, and that you are based in Pune and available to start soon.]
+
+I have attached my CV and would welcome the chance to discuss how I can contribute to your marketing team.
+
+Thank you for your time and consideration.
+
+Yours sincerely,
+
+[Your name]
+[Phone] | [Email]
+[LinkedIn]

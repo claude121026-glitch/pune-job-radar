@@ -5,3 +5,7 @@ __pycache__/
 data/*-journal
 data/*-wal
 data/*-shm
+outbox/
+emails-to-draft*.csv
+*.pdf
+*.docx
