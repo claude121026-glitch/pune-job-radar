@@ -456,7 +456,7 @@ def company_sector(cin, name):
     return name_sector(name) if sec == "Unknown" else sec
 
 
-def enrich(limit=300, industry=None):
+def enrich(limit=300, industry=None, sizes=None):
     con = db()
     # best marketing prospects first: industry likelihood + size, skipping holding/investment shells
     sizes = {"large": 3, "mid": 2, "small": 1, "micro": 0, "llp": 0, "unknown": 0}
@@ -464,6 +464,9 @@ def enrich(limit=300, industry=None):
         WHERE enriched IS NULL AND status LIKE 'activ%'""").fetchall()
     if industry:  # e.g. enrich 700 --industry "Advertising & market research"
         cand = [r for r in cand if company_sector(r[0], r[1]).lower() == industry.lower()]
+    if sizes:  # e.g. enrich 9800 --sizes large,mid,small
+        want = {s.strip().lower() for s in sizes.split(",") if s.strip()}
+        cand = [r for r in cand if size_band(r[4], r[0]) in want]
     shell = re.compile(r"holding|investment|finvest|\btrust\b|properties|estates?\b", re.I)
     cand.sort(key=lambda r: (-(MKT_SECTOR.get(sector(r[0], r[1]), 1) + sizes[size_band(r[4], r[0])]
                                - (3 if SHELL.search(r[1] or "") else 0)), -(r[4] or 0)))
@@ -545,8 +548,9 @@ if __name__ == "__main__":
         import_csv(a[1])
     elif cmd == "enrich":
         ind = a[a.index("--industry") + 1] if "--industry" in a and a.index("--industry") + 1 < len(a) else None
+        sz = a[a.index("--sizes") + 1] if "--sizes" in a and a.index("--sizes") + 1 < len(a) else None
         nums = [x for x in a[1:] if x.isdigit()]
-        enrich(int(nums[0]) if nums else 300, ind)
+        enrich(int(nums[0]) if nums else 300, ind, sz)
     elif cmd == "site" and len(a) > 2:
         set_site(a[1], a[2])
     elif cmd == "build":
