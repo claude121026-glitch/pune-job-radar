@@ -1,0 +1,24 @@
+{
+  "_help": "Add employers here. ats = greenhouse | lever | ashby | smartrecruiters | workday. For workday, slug = host|tenant|site (copy from the careers URL). Or run: python crawler.py discover \"Company Name\"",
+  "companies": [
+    {"name": "PubMatic", "ats": "greenhouse", "slug": "pubmatic", "size": "mid"},
+    {"name": "Druva", "ats": "greenhouse", "slug": "druva", "size": "mid"},
+    {"name": "Addepar", "ats": "greenhouse", "slug": "addepar1", "size": "mid"},
+    {"name": "Zscaler", "ats": "greenhouse", "slug": "zscaler", "size": "large"},
+    {"name": "Rubrik", "ats": "greenhouse", "slug": "rubrik", "size": "large"},
+    {"name": "Thoughtworks", "ats": "greenhouse", "slug": "thoughtworks", "size": "large"},
+    {"name": "Mindtickle", "ats": "lever", "slug": "mindtickle", "size": "mid"},
+    {"name": "Paytm", "ats": "lever", "slug": "paytm", "size": "large"},
+    {"name": "Entrata", "ats": "lever", "slug": "entrata", "size": "mid"},
+    {"name": "Coupa", "ats": "lever", "slug": "coupa", "size": "large"},
+    {"name": "Snowflake", "ats": "ashby", "slug": "snowflake", "size": "large"},
+    {"name": "Bosch", "ats": "smartrecruiters", "slug": "BoschGroup", "size": "large"},
+    {"name": "Ubisoft", "ats": "smartrecruiters", "slug": "Ubisoft2", "size": "large"},
+    {"name": "Sutherland", "ats": "smartrecruiters", "slug": "Sutherland", "size": "large"},
+    {"name": "Experian", "ats": "smartrecruiters", "slug": "Experian", "size": "large"},
+    {"name": "Workday", "ats": "workday", "slug": "workday.wd5.myworkdayjobs.com|workday|Workday", "size": "large"},
+    {"name": "NVIDIA", "ats": "workday", "slug": "nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite", "size": "large"},
+    {"name": "Red Hat", "ats": "workday", "slug": "redhat.wd5.myworkdayjobs.com|redhat|jobs", "size": "large"},
+    {"name": "Mastercard", "ats": "workday", "slug": "mastercard.wd1.myworkdayjobs.com|mastercard|CorporateCareers", "size": "large"}
+  ]
+}

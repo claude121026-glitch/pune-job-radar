@@ -1,0 +1,61 @@
+name: Crawl Pune jobs and companies
+
+on:
+  schedule:
+    - cron: "17 */2 * * *"   # jobs every 2 hours, around the clock
+    - cron: "40 2 1 * *"     # company registry refresh on the 1st of each month
+  workflow_dispatch:
+    inputs:
+      import_registry:
+        description: "Re-import the company registry now"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: crawl
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
+      ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+      ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      KEYWORDS: ${{ vars.KEYWORDS }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Crawl jobs
+        run: python crawler.py
+      - name: Import company registry
+        if: ${{ env.DATA_GOV_API_KEY != '' && (github.event.schedule == '40 2 1 * *' || inputs.import_registry || hashFiles('data/companies.sqlite') == '') }}
+        run: python directory.py import-api
+      - name: Find contact details (300 more companies per run)
+        run: |
+          if [ -f data/companies.sqlite ]; then
+            python directory.py enrich 300
+            python directory.py build
+          fi
+      - name: Save results
+        run: |
+          git config user.name "job-crawler"
+          git config user.email "job-crawler@users.noreply.github.com"
+          git add web/jobs.json
+          if [ -f data/companies.sqlite ]; then git add data/companies.sqlite web/companies.json; fi
+          git diff --cached --quiet || git commit -m "crawl $(date -u +%FT%TZ)"
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - uses: actions/deploy-pages@v4

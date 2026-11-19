@@ -1,0 +1,7 @@
+.claude/
+__pycache__/
+*.pyc
+*.tmp
+data/*-journal
+data/*-wal
+data/*-shm

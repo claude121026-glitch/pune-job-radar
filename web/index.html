@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pune Job Radar</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#16181d;--mute:#626a77;--line:#e3e6eb;--acc:#2456d6;--accbg:#e8eefc;--new:#0f8a4b;--newbg:#e3f5ea;--warn:#b5520b;--warnbg:#fcefe3}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a20;--ink:#e8eaee;--mute:#99a1ad;--line:#2a2f38;--acc:#7da2ff;--accbg:#1c2640;--new:#4fd18b;--newbg:#15301f;--warn:#f0a35e;--warnbg:#33230f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 16px 10px}
+.wrap{max-width:1100px;margin:0 auto}
+.top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+h1{font-size:18px;margin:0}
+.tabs{display:flex;gap:4px}
+.tabs button{border-radius:99px;padding:5px 14px}
+.sub{color:var(--mute);font-size:12.5px;margin-top:4px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+input,select,button{font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+input[type=search]{flex:1 1 240px;min-width:0}
+label.chk{display:flex;align-items:center;gap:6px;padding:0 4px;color:var(--mute)}
+button{cursor:pointer}
+button.on{background:var(--accbg);border-color:var(--acc);color:var(--acc)}
+main{padding:12px 16px 40px}
+.stats{display:flex;gap:16px;flex-wrap:wrap;color:var(--mute);font-size:12.5px;margin:2px 0 10px;align-items:center}
+.stats b{color:var(--ink)}
+.stats button{margin-left:auto;padding:4px 10px;font-size:12.5px}
+.card{display:grid;grid-template-columns:1fr auto;gap:4px 12px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:8px}
+.card.closed{opacity:.55}
+.card.applied{border-left:3px solid var(--acc)}
+.t{font-weight:600;font-size:15px;color:var(--ink);text-decoration:none}
+a.t:hover{text-decoration:underline}
+.meta{color:var(--mute);font-size:12.5px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+.meta a{color:var(--acc)}
+.co{color:var(--ink);font-weight:500}
+.tag{font-size:11px;padding:1px 7px;border-radius:99px;background:var(--accbg);color:var(--acc);white-space:nowrap}
+.tag.new{background:var(--newbg);color:var(--new)}
+.tag.warn{background:var(--warnbg);color:var(--warn)}
+.tag.size{background:transparent;border:1px solid var(--line);color:var(--mute)}
+.acts{display:flex;gap:6px;align-items:start;flex-wrap:wrap;justify-content:flex-end}
+.acts button,.acts select{padding:4px 9px;font-size:12px}
+.note{grid-column:1/-1}
+.note input{width:100%;padding:5px 9px;font-size:12.5px}
+.pager{display:flex;gap:8px;justify-content:center;align-items:center;margin-top:12px;color:var(--mute)}
+details{margin-top:18px;color:var(--mute);font-size:12.5px}
+table{border-collapse:collapse;width:100%;margin-top:6px}
+td,th{text-align:left;padding:4px 8px;border-bottom:1px solid var(--line)}
+.empty{padding:40px;text-align:center;color:var(--mute);background:var(--card);border:1px dashed var(--line);border-radius:10px}
+.empty code{background:var(--accbg);padding:2px 6px;border-radius:5px}
+[hidden]{display:none!important}
+@media (max-width:640px){.card{grid-template-columns:1fr}.acts{justify-content:flex-start}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top">
+    <h1>Pune Job Radar</h1>
+    <div class="tabs"><button id="tabJobs" class="on">Jobs</button><button id="tabCos">Companies</button></div>
+    <a href="pune-companies-with-contacts.csv" download style="margin-left:auto;font-size:13px;color:var(--acc)">⬇ Companies with phone/email (Excel/CSV)</a>
+  </div>
+  <div class="sub" id="updated">Loading…</div>
+
+  <div class="bar" id="jobBar">
+    <input type="search" id="q" placeholder="Search jobs: title, company, team…">
+    <label class="chk"><input type="checkbox" id="mkt" checked> Marketing only</label>
+    <select id="age"><option value="0">Any time</option><option value="1">New in 24h</option><option value="3">New in 3 days</option><option value="7">New in 7 days</option></select>
+    <select id="company"><option value="">All companies</option></select>
+    <select id="where"><option value="">Pune + remote India</option><option value="pune">Pune only</option><option value="remote-india">Remote India only</option></select>
+    <select id="view"><option value="open">Open</option><option value="saved">Saved</option><option value="applied">Applied</option><option value="hidden">Hidden</option><option value="closed">Recently closed</option></select>
+  </div>
+
+  <div class="bar" id="coBar" hidden>
+    <input type="search" id="cq" placeholder="Search companies: name, industry, area pincode…">
+    <select id="csize"><option value="">All sizes</option><option value="large">Large</option><option value="mid">Mid</option><option value="small">Small</option><option value="micro">Micro</option><option value="llp">LLP (partnership)</option></select>
+    <select id="csector"><option value="">All industries</option></select>
+    <select id="cfilter"><option value="">Everyone</option><option value="hiring">Hiring for marketing now</option><option value="phone">Has phone number</option><option value="contact">Has phone or email</option></select>
+    <select id="cstatus"><option value="">Any status</option><option value="todo">To contact</option><option value="contacted">Contacted</option><option value="applied">Applied</option><option value="no">Not interested</option></select>
+    <select id="csort"><option value="fit">Best marketing fit</option><option value="size">Biggest first</option><option value="new">Newest companies</option><option value="name">A–Z</option></select>
+  </div>
+</div></header>
+
+<main><div class="wrap">
+  <section id="jobsView">
+    <div class="stats" id="stats"></div>
+    <div id="list"></div>
+    <details><summary>Job sources and crawl health</summary><table id="src"></table></details>
+  </section>
+  <section id="cosView" hidden>
+    <div class="stats" id="cstats"></div>
+    <div id="clist"></div>
+    <div class="pager" id="pager"></div>
+  </section>
+</div></main>
+
+<script>
+const $ = id => document.getElementById(id);
+const store = {
+  get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d } catch { return d } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)) } catch {} }
+};
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function ago(iso) {
+  if (!iso) return "";
+  const m = (Date.now() - new Date(iso)) / 60000;
+  if (m < 60) return Math.max(1, Math.round(m)) + "m ago";
+  if (m < 1440) return Math.round(m / 60) + "h ago";
+  return Math.round(m / 1440) + "d ago";
+}
+const crore = n => n >= 1e7 ? "₹" + (n / 1e7).toFixed(n >= 1e9 ? 0 : 1) + " Cr" : n >= 1e5 ? "₹" + (n / 1e5).toFixed(0) + " L" : n ? "₹" + n : "";
+
+let data = {jobs: [], sources: []}, cos = [], F = [], page = 0, cosUpdated = null;
+let marks = store.get("marks", {});        // job id -> saved | applied | hidden
+let cmarks = store.get("cmarks", {});      // cin -> {s: status, n: note}
+const lastVisit = store.get("lastVisit", null);
+store.set("lastVisit", new Date().toISOString());
+
+// ---------- tabs ----------
+function tab(which) {
+  const jobs = which === "jobs";
+  $("tabJobs").classList.toggle("on", jobs); $("tabCos").classList.toggle("on", !jobs);
+  $("jobBar").hidden = $("jobsView").hidden = !jobs;
+  $("coBar").hidden = $("cosView").hidden = jobs;
+  store.set("tab", which);
+  updatedLine();
+}
+$("tabJobs").onclick = () => tab("jobs");
+$("tabCos").onclick = () => tab("cos");
+
+for (const id of ["q", "mkt", "age", "company", "where", "view", "cq", "csize", "csector", "cfilter", "cstatus", "csort"]) {
+  const el = $(id), isChk = el.type === "checkbox";
+  const saved = store.get("f_" + id, null);
+  if (saved !== null && !["q", "cq"].includes(id)) isChk ? (el.checked = saved) : (el.value = saved);
+  el.addEventListener("input", () => {
+    store.set("f_" + id, isChk ? el.checked : el.value);
+    id.startsWith("c") && id !== "company" ? (page = 0, renderCos()) : renderJobs();
+  });
+}
+
+function updatedLine() {
+  if (!$("jobsView").hidden) {
+    const bad = data.sources.filter(s => !s.ok).length;
+    $("updated").textContent = data.updated ? `Jobs last crawled ${ago(data.updated)} · ${data.sources.length} sources` +
+      (bad ? ` · ${bad} failed this round` : "") : "No jobs yet — run: python crawler.py";
+  } else {
+    $("updated").textContent = cos.length ? `${cos.length.toLocaleString()} active companies registered in Pune · directory built ${ago(cosUpdated)}`
+      : "Company directory not built yet";
+  }
+}
+
+// ---------- jobs ----------
+async function loadJobs() {
+  try { data = await (await fetch("jobs.json?t=" + Date.now())).json(); } catch { data = {jobs: [], sources: []}; }
+  const names = [...new Set(data.jobs.map(j => j.company))].sort((a, b) => a.localeCompare(b));
+  const cur = $("company").value || store.get("f_company", "");
+  $("company").innerHTML = '<option value="">All companies</option>' +
+    names.map(c => `<option${c === cur ? " selected" : ""}>${esc(c)}</option>`).join("");
+  $("src").innerHTML = "<tr><th>Source</th><th>Board</th><th>All jobs</th><th>Pune</th><th>Status</th></tr>" +
+    data.sources.map(s => `<tr><td>${esc(s.name)}</td><td>${esc(s.ats)}</td><td>${s.total}</td><td>${s.pune}</td>
+      <td>${s.ok ? "ok" : '<span class="tag warn">' + esc(s.error) + "</span>"}</td></tr>`).join("");
+  updatedLine(); renderJobs();
+}
+
+function renderJobs() {
+  const q = $("q").value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const age = +$("age").value, co = $("company").value, where = $("where").value, view = $("view").value, mkt = $("mkt").checked;
+  const since = age ? Date.now() - age * 86400000 : 0;
+  const list = data.jobs.filter(j => {
+    const m = marks[j.id];
+    if (mkt && !j.marketing) return false;
+    if (view === "open" && (j.closed || m === "hidden")) return false;
+    if (view === "closed" && !j.closed) return false;
+    if (["saved", "applied", "hidden"].includes(view) && m !== view) return false;
+    if (co && j.company !== co) return false;
+    if (where && j.where !== where) return false;
+    if (since && new Date(j.first_seen) < since) return false;
+    const hay = (j.title + " " + j.company + " " + j.dept + " " + j.location).toLowerCase();
+    return q.every(w => hay.includes(w));
+  });
+  const open = data.jobs.filter(j => !j.closed), openM = open.filter(j => j.marketing);
+  const fresh = lastVisit ? (mkt ? openM : open).filter(j => j.first_seen > lastVisit).length : 0;
+  $("stats").innerHTML = `<span><b>${list.length}</b> shown</span><span><b>${openM.length}</b> open marketing jobs</span>` +
+    `<span><b>${open.length}</b> open jobs total</span>` +
+    (lastVisit ? `<span><b>${fresh}</b> new since last visit</span>` : "") +
+    `<span><b>${Object.values(marks).filter(v => v === "applied").length}</b> applied</span>`;
+  $("list").innerHTML = list.length ? list.slice(0, 500).map(j => {
+    const m = marks[j.id], isNew = Date.now() - new Date(j.first_seen) < 86400000;
+    return `<div class="card${j.closed ? " closed" : ""}${m === "applied" ? " applied" : ""}">
+      <div><a class="t" href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
+        <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(j.location)}</span>
+        ${j.dept ? `<span>${esc(j.dept)}</span>` : ""}<span>found ${ago(j.first_seen)}</span>
+        ${isNew ? '<span class="tag new">new</span>' : ""}${j.marketing ? '<span class="tag">marketing</span>' : ""}
+        ${j.where === "remote-india" ? '<span class="tag">remote</span>' : ""}
+        ${j.closed ? `<span class="tag warn">closed ${ago(j.closed)}</span>` : ""}<span class="tag size">${esc(j.source)}</span></div></div>
+      <div class="acts">${["saved", "applied", "hidden"].map(k =>
+        `<button data-id="${esc(j.id)}" data-m="${k}" class="${m === k ? "on" : ""}">${{saved: "Save", applied: "Applied", hidden: "Hide"}[k]}</button>`).join("")}</div></div>`;
+  }).join("") : `<div class="empty">No jobs match these filters.${mkt && !openM.length ?
+     "<br><br>Most marketing openings come from the Adzuna feed — add a free key (see README) to switch it on." : ""}</div>`;
+}
+
+$("list").addEventListener("click", e => {
+  const b = e.target.closest("button[data-id]");
+  if (!b) return;
+  const {id, m} = b.dataset;
+  marks[id] === m ? delete marks[id] : (marks[id] = m);
+  store.set("marks", marks); renderJobs();
+});
+
+// ---------- companies ----------
+const FIELDS = ["cin", "name", "size", "sector", "pincode", "registered", "paidup", "website", "phones", "emails", "jobs", "mkt_jobs", "fit", "address"];
+async function loadCos() {
+  try {
+    const d = await (await fetch("companies.json?t=" + Date.now())).json();
+    const idx = Object.fromEntries(d.fields.map((f, i) => [f, i]));
+    cos = d.companies.map(r => Object.fromEntries(FIELDS.map(f => [f, r[idx[f]]])));
+    cosUpdated = d.updated;
+  } catch { cos = []; }
+  const sectors = [...new Set(cos.map(c => c.sector))].sort();
+  const cur = store.get("f_csector", "");
+  $("csector").innerHTML = '<option value="">All industries</option>' +
+    sectors.map(s => `<option${s === cur ? " selected" : ""}>${esc(s)}</option>`).join("");
+  updatedLine(); renderCos();
+}
+
+function filterCos() {
+  const q = $("cq").value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const size = $("csize").value, sec = $("csector").value, f = $("cfilter").value, st = $("cstatus").value;
+  const out = cos.filter(c => {
+    if (size && c.size !== size) return false;
+    if (sec && c.sector !== sec) return false;
+    if (f === "hiring" && !c.mkt_jobs) return false;
+    if (f === "phone" && !c.phones.length) return false;
+    if (f === "contact" && !c.phones.length && !c.emails.length) return false;
+    if (st && (cmarks[c.cin]?.s || "") !== st) return false;
+    const hay = (c.name + " " + c.sector + " " + c.pincode + " " + c.address).toLowerCase();
+    return q.every(w => hay.includes(w));
+  });
+  const s = $("csort").value;
+  if (s === "size") out.sort((a, b) => b.paidup - a.paidup);
+  else if (s === "new") out.sort((a, b) => (b.registered || "").localeCompare(a.registered || ""));
+  else if (s === "name") out.sort((a, b) => a.name.localeCompare(b.name));
+  return out;  // default order from the file is best marketing fit
+}
+
+function renderCos() {
+  if (!cos.length) {
+    $("cstats").innerHTML = "";
+    $("clist").innerHTML = `<div class="empty">The company directory isn't built yet.<br><br>
+      Get a free API key at data.gov.in, then run<br><br><code>python directory.py import-api</code>
+      &nbsp;<code>python directory.py enrich 300</code>&nbsp;<code>python directory.py build</code></div>`;
+    $("pager").innerHTML = ""; return;
+  }
+  F = filterCos();
+  const per = 50, pages = Math.ceil(F.length / per);
+  page = Math.min(page, Math.max(0, pages - 1));
+  const tracked = Object.values(cmarks).filter(m => m.s).length;
+  $("cstats").innerHTML = `<span><b>${F.length.toLocaleString()}</b> companies match</span>` +
+    `<span><b>${cos.filter(c => c.mkt_jobs).length}</b> hiring for marketing now</span>` +
+    `<span><b>${cos.filter(c => c.phones.length).length.toLocaleString()}</b> with phone numbers</span>` +
+    `<span><b>${tracked}</b> tracked</span><button id="csv">Download list (CSV)</button>`;
+  $("csv").onclick = downloadCsv;
+  $("clist").innerHTML = F.slice(page * per, page * per + per).map(c => {
+    const m = cmarks[c.cin] || {};
+    const since = (c.registered || "").slice(0, 4);
+    return `<div class="card${m.s === "applied" ? " applied" : ""}">
+      <div><span class="t">${esc(c.name)}</span>
+        <div class="meta"><span class="tag size">${esc(c.size)}${c.paidup ? " · " + crore(c.paidup) + " capital" : ""}</span>
+          <span class="co">${esc(c.sector)}</span>${c.pincode ? `<span>Pune ${esc(c.pincode)}</span>` : ""}
+          ${since ? `<span>since ${since}</span>` : ""}
+          ${c.mkt_jobs ? `<a href="#" class="tag new" data-jobs="${esc(c.name)}">${c.mkt_jobs} marketing opening${c.mkt_jobs > 1 ? "s" : ""}</a>` : ""}
+          ${c.jobs && !c.mkt_jobs ? `<a href="#" class="tag" data-jobs="${esc(c.name)}">${c.jobs} other opening${c.jobs > 1 ? "s" : ""}</a>` : ""}</div>
+        <div class="meta">${c.phones.map(p => `<a href="tel:${esc(p.replace(/\s/g, ""))}">📞 ${esc(p)}</a>`).join("")}
+          ${c.emails.map(e => `<a href="mailto:${esc(e)}">✉ ${esc(e)}</a>`).join("")}
+          ${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website.replace(/^https?:\/\/(www\.)?/, ""))}</a>` : ""}
+          ${!c.phones.length && !c.emails.length && !c.website ? `<span>${esc(c.address)}</span>` : ""}</div></div>
+      <div class="acts"><select data-cin="${esc(c.cin)}">
+        ${[["", "Track…"], ["todo", "To contact"], ["contacted", "Contacted"], ["applied", "Applied"], ["no", "Not interested"]]
+          .map(([v, l]) => `<option value="${v}"${(m.s || "") === v ? " selected" : ""}>${l}</option>`).join("")}</select></div>
+      ${m.s ? `<div class="note"><input data-note="${esc(c.cin)}" placeholder="Notes (who you spoke to, follow-up date…)" value="${esc(m.n || "")}"></div>` : ""}
+    </div>`;
+  }).join("") || '<div class="empty">No companies match these filters.</div>';
+  $("pager").innerHTML = pages > 1 ? `<button ${page ? "" : "disabled"} id="prev">← Prev</button>
+    <span>Page ${page + 1} of ${pages}</span><button ${page < pages - 1 ? "" : "disabled"} id="next">Next →</button>` : "";
+  if ($("prev")) $("prev").onclick = () => { page--; renderCos(); scrollTo(0, 0); };
+  if ($("next")) $("next").onclick = () => { page++; renderCos(); scrollTo(0, 0); };
+}
+
+$("clist").addEventListener("change", e => {
+  const cin = e.target.dataset.cin;
+  if (!cin) return;
+  cmarks[cin] = {...(cmarks[cin] || {}), s: e.target.value};
+  store.set("cmarks", cmarks); renderCos();
+});
+$("clist").addEventListener("input", e => {
+  const cin = e.target.dataset.note;
+  if (!cin) return;
+  cmarks[cin] = {...(cmarks[cin] || {}), n: e.target.value};
+  store.set("cmarks", cmarks);
+});
+$("clist").addEventListener("click", e => {
+  const a = e.target.closest("[data-jobs]");
+  if (!a) return;
+  e.preventDefault();
+  const name = a.dataset.jobs.toLowerCase().replace(/\b(private|pvt|limited|ltd|llp|india)\b/g, "").trim();
+  const match = [...$("company").options].find(o => o.value && (o.value.toLowerCase().includes(name) || name.includes(o.value.toLowerCase())));
+  $("company").value = match ? match.value : "";
+  $("mkt").checked = false; $("view").value = "open";
+  tab("jobs"); renderJobs();
+});
+
+function downloadCsv() {
+  const cell = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
+  const rows = [["Company", "Size", "Industry", "Pincode", "Phones", "Emails", "Website", "Marketing openings", "Status", "Notes", "Address", "CIN"]]
+    .concat(F.map(c => [c.name, c.size, c.sector, c.pincode, c.phones.join(" / "), c.emails.join(" / "), c.website,
+      c.mkt_jobs, cmarks[c.cin]?.s || "", cmarks[c.cin]?.n || "", c.address, c.cin]));
+  const blob = new Blob(["﻿" + rows.map(r => r.map(cell).join(",")).join("\n")], {type: "text/csv"});
+  const a = Object.assign(document.createElement("a"), {href: URL.createObjectURL(blob), download: "pune-companies.csv"});
+  a.click(); URL.revokeObjectURL(a.href);
+}
+
+tab(store.get("tab", "jobs"));
+loadJobs(); loadCos();
+setInterval(loadJobs, 5 * 60 * 1000);
+</script>
+</body>
+</html>
