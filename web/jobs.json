@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-20T00:37:00+00:00",
- "started": "2026-11-20T00:36:32+00:00",
+ "updated": "2026-11-20T03:51:40+00:00",
+ "started": "2026-11-20T03:51:08+00:00",
  "sources": [
   {
    "key": "greenhouse:pubmatic",
@@ -35,7 +35,7 @@
    "ats": "greenhouse",
    "ok": true,
    "error": null,
-   "total": 378,
+   "total": 377,
    "pune": 11
   },
   {
@@ -44,7 +44,7 @@
    "ats": "greenhouse",
    "ok": true,
    "error": null,
-   "total": 202,
+   "total": 201,
    "pune": 1
   },
   {
@@ -172,13 +172,3223 @@
    "error": null,
    "total": 40,
    "pune": 38
+  },
+  {
+   "key": "adzuna",
+   "name": "Adzuna (aggregator)",
+   "ats": "adzuna",
+   "ok": true,
+   "error": null,
+   "total": 200,
+   "pune": 200
   }
  ],
+ "adzuna_last": "2026-11-20T03:51:40+00:00",
  "counts": {
-  "open": 204,
-  "new": 2
+  "open": 404,
+  "new": 200
  },
  "jobs": [
+  {
+   "id": "adzuna:5972006540",
+   "company": "Happiest Resume",
+   "title": "Associate – Business Strategy",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5972006540?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-20T00:35:42Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5971915092",
+   "company": "MSD",
+   "title": "Manager, Regulatory Affairs",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/land/ad/5971915092?se=PK3ErJXk8RGzJOoV2dqqBw&utm_medium=api&utm_source=15166d74&v=66B1D4EFD2F915975A39CB90E71374140C71AF56",
+   "posted": "2026-11-19T22:47:31Z",
+   "dept": "Scientific & QA Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5971881215",
+   "company": "Michelin",
+   "title": "Tire Referential Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5971881215?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T22:34:43Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5971878464",
+   "company": "Enpro",
+   "title": "Senior Engineer - Marketing - PED",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5971878464?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T22:32:41Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5971871692",
+   "company": "Kaapro Management Solutions",
+   "title": "Social Media and Digital Marketing Executive",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5971871692?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T22:27:15Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5971853753",
+   "company": "Wesco",
+   "title": "Coordinator - Marketing",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5971853753?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T22:15:00Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5971589835",
+   "company": "Weekday AI",
+   "title": "Performance Marketing Executive",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5971589835?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T18:21:47Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5971230145",
+   "company": "Microsoft Corporation",
+   "title": "Technical Support Engineering",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5971230145?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T12:41:44Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5971229257",
+   "company": "GE HealthCare",
+   "title": "Application Specialist",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5971229257?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T12:40:05Z",
+   "dept": "Healthcare & Nursing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5971228640",
+   "company": "Danaher Corporation",
+   "title": "CPI Integration Developer, Customer Integrations",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5971228640?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T12:39:43Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5971228637",
+   "company": "Danaher Corporation",
+   "title": "CPI Integration Developer, Customer Integrations",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5971228637?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T12:39:43Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5971095381",
+   "company": "Puma",
+   "title": "Director of Engineering Core Commerce Platform",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5971095381?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T10:24:58Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5971046852",
+   "company": "IBM",
+   "title": "Package Consultant-SAP CX",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5971046852?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T09:37:24Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970905985",
+   "company": "NielsenIQ",
+   "title": "Marketing Shared Services - Senior Associate",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5970905985?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T06:50:16Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970900953",
+   "company": "MTechZilla",
+   "title": "Senior Technical Delivery Manager",
+   "location": "Yerwada, Pune",
+   "url": "https://www.adzuna.in/details/5970900953?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T06:42:28Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970900958",
+   "company": "Bravient Advisors Private Limited",
+   "title": "Business Development Manager Or Assistant Manager",
+   "location": "Yerwada, Pune",
+   "url": "https://www.adzuna.in/details/5970900958?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-19T06:42:28Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970580018",
+   "company": "AGCO",
+   "title": "Sr Analyst, Digital Asset Platform",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5970580018?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T22:44:58Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970570421",
+   "company": "Honeywell",
+   "title": "Sr Sales Representative",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5970570421?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T22:38:28Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970567730",
+   "company": "HG Insights",
+   "title": "Customer Education Manager",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5970567730?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T22:36:47Z",
+   "dept": "Consultancy Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970567290",
+   "company": "Amura",
+   "title": "Trainee - Social Media",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5970567290?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T22:36:25Z",
+   "dept": "Creative & Design Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970566503",
+   "company": "LSCC India",
+   "title": "Staff QA Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5970566503?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T22:35:41Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970564061",
+   "company": "Tata Teleservices",
+   "title": "Lead - Acquisition & Regular",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5970564061?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T22:34:12Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970563951",
+   "company": "Amura",
+   "title": "Trainee - SEO",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5970563951?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T22:34:07Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970551620",
+   "company": "CrelioHealth",
+   "title": "Customer Success Manager (IC Role)",
+   "location": "Baner, Pune",
+   "url": "https://www.adzuna.in/details/5970551620?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T22:26:15Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970545669",
+   "company": "Amura",
+   "title": "Sr. Executive - Social Media",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5970545669?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T22:22:41Z",
+   "dept": "Creative & Design Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970533054",
+   "company": "Cloud SynApps",
+   "title": "Salesforce Business Analyst",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5970533054?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T22:13:51Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970521388",
+   "company": "SailPoint",
+   "title": "Lead Technical Support Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5970521388?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T22:05:18Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970520855",
+   "company": "WTW",
+   "title": "AVP/VP/Sr.VP Techno Marketing Professionals",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5970520855?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T22:04:50Z",
+   "dept": "Accounting & Finance Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970451324",
+   "company": "Botmakers Pvt Ltd",
+   "title": "Sales Intern",
+   "location": "Yerwada, Pune",
+   "url": "https://www.adzuna.in/details/5970451324?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T20:42:27Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970451323",
+   "company": "Bravient Advisors Private Limited",
+   "title": "Customer Success Manager",
+   "location": "Yerwada, Pune",
+   "url": "https://www.adzuna.in/details/5970451323?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T20:42:27Z",
+   "dept": "Accounting & Finance Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5970159478",
+   "company": "WTW",
+   "title": "AVP/VP/Sr.VP Techno Marketing Professionals",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/land/ad/5970159478?se=PK3ErJXk8RGzJOoV2dqqBw&utm_medium=api&utm_source=15166d74&v=A440F135BA287B9DC791CCD26FCA5D73FA4929FA",
+   "posted": "2026-11-18T16:46:09Z",
+   "dept": "Accounting & Finance Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969969953",
+   "company": "HSBC",
+   "title": "AM Employee Workplace Solutions, MSF",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969969953?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T12:38:54Z",
+   "dept": "Accounting & Finance Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969968611",
+   "company": "Honeywell Technologies",
+   "title": "Lead Sales Representative",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969968611?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T12:37:12Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969968607",
+   "company": "Honeywell Technologies",
+   "title": "Sr Sales Representative",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969968607?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T12:37:12Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969968352",
+   "company": "Emerson",
+   "title": "Electronic Design Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969968352?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T12:36:45Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969966643",
+   "company": "WESCO",
+   "title": "Analyst - Commercial Analytics",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969966643?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T12:35:51Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969966391",
+   "company": "AGCO Corporation",
+   "title": "Platform Owner, Marketing Analytics",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969966391?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T12:35:04Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969966394",
+   "company": "AGCO Corporation",
+   "title": "Sr Platform Owner, WG PIM",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969966394?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T12:35:04Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969952059",
+   "company": "StoneX",
+   "title": "Staff - IT Software Engineering - CRM",
+   "location": "Vadgaon Sheri, Pune",
+   "url": "https://www.adzuna.in/details/5969952059?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T12:25:55Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969793543",
+   "company": "IBM",
+   "title": "Selection Specialist",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969793543?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T10:13:23Z",
+   "dept": "HR & Recruitment Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969745615",
+   "company": "Aarna Systems | Performance Driven Digital Marketing Agency",
+   "title": "Project Manager",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969745615?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T09:33:13Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969315113",
+   "company": "POWER BRIDGE SYSTEMS PRIVATE LIMITED",
+   "title": "Business Development Manager Audio Visual",
+   "location": "Yerwada, Pune",
+   "url": "https://www.adzuna.in/details/5969315113?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T01:02:37Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969314835",
+   "company": "Indovance Private Limited",
+   "title": "Digital Marketing Lead",
+   "location": "Katraj, Pune",
+   "url": "https://www.adzuna.in/details/5969314835?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-18T01:02:03Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969253510",
+   "company": "AGCO",
+   "title": "Platform Owner, Marketing Analytics",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969253510?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-17T22:39:07Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969246247",
+   "company": "DeepIntent",
+   "title": "Senior Software Engineer In Test - Mobile",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969246247?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-17T22:30:08Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969246106",
+   "company": "Zensar Technologies",
+   "title": "Drupal Developer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969246106?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-17T22:29:59Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969245250",
+   "company": "DealerOn",
+   "title": "Website Performance Analyst",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969245250?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-17T22:29:08Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969242925",
+   "company": "Honeywell",
+   "title": "Lead Sales Representative",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969242925?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-17T22:25:47Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969240580",
+   "company": "Scalanova Health",
+   "title": "Director of Strategic Sales",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969240580?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-17T22:23:58Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969229169",
+   "company": "Wesco",
+   "title": "Analyst - Commercial Analytics",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969229169?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-17T22:11:33Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969228871",
+   "company": "DeepIntent",
+   "title": "Senior Staff Software Engineer - Mobile",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969228871?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-17T22:11:13Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5969226317",
+   "company": "Emerson",
+   "title": "Electronic Design Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5969226317?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-17T22:08:42Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5968765754",
+   "company": "QAD, Inc.",
+   "title": "Talent Acquisition Intern",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5968765754?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-17T12:47:20Z",
+   "dept": "HR & Recruitment Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5968301884",
+   "company": "AGSuite Technologies Pvt Ltd",
+   "title": "Zoho Sales Executive",
+   "location": "Yerwada, Pune",
+   "url": "https://www.adzuna.in/details/5968301884?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-17T04:40:11Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5967996721",
+   "company": "AGCO",
+   "title": "Sr Platform Owner, WG PIM",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5967996721?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-16T22:34:32Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5967963221",
+   "company": "AspenTech",
+   "title": "Sr Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5967963221?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-16T22:06:04Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5967713571",
+   "company": "Sweat Pants Agency",
+   "title": "PPC Marketing Specialist (Remote)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5967713571?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-16T18:13:37Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5967511336",
+   "company": "IBM",
+   "title": "Package Consultant-SuccessFactors Talent Mgmt",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5967511336?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-16T12:35:20Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5967510136",
+   "company": "Emerson",
+   "title": "Sr Engineer /Assistant Manager Commodity",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5967510136?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-16T12:35:05Z",
+   "dept": "Logistics & Warehouse Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5967001227",
+   "company": "AspenTech",
+   "title": "Principal Software Developer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5967001227?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-15T22:09:47Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5966997640",
+   "company": "AspenTech",
+   "title": "Principal Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5966997640?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-15T22:04:31Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5966845479",
+   "company": "NeoGenCode Technologies Pvt Ltd",
+   "title": "Content Writer (AI, SEO & Content Marketing)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5966845479?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-15T18:39:34Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5966625012",
+   "company": "IBM",
+   "title": "Package Consultant-SAP CX",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5966625012?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-15T12:33:45Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5966520243",
+   "company": "Recruitable",
+   "title": "Business Development Intern",
+   "location": "Yerwada, Pune",
+   "url": "https://www.adzuna.in/details/5966520243?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-15T10:20:08Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5966508427",
+   "company": "TransPerfect",
+   "title": "Web Project Manager | Pune",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5966508427?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-15T09:56:53Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5966490969",
+   "company": "TransPerfect",
+   "title": "Technical Project Manager",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5966490969?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-15T09:40:29Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5966113041",
+   "company": "Amberstudent",
+   "title": "Content & Editorial Lead",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5966113041?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-14T22:38:19Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5966109013",
+   "company": "amber",
+   "title": "Regional Marketing Manager – Influencer Marketing & Creative Coordination",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5966109013?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-14T22:34:51Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5966103601",
+   "company": "Pattern",
+   "title": "Junior Digital Marketing Analyst",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5966103601?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-14T22:31:59Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5966095638",
+   "company": "Pune Office",
+   "title": "Senior Associate Data Processing",
+   "location": "Khadakwasla R.S., Pune",
+   "url": "https://www.adzuna.in/details/5966095638?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-14T22:27:12Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5966081911",
+   "company": "LSCC India",
+   "title": "Sr Staff Firmware Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5966081911?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-14T22:16:58Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5965396129",
+   "company": "Stantec",
+   "title": "Pursuits Specialist",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5965396129?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-14T12:32:53Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5965395422",
+   "company": "Whirlpool Corporation",
+   "title": "Senior Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5965395422?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-14T12:32:21Z",
+   "dept": "Manufacturing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5965394900",
+   "company": "NTT America, Inc.",
+   "title": "Salesforce Architect -Financial Services Cloud",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5965394900?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-14T12:31:58Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5965393418",
+   "company": "Eaton Corporation",
+   "title": "Business Process Owner - MG Salesforce",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5965393418?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-14T12:31:32Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964888240",
+   "company": "Acme Services Private Limited",
+   "title": "Talent Acquisition",
+   "location": "Yerwada, Pune",
+   "url": "https://www.adzuna.in/details/5964888240?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-14T00:24:27Z",
+   "dept": "HR & Recruitment Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964785726",
+   "company": "Qualys",
+   "title": "Lead Subject Matter Expert",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5964785726?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T22:32:06Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964784413",
+   "company": "HG Insights",
+   "title": "Principal UX designer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5964784413?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T22:30:50Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964777612",
+   "company": "MaxIQ MaxIQ",
+   "title": "CHRO / Head of People & Operations",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5964777612?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T22:23:34Z",
+   "dept": "HR & Recruitment Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964777157",
+   "company": "Agilysis",
+   "title": "Sales Manager",
+   "location": "Baner, Pune",
+   "url": "https://www.adzuna.in/details/5964777157?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T22:23:05Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964774679",
+   "company": "HG Insights",
+   "title": "Director, Data & AI Product Manager",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5964774679?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T22:20:26Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964774164",
+   "company": "Instem",
+   "title": "Client Solutions Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5964774164?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T22:19:53Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964770248",
+   "company": "Global Payment Holding Company",
+   "title": "Data Scientist",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5964770248?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T22:16:47Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964769263",
+   "company": "Stantec",
+   "title": "Pursuits Specialist",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5964769263?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T22:16:05Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964757812",
+   "company": "Avient",
+   "title": "Senior Specialist, Salesforce (Techno-Functional)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5964757812?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T22:04:54Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964732850",
+   "company": "Suncorp Solutions",
+   "title": "Area Sales Manager - Pune",
+   "location": "Yerwada, Pune",
+   "url": "https://www.adzuna.in/details/5964732850?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T21:18:05Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964475405",
+   "company": "StradIT",
+   "title": "Jr. Sales/Marketing Executive",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5964475405?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T18:12:51Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964194537",
+   "company": "Advanced Energy",
+   "title": "Data Architect",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5964194537?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T12:29:01Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964175400",
+   "company": "Bridgenext",
+   "title": "Domain Consultant — Wealth Management",
+   "location": "Deccan Gymkhana, Pune",
+   "url": "https://www.adzuna.in/details/5964175400?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T12:22:31Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5964005687",
+   "company": "Johnson and Johnson",
+   "title": "Clinical Field Sales Training Mgr Joints",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5964005687?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-13T09:36:59Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963469030",
+   "company": "UniAthena",
+   "title": "Admissions Counselor",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963469030?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:24:49Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963468697",
+   "company": "12thWonder",
+   "title": "Content Writer Intern",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963468697?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:24:39Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963468176",
+   "company": "Amura",
+   "title": "Trainee - Paid Media",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963468176?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:24:19Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963466482",
+   "company": "Toprankers",
+   "title": "Academic Counsellor - Pune",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963466482?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:23:06Z",
+   "dept": "Teaching Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963466428",
+   "company": "Amura",
+   "title": "Executive - Paid Media",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963466428?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:23:03Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963465456",
+   "company": "Kylas",
+   "title": "Trainee - Inside Sales",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963465456?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:21:32Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963465379",
+   "company": "Amura",
+   "title": "Executive- Business development",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963465379?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:21:28Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963464926",
+   "company": "SAVA Healthcare",
+   "title": "Territory Sales Executive",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963464926?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:21:08Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963464432",
+   "company": "Amura",
+   "title": "Team Lead - Web Development (Web, Martech & Integrations)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963464432?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:20:49Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963463991",
+   "company": "Ugaoo",
+   "title": "Demand and Supply Planning Manager",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963463991?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:20:32Z",
+   "dept": "Logistics & Warehouse Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963463904",
+   "company": "Amura",
+   "title": "Team Lead - Paid Media",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963463904?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:20:28Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963463722",
+   "company": "Amura",
+   "title": "Sr. Executive - SEO & AEO",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963463722?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:20:20Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963462664",
+   "company": "Suavis",
+   "title": "Oracle CX Cloud Solution Architect",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963462664?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:19:43Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963462368",
+   "company": "HG Insights",
+   "title": "Customer Success Manager II",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963462368?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:19:34Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963462054",
+   "company": "Amura",
+   "title": "Outbound Lead (Senior SDR)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963462054?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:19:25Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963461350",
+   "company": "Amber Amber",
+   "title": "Social Media Executive (Content Creator)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963461350?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:18:59Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963460825",
+   "company": "SAVA Healthcare",
+   "title": "Area Sales Manager - CA Business",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963460825?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:18:39Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963459968",
+   "company": "Amura",
+   "title": "Sr. Visualizer (Sr. Executive - Graphic Design)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963459968?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:18:09Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963458985",
+   "company": "Leadership For Equity",
+   "title": "Intern- Communication & Branding",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963458985?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:17:32Z",
+   "dept": "Teaching Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963458556",
+   "company": "SAVA Healthcare",
+   "title": "Product Executive",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963458556?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:17:16Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963457825",
+   "company": "Vyapar App",
+   "title": "Field Sales Executive- PUNE",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963457825?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:16:49Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963455810",
+   "company": "Bright Future India",
+   "title": "Agri Sales Trainer",
+   "location": "Baramati, Pune",
+   "url": "https://www.adzuna.in/details/5963455810?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:15:28Z",
+   "dept": "Teaching Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963453845",
+   "company": "Amura Marketing Technologies",
+   "title": "Copy Supervisor / Sr. Copywriter",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963453845?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:14:23Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963453423",
+   "company": "Amura",
+   "title": "Visualizer - Graphics Designer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963453423?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:14:11Z",
+   "dept": "Creative & Design Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963452399",
+   "company": "Comprinno",
+   "title": "Manager – Sales Development (SDR)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963452399?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:13:36Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963451404",
+   "company": "Navitas Semiconductor Usa",
+   "title": "Applications Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963451404?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:13:05Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963450780",
+   "company": "Suavis",
+   "title": "Oracle CX Techno-Functional consultant/Lead",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963450780?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:12:44Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963449159",
+   "company": "Amura",
+   "title": "Trainee- Client Pre-sales",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963449159?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:12:14Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963448513",
+   "company": "SAVA Healthcare",
+   "title": "Veterinary Sales Officer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963448513?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:11:49Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963448263",
+   "company": "Comprinno",
+   "title": "Talent Acquisition Associate",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963448263?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:11:41Z",
+   "dept": "HR & Recruitment Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963448093",
+   "company": "Infinite Uptime",
+   "title": "Lead - Inside Sales",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963448093?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:11:34Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963447877",
+   "company": "Dhyey Consulting Services",
+   "title": "ERP Business Development Executive",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963447877?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:11:27Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963446253",
+   "company": "Amura",
+   "title": "Trainee - Account Management (Marketing)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963446253?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:10:34Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963445427",
+   "company": "Acuiti Labs",
+   "title": "Senior Associate – Demand Marketing & Inside Sales",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963445427?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:10:04Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963444463",
+   "company": "AdLift AdLift",
+   "title": "B2B Email Marketing Specialist - US",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963444463?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:09:36Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963443798",
+   "company": "Shubham EPC Private",
+   "title": "Engineer - Civil",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963443798?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:09:26Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963438114",
+   "company": "role",
+   "title": "Sales Closing Manager- Dudulgaon",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963438114?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:07:32Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963437359",
+   "company": "Amura",
+   "title": "Associate Creative Director",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963437359?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:07:03Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963436968",
+   "company": "Suavis",
+   "title": "Oracle CPQ Business Analyst",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963436968?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:06:49Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963436926",
+   "company": "Suavis",
+   "title": "Cx Ba",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963436926?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:06:48Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963436226",
+   "company": "HG Insights",
+   "title": "Principal/Staff Data Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963436226?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:06:22Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963435326",
+   "company": "Vyapar App",
+   "title": "Sales Promoter - Pune",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963435326?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:05:41Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963434914",
+   "company": "Comprinno",
+   "title": "Head – Data Analytics & AI",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963434914?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:05:23Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963433157",
+   "company": "Amber Amber",
+   "title": "Director Business Analytics, AI & Decision Intelligence",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963433157?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:04:03Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963431136",
+   "company": "Hudle",
+   "title": "Community & Event Management Intern",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963431136?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:02:48Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963428149",
+   "company": "Amura",
+   "title": "Sr. Web Developer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963428149?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T22:01:12Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5963426125",
+   "company": "Navitas Semiconductor Usa",
+   "title": "Principal Technical Marketing Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5963426125?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T21:59:34Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5962849461",
+   "company": "2coms",
+   "title": "Hiring || Senior Executive – Brand & Visual Design",
+   "location": "Yerwada, Pune",
+   "url": "https://www.adzuna.in/details/5962849461?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T14:38:08Z",
+   "dept": "Creative & Design Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5962711700",
+   "company": "Stantec",
+   "title": "Communications Specialist, North America",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5962711700?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T12:32:02Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5962711702",
+   "company": "Stantec",
+   "title": "Communications Specialist, Global Region",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5962711702?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T12:32:02Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5962711579",
+   "company": "J&J Family of Companies",
+   "title": "Clinical Field Sales Training Mgr Joints",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5962711579?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T12:31:56Z",
+   "dept": "Teaching Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5962480237",
+   "company": "Gunnam Associates",
+   "title": "Marketing Executive – Fire Fighting Systems",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5962480237?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T09:35:38Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5962480245",
+   "company": "Teamlease Digital Private Limited",
+   "title": "Face In Store",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5962480245?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T09:35:38Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5962480328",
+   "company": "Teamlease Digital Private Limited",
+   "title": "Branch Relationship Executive",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5962480328?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-12T09:35:38Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5961901887",
+   "company": "WeWork India",
+   "title": "Community Lead (Managed Office)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5961901887?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-11T22:32:50Z",
+   "dept": "Consultancy Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5961901586",
+   "company": "Stantec",
+   "title": "Communications Specialist, North America",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5961901586?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-11T22:32:30Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5961881158",
+   "company": "Johnson & Johnson",
+   "title": "Clinical Field Sales Training Mgr Joints",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5961881158?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-11T22:14:26Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5961878806",
+   "company": "Stantec",
+   "title": "Communications Specialist, Global Region",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5961878806?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-11T22:12:42Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5961873886",
+   "company": "Kotak Mahindra Bank",
+   "title": "Relationship Manager - Commercial Vehicles_RBG-CV (Working Capital)_0649_0751_1069767",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5961873886?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-11T22:10:08Z",
+   "dept": "Accounting & Finance Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5961873609",
+   "company": "Stantec",
+   "title": "Pursuits Assistant",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5961873609?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-11T22:09:55Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5961709302",
+   "company": "Vrinda International",
+   "title": "PRODUCT MARKETING MANAGER (TECHNICAL)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5961709302?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-11T19:30:38Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5961611246",
+   "company": "Clicks And Co Media",
+   "title": "Junior Digital Illustrator",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5961611246?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-11T18:38:12Z",
+   "dept": "Creative & Design Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5961444312",
+   "company": "AcquireX",
+   "title": "Graphic Designer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5961444312?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-11T15:05:23Z",
+   "dept": "Creative & Design Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5961250735",
+   "company": "Stantec",
+   "title": "Pursuits Assistant",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5961250735?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-11T12:31:45Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5961109172",
+   "company": "N Human Resources & Management Systems",
+   "title": "City Head/B2B Field Sales/ Pune",
+   "location": "Yerwada, Pune",
+   "url": "https://www.adzuna.in/details/5961109172?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-11T10:19:57Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5960527878",
+   "company": "Ansira",
+   "title": "Associate Audit, Client Delivery - Incent",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5960527878?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-10T22:24:37Z",
+   "dept": "Admin Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5960517960",
+   "company": "Michelin",
+   "title": "Trainee – Customer Sales Administrator",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5960517960?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-10T22:07:56Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5960003257",
+   "company": "StoneX",
+   "title": "Lead Analyst",
+   "location": "Vadgaon Sheri, Pune",
+   "url": "https://www.adzuna.in/details/5960003257?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-10T12:21:24Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5959996414",
+   "company": "Kennametal, Inc.",
+   "title": "Key Account Specialist-India",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5959996414?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-10T12:11:34Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5959117767",
+   "company": "Weekday AI",
+   "title": "Head- Learning & Development",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5959117767?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-09T18:22:30Z",
+   "dept": "HR & Recruitment Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5958898480",
+   "company": "Bentley Systems",
+   "title": "Workplace Culture & Engagement Specialist",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5958898480?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-09T12:42:34Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5958336455",
+   "company": "Tata Capital",
+   "title": "Area Manager - Retail Sales - Direct & DSA - Housing DM - Sales - Pune - Bhakti Genesis - MM",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5958336455?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-08T23:18:28Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5958330392",
+   "company": "Kaseya",
+   "title": "Staff Software Development Engineer in Test",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5958330392?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-08T23:14:40Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5958329748",
+   "company": "Wesco",
+   "title": "Specialist - Sales",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5958329748?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-08T23:14:15Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5958328979",
+   "company": "Tata Capital",
+   "title": "Regional Manager - Retail Sales - Direct & DSA - Housing - EM - Sales - Pune - Bhakti Genesis - MM",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5958328979?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-08T23:13:47Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5958327706",
+   "company": "Showpad",
+   "title": "Lead Web Developer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5958327706?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-08T23:12:46Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5958324578",
+   "company": "Vertiv Group",
+   "title": "Sr. Controls Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5958324578?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-08T23:10:27Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5958321457",
+   "company": "Tata Teleservices",
+   "title": "Partner Development Manager – Platinum",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5958321457?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-08T23:06:40Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5958319388",
+   "company": "Madison Logic",
+   "title": "Campaign Manager",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5958319388?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-08T23:04:25Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957859253",
+   "company": "Marriott",
+   "title": "Cluster Videographer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957859253?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-08T12:12:23Z",
+   "dept": "Hospitality & Catering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957852941",
+   "company": "WESCO",
+   "title": "Specialist - Sales",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957852941?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-08T12:09:09Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957706399",
+   "company": "LTM",
+   "title": "Senior Specialist - Business Analysis",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957706399?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-08T10:48:32Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957259573",
+   "company": "Kaseya",
+   "title": "Software Engineer II (Development & Quality)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957259573?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T23:02:55Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957257718",
+   "company": "Bentley Systems India",
+   "title": "Workplace Culture & Engagement Specialist",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957257718?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T23:01:04Z",
+   "dept": "HR & Recruitment Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957256825",
+   "company": "Vertiv Group",
+   "title": "Controls Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957256825?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T22:59:55Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957254277",
+   "company": "Generac",
+   "title": "Mechanical Engineer II",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957254277?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T22:56:50Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957253527",
+   "company": "Kaseya",
+   "title": "Software Engineer II (Development & Testing)",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957253527?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T22:56:03Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957249291",
+   "company": "Marriott Hotels Resorts",
+   "title": "Cluster Videographer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957249291?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T22:53:04Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957238859",
+   "company": "Stantec",
+   "title": "Pursuits Specialist",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957238859?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T22:46:48Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957228121",
+   "company": "DeepIntent",
+   "title": "Software Engineer In Test",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957228121?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T22:34:40Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957224490",
+   "company": "Kaseya",
+   "title": "Software Engineer II",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957224490?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T22:29:32Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957223669",
+   "company": "Marriott Hotels Resorts",
+   "title": "Cluster Director of Sales & Marketing - Ventive Hotels, Pune",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957223669?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T22:28:33Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957221179",
+   "company": "LSCC India",
+   "title": "Senior SW Development Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957221179?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T22:26:30Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5957220614",
+   "company": "DeepIntent",
+   "title": "Software Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5957220614?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T22:26:07Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5956585694",
+   "company": "Stantec",
+   "title": "Pursuits Specialist",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5956585694?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T11:57:19Z",
+   "dept": "Other/General Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5956585311",
+   "company": "Marriott",
+   "title": "Cluster Director of Sales & Marketing - Ventive Hotels, Pune",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5956585311?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T11:57:07Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5956099098",
+   "company": "MTechZilla",
+   "title": "Graphic Designer",
+   "location": "Yerwada, Pune",
+   "url": "https://www.adzuna.in/details/5956099098?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-07T03:05:43Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5955821238",
+   "company": "DealerOn",
+   "title": "Sr Digital Advertising Data Analyst",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5955821238?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T22:12:31Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5955807575",
+   "company": "AllianceBernstein LP",
+   "title": "Marketing Coordinator",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5955807575?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T22:03:48Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5955803546",
+   "company": "Cornerstone OnDemand",
+   "title": "Marketing Operations Manager",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5955803546?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T21:56:20Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5955796005",
+   "company": "Kaseya",
+   "title": "Staff Software Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5955796005?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T21:46:39Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5955795133",
+   "company": "eClerx",
+   "title": "Associate Process Manager",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5955795133?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T21:45:11Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5955679270",
+   "company": "comprinno",
+   "title": "Sales Development Representative",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5955679270?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T18:34:22Z",
+   "dept": "Sales Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5955617801",
+   "company": "Weekday AI",
+   "title": "Manager - Field Application Engineering",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5955617801?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T18:08:23Z",
+   "dept": "Engineering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5955617580",
+   "company": "Syngenta Group",
+   "title": "Digital Product Manager",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5955617580?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T18:08:22Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5955403858",
+   "company": "NTT America, Inc.",
+   "title": "Salesforce Architect",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5955403858?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T13:42:43Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5955394590",
+   "company": "Cornerstone onDemand",
+   "title": "Marketing Operations Manager",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5955394590?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T13:39:30Z",
+   "dept": "PR, Advertising & Marketing Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": true,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5955365274",
+   "company": "Amazon",
+   "title": "Sr. Product Manager - Tech, Alexa AI Developer Tech",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5955365274?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T13:06:47Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5954661119",
+   "company": "Syngenta Crop Protection",
+   "title": "Digital Product Manager",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5954661119?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T01:21:49Z",
+   "dept": "IT Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "adzuna:5954661038",
+   "company": "NOVOTEL",
+   "title": "Assistant F&B Manager",
+   "location": "Pune, Maharashtra",
+   "url": "https://www.adzuna.in/details/5954661038?utm_medium=api&utm_source=15166d74",
+   "posted": "2026-11-06T01:21:48Z",
+   "dept": "Hospitality & Catering Jobs",
+   "source": "adzuna",
+   "size": "",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-20T03:51:40+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
   {
    "id": "workday:mastercard/job/Pune-India/Senior-Software-Engineer---Java-Full-stack-with-AI_R-294119",
    "company": "Mastercard",
@@ -192,7 +3402,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T00:37:00+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -208,7 +3418,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T00:37:00+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -224,7 +3434,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -240,7 +3450,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -256,7 +3466,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -272,7 +3482,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -288,7 +3498,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -304,7 +3514,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -320,7 +3530,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -336,7 +3546,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -352,7 +3562,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -368,7 +3578,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -384,7 +3594,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -400,7 +3610,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -416,7 +3626,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -432,7 +3642,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -448,7 +3658,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -464,7 +3674,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -480,7 +3690,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -496,7 +3706,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -512,7 +3722,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -528,7 +3738,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -544,7 +3754,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -560,7 +3770,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -576,7 +3786,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -592,7 +3802,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -608,7 +3818,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -624,7 +3834,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -640,7 +3850,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -656,7 +3866,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -672,7 +3882,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -688,7 +3898,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -704,7 +3914,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -720,7 +3930,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -736,7 +3946,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -752,7 +3962,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -768,7 +3978,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -784,7 +3994,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -800,7 +4010,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -816,7 +4026,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -832,7 +4042,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -848,7 +4058,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -864,7 +4074,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -880,7 +4090,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -896,7 +4106,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -912,7 +4122,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -928,7 +4138,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -944,7 +4154,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -960,7 +4170,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -976,7 +4186,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -992,7 +4202,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1008,7 +4218,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1024,7 +4234,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1040,7 +4250,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1056,7 +4266,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1072,7 +4282,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1088,7 +4298,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1104,7 +4314,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1120,7 +4330,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1136,7 +4346,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1152,7 +4362,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1168,7 +4378,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1184,7 +4394,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1200,7 +4410,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1216,7 +4426,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1232,7 +4442,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1248,7 +4458,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1264,7 +4474,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1280,7 +4490,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1296,7 +4506,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1312,7 +4522,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1328,7 +4538,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1344,7 +4554,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1360,7 +4570,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1376,7 +4586,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1392,7 +4602,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1408,7 +4618,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1424,7 +4634,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1440,7 +4650,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1456,7 +4666,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1472,7 +4682,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1488,7 +4698,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1504,7 +4714,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1520,7 +4730,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1536,7 +4746,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1552,7 +4762,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1568,7 +4778,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1584,7 +4794,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1600,7 +4810,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1616,7 +4826,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1632,7 +4842,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1648,7 +4858,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1664,7 +4874,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1680,7 +4890,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1696,7 +4906,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1712,7 +4922,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1728,7 +4938,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1744,7 +4954,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1760,7 +4970,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1776,7 +4986,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1792,7 +5002,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1808,7 +5018,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1824,7 +5034,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1840,23 +5050,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
-   "closed": null
-  },
-  {
-   "id": "greenhouse:8814695002",
-   "company": "Druva",
-   "title": "Senior Staff Software Engineer",
-   "location": "Pune, Maharashtra, India",
-   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8814695002/?gh_jid=8814695002",
-   "posted": "2026-11-16T01:05:12-05:00",
-   "dept": "",
-   "source": "greenhouse",
-   "size": "mid",
-   "marketing": false,
-   "where": "pune",
-   "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1872,7 +5066,23 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "greenhouse:8814695002",
+   "company": "Druva",
+   "title": "Senior Staff Software Engineer",
+   "location": "Pune, Maharashtra, India",
+   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8814695002/?gh_jid=8814695002",
+   "posted": "2026-11-16T01:05:12-05:00",
+   "dept": "",
+   "source": "greenhouse",
+   "size": "mid",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-18T19:00:45+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1888,7 +5098,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1904,7 +5114,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1920,23 +5130,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
-   "closed": null
-  },
-  {
-   "id": "greenhouse:8743690002",
-   "company": "Addepar",
-   "title": "ADM Support Analyst",
-   "location": "Pune, India",
-   "url": "https://job-boards.greenhouse.io/addepar1/jobs/8743690002",
-   "posted": "2026-10-07T11:24:59-04:00",
-   "dept": "",
-   "source": "greenhouse",
-   "size": "mid",
-   "marketing": false,
-   "where": "pune",
-   "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1952,7 +5146,23 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
+   "closed": null
+  },
+  {
+   "id": "greenhouse:8743690002",
+   "company": "Addepar",
+   "title": "ADM Support Analyst",
+   "location": "Pune, India",
+   "url": "https://job-boards.greenhouse.io/addepar1/jobs/8743690002",
+   "posted": "2026-10-07T11:24:59-04:00",
+   "dept": "",
+   "source": "greenhouse",
+   "size": "mid",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-18T19:00:45+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1968,7 +5178,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -1984,7 +5194,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2000,7 +5210,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2016,7 +5226,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2032,7 +5242,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2048,7 +5258,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2064,7 +5274,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2080,7 +5290,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2096,7 +5306,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2112,7 +5322,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2128,7 +5338,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2144,7 +5354,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2160,7 +5370,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2176,7 +5386,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2192,7 +5402,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2208,7 +5418,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2224,7 +5434,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2240,7 +5450,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2256,7 +5466,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2272,7 +5482,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2288,7 +5498,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2304,7 +5514,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2320,7 +5530,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2336,7 +5546,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2352,7 +5562,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2368,7 +5578,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2384,7 +5594,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2400,7 +5610,7 @@
    "marketing": true,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2416,7 +5626,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2432,7 +5642,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2448,7 +5658,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2464,7 +5674,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2480,7 +5690,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2496,7 +5706,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2512,7 +5722,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2528,7 +5738,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2544,7 +5754,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2560,7 +5770,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2576,7 +5786,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2592,7 +5802,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2608,7 +5818,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2624,7 +5834,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2640,7 +5850,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2656,7 +5866,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2672,7 +5882,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2688,7 +5898,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2704,7 +5914,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2720,7 +5930,7 @@
    "marketing": true,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2736,7 +5946,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2752,7 +5962,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2768,7 +5978,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2784,7 +5994,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2800,7 +6010,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2816,7 +6026,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2832,7 +6042,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2848,7 +6058,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2864,7 +6074,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2880,7 +6090,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2896,7 +6106,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2912,7 +6122,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2928,7 +6138,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2944,7 +6154,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2960,7 +6170,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2976,7 +6186,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -2992,7 +6202,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3008,7 +6218,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3024,7 +6234,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3040,7 +6250,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3056,7 +6266,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3072,7 +6282,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3088,7 +6298,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3104,7 +6314,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3120,7 +6330,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3136,7 +6346,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3152,7 +6362,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3168,7 +6378,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3184,7 +6394,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3200,7 +6410,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3216,7 +6426,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3232,7 +6442,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3248,7 +6458,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3264,7 +6474,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3280,7 +6490,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3296,7 +6506,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3312,7 +6522,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3328,7 +6538,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3344,7 +6554,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3360,7 +6570,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3376,7 +6586,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3392,7 +6602,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3408,7 +6618,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3424,7 +6634,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
@@ -3440,7 +6650,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T00:37:00+00:00",
+   "last_seen": "2026-11-20T03:51:40+00:00",
    "closed": null
   },
   {
