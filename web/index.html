@@ -290,7 +290,7 @@ function renderJobs() {
       <div class="acts">${["saved", "applied", "hidden"].map(k =>
         `<button data-id="${esc(j.id)}" data-m="${k}" class="${m === k ? "on" : ""}">${{saved: "Save", applied: "Applied", hidden: "Hide"}[k]}</button>`).join("")}</div></div>`;
   }).join("") : `<div class="empty">No jobs match these filters.${mkt && !openM.length ?
-     "<br><br>Most marketing openings will come from the Adzuna job feed once it is switched on." : ""}</div>`;
+     "<br><br>Most marketing openings come from the Jooble and Adzuna job feeds once their keys are added." : ""}</div>`;
 }
 
 $("list").addEventListener("click", e => {

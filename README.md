@@ -3,7 +3,7 @@
 A job-search tool for marketing roles in Pune. Two parts:
 
 - **Jobs**: a crawler checks employers' public job boards (and, with a free key, the
-  Adzuna aggregator) around the clock and flags marketing openings.
+  Jooble and Adzuna aggregators) around the clock and flags marketing openings.
 - **Companies**: a directory of every active company registered in Pune (from the
   official Ministry of Corporate Affairs registry), with size, industry, a
   "marketing fit" ranking, public office phone numbers and emails from each
@@ -19,8 +19,13 @@ A job-search tool for marketing roles in Pune. Two parts:
    python directory.py import-api       # reads all Maharashtra companies, keeps Pune ones
    ```
    If it stops partway, it prints an offset; resume with `$env:IMPORT_OFFSET="<offset>"`.
-2. **Adzuna key (free, for marketing jobs at small and mid-size firms):**
-   https://developer.adzuna.com → set `ADZUNA_APP_ID` and `ADZUNA_APP_KEY`.
+2. **Jooble key (free, 100 searches a day; marketing jobs at small and mid-size firms):**
+   register at https://in.jooble.org/api/about (the India site: keys only work for their own
+   country) and the key arrives by email. Set `JOOBLE_API_KEY`. The crawler uses at most 7
+   searches per run and 90 a day.
+3. **Adzuna key (optional; the free test plan is only 25 calls, then it's paid):**
+   https://developer.adzuna.com → set `ADZUNA_APP_ID` and `ADZUNA_APP_KEY`. Rationed to 4 calls
+   a day; change with `ADZUNA_MAX_CALLS` and `ADZUNA_EVERY_HOURS`.
 
 ## Daily use
 
@@ -72,7 +77,7 @@ lists are never uploaded to GitHub (they're in `.gitignore`).
 
 `.github/workflows/crawl.yml` crawls jobs every 2 hours, finds contacts for 300 more
 companies each run, refreshes the registry monthly, and publishes the dashboard to
-GitHub Pages. Add `DATA_GOV_API_KEY`, `ADZUNA_APP_ID`, `ADZUNA_APP_KEY` as repo secrets.
+GitHub Pages. Add `DATA_GOV_API_KEY`, `JOOBLE_API_KEY`, `ADZUNA_APP_ID`, `ADZUNA_APP_KEY` as repo secrets.
 
 Or only on this PC: `powershell -ExecutionPolicy Bypass -File schedule_windows.ps1`.
 

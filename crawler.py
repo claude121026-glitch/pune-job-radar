@@ -1,7 +1,7 @@
 """Pune job crawler.
 
 Pulls openings from employers' public job-board APIs (Greenhouse, Lever, Ashby,
-SmartRecruiters, Workday) plus, optionally, the Adzuna aggregator API for broad
+SmartRecruiters, Workday) plus, optionally, the Jooble and Adzuna aggregator APIs for broad
 coverage of small and mid-size companies. Keeps only Pune-area roles (and,
 optionally, remote-India roles), flags marketing roles, and writes web/jobs.json.
 
@@ -29,6 +29,8 @@ COMPANIES = os.path.join(ROOT, "companies.json")
 OUT = os.path.join(ROOT, "web", "jobs.json")
 UA = "PuneJobCrawler/1.0 (personal job search; polite, low volume)"
 KEEP_CLOSED_DAYS = 14
+AGGREGATORS = {"adzuna", "jooble"}
+AGGREGATOR_GRACE_DAYS = 3
 
 PUNE_RE = re.compile(
     r"\b(pune|poona|hinjewadi|hinjawadi|kharadi|magarpatta|baner|hadapsar|viman ?nagar|"
@@ -206,6 +208,64 @@ def f_adzuna(last_run=None):
     return out
 
 
+JOOBLE_EXTRA = ["digital marketing", "social media", "brand", "SEO", "content writer",
+                "public relations", "marketing executive", "performance marketing", "event"]
+
+
+def f_jooble(state):
+    """Aggregator with a free key: 100 requests a day per key, reset at midnight UTC.
+
+    `state` is {"day": "YYYY-MM-DD", "calls": n}, carried in jobs.json so the daily limit holds
+    across runs. Each run spends at most JOOBLE_MAX_CALLS (default 7): the "marketing" search
+    first, then one page each of a few related searches that rotate from run to run.
+    """
+    key = os.environ.get("JOOBLE_API_KEY")
+    if not key:
+        return None
+    day = datetime.now(timezone.utc).date().isoformat()
+    if state.get("day") != day:
+        state.clear()
+        state.update(day=day, calls=0)
+    daily = int(os.environ.get("JOOBLE_DAILY") or 90)
+    budget = min(int(os.environ.get("JOOBLE_MAX_CALLS") or 7), daily - state["calls"])
+    if budget <= 0:
+        return ADZUNA_SKIPPED
+    host = os.environ.get("JOOBLE_HOST") or "in.jooble.org"
+    turn = datetime.now(timezone.utc).hour // 2
+    extras = JOOBLE_EXTRA[turn % len(JOOBLE_EXTRA):] + JOOBLE_EXTRA[:turn % len(JOOBLE_EXTRA)]
+    plan = [("marketing", p) for p in (1, 2, 3)] + [(q, 1) for q in extras]
+    out, seen, done = [], set(), set()
+    for kw, page in plan:
+        if budget <= 0:
+            break
+        if kw in done:
+            continue  # the previous page of this search was the last one
+        budget -= 1
+        state["calls"] += 1
+        body = {"keywords": kw, "location": "Pune", "radius": "40", "page": str(page), "ResultOnPage": 50}
+        try:
+            d = http_json(f"https://{host}/api/{key}", body, retries=0)
+        except urllib.error.HTTPError as e:
+            if e.code == 429:  # daily limit used up elsewhere: stop for today
+                state["calls"] = daily
+                break
+            raise
+        res = d.get("jobs", [])
+        if len(res) < 20:  # fewer than any sensible page size: no more pages
+            done.add(kw)
+        for j in res:
+            if j.get("id") in seen:
+                continue
+            seen.add(j.get("id"))
+            loc = (j.get("location") or "Pune").strip()
+            if not PUNE_RE.search(loc):
+                loc += " (Pune area)"
+            out.append(job((j.get("company") or "").strip() or "Unknown", "jooble", j.get("id"),
+                           j.get("title"), loc, j.get("link"), j.get("updated"), j.get("type")))
+        time.sleep(1)
+    return out
+
+
 FETCHERS = {"greenhouse": f_greenhouse, "lever": f_lever, "ashby": f_ashby,
             "smartrecruiters": f_smartrecruiters, "workday": f_workday}
 
@@ -272,8 +332,30 @@ def crawl():
         status.append({"key": "adzuna", "name": "Adzuna (aggregator)", "ats": "adzuna", "ok": False,
                        "error": str(e)[:120], "total": 0, "pune": 0})
 
+    jooble_state = dict(prev_state.get("jooble") or {})
+    try:
+        jb = f_jooble(jooble_state)
+        if jb == ADZUNA_SKIPPED:
+            status.append({"key": "jooble", "name": "Jooble (aggregator)", "ats": "jooble", "ok": False,
+                           "error": "daily limit reached; resumes after midnight UTC", "total": 0, "pune": 0})
+        elif jb is not None:
+            # the same opening is often on Adzuna and Jooble: keep the first copy
+            others = found + [j for j in prev_state.get("jobs", []) if j["source"] != "jooble" and not j.get("closed")]
+            have = {(j["company"].lower(), j["title"].lower()) for j in others}
+            fresh = [j for j in jb if (j["company"].lower(), j["title"].lower()) not in have]
+            for j in fresh:
+                j["where"] = "pune"
+            found += fresh
+            status.append({"key": "jooble", "name": "Jooble (aggregator)", "ats": "jooble", "ok": True,
+                           "error": None, "total": len(jb), "pune": len(fresh)})
+    except Exception as e:
+        status.append({"key": "jooble", "name": "Jooble (aggregator)", "ats": "jooble", "ok": False,
+                       "error": f"{type(e).__name__}: {str(e)[:120]}", "total": 0, "pune": 0})
+
     # merge with previous state: keep first_seen, mark vanished jobs closed
     prev = {j["id"]: j for j in prev_state.get("jobs", [])}
+    # aggregators only return a slice of results per run, so a job missing from one run isn't closed
+    grace = (datetime.now(timezone.utc) - timedelta(days=AGGREGATOR_GRACE_DAYS)).isoformat()
     failed = {s["key"] for s in status if not s["ok"]}
     ts = now()
     merged, new = {}, []
@@ -290,9 +372,12 @@ def crawl():
     for jid, old in prev.items():
         if jid in merged:
             continue
-        key = "adzuna" if old["source"] == "adzuna" else src_key.get(old["company"], "")
+        key = old["source"] if old["source"] in AGGREGATORS else src_key.get(old["company"], "")
         if key in failed and not old.get("closed"):
             merged[jid] = old  # source was down this round; don't assume the job closed
+            continue
+        if key in AGGREGATORS and not old.get("closed") and old.get("last_seen", "") >= grace:
+            merged[jid] = old
             continue
         old["closed"] = old.get("closed") or ts
         if old["closed"] >= cutoff:
@@ -301,6 +386,7 @@ def crawl():
     jobs = sorted(merged.values(), key=lambda j: j["first_seen"], reverse=True)
     jobs.sort(key=lambda j: j["closed"] is not None)  # stable: open jobs first, newest first
     out = {"updated": ts, "started": started, "sources": status, "adzuna_last": adzuna_last,
+           "jooble": jooble_state,
            "counts": {"open": sum(1 for j in jobs if not j["closed"]), "new": len(new)}, "jobs": jobs}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     tmp = OUT + ".tmp"
