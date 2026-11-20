@@ -157,15 +157,31 @@ def f_workday(c):
     return out
 
 
-def f_adzuna():
-    """Aggregator: covers thousands of Pune employers incl. small companies. Needs a free key."""
+ADZUNA_SKIPPED = "skipped"
+
+
+def f_adzuna(last_run=None):
+    """Aggregator: covers thousands of Pune employers incl. small companies. Needs a key.
+
+    Adzuna counts every request, so this is rationed: at most ADZUNA_MAX_CALLS requests per run
+    (default 4) and at most one run every ADZUNA_EVERY_HOURS hours (default 24).
+    """
     app_id, key = os.environ.get("ADZUNA_APP_ID"), os.environ.get("ADZUNA_APP_KEY")
     if not (app_id and key):
         return None
+    budget = int(os.environ.get("ADZUNA_MAX_CALLS") or 4)
+    every = float(os.environ.get("ADZUNA_EVERY_HOURS") or 24)
+    if budget <= 0:
+        return None
+    if last_run and datetime.now(timezone.utc) - datetime.fromisoformat(last_run) < timedelta(hours=every):
+        return ADZUNA_SKIPPED
     out, seen = [], set()
-    # a marketing-focused pass first, then general Pune jobs
-    for what, pages in (("marketing", 20), (None, int(os.environ.get("ADZUNA_PAGES", "10")))):
-        for page in range(1, pages + 1):
+    # marketing jobs first; general Pune jobs only if calls are left over
+    for what in ("marketing", None):
+        for page in range(1, 100):
+            if budget <= 0:
+                break
+            budget -= 1
             params = {"app_id": app_id, "app_key": key, "where": "Pune",
                       "results_per_page": 50, "max_days_old": 30, "sort_by": "date"}
             if what:
@@ -237,9 +253,16 @@ def crawl():
         status.append({"key": f"{c['ats']}:{c['slug']}", "name": c["name"], "ats": c["ats"],
                        "ok": err is None, "error": err, "total": len(jobs), "pune": len(kept)})
 
+    prev_state = load_state()
+    adzuna_last = prev_state.get("adzuna_last")
     try:
-        az = f_adzuna()
-        if az is not None:
+        az = f_adzuna(adzuna_last)
+        if az == ADZUNA_SKIPPED:  # not due yet: keep the Adzuna jobs we already have
+            status.append({"key": "adzuna", "name": "Adzuna (aggregator)", "ats": "adzuna", "ok": False,
+                           "error": "not due yet (rationed to save API calls)", "total": 0, "pune": 0})
+            az = None
+        elif az is not None:
+            adzuna_last = now()
             for j in az:
                 j["where"] = "pune"
             found += az
@@ -250,7 +273,7 @@ def crawl():
                        "error": str(e)[:120], "total": 0, "pune": 0})
 
     # merge with previous state: keep first_seen, mark vanished jobs closed
-    prev = {j["id"]: j for j in load_state().get("jobs", [])}
+    prev = {j["id"]: j for j in prev_state.get("jobs", [])}
     failed = {s["key"] for s in status if not s["ok"]}
     ts = now()
     merged, new = {}, []
@@ -277,7 +300,7 @@ def crawl():
 
     jobs = sorted(merged.values(), key=lambda j: j["first_seen"], reverse=True)
     jobs.sort(key=lambda j: j["closed"] is not None)  # stable: open jobs first, newest first
-    out = {"updated": ts, "started": started, "sources": status,
+    out = {"updated": ts, "started": started, "sources": status, "adzuna_last": adzuna_last,
            "counts": {"open": sum(1 for j in jobs if not j["closed"]), "new": len(new)}, "jobs": jobs}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     tmp = OUT + ".tmp"
