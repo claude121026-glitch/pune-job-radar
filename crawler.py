@@ -82,6 +82,18 @@ def classify(location):
     return None
 
 
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+
+
+def posting_email(text):
+    """An application address printed in the job text ("send your CV to hr@..."), if any."""
+    for e in EMAIL_RE.findall(text or ""):
+        e = e.strip(".").lower()
+        if not re.search(r"noreply|no-reply|example\.|jooble|adzuna|\.(png|jpg|gif)$", e):
+            return e
+    return ""
+
+
 def unmangle(s):
     """Fix text that was UTF-8 but got decoded as Windows-1252 upstream (e.g. 'â€“' for '–')."""
     if s and re.search(r"â€|Ã.", s):
@@ -210,6 +222,7 @@ def f_adzuna(last_run=None):
                          j.get("redirect_url"), j.get("created"), (j.get("category") or {}).get("label"))
                 if "marketing" in jb["dept"].lower():  # Adzuna category "PR, Advertising & Marketing Jobs"
                     jb["marketing"] = True
+                jb["email"] = posting_email(j.get("description"))
                 out.append(jb)
             if len(res) < 50:
                 break
@@ -271,8 +284,10 @@ def f_jooble(state):
             loc = (j.get("location") or "Pune").strip()
             if not PUNE_RE.search(loc):
                 loc += " (Pune area)"
-            out.append(job((j.get("company") or "").strip() or "Unknown", "jooble", j.get("id"),
-                           j.get("title"), loc, j.get("link"), j.get("updated"), j.get("type")))
+            jb = job((j.get("company") or "").strip() or "Unknown", "jooble", j.get("id"),
+                     j.get("title"), loc, j.get("link"), j.get("updated"), j.get("type"))
+            jb["email"] = posting_email(j.get("snippet"))
+            out.append(jb)
         time.sleep(1)
     return out
 

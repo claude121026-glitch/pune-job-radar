@@ -39,25 +39,33 @@ python crawler.py serve         # open the dashboard at http://localhost:8765
 If a company's website wasn't found, set it by hand and re-enrich:
 `python directory.py site <CIN> https://example.com`
 
-## Emailing companies (CV + cover letter)
+## Applying to jobs and emailing companies in bulk (CV + cover letter)
 
 On the website:
-1. **Companies** tab: tap ☆ to save companies (tip: filter by *Has email*). Tap a name for its details:
-   what they do, contacts, map, Google and LinkedIn links, notes.
-2. **✉ Email** tab: fill in your details once, edit the template (placeholders like `{company}` and
-   `{about}` are filled in for each company), add a personal line per company if you like.
-3. Either click **Open in Gmail** for each company (then attach your CV with 📎 and send), or
-   click **Download selected for the Gmail drafts tool** and on the laptop run:
+1. **Jobs** tab: press **Save** on the jobs you want, then **✉ Apply to N saved jobs**.
+   **Companies** tab: tap ☆ to save companies you'd like to approach even without an opening.
+2. **✉ Email** tab: fill in your details once. There are two templates: one for saved jobs (it names
+   the job, `{job_title}`) and one for companies (`{company}`, `{about}`, …). Add a personal line per row if you like.
+3. Each saved job gets an email address from the job posting when it lists one, otherwise from the
+   company's published address in the directory. Pick or type one where it's missing, or use **Job page**
+   to apply on the website.
+4. Click **Open in Gmail** for single emails (attach your CV with 📎), or **Download selected…** for all of
+   them at once, and on the laptop run:
    ```
    python mailer.py emails-to-draft.csv --cv "My_CV.pdf" --cover-template cover_letter.txt --dry-run
-   python mailer.py emails-to-draft.csv --cv "My_CV.pdf" --cover-template cover_letter.txt
+   python mailer.py emails-to-draft.csv --cv "My_CV.pdf" --cover-template cover_letter.txt --send
    ```
-   The first command makes sample emails in `outbox/` to check. The second puts every email, with the
-   CV and a personalised cover-letter PDF attached, into **Gmail → Drafts**. Nothing is sent
-   automatically: open each draft, check it, press Send. Gmail needs an App Password
-   (Google Account → Security → 2-Step Verification → App passwords). Edit `cover_letter.txt` first.
+   The first makes sample emails in `outbox/` to open and check. The second shows the list, asks you to
+   type `SEND`, then sends every email from your Gmail with the CV and a personalised cover-letter PDF
+   attached (one every 45 seconds, at most 40 per run, so Gmail doesn't flag the account). Sent emails
+   appear in Gmail → Sent and in `outbox/sent-log.csv`. Leave out `--send` to put them in
+   **Gmail → Drafts** instead and send them yourself.
+5. Back on the website, press **Mark selected as applied**.
 
-Saved companies, notes and your details stay in your browser only. CVs, cover letters and email
+Gmail needs an App Password (Google Account → Security → 2-Step Verification → App passwords).
+Edit `cover_letter.txt` first: `{company}`, `{position}` (e.g. "the Brand Manager position") and `{date}` are filled in.
+
+Saved jobs and companies, notes and your details stay in your browser only. CVs, cover letters and email
 lists are never uploaded to GitHub (they're in `.gitignore`).
 
 ## How to read the data

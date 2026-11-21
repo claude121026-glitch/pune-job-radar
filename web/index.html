@@ -24,6 +24,7 @@ textarea{width:100%;resize:vertical}
 input[type=search]{flex:1 1 240px;min-width:0}
 label.chk{display:flex;align-items:center;gap:6px;padding:0 4px;color:var(--mute)}
 button{cursor:pointer}
+button:disabled{opacity:.45;cursor:not-allowed}
 button.on{background:var(--accbg);border-color:var(--acc);color:var(--acc)}
 button.primary{background:var(--acc);border-color:var(--acc);color:#fff}
 main{padding:12px 16px 40px}
@@ -48,7 +49,8 @@ button.t{background:none;border:0;padding:0;text-align:left;cursor:pointer}
 .tag.warn{background:var(--warnbg);color:var(--warn)}
 .tag.size{background:transparent;border:1px solid var(--line);color:var(--mute)}
 .acts{display:flex;gap:6px;align-items:start;flex-wrap:wrap;justify-content:flex-end}
-.acts button,.acts select{padding:4px 9px;font-size:12px}
+.acts button,.acts select,.acts a.btn{padding:4px 9px;font-size:12px}
+a.btn{border:1px solid var(--line);border-radius:8px;background:var(--card);color:inherit;text-decoration:none}
 .star{color:var(--mute);font-size:16px;line-height:1;padding:3px 8px!important}
 .star.on{color:var(--star);border-color:var(--star);background:transparent}
 .note{grid-column:1/-1}
@@ -150,7 +152,29 @@ td,th{text-align:left;padding:4px 8px;border-bottom:1px solid var(--line)}
     </div>
 
     <div class="panel">
-      <h2>3. Companies to email</h2>
+      <h2>3. Saved jobs to apply for</h2>
+      <details id="jtplBox"><summary>Edit the job application email (it names the job you're applying for)</summary>
+        <input id="j_subject" style="width:100%;margin:8px 0" placeholder="Subject">
+        <textarea id="j_body" rows="12"></textarea>
+        <p class="hint">Click to insert: <code data-ph="{job_title}">{job_title}</code> <code data-ph="{company}">{company}</code>
+          <code data-ph="{personal}">{personal}</code> <code data-ph="{my_name}">{my_name}</code> <code data-ph="{my_phone}">{my_phone}</code>
+          <code data-ph="{my_email}">{my_email}</code> <code data-ph="{my_linkedin}">{my_linkedin}</code>
+          · <a href="#" id="j_reset">reset to default</a></p>
+      </details>
+      <div class="stats" id="jstats"></div>
+      <div id="jlist"></div>
+      <div class="bar">
+        <button class="primary" id="j_export">⬇ Download selected jobs for the bulk email tool</button>
+        <button id="j_appliedall">Mark selected as applied</button>
+      </div>
+      <p class="hint"><b>Where the email address comes from:</b> the job posting itself when it lists one, otherwise the company's
+        published address from the directory. If neither is found, type one in or use <b>Job page</b> to apply on the website.
+        <b>Bulk sending:</b> download the list and run <code>python mailer.py emails-to-draft.csv --cv "My_CV.pdf" --send</code>
+        on the laptop. It attaches your CV and cover letter to every email and sends them all, one every ~45 seconds (see README).</p>
+    </div>
+
+    <div class="panel">
+      <h2>4. Companies to email</h2>
       <div class="stats" id="mstats"></div>
       <div id="mlist"></div>
       <div class="bar">
@@ -200,6 +224,12 @@ let marks = store.get("marks", {});        // job id -> saved | applied | hidden
 let cmarks = store.get("cmarks", {});      // cin -> {s: status, n: note, star, sel, to, personal, sent}
 const saveC = () => store.set("cmarks", cmarks);
 const cm = cin => (cmarks[cin] = cmarks[cin] || {});
+let jmarks = store.get("jmarks", {});      // job id -> {title, company, url, email, source, sel, to, personal, sent}
+const saveJ = () => store.set("jmarks", jmarks);
+const jm = id => (jmarks[id] = jmarks[id] || {});
+let byName = {};                           // normalised company name -> directory company (for job emails)
+const norm = s => nice(s).toLowerCase().replace(/\b(india|technologies|technology|solutions|services|pvt|co)\b/g, "").replace(/[^a-z0-9]/g, "");
+const savedJobIds = () => Object.keys(marks).filter(id => marks[id] === "saved" || (marks[id] === "applied" && jmarks[id]?.sent));
 const lastVisit = store.get("lastVisit", null);
 store.set("lastVisit", new Date().toISOString());
 
@@ -237,9 +267,9 @@ function updatedLine() {
     $("updated").textContent = cos.length ? `${cos.length.toLocaleString()} active companies registered in Pune · updated ${ago(cosUpdated)}`
       : "Loading company directory…";
   } else {
-    $("updated").textContent = "Write one template, personalise it for each saved company, then open each email in Gmail.";
+    $("updated").textContent = "Apply to your saved jobs and email your saved companies: one template each, sent all at once with your CV.";
   }
-  const n = Object.values(cmarks).filter(m => m.star).length;
+  const n = Object.values(cmarks).filter(m => m.star).length + Object.values(marks).filter(v => v === "saved").length;
   $("mailCount").textContent = n ? `(${n})` : "";
 }
 
@@ -253,7 +283,7 @@ async function loadJobs() {
   $("src").innerHTML = "<tr><th>Source</th><th>Board</th><th>All jobs</th><th>Pune</th><th>Status</th></tr>" +
     data.sources.map(s => `<tr><td>${esc(s.name)}</td><td>${esc(s.ats)}</td><td>${s.total}</td><td>${s.pune}</td>
       <td>${s.ok ? "ok" : '<span class="tag warn">' + esc(s.error) + "</span>"}</td></tr>`).join("");
-  updatedLine(); renderJobs();
+  updatedLine(); renderJobs(); if (!$("mailView").hidden) renderJobMail();
 }
 
 function renderJobs() {
@@ -274,10 +304,13 @@ function renderJobs() {
   });
   const open = data.jobs.filter(j => !j.closed), openM = open.filter(j => j.marketing);
   const fresh = lastVisit ? (mkt ? openM : open).filter(j => j.first_seen > lastVisit).length : 0;
+  const nSaved = Object.values(marks).filter(v => v === "saved").length;
   $("stats").innerHTML = `<span><b>${list.length}</b> shown</span><span><b>${openM.length}</b> open marketing jobs</span>` +
     `<span><b>${open.length}</b> open jobs total</span>` +
     (lastVisit ? `<span><b>${fresh}</b> new since last visit</span>` : "") +
-    `<span><b>${Object.values(marks).filter(v => v === "applied").length}</b> applied</span>`;
+    `<span><b>${Object.values(marks).filter(v => v === "applied").length}</b> applied</span>` +
+    (nSaved ? `<button class="primary" id="goApply">✉ Apply to ${nSaved} saved job${nSaved > 1 ? "s" : ""}</button>` : "");
+  if ($("goApply")) $("goApply").onclick = () => tab("mail");
   $("list").innerHTML = list.length ? list.slice(0, 500).map(j => {
     const m = marks[j.id], isNew = Date.now() - new Date(j.first_seen) < 86400000;
     return `<div class="card${j.closed ? " closed" : ""}${m === "applied" ? " applied" : ""}">
@@ -298,7 +331,13 @@ $("list").addEventListener("click", e => {
   if (!b) return;
   const {id, m} = b.dataset;
   marks[id] === m ? delete marks[id] : (marks[id] = m);
-  store.set("marks", marks); renderJobs();
+  const j = data.jobs.find(x => x.id === id);
+  if (marks[id] === "saved" && j) {   // keep a copy, so the job stays in the Email tab after it leaves the feed
+    Object.assign(jm(id), {title: j.title, company: j.company, url: j.url, email: j.email || "", source: j.source, location: j.location});
+    if (jmarks[id].sel === undefined) jmarks[id].sel = true;
+    saveJ();
+  }
+  store.set("marks", marks); renderJobs(); updatedLine();
 });
 
 // ---------- companies ----------
@@ -309,6 +348,10 @@ async function loadCos() {
     const idx = Object.fromEntries(d.fields.map((f, i) => [f, i]));
     cos = d.companies.map(r => Object.fromEntries(FIELDS.map(f => [f, idx[f] === undefined ? "" : r[idx[f]]])));
     for (const c of cos) { c.phones = c.phones || []; c.emails = c.emails || []; c.nice = nice(c.name); byCin[c.cin] = c; }
+    for (const c of cos) {   // prefer the company that has an email when two share a name
+      const k = norm(c.name);
+      if (k.length > 3 && (!byName[k] || (!byName[k].emails.length && c.emails.length))) byName[k] = c;
+    }
     cosUpdated = d.updated;
   } catch { cos = []; }
   const counts = {};
@@ -513,8 +556,10 @@ $("t_reset").onclick = e => { e.preventDefault(); $("t_subject").value = DEFAULT
 
 function fill(text, c, m) {
   const about = c.about ? c.about.replace(/\s*[|–-]\s*[^|–-]*$/, "").trim() : "";
+  const sector = (c.sector || "").toLowerCase();
   const vals = {
-    company: c.nice, industry: c.sector.toLowerCase(), about: about || `your work in ${c.sector.toLowerCase()}`,
+    company: c.nice, industry: sector || "marketing", about: about || (sector ? `your work in ${sector}` : "your work"),
+    job_title: m.title || profile.role || "marketing",
     personal: (m.personal || "").trim(), role: profile.role || "marketing", my_name: profile.name || "[your name]",
     my_phone: profile.phone || "", my_email: profile.email || "", my_linkedin: profile.linkedin || "",
   };
@@ -526,8 +571,144 @@ function emailFor(cin) {
   return {c, m, to: (m.to || c.emails[0] || "").trim(), subject: fill(tpl.subject, c, m), body: fill(tpl.body, c, m)};
 }
 
+// ---------- saved jobs: apply by email ----------
+const DEFAULT_JSUBJECT = "Application for {job_title} – {my_name}";
+const DEFAULT_JBODY = `Dear Hiring Team at {company},
+
+I'd like to apply for the {job_title} position at {company}. I'm {my_name}, a marketing professional based in Pune.
+
+{personal}
+
+[Two or three lines about your experience: campaigns you ran, tools you know (social media, SEO, Google Ads, content), and a result you're proud of.]
+
+I've attached my CV and cover letter, and I'm available to start soon. I'd welcome the chance to talk about how I can help your team.
+
+Thank you for your time.
+
+Best regards,
+{my_name}
+{my_phone}
+{my_email}
+{my_linkedin}`;
+let jtpl = store.get("jtemplate", {subject: DEFAULT_JSUBJECT, body: DEFAULT_JBODY});
+$("j_subject").value = jtpl.subject; $("j_body").value = jtpl.body;
+for (const id of ["j_subject", "j_body"]) {
+  $(id).addEventListener("input", () => { jtpl = {subject: $("j_subject").value, body: $("j_body").value}; store.set("jtemplate", jtpl); renderJobMail(); });
+  $(id).addEventListener("focus", () => lastField = $(id));
+}
+$("j_reset").onclick = e => { e.preventDefault(); $("j_subject").value = DEFAULT_JSUBJECT; $("j_body").value = DEFAULT_JBODY; $("j_body").dispatchEvent(new Event("input")); };
+
+function jobInfo(id) {   // the job, with the latest feed data when it is still listed
+  const live = data.jobs.find(j => j.id === id) || {};
+  const m = jmarks[id] || {};
+  const j = {title: live.title || m.title || "", company: live.company || m.company || "", url: live.url || m.url || "",
+             email: live.email || m.email || "", source: live.source || m.source || "", location: live.location || m.location || "",
+             closed: live.closed};
+  const company = j.company && j.company !== "Unknown" ? j.company : "";
+  const dir = company ? byName[norm(company)] : null;
+  const choices = [...new Set([j.email, ...(dir ? dir.emails : [])].filter(Boolean))];
+  return {j, m, dir, choices, company};
+}
+function jobEmail(id) {
+  const {j, m, dir, choices, company} = jobInfo(id);
+  const c = {nice: company ? nice(company) : "your company", sector: dir?.sector || "", about: dir?.about || ""};
+  const mm = Object.assign({}, m, {title: j.title});
+  return {j, m, dir, choices, to: (m.to || choices[0] || "").trim(), subject: fill(jtpl.subject, c, mm), body: fill(jtpl.body, c, mm)};
+}
+function renderJobMail() {
+  const ids = savedJobIds().filter(id => jmarks[id]?.title || data.jobs.some(j => j.id === id));
+  const sel = ids.filter(id => jmarks[id]?.sel !== false && !jmarks[id]?.sent);
+  const ready = sel.filter(id => jobEmail(id).to);
+  $("jstats").innerHTML = `<span><b>${ids.length}</b> saved jobs</span><span><b>${sel.length}</b> selected</span>` +
+    `<span><b>${ready.length}</b> selected with an email address</span><span><b>${ids.filter(id => jmarks[id]?.sent).length}</b> applied by email</span>`;
+  if (!ids.length) {
+    $("jlist").innerHTML = `<div class="empty">No saved jobs yet.<br><br>In the <b>Jobs</b> tab, press <b>Save</b> on the jobs you want.
+      They'll appear here, ready to apply to all at once.</div>`;
+    return;
+  }
+  $("jlist").innerHTML = ids.map(id => {
+    const {j, m, dir, choices, to, subject, body} = jobEmail(id);
+    const custom = m.to && !choices.includes(m.to);
+    return `<div class="mrow" data-jrow="${esc(id)}">
+      <input type="checkbox" data-jsel="${esc(id)}" ${m.sel !== false && !m.sent ? "checked" : ""} title="Include">
+      <div><a class="t" href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
+        ${m.sent ? `<span class="tag new">applied ${esc(m.sent)}</span>` : ""}${j.closed ? '<span class="tag warn">closed</span>' : ""}
+        <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(j.location)}</span><span class="tag size">${esc(j.source)}</span></div>
+        <div class="about">${j.email ? "Email address from the job posting." : dir ? `Matched to <button class="t" data-open="${esc(dir.cin)}" style="font-size:inherit">${esc(dir.nice)}</button> in the directory${dir.emails.length ? "" : " (no email found for them)"}.` : "No email address found: type one in, or apply on the job page."}</div>
+        <div class="fields">
+          ${choices.length ? `<select data-jto="${esc(id)}">${choices.map(e => `<option${e === to && !custom ? " selected" : ""}>${esc(e)}</option>`).join("")}<option value="__other"${custom ? " selected" : ""}>Other address…</option></select>` : ""}
+          ${!choices.length || custom ? `<input data-jtoinput="${esc(id)}" type="email" placeholder="Email address (check the job page)" value="${esc((m.to || "").trim())}">` : ""}
+          <input data-jpersonal="${esc(id)}" placeholder="Personal line for {personal} (optional)" value="${esc(m.personal || "")}">
+        </div>
+        <details data-jprev="${esc(id)}"><summary>Preview</summary><div class="preview"><b>To:</b> ${esc(to || "—")}\n<b>Subject:</b> ${esc(subject)}\n\n${esc(body)}</div></details>
+      </div>
+      <div class="acts">
+        <button class="primary" data-jgmail="${esc(id)}" ${to ? "" : "disabled"}>Open in Gmail</button>
+        <a class="btn" href="${esc(j.url)}" target="_blank" rel="noopener">Job page</a>
+        <button data-japplied="${esc(id)}">${m.sent ? "Unmark applied" : "Mark applied"}</button>
+        <button data-junsave="${esc(id)}" title="Remove from list">✕</button>
+      </div></div>`;
+  }).join("");
+}
+function markApplied(id, on = true) {
+  const m = jm(id);
+  if (on) { m.sent = today(); marks[id] = "applied"; } else { delete m.sent; marks[id] = "saved"; }
+  saveJ(); store.set("marks", marks);
+}
+const selectedJobs = () => savedJobIds().filter(id => jmarks[id]?.sel !== false && !jmarks[id]?.sent);
+$("jlist").addEventListener("click", e => {
+  const t = e.target.closest("button");
+  if (!t) return;
+  const d = t.dataset;
+  if (d.open) return openDrawer(d.open);
+  const id = d.jgmail || d.japplied || d.junsave;
+  if (!id) return;
+  if (d.jgmail) {
+    const {to, subject, body} = jobEmail(id);
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank", "noopener");
+    if (confirm("Gmail opened in a new tab. Remember to attach your CV.\n\nMark this job as applied?")) markApplied(id);
+  } else if (d.japplied) {
+    markApplied(id, !jmarks[id]?.sent);
+  } else if (d.junsave) {
+    delete marks[id]; store.set("marks", marks);
+  }
+  renderJobMail(); renderJobs(); updatedLine();
+});
+$("jlist").addEventListener("change", e => {
+  const d = e.target.dataset;
+  if (d.jsel) { jm(d.jsel).sel = e.target.checked; saveJ(); renderJobMail(); }
+  if (d.jto) { jm(d.jto).to = e.target.value === "__other" ? " " : e.target.value; saveJ(); renderJobMail(); }
+});
+$("jlist").addEventListener("input", e => {
+  const d = e.target.dataset, id = d.jpersonal || d.jtoinput;
+  if (!id) return;
+  if (d.jpersonal) jm(id).personal = e.target.value; else jm(id).to = e.target.value;
+  saveJ();
+  const {to, subject, body} = jobEmail(id);
+  const box = document.querySelector(`[data-jprev="${CSS.escape(id)}"] .preview`);
+  if (box) box.innerHTML = `<b>To:</b> ${esc(to || "—")}\n<b>Subject:</b> ${esc(subject)}\n\n${esc(body)}`;
+  document.querySelector(`[data-jgmail="${CSS.escape(id)}"]`).disabled = !to;
+});
+$("j_export").onclick = () => {
+  const rows = selectedJobs().map(id => Object.assign(jobEmail(id), {id})).filter(x => x.to);
+  if (!rows.length) return alert("No selected jobs have an email address yet. Pick or type one for each job first.");
+  const missing = selectedJobs().length - rows.length;
+  const cell = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
+  const lines = [["to", "subject", "body", "company", "cin", "job"]].concat(rows.map(r =>
+    [r.to, r.subject, r.body, r.j.company && r.j.company !== "Unknown" ? nice(r.j.company) : "", r.id, r.j.title]));
+  saveFile("emails-to-draft.csv", lines.map(r => r.map(cell).join(",")).join("\n"));
+  alert(`Downloaded ${rows.length} applications.` + (missing ? `\n${missing} selected job(s) had no email address and were left out.` : "") +
+    "\n\nAfter the bulk email tool has sent them, press “Mark selected as applied”.");
+};
+$("j_appliedall").onclick = () => {
+  const sel = selectedJobs().filter(id => jobEmail(id).to);   // the ones that went into the download
+  if (!sel.length) return alert("No selected jobs with an email address to mark.");
+  if (confirm(`Mark ${sel.length} selected job(s) with an email address as applied today?`)) { sel.forEach(id => markApplied(id)); renderJobMail(); renderJobs(); updatedLine(); }
+};
+
 function renderMail() {
   updatedLine();
+  renderJobMail();
   if (!cos.length) { $("mlist").innerHTML = '<div class="empty">Loading companies…</div>'; return; }
   const saved = Object.keys(cmarks).filter(cin => cmarks[cin].star && byCin[cin]);
   const sel = saved.filter(cin => cmarks[cin].sel !== false);

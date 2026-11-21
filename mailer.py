@@ -1,14 +1,16 @@
-"""Put personalised job-application emails into your Gmail Drafts, with your CV attached.
+"""Send personalised job applications in bulk from Gmail, with your CV and cover letter attached.
 
-Nothing is ever sent by this script. Every email lands in Gmail -> Drafts, where you
-read it, change anything you like, and press Send yourself.
+By default every email goes into Gmail -> Drafts so you can check them first. Add --send to
+send them all in one go (you confirm once, then it sends one email every ~45 seconds).
 
-1. In the dashboard's Email tab, save companies, write your template, then click
-   "Download selected for the Gmail drafts tool" -> emails-to-draft.csv
+1. In the dashboard's Email tab, save jobs (or companies), write your template, then click
+   the Download button -> emails-to-draft.csv
 2. Try it without touching Gmail (writes .eml files you can open and check):
      python mailer.py emails-to-draft.csv --cv "My_CV.pdf" --cover-template cover_letter.txt --dry-run
-3. Create the drafts:
+3. Either create drafts to check and send yourself:
      python mailer.py emails-to-draft.csv --cv "My_CV.pdf" --cover-template cover_letter.txt
+   or send them all now:
+     python mailer.py emails-to-draft.csv --cv "My_CV.pdf" --cover-template cover_letter.txt --send
 
 Gmail needs an *App Password* for this (not your normal password):
   Google Account -> Security -> turn on 2-Step Verification -> search "App passwords" ->
@@ -17,14 +19,19 @@ Gmail needs an *App Password* for this (not your normal password):
 Options
   --cv FILE               attach this file to every email (PDF recommended)
   --cover FILE            attach the same cover letter file to every email
-  --cover-template FILE   a .txt letter with {company} and {date}; a personalised PDF is made per company
-  --limit N               at most N drafts per run (default 40)
+  --cover-template FILE   a .txt letter with {company}, {position} and {date}; a personalised PDF per email
+  --limit N               at most N emails per run (default 40; Gmail flags accounts that send too many at once)
+  --send                  send the emails instead of saving drafts (asks you to confirm first)
+  --delay SECONDS         wait between sent emails (default 45)
   --dry-run               write outbox/*.eml instead of logging in to Gmail
+
+Sent emails also appear in Gmail -> Sent, and are listed in outbox/sent-log.csv.
 """
 import argparse
 import csv
 import getpass
 import imaplib
+import smtplib
 import mimetypes
 import os
 import re
@@ -107,7 +114,8 @@ def build(row, sender, args, workdir):
         attach(msg, args.cover)
     if args.cover_template:
         with open(args.cover_template, encoding="utf-8") as f:
-            letter = f.read().replace("{company}", row.get("company", "")).replace("{date}", date.today().strftime("%d %B %Y"))
+            job = (row.get("job") or "").strip()
+            letter = f.read().replace("{company}", row.get("company", "") or "your company")                 .replace("{position}", f"the {job} position" if job else "a marketing role")                 .replace("{date}", date.today().strftime("%d %B %Y"))
         pdf = os.path.join(workdir, f"Cover_Letter_{safe(row.get('company', ''))}.pdf")
         text_to_pdf(letter, pdf)
         attach(msg, pdf, "Cover_Letter.pdf")
@@ -130,6 +138,8 @@ def main():
     ap.add_argument("--cover")
     ap.add_argument("--cover-template")
     ap.add_argument("--limit", type=int, default=40)
+    ap.add_argument("--send", action="store_true")
+    ap.add_argument("--delay", type=float, default=45)
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -159,9 +169,11 @@ def main():
         print(f"Wrote {len(rows)} sample emails to {outdir}. Open one to check it, then run again without --dry-run.")
         return
 
+    if args.send:
+        return send_all(rows, args, outdir)
+
     print("Log in to Gmail to create drafts (nothing will be sent).")
-    user = input("Gmail address: ").strip()
-    pw = getpass.getpass("Gmail App Password (16 letters, input hidden): ").replace(" ", "")
+    user, pw = login_details()
     imap = imaplib.IMAP4_SSL("imap.gmail.com")
     try:
         imap.login(user, pw)
@@ -177,6 +189,65 @@ def main():
         time.sleep(1)
     imap.logout()
     print(f"\n{done} drafts are in Gmail -> Drafts. Open each one, check it, and press Send.")
+
+
+def login_details():
+    user = input("Gmail address: ").strip()
+    pw = getpass.getpass("Gmail App Password (16 letters, input hidden): ").replace(" ", "")
+    return user, pw
+
+
+def send_all(rows, args, outdir):
+    print(f"\nAbout to SEND {len(rows)} emails from your Gmail, one every {args.delay:.0f} seconds:")
+    for r in rows[:10]:
+        print(f"  - {r.get('job') or r.get('company') or ''} <{r['to'].strip()}>")
+    if len(rows) > 10:
+        print(f"  ... and {len(rows) - 10} more")
+    if input(f"\nType SEND to send all {len(rows)} (anything else cancels): ").strip() != "SEND":
+        sys.exit("Cancelled. Nothing was sent.")
+    user, pw = login_details()
+
+    def connect():
+        s = smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=60)
+        s.login(user, pw)
+        return s
+    try:
+        smtp = connect()
+    except smtplib.SMTPAuthenticationError:
+        sys.exit("Gmail refused the login. Use an App Password (see the top of this file), not your normal password.")
+    log_path = os.path.join(outdir, "sent-log.csv")
+    new_log = not os.path.exists(log_path)
+    sent = 0
+    with open(log_path, "a", encoding="utf-8-sig", newline="") as lf:
+        log = csv.writer(lf)
+        if new_log:
+            log.writerow(["sent_at", "to", "subject", "company", "job", "id"])
+        for i, r in enumerate(rows, 1):
+            msg = build(r, user, args, outdir)
+            try:
+                try:
+                    smtp.send_message(msg)
+                except smtplib.SMTPServerDisconnected:
+                    smtp = connect()
+                    smtp.send_message(msg)
+            except smtplib.SMTPException as e:
+                print(f"  [{i}/{len(rows)}] FAILED: <{r['to']}>: {e}")
+                if "limit" in str(e).lower() or "550 5.4.5" in str(e):
+                    print("Gmail's daily sending limit was reached. Run the rest tomorrow.")
+                    break
+                continue
+            sent += 1
+            log.writerow([time.strftime("%Y-%m-%d %H:%M"), r["to"].strip(), r["subject"], r.get("company", ""), r.get("job", ""), r.get("cin", "")])
+            lf.flush()
+            print(f"  [{i}/{len(rows)}] sent: {r.get('job') or r.get('company') or ''} <{r['to'].strip()}>")
+            if i < len(rows):
+                time.sleep(args.delay)
+    try:
+        smtp.quit()
+    except smtplib.SMTPException:
+        pass
+    print(f"\n{sent} of {len(rows)} emails sent. They are in Gmail -> Sent; the list is in {log_path}.")
+    print("Back on the website, press \"Mark selected as applied\".")
 
 
 if __name__ == "__main__":
