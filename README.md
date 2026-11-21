@@ -41,6 +41,16 @@ If a company's website wasn't found, set it by hand and re-enrich:
 
 ## Applying to jobs and emailing companies in bulk (CV + cover letter)
 
+**One click, on the website:** Email tab → section 5. Choose the CV once (kept on that device only),
+click **Connect Gmail**, then **Send N emails now**. The browser sends the ticked jobs and companies
+straight from her Gmail through the Gmail API (permission: send only), with the CV and a personalised
+cover-letter PDF attached, one every 30 s, at most 40 per batch and 100 a day. Nothing goes through
+any server of ours. This needs a Google OAuth Client ID in `web/config.json` (`googleClientId`): create
+it in Google Cloud Console → Google Auth Platform (Gmail API enabled, External app in Testing with her
+address as a test user, a Web client with origin `https://claude121026-glitch.github.io`).
+
+**Or from the laptop:**
+
 On the website:
 1. **Jobs** tab: press **Save** on the jobs you want, then **✉ Apply to N saved jobs**.
    **Companies** tab: tap ☆ to save companies you'd like to approach even without an opening.

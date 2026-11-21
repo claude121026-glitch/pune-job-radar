@@ -81,6 +81,7 @@ td,th{text-align:left;padding:4px 8px;border-bottom:1px solid var(--line)}
 [hidden]{display:none!important}
 @media (max-width:640px){header{position:static}.bar select{flex:1 1 45%}.card{grid-template-columns:1fr}.acts{justify-content:flex-start}.grid2{grid-template-columns:1fr}.dl{margin-left:0}}
 </style>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
 <header><div class="wrap">
@@ -186,6 +187,35 @@ td,th{text-align:left;padding:4px 8px;border-bottom:1px solid var(--line)}
         download the list above and run <code>python mailer.py</code> on the laptop (see README): it puts every email in your Gmail
         <i>Drafts</i> folder so you can check each one and press Send.</p>
     </div>
+
+    <div class="panel" id="sendPanel">
+      <h2>5. Send everything in one click</h2>
+      <div class="grid2">
+        <label class="file">Your CV (PDF): <input type="file" id="s_cv" accept=".pdf,.doc,.docx"></label>
+        <div class="hint" id="s_cvname">No CV chosen yet. It's kept on this device only.</div>
+      </div>
+      <label class="chk" style="margin-top:8px"><input type="checkbox" id="s_cover" checked> Attach a cover letter made for each job and company (PDF)</label>
+      <details><summary>Edit the cover letter</summary>
+        <textarea id="s_coverText" rows="16" style="margin-top:8px"></textarea>
+        <p class="hint">Filled in for each email: <code>{company}</code> <code>{position}</code> (e.g. "the Brand Manager position") <code>{date}</code>
+          <code>{my_name}</code> <code>{my_phone}</code> <code>{my_email}</code> <code>{my_linkedin}</code>
+          · <a href="#" id="s_coverPdf">download a sample PDF</a> · <a href="#" id="s_coverReset">reset to default</a></p>
+      </details>
+      <div class="stats" id="s_stats" style="margin-top:10px"></div>
+      <div class="bar">
+        <button id="s_connect">Connect Gmail</button>
+        <span class="hint" id="s_who"></span>
+        <select id="s_delay"><option value="15">one email every 15 s</option><option value="30" selected>one email every 30 s</option><option value="60">one email every 60 s</option></select>
+      </div>
+      <div class="bar">
+        <button class="primary" id="s_send" disabled>Send</button>
+        <button id="s_stop" hidden>Stop</button>
+      </div>
+      <div id="s_progress"></div>
+      <p class="hint">Sends the <b>ticked</b> jobs (section 3) and companies (section 4) that have an email address, from your own Gmail,
+        with your CV and cover letter attached. Each one is marked applied/emailed as it goes, and appears in Gmail → Sent.
+        At most 40 per batch and 100 a day, spaced out so Gmail doesn't treat it as spam. <b>Keep this page open</b> until it finishes.</p>
+    </div>
   </section>
 </div></main>
 
@@ -230,6 +260,8 @@ const jm = id => (jmarks[id] = jmarks[id] || {});
 let byName = {}, jobContacts = {};   // jobContacts: job-feed company name -> {emails, phones, website}
 let byName_ = null;                           // normalised company name -> directory company (for job emails)
 const norm = s => nice(s).toLowerCase().replace(/\b(india|technologies|technology|solutions|services|pvt|co)\b/g, "").replace(/[^a-z0-9]/g, "");
+// job feeds spell names their own way: keep "PadCare Labs", tidy "SRV IT HUB PRIVATE LIMITED", drop "| tagline"
+const coName = raw => { const n = String(raw || "").split("|")[0].trim(); return !n || n === "Unknown" ? "" : /[a-z]/.test(n) ? n.replace(/\s+(Pvt\.?|Private)\s+(Ltd\.?|Limited)\.?$/i, "").trim() : nice(n); };
 const savedJobIds = () => Object.keys(marks).filter(id => marks[id] === "saved" || (marks[id] === "applied" && jmarks[id]?.sent));
 const lastVisit = store.get("lastVisit", null);
 store.set("lastVisit", new Date().toISOString());
@@ -615,7 +647,7 @@ function jobInfo(id) {   // the job, with the latest feed data when it is still 
 }
 function jobEmail(id) {
   const {j, m, dir, look, choices, company} = jobInfo(id);
-  const c = {nice: company ? nice(company) : "your company", sector: dir?.sector || "", about: dir?.about || ""};
+  const c = {nice: coName(company) || "your company", sector: dir?.sector || "", about: dir?.about || ""};
   const mm = Object.assign({}, m, {title: j.title});
   return {j, m, dir, look, choices, to: (m.to || choices[0] || "").trim(), subject: fill(jtpl.subject, c, mm), body: fill(jtpl.body, c, mm)};
 }
@@ -699,7 +731,7 @@ $("j_export").onclick = () => {
   const missing = selectedJobs().length - rows.length;
   const cell = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
   const lines = [["to", "subject", "body", "company", "cin", "job"]].concat(rows.map(r =>
-    [r.to, r.subject, r.body, r.j.company && r.j.company !== "Unknown" ? nice(r.j.company) : "", r.id, r.j.title]));
+    [r.to, r.subject, r.body, coName(r.j.company), r.id, r.j.title]));
   saveFile("emails-to-draft.csv", lines.map(r => r.map(cell).join(",")).join("\n"));
   alert(`Downloaded ${rows.length} applications.` + (missing ? `\n${missing} selected job(s) had no email address and were left out.` : "") +
     "\n\nAfter the bulk email tool has sent them, press “Mark selected as applied”.");
@@ -806,6 +838,271 @@ $("m_sentall").onclick = () => {
   const sel = Object.keys(cmarks).filter(cin => cmarks[cin].star && cmarks[cin].sel !== false);
   if (sel.length && confirm(`Mark ${sel.length} selected companies as emailed today?`)) { sel.forEach(cin => markSent(cin)); renderMail(); renderCos(); }
 };
+
+// ---------- one-click sending through the Gmail API (runs entirely in this browser) ----------
+const BATCH_MAX = 40, DAILY_MAX = 100;
+let cfg = {};
+let gToken = null, gTokenExp = 0, gWho = "", sending = false, stopFlag = false, cvFile = null;
+let sendLog = store.get("sendLog", []);   // [{at, kind, id, to, subject, ok, err}]
+
+// files (the CV) are kept in IndexedDB on this device; never uploaded anywhere except into the email
+function idb() {
+  return new Promise((res, rej) => {
+    const r = indexedDB.open("pune-job-radar", 1);
+    r.onupgradeneeded = () => r.result.createObjectStore("files");
+    r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+  });
+}
+async function fileGet(k) {
+  try { const d = await idb(); return await new Promise(res => { const q = d.transaction("files").objectStore("files").get(k); q.onsuccess = () => res(q.result || null); q.onerror = () => res(null); }); }
+  catch { return null; }
+}
+async function filePut(k, v) {
+  try { const d = await idb(); await new Promise((res, rej) => { const t = d.transaction("files", "readwrite"); t.objectStore("files").put(v, k); t.oncomplete = res; t.onerror = () => rej(t.error); }); return true; }
+  catch { return false; }
+}
+
+const DEFAULT_COVER = `{date}
+
+The Hiring Manager
+{company}
+Pune
+
+Dear Hiring Manager,
+
+I am writing to apply for {position} at {company}. [One line on why this company: their brand, clients, products or a campaign you admired.]
+
+[Paragraph about your experience: the kind of marketing you have done (social media, content, SEO, performance ads, events, brand), tools you use, and one or two results with numbers, e.g. "grew Instagram followers by 40% in six months".]
+
+[Paragraph about what you would bring to {company}: skills that match their work, and that you are based in Pune and available to start soon.]
+
+I have attached my CV and would welcome the chance to discuss how I can contribute to your marketing team.
+
+Thank you for your time and consideration.
+
+Yours sincerely,
+
+{my_name}
+{my_phone} | {my_email}
+{my_linkedin}`;
+let coverTpl = store.get("coverTpl", DEFAULT_COVER);
+$("s_coverText").value = coverTpl;
+$("s_coverText").addEventListener("input", e => { coverTpl = e.target.value; store.set("coverTpl", coverTpl); });
+$("s_coverReset").onclick = e => { e.preventDefault(); $("s_coverText").value = coverTpl = DEFAULT_COVER; store.set("coverTpl", coverTpl); };
+$("s_cover").checked = store.get("s_cover", true);
+$("s_cover").onchange = e => store.set("s_cover", e.target.checked);
+$("s_delay").value = String(store.get("s_delay", 30));
+$("s_delay").onchange = e => store.set("s_delay", +e.target.value);
+
+function coverText(company, position) {
+  const vals = {company: company || "your company", position, my_name: profile.name || "", my_phone: profile.phone || "",
+    my_email: profile.email || "", my_linkedin: profile.linkedin || "",
+    date: new Date().toLocaleDateString("en-GB", {day: "numeric", month: "long", year: "numeric"})};
+  return coverTpl.replace(/\{(\w+)\}/g, (all, k) => k in vals ? vals[k] : all).replace(/\|\s*$/gm, "").replace(/\n{3,}/g, "\n\n").trim();
+}
+
+// a tiny PDF writer (A4, Helvetica 11pt, WinAnsi), same as mailer.py
+function textToPdf(text) {
+  text = text.replace(/₹/g, "Rs. ").replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/[–—]/g, "-").replace(/•/g, "-");
+  const wrap = (para, w) => {
+    if (!para.trim()) return [""];
+    const out = []; let line = "";
+    for (const word of para.split(/\s+/)) {
+      if (line && (line + " " + word).length > w) { out.push(line); line = word; } else line = line ? line + " " + word : word;
+    }
+    if (line) out.push(line);
+    return out;
+  };
+  const lines = text.split(/\r?\n/).flatMap(p => wrap(p, 95));
+  const latin = s => [...s].map(ch => ch.charCodeAt(0) < 256 ? ch : "?").join("");
+  const pdfEsc = s => s.replace(/\\/g, "\\\\").replace(/\(/g, "\\(").replace(/\)/g, "\\)");
+  const pages = [];
+  for (let i = 0; i < Math.max(lines.length, 1); i += 52) {
+    const ops = ["BT", "/F1 11 Tf", "14 TL", "60 780 Td", ...lines.slice(i, i + 52).map(l => `(${pdfEsc(latin(l))}) Tj T*`), "ET"];
+    pages.push(ops.join("\n"));
+  }
+  const objs = ["<< /Type /Catalog /Pages 2 0 R >>", null, "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>"];
+  const kids = [];
+  for (const content of pages) {
+    objs.push(`<< /Length ${content.length} >>\nstream\n${content}\nendstream`);
+    objs.push(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents ${objs.length} 0 R >>`);
+    kids.push(objs.length);
+  }
+  objs[1] = `<< /Type /Pages /Kids [${kids.map(k => k + " 0 R").join(" ")}] /Count ${kids.length} >>`;
+  let out = "%PDF-1.4\n"; const offs = [];
+  objs.forEach((b, i) => { offs.push(out.length); out += `${i + 1} 0 obj\n${b}\nendobj\n`; });
+  const xref = out.length;
+  out += `xref\n0 ${objs.length + 1}\n0000000000 65535 f \n` + offs.map(o => String(o).padStart(10, "0") + " 00000 n \n").join("");
+  out += `trailer\n<< /Size ${objs.length + 1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF\n`;
+  return Uint8Array.from(out, ch => ch.charCodeAt(0) & 255);   // every character is Latin-1 by now
+}
+$("s_coverPdf").onclick = e => {
+  e.preventDefault();
+  const blob = new Blob([textToPdf(coverText("Example Company Pvt Ltd", "the Digital Marketing Executive position"))], {type: "application/pdf"});
+  const a = Object.assign(document.createElement("a"), {href: URL.createObjectURL(blob), download: "Cover_Letter_sample.pdf"});
+  document.body.appendChild(a); a.click(); a.remove();
+};
+
+// MIME message, built by hand (multipart/mixed with base64 parts)
+function b64(bytes) {
+  let s = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+  return btoa(s);
+}
+const wrap76 = s => s.replace(/.{1,76}/g, "$&\r\n");
+const encHeader = s => /^[\x20-\x7e]*$/.test(s) ? s : `=?UTF-8?B?${b64(new TextEncoder().encode(s))}?=`;
+const asciiName = s => s.normalize("NFKD").replace(/[^\x20-\x7e]/g, "").replace(/["\\]/g, "").trim() || "file";
+function buildMime({to, subject, body, attachments}) {
+  const boundary = "pjr_" + Math.random().toString(36).slice(2) + Date.now().toString(36);
+  let m = `To: ${to}\r\nSubject: ${encHeader(subject)}\r\nMIME-Version: 1.0\r\n` +
+    `Content-Type: multipart/mixed; boundary="${boundary}"\r\n\r\n` +
+    `--${boundary}\r\nContent-Type: text/plain; charset="UTF-8"\r\nContent-Transfer-Encoding: base64\r\n\r\n` +
+    wrap76(b64(new TextEncoder().encode(body.replace(/\r?\n/g, "\r\n"))));
+  for (const a of attachments) {
+    const name = asciiName(a.name);
+    m += `--${boundary}\r\nContent-Type: ${a.type || "application/octet-stream"}; name="${name}"\r\n` +
+      `Content-Disposition: attachment; filename="${name}"\r\nContent-Transfer-Encoding: base64\r\n\r\n` + wrap76(b64(a.bytes));
+  }
+  return m + `--${boundary}--\r\n`;
+}
+
+// what would be sent right now: ticked jobs and companies with an address, not yet sent
+function sendQueue() {
+  const items = [];
+  for (const id of selectedJobs()) {
+    const e = jobEmail(id);
+    if (!e.to) continue;
+    const company = coName(e.j.company);
+    items.push({kind: "job", id, to: e.to, subject: e.subject, body: e.body, company, label: `${e.j.title} · ${company || "company"}`,
+      position: e.j.title ? `the ${e.j.title} position` : "a marketing role"});
+  }
+  for (const cin of Object.keys(cmarks).filter(c => cmarks[c].star && cmarks[c].sel !== false && !cmarks[c].sent && byCin[c])) {
+    const e = emailFor(cin);
+    if (!e.to) continue;
+    items.push({kind: "company", id: cin, to: e.to, subject: e.subject, body: e.body, company: e.c.nice, label: e.c.nice,
+      position: profile.role ? `a ${profile.role} role` : "a marketing role"});
+  }
+  const seen = new Set();   // the same email to the same inbox only once per batch
+  return items.filter(x => { const k = x.to.toLowerCase() + "|" + x.subject; return !seen.has(k) && seen.add(k); });
+}
+const sentToday = () => sendLog.filter(l => l.ok && l.at.slice(0, 10) === today()).length;
+
+function renderSend() {
+  if (!$("s_stats")) return;
+  const q = sendQueue(), left = Math.max(0, DAILY_MAX - sentToday());
+  const n = Math.min(q.length, BATCH_MAX, left);
+  const jobs = q.filter(x => x.kind === "job").length;
+  $("s_stats").innerHTML = `<span><b>${q.length}</b> ready to send (${jobs} job${jobs === 1 ? "" : "s"}, ${q.length - jobs} compan${q.length - jobs === 1 ? "y" : "ies"})</span>` +
+    `<span><b>${sentToday()}</b> sent today (limit ${DAILY_MAX})</span>`;
+  $("s_cvname").textContent = cvFile ? `CV: ${cvFile.name} (${Math.round(cvFile.size / 1024)} KB), kept on this device.` : "No CV chosen yet. It's kept on this device only.";
+  if (!cfg.googleClientId) {
+    $("s_connect").disabled = true;
+    $("s_who").textContent = "One-click sending isn't switched on yet (the site's Google connection is still being set up).";
+  } else {
+    $("s_connect").disabled = sending;
+    $("s_who").textContent = gToken && Date.now() < gTokenExp ? `Connected as ${gWho || "your Gmail"}` : "Not connected";
+    $("s_connect").textContent = gToken && Date.now() < gTokenExp ? "Switch account" : "Connect Gmail";
+  }
+  $("s_send").textContent = n ? `Send ${n} email${n > 1 ? "s" : ""} now` + (q.length > n ? ` (${q.length - n} more later)` : "") : "Send";
+  $("s_send").disabled = sending || !n || !gToken || Date.now() >= gTokenExp;
+}
+
+$("s_cv").onchange = async e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  if (f.size > 8e6) { alert("That file is over 8 MB. Please use a smaller PDF of your CV."); e.target.value = ""; return; }
+  cvFile = {name: f.name, type: f.type || "application/pdf", size: f.size, bytes: new Uint8Array(await f.arrayBuffer())};
+  if (!await filePut("cv", {name: f.name, type: cvFile.type, size: f.size, blob: f}))
+    $("s_cvname").textContent = "CV chosen (this browser can't remember it, so pick it again next time).";
+  renderSend();
+};
+(async () => {
+  const saved = await fileGet("cv");
+  if (saved?.blob) { cvFile = {name: saved.name, type: saved.type, size: saved.size, bytes: new Uint8Array(await saved.blob.arrayBuffer())}; renderSend(); }
+})();
+
+function connectGmail() {
+  if (!window.google?.accounts?.oauth2) return alert("Google sign-in is still loading. Wait a moment and try again (and check that no ad blocker is blocking accounts.google.com).");
+  const client = google.accounts.oauth2.initTokenClient({
+    client_id: cfg.googleClientId,
+    scope: "https://www.googleapis.com/auth/gmail.send openid email",
+    callback: async r => {
+      if (r.error) return alert("Gmail wasn't connected: " + r.error);
+      if (!google.accounts.oauth2.hasGrantedAllScopes(r, "https://www.googleapis.com/auth/gmail.send"))
+        return alert("Please tick the box that allows sending email, then try again.");
+      gToken = r.access_token; gTokenExp = Date.now() + (r.expires_in - 120) * 1000;
+      try { gWho = (await (await fetch("https://www.googleapis.com/oauth2/v3/userinfo", {headers: {Authorization: "Bearer " + gToken}})).json()).email || ""; } catch { gWho = ""; }
+      renderSend();
+    },
+    error_callback: e => { if (e?.type !== "popup_closed") alert("Google sign-in didn't finish: " + (e?.message || e?.type || "unknown error")); },
+  });
+  client.requestAccessToken({prompt: gToken ? "select_account" : ""});
+}
+$("s_connect").onclick = connectGmail;
+
+async function gmailSend(raw) {
+  const r = await fetch("https://gmail.googleapis.com/upload/gmail/v1/users/me/messages/send?uploadType=media", {
+    method: "POST", headers: {Authorization: "Bearer " + gToken, "Content-Type": "message/rfc822"}, body: raw});
+  if (r.ok) return (await r.json()).id;
+  let msg = r.status + "";
+  try { msg = (await r.json()).error?.message || msg; } catch {}
+  const err = new Error(msg); err.status = r.status; throw err;
+}
+
+const sleep = ms => new Promise(res => setTimeout(res, ms));
+$("s_send").onclick = async () => {
+  const left = Math.max(0, DAILY_MAX - sentToday());
+  const q = sendQueue().slice(0, Math.min(BATCH_MAX, left));
+  if (!q.length) return;
+  if (!cvFile && !confirm("No CV is attached. Send without a CV?")) return;
+  if (!profile.name && !confirm("Your name is empty in section 1, so the emails will say [your name]. Send anyway?")) return;
+  if (/\[[^\]]{8,}\]/.test(jtpl.body + tpl.body + ($("s_cover").checked ? coverTpl : "")) &&
+      !confirm("Your email or cover letter still has [text in square brackets] to replace. Send anyway?")) return;
+  const delay = +$("s_delay").value;
+  if (!confirm(`Send ${q.length} email${q.length > 1 ? "s" : ""} from ${gWho || "your Gmail"}?\n\n` +
+      q.slice(0, 8).map(x => `• ${x.label}  (${x.to})`).join("\n") + (q.length > 8 ? `\n…and ${q.length - 8} more` : "") +
+      `\n\nOne every ${delay} seconds, about ${Math.ceil(q.length * delay / 60)} min. Keep this page open.`)) return;
+
+  sending = true; stopFlag = false; $("s_stop").hidden = false; renderSend();
+  let ok = 0, failed = 0;
+  const show = (i, note) => {
+    $("s_progress").innerHTML = `<div class="preview"><b>${ok} sent</b>${failed ? `, ${failed} failed` : ""} of ${q.length}${note ? " · " + esc(note) : ""}\n` +
+      q.map((x, j) => `${j < i ? (x.done ? "✓" : "✗") : j === i ? "…" : "·"} ${esc(x.label)} &lt;${esc(x.to)}&gt;${x.err ? " — " + esc(x.err) : ""}`).join("\n") + "</div>";
+  };
+  for (let i = 0; i < q.length; i++) {
+    if (stopFlag) { show(i, "stopped"); break; }
+    if (Date.now() >= gTokenExp) { show(i, "the Gmail connection expired: click Connect Gmail, then Send again to continue"); break; }
+    const x = q[i];
+    show(i, "sending…");
+    const attachments = [];
+    if (cvFile) attachments.push(cvFile);
+    if ($("s_cover").checked) attachments.push({name: "Cover_Letter.pdf", type: "application/pdf", bytes: textToPdf(coverText(x.company, x.position))});
+    try {
+      await gmailSend(buildMime({to: x.to, subject: x.subject, body: x.body, attachments}));
+      x.done = true; ok++;
+      if (x.kind === "job") markApplied(x.id); else markSent(x.id);
+      sendLog.push({at: new Date().toISOString(), kind: x.kind, id: x.id, to: x.to, subject: x.subject, ok: true});
+    } catch (e) {
+      x.err = e.message; failed++;
+      sendLog.push({at: new Date().toISOString(), kind: x.kind, id: x.id, to: x.to, subject: x.subject, ok: false, err: e.message});
+      if (e.status === 401) { gTokenExp = 0; show(i + 1, "the Gmail connection expired: click Connect Gmail, then Send again to continue"); break; }
+      if (e.status === 429 || (e.status === 403 && /limit|quota/i.test(e.message))) { show(i + 1, "Gmail's sending limit was reached: try again tomorrow"); break; }
+    }
+    store.set("sendLog", sendLog.slice(-1000));
+    show(i + 1, i + 1 < q.length ? `next in ${delay} s` : "done");
+    if (i + 1 < q.length) for (let t = 0; t < delay * 10 && !stopFlag; t++) await sleep(100);
+  }
+  sending = false; $("s_stop").hidden = true;
+  renderJobMail(); renderMail(); renderJobs(); renderCos(); renderSend();
+};
+$("s_stop").onclick = () => { stopFlag = true; };
+window.addEventListener("beforeunload", e => { if (sending) { e.preventDefault(); e.returnValue = ""; } });
+
+fetch("config.json?t=" + Date.now()).then(r => r.json()).catch(() => ({})).then(c => { cfg = c || {}; renderSend(); });
+
+// keep the send panel's numbers in step with the lists above
+const _renderMail = renderMail; renderMail = function () { _renderMail(); renderSend(); };
+const _renderJobMail = renderJobMail; renderJobMail = function () { _renderJobMail(); renderSend(); };
 
 tab(store.get("tab", "jobs"));
 loadJobs(); loadCos();
