@@ -16,6 +16,9 @@ on:
       enrich_sizes:
         description: "Only these sizes, e.g. large,mid,small (blank = all)"
         default: ""
+      enrich_minutes:
+        description: "Stop checking after this many minutes (blank = no limit); progress is saved as it goes"
+        default: ""
 
 permissions:
   contents: write
@@ -29,7 +32,7 @@ concurrency:
 jobs:
   crawl:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 170
     env:
       DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
       ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
@@ -52,9 +55,13 @@ jobs:
         env:
           LIMIT: ${{ inputs.enrich_limit || '300' }}
           SIZES: ${{ inputs.enrich_sizes || '' }}
+          MINUTES: ${{ inputs.enrich_minutes || '' }}
         run: |
           if [ -f data/companies.sqlite ]; then
-            if [ -n "$SIZES" ]; then python directory.py enrich "$LIMIT" --sizes "$SIZES"; else python directory.py enrich "$LIMIT"; fi
+            args="$LIMIT"
+            if [ -n "$SIZES" ]; then args="$args --sizes $SIZES"; fi
+            if [ -n "$MINUTES" ]; then args="$args --minutes $MINUTES"; fi
+            python directory.py enrich $args
             python directory.py about 1500
             python directory.py job-contacts
             python directory.py build

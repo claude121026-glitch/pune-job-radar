@@ -510,7 +510,18 @@ def company_sector(cin, name):
     return name_sector(name) if sec == "Unknown" else sec
 
 
-def enrich(limit=300, industry=None, size_filter=None):
+def commit(con):
+    for attempt in range(6):
+        try:
+            con.commit()
+            return
+        except sqlite3.OperationalError:
+            if attempt == 5:
+                raise
+            time.sleep(2 * (attempt + 1))
+
+
+def enrich(limit=300, industry=None, size_filter=None, max_minutes=None):
     con = db()
     # best marketing prospects first: industry likelihood + size, skipping holding/investment shells
     sizes = {"large": 3, "mid": 2, "small": 1, "micro": 0, "llp": 0, "unknown": 0}
@@ -532,19 +543,31 @@ def enrich(limit=300, industry=None, size_filter=None):
     print(f"  enriching {len(rows)} companies ({first} hiring for marketing now, then best marketing prospects)…")
     ts = datetime.now(timezone.utc).isoformat()
     done = found = 0
+    t0 = time.time()
     with ThreadPoolExecutor(8) as ex:
-        for cin, site, phones, emails, note in ex.map(enrich_one, rows):
-            con.execute("UPDATE company SET website=?, phones=?, emails=?, enriched=?, enrich_note=?, about=? "
-                        "WHERE cin=?", (site, json.dumps(phones), json.dumps(emails), ts, note,
-                                        ABOUT.pop(cin, "") if site else None, cin))
-            done += 1
-            found += bool(phones)
-    con.commit()
-    print(f"  done: {done} checked, {found} with a phone number")
+        for start in range(0, len(rows), 400):  # save every 400, so a long run never loses its work
+            if max_minutes and time.time() - t0 > max_minutes * 60:
+                print(f"  time limit of {max_minutes} min reached; the rest will be checked in later runs")
+                break
+            for cin, site, phones, emails, note in ex.map(enrich_one, rows[start:start + 400]):
+                con.execute("UPDATE company SET website=?, phones=?, emails=?, enriched=?, enrich_note=?, about=? "
+                            "WHERE cin=?", (site, json.dumps(phones), json.dumps(emails), ts, note,
+                                            ABOUT.pop(cin, "") if site else None, cin))
+                done += 1
+                found += bool(phones or emails)
+            commit(con)
+            if start and start % 4000 == 0:
+                print(f"  … {done} checked, {found} with a phone or email ({(time.time() - t0) / 60:.0f} min)", flush=True)
+    print(f"  done: {done} checked, {found} with a phone or email")
 
 
-def hiring_companies():
-    """norm_name -> the company name as the job feed spells it, for open marketing jobs."""
+def job_key(name):
+    """The matching key for a company name from a job feed ("Aarna Systems | Agency" -> "aarnasystems")."""
+    return norm_name((name or "").split("|")[0])
+
+
+def hiring_companies(marketing_only=True):
+    """norm_name -> the company name as the job feed spells it, for open (marketing) jobs."""
     try:
         jobs = json.load(open(JOBS, encoding="utf-8"))["jobs"]
     except (FileNotFoundError, KeyError, json.JSONDecodeError):
@@ -552,15 +575,15 @@ def hiring_companies():
     out = {}
     for j in jobs:
         name = (j.get("company") or "").strip()
-        if j.get("marketing") and not j.get("closed") and name and name.lower() != "unknown":
-            k = norm_name(name.split("|")[0])
+        if (j.get("marketing") or not marketing_only) and not j.get("closed") and name and name.lower() != "unknown":
+            k = job_key(name)
             if len(k) > 3:
                 out.setdefault(k, name)
     return out
 
 
 def job_contacts(recheck_days=14):
-    """Find emails for every company with an open marketing job, registry or not -> web/job-contacts.json.
+    """Find emails for every company with an open job in Pune, registry or not -> web/job-contacts.json.
 
     Registry companies use their saved contacts; anyone without an email gets a deeper look at
     their website (contact and careers pages). Results are cached for `recheck_days`.
@@ -568,7 +591,9 @@ def job_contacts(recheck_days=14):
     con = db()
     con.execute("""CREATE TABLE IF NOT EXISTS job_contact (
         key TEXT PRIMARY KEY, name TEXT, website TEXT, phones TEXT, emails TEXT, note TEXT, checked TEXT)""")
-    hiring = hiring_companies()
+    if "about" not in [r[1] for r in con.execute("PRAGMA table_info(job_contact)")]:
+        con.execute("ALTER TABLE job_contact ADD COLUMN about TEXT")
+    hiring = hiring_companies(marketing_only=False)
     reg = {}
     for cin, name, site, phones, emails, email in con.execute(
             "SELECT cin, name, website, phones, emails, email FROM company WHERE status LIKE 'activ%'"):
@@ -586,14 +611,14 @@ def job_contacts(recheck_days=14):
             continue
         clean = re.sub(r"\s+", " ", name.split("|")[0]).strip()
         todo.append((k, clean, r[5] if r else None, r[2] if r else None))
-    print(f"  {len(hiring)} companies hiring for marketing; looking up {len(todo)} of them…")
+    print(f"  {len(hiring)} companies hiring in Pune; looking up {len(todo)} of them…")
     ts = datetime.now(timezone.utc).isoformat()
     found = 0
     with ThreadPoolExecutor(8) as ex:
         for k, site, phones, emails, note in ex.map(lambda r: enrich_one(r, deep=True), todo):
-            ABOUT.pop(k, None)
-            con.execute("INSERT OR REPLACE INTO job_contact VALUES (?,?,?,?,?,?,?)",
-                        (k, hiring[k], site, json.dumps(phones), json.dumps(emails), note, ts))
+            con.execute("INSERT OR REPLACE INTO job_contact (key, name, website, phones, emails, note, checked, about) "
+                        "VALUES (?,?,?,?,?,?,?,?)",
+                        (k, hiring[k], site, json.dumps(phones), json.dumps(emails), note, ts, ABOUT.pop(k, "") if site else ""))
             found += bool(emails)
     con.commit()
     print(f"  found an email for {found} of {len(todo)} looked up")
@@ -631,15 +656,16 @@ def build():
     open_jobs = {}
     for j in jobs:
         if not j.get("closed"):
-            open_jobs.setdefault(norm_name(j["company"]), []).append(j)
+            open_jobs.setdefault(job_key(j["company"]), []).append(j)
     sizes = {"large": 3, "mid": 2, "small": 1, "micro": 0, "llp": 0, "unknown": 0}
-    out = []
+    out, registry_keys = [], set()
     for (cin, name, reg, paidup, addr, pin, email, site, phones, emails, about) in con.execute(
             """SELECT cin, name, registered, paidup, address, pincode, email, website, phones, emails, about
                FROM company WHERE status LIKE 'activ%'"""):
         sec, size = sector(cin, name), size_band(paidup, cin)
         if sec == "Unknown":
             sec = name_sector(name)  # LLPs and foreign companies carry no activity code
+        registry_keys.add(norm_name(name))
         js = open_jobs.get(norm_name(name), [])
         mkt_jobs = [j for j in js if j.get("marketing")]
         score = MKT_SECTOR.get(sec, 1) + sizes.get(size, 0) + (4 if mkt_jobs else 0) + (1 if phones not in (None, "", "[]") else 0)
@@ -651,6 +677,27 @@ def build():
         out.append([cin, name, size, sec, pin, (reg or "")[:10], paidup or 0, site or "",
                     json.loads(phones or "[]"), em, len(js), len(mkt_jobs), min(score, 10),
                     re.sub(r"\s+", " ", addr or "")[:160], about or ""])
+    # companies hiring in Pune whose registered office is elsewhere (or not a company at all, e.g. a firm
+    # or startup): they come from the job feeds, with whatever their website told us
+    looked = {}
+    try:
+        for k, site, phones, emails, about in con.execute("SELECT key, website, phones, emails, about FROM job_contact"):
+            looked[k] = (site or "", json.loads(phones or "[]"), json.loads(emails or "[]"), about or "")
+    except sqlite3.OperationalError:
+        pass  # job-contacts hasn't run yet
+    extra = 0
+    for k, js in open_jobs.items():
+        name = re.sub(r"\s+", " ", (js[0].get("company") or "").split("|")[0]).strip()
+        if len(k) <= 3 or k in registry_keys or not name or name.lower() in ("unknown", "confidential"):
+            continue
+        site, phones, emails, about = looked.get(k, ("", [], [], ""))
+        mkt_jobs = [j for j in js if j.get("marketing")]
+        places = sorted({j.get("location", "") for j in js if j.get("location")})
+        out.append([f"job:{k}", name, "unknown", "Hiring now (job listings)", "", "", 0, site, phones, emails,
+                    len(js), len(mkt_jobs), min(10, 6 + (3 if mkt_jobs else 0) + (1 if emails else 0)),
+                    " / ".join(places)[:160], about])
+        extra += 1
+    print(f"  added {extra} companies hiring in Pune that aren't registered here")
     out.sort(key=lambda r: (-r[12], -r[6]))
     data = {"updated": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
             "fields": ["cin", "name", "size", "sector", "pincode", "registered", "paidup", "website",
@@ -681,8 +728,9 @@ if __name__ == "__main__":
     elif cmd == "enrich":
         ind = a[a.index("--industry") + 1] if "--industry" in a and a.index("--industry") + 1 < len(a) else None
         sz = a[a.index("--sizes") + 1] if "--sizes" in a and a.index("--sizes") + 1 < len(a) else None
-        nums = [x for x in a[1:] if x.isdigit()]
-        enrich(int(nums[0]) if nums else 300, ind, sz)
+        mins = float(a[a.index("--minutes") + 1]) if "--minutes" in a and a.index("--minutes") + 1 < len(a) else None
+        nums = [x for x in a[1:] if x.isdigit() and not (mins and x == a[a.index("--minutes") + 1])]
+        enrich(int(nums[0]) if nums else 300, ind, sz, mins)
     elif cmd == "site" and len(a) > 2:
         set_site(a[1], a[2])
     elif cmd == "about":

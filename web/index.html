@@ -244,6 +244,9 @@ function nice(name) {
   return s.toLowerCase().replace(/\b([a-z])/g, c => c.toUpperCase()).replace(/\b(It|Pr|Hr|Ai|Llp|Ev|Bpo|Kpo)\b/g, w => w.toUpperCase());
 }
 function oneLiner(c) {   // a plain-language summary when the company's own description is unknown
+  if (String(c.cin).startsWith("job:"))
+    return `Hiring in Pune now: ${c.jobs} open job${c.jobs === 1 ? "" : "s"}` + (c.mkt_jobs ? `, ${c.mkt_jobs} in marketing` : "") +
+      ". Found through job listings (registered outside Pune, or not a registered company).";
   const since = (c.registered || "").slice(0, 4);
   return `${SIZE_LABEL[c.size] || "Company"} in ${c.sector.toLowerCase()}` + (since ? `, registered ${since}` : "") +
     (c.pincode ? `, Pune ${c.pincode}` : "") + ".";
@@ -297,7 +300,9 @@ function updatedLine() {
     $("updated").textContent = data.updated ? `Jobs last checked ${ago(data.updated)} · ${data.sources.length} sources` +
       (bad ? ` · ${bad} failed this round` : "") : "No jobs yet";
   } else if (!$("cosView").hidden) {
-    $("updated").textContent = cos.length ? `${cos.length.toLocaleString()} active companies registered in Pune · updated ${ago(cosUpdated)}`
+    const fromJobs = cos.filter(c => String(c.cin).startsWith("job:")).length;
+    $("updated").textContent = cos.length ? `${(cos.length - fromJobs).toLocaleString()} companies registered in Pune` +
+      (fromJobs ? ` + ${fromJobs} more hiring here` : "") + ` · updated ${ago(cosUpdated)}`
       : "Loading company directory…";
   } else {
     $("updated").textContent = "Apply to your saved jobs and email your saved companies: one template each, sent all at once with your CV.";
@@ -394,7 +399,7 @@ async function loadCos() {
   const cur = store.get("f_csector", "");
   $("csector").innerHTML = '<option value="">All industries</option>' +
     sectors.map(s => `<option${s === cur ? " selected" : ""}>${esc(s)}</option>`).join("");
-  const top = ["Advertising & market research", "Media & entertainment", "Education", "Food & beverages (FMCG)", "Retail",
+  const top = ["Hiring now (job listings)", "Advertising & market research", "Media & entertainment", "Education", "Food & beverages (FMCG)", "Retail",
                "Hospitality & food", "Real estate", "Healthcare", "Finance & insurance", "IT & software", "Telecom", "Publishing"];
   $("chips").innerHTML = top.filter(s => counts[s]).map(s =>
     `<button data-sector="${esc(s)}">${esc(s)}<span>${counts[s].toLocaleString()}</span></button>`).join("");
@@ -449,7 +454,7 @@ function renderCos() {
     return `<div class="card${m.s === "applied" ? " applied" : ""}">
       <div><button class="t" data-open="${esc(c.cin)}">${esc(c.nice || c.name)}</button>
         <div class="about">${esc(c.about || oneLiner(c))}</div>
-        <div class="meta"><span class="tag size">${esc(c.size)}${c.paidup ? " · " + crore(c.paidup) + " capital" : ""}</span>
+        <div class="meta"><span class="tag size">${String(c.cin).startsWith("job:") ? "from job listings" : esc(c.size)}${c.paidup ? " · " + crore(c.paidup) + " capital" : ""}</span>
           <span class="co">${esc(c.sector)}</span>${c.pincode ? `<span>Pune ${esc(c.pincode)}</span>` : ""}
           ${c.mkt_jobs ? `<span class="tag new">${c.mkt_jobs} marketing opening${c.mkt_jobs > 1 ? "s" : ""}</span>` : ""}
           ${c.phones.slice(0, 2).map(p => `<a href="tel:${esc(p.replace(/\s/g, ""))}">📞 ${esc(p)}</a>`).join("")}
@@ -491,8 +496,10 @@ function openDrawer(cin) {
   if (!c) return;
   const m = cmarks[cin] || {};
   const q = encodeURIComponent(c.nice + " Pune");
-  const jobs = data.jobs.filter(j => !j.closed && c.nice && j.company.toLowerCase().includes(c.nice.toLowerCase().split(" ")[0]) &&
-    c.nice.toLowerCase().includes(j.company.toLowerCase().split(" ")[0]));
+  const fromJobs = String(cin).startsWith("job:");
+  const jobs = fromJobs ? data.jobs.filter(j => !j.closed && j.company.split("|")[0].replace(/\s+/g, " ").trim() === c.name)
+    : data.jobs.filter(j => !j.closed && c.nice && j.company.toLowerCase().includes(c.nice.toLowerCase().split(" ")[0]) &&
+      c.nice.toLowerCase().includes(j.company.toLowerCase().split(" ")[0]));
   $("dbox").innerHTML = `<button class="close" id="dclose">✕</button>
     <h2 style="font-size:18px;margin-right:40px">${esc(c.nice)}</h2>
     <div class="meta">${esc(c.name)}</div>
@@ -500,13 +507,13 @@ function openDrawer(cin) {
     ${c.about ? "" : '<p class="hint">No description found on a company website yet; use the links below to look them up.</p>'}
     <div class="kv">
       <div>Industry</div><div>${esc(c.sector)}</div>
-      <div>Size</div><div>${esc(SIZE_LABEL[c.size] || c.size)}${c.paidup ? " · " + crore(c.paidup) + " paid-up capital" : ""}</div>
-      <div>Registered</div><div>${esc((c.registered || "").slice(0, 10) || "—")}</div>
-      <div>Address</div><div>${esc(c.address || "—")}</div>
+      <div>Size</div><div>${fromJobs ? "Not known" : esc(SIZE_LABEL[c.size] || c.size)}${c.paidup ? " · " + crore(c.paidup) + " paid-up capital" : ""}</div>
+      ${fromJobs ? "" : `<div>Registered</div><div>${esc((c.registered || "").slice(0, 10) || "—")}</div>`}
+      <div>${fromJobs ? "Job locations" : "Address"}</div><div>${esc(c.address || "—")}</div>
       <div>Phone</div><div>${c.phones.map(p => `<a href="tel:${esc(p.replace(/\s/g, ""))}">${esc(p)}</a>`).join("<br>") || "—"}</div>
       <div>Email</div><div>${c.emails.map(e => `<a href="mailto:${esc(e)}">${esc(e)}</a>`).join("<br>") || "—"}</div>
       <div>Website</div><div>${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website.replace(/^https?:\/\//, ""))}</a>` : "—"}</div>
-      <div>Company ID</div><div>${esc(c.cin)}</div>
+      ${fromJobs ? "<div>Source</div><div>Job listings (not in the Pune company registry)</div>" : `<div>Company ID</div><div>${esc(c.cin)}</div>`}
     </div>
     <div class="links">
       <a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener">Google</a>
@@ -590,7 +597,7 @@ $("t_reset").onclick = e => { e.preventDefault(); $("t_subject").value = DEFAULT
 
 function fill(text, c, m) {
   const about = c.about ? c.about.replace(/\s*[|–-]\s*[^|–-]*$/, "").trim() : "";
-  const sector = (c.sector || "").toLowerCase();
+  const sector = /^hiring now/i.test(c.sector || "") ? "" : (c.sector || "").toLowerCase();
   const vals = {
     company: c.nice, industry: sector || "marketing", about: about || (sector ? `your work in ${sector}` : "your work"),
     job_title: m.title || profile.role || "marketing",
