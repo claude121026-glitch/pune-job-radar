@@ -22,6 +22,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # lets a long batch start the next one
   pages: write
   id-token: write
 
@@ -58,6 +59,7 @@ jobs:
           MINUTES: ${{ inputs.enrich_minutes || '' }}
         run: |
           if [ -f data/companies.sqlite ]; then
+            echo "UNCHECKED_BEFORE=$(python directory.py unchecked)" >> "$GITHUB_ENV"
             args="$LIMIT"
             if [ -n "$SIZES" ]; then args="$args --sizes $SIZES"; fi
             if [ -n "$MINUTES" ]; then args="$args --minutes $MINUTES"; fi
@@ -75,6 +77,19 @@ jobs:
           git diff --cached --quiet || git commit -m "crawl $(date -u +%FT%TZ)"
           git pull --rebase -X theirs || true
           git push
+      - name: Start the next batch (long runs only, until every company is checked)
+        if: ${{ inputs.enrich_minutes != '' && inputs.enrich_minutes != null }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          left=$(python directory.py unchecked)
+          echo "unchecked before: $UNCHECKED_BEFORE, after: $left"
+          if [ "$left" -gt 0 ] && [ "$left" -lt "${UNCHECKED_BEFORE:-0}" ]; then
+            gh workflow run crawl.yml --ref main -f enrich_limit="${{ inputs.enrich_limit }}" -f enrich_minutes="${{ inputs.enrich_minutes }}"
+            echo "started the next batch ($left companies left)"
+          else
+            echo "no next batch: all checked, or this run made no progress"
+          fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web

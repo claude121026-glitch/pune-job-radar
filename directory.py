@@ -736,6 +736,8 @@ if __name__ == "__main__":
     elif cmd == "about":
         nums = [x for x in a[1:] if x.isdigit()]
         backfill_about(int(nums[0]) if nums else 2000)
+    elif cmd == "unchecked":  # how many active companies still need a contact check
+        print(db().execute("SELECT COUNT(*) FROM company WHERE enriched IS NULL AND status LIKE 'activ%'").fetchone()[0])
     elif cmd == "job-contacts":
         job_contacts()
     elif cmd == "build":
