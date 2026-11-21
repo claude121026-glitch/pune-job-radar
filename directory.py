@@ -15,6 +15,7 @@ Usage
   python directory.py import-api              # pull Pune companies from the registry
   python directory.py import-csv file.csv     # same, from a downloaded CSV
   python directory.py enrich 300              # find websites/phones for 300 more companies
+  python directory.py job-contacts            # find emails for companies with open marketing jobs
   python directory.py build                   # write web/companies.json for the dashboard
 """
 import csv
@@ -30,7 +31,7 @@ import urllib.parse
 import urllib.request
 import urllib.robotparser
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(ROOT, "data", "companies.sqlite")
@@ -396,7 +397,8 @@ def guess_site(name):
     return None
 
 
-def enrich_one(row):
+def enrich_one(row, deep=False):
+    """deep=True (for companies hiring now) also reads careers/jobs pages and common contact URLs."""
     cin, name, email, website = row
     site, home, final = website, None, None
     if not site and email and "@" in email:
@@ -433,8 +435,12 @@ def enrich_one(row):
                 not re.search(r"\bindia\b|\bpune\b|maharashtra|\+91|\b0?20[\s-]?\d{4}[\s-]?\d{4}", home, re.I):
             return cin, None, [], [], f"site not Indian: {host}"
         phones, emails = contacts(home)
-        links = re.findall(r'href=["\']([^"\'#]*(?:contact|reach|locat|office)[^"\'#]*)', home, re.I)
-        for link in list(dict.fromkeys(links))[:2]:
+        pat = r"contact|reach|locat|office" + (r"|career|jobs|join|hiring|work-with" if deep else "")
+        links = re.findall(r'href=["\']([^"\'#]*(?:' + pat + r')[^"\'#]*)', home, re.I)
+        links = list(dict.fromkeys(links))[:4 if deep else 2]
+        if deep and not links:
+            links = ["/contact", "/contact-us", "/careers"]
+        for link in links:
             url = urllib.parse.urljoin(final, link)
             if urllib.parse.urlparse(url).netloc != urllib.parse.urlparse(final).netloc:
                 continue
@@ -518,8 +524,12 @@ def enrich(limit=300, industry=None, size_filter=None):
     shell = re.compile(r"holding|investment|finvest|\btrust\b|properties|estates?\b", re.I)
     cand.sort(key=lambda r: (-(MKT_SECTOR.get(sector(r[0], r[1]), 1) + sizes[size_band(r[4], r[0])]
                                - (3 if SHELL.search(r[1] or "") else 0)), -(r[4] or 0)))
+    hiring = set(hiring_companies())  # companies with an open marketing job jump the queue
+    if hiring:
+        cand.sort(key=lambda r: norm_name(r[1]) not in hiring)
+    first = sum(1 for r in cand[:limit] if norm_name(r[1]) in hiring)
     rows = [r[:4] for r in cand[:limit]]
-    print(f"  enriching {len(rows)} companies (best marketing prospects first)…")
+    print(f"  enriching {len(rows)} companies ({first} hiring for marketing now, then best marketing prospects)…")
     ts = datetime.now(timezone.utc).isoformat()
     done = found = 0
     with ThreadPoolExecutor(8) as ex:
@@ -531,6 +541,77 @@ def enrich(limit=300, industry=None, size_filter=None):
             found += bool(phones)
     con.commit()
     print(f"  done: {done} checked, {found} with a phone number")
+
+
+def hiring_companies():
+    """norm_name -> the company name as the job feed spells it, for open marketing jobs."""
+    try:
+        jobs = json.load(open(JOBS, encoding="utf-8"))["jobs"]
+    except (FileNotFoundError, KeyError, json.JSONDecodeError):
+        return {}
+    out = {}
+    for j in jobs:
+        name = (j.get("company") or "").strip()
+        if j.get("marketing") and not j.get("closed") and name and name.lower() != "unknown":
+            k = norm_name(name.split("|")[0])
+            if len(k) > 3:
+                out.setdefault(k, name)
+    return out
+
+
+def job_contacts(recheck_days=14):
+    """Find emails for every company with an open marketing job, registry or not -> web/job-contacts.json.
+
+    Registry companies use their saved contacts; anyone without an email gets a deeper look at
+    their website (contact and careers pages). Results are cached for `recheck_days`.
+    """
+    con = db()
+    con.execute("""CREATE TABLE IF NOT EXISTS job_contact (
+        key TEXT PRIMARY KEY, name TEXT, website TEXT, phones TEXT, emails TEXT, note TEXT, checked TEXT)""")
+    hiring = hiring_companies()
+    reg = {}
+    for cin, name, site, phones, emails, email in con.execute(
+            "SELECT cin, name, website, phones, emails, email FROM company WHERE status LIKE 'activ%'"):
+        k = norm_name(name)
+        if k in hiring and (k not in reg or (emails or "[]") != "[]"):
+            reg[k] = (cin, name, site, json.loads(phones or "[]"), json.loads(emails or "[]"), email)
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=recheck_days)).isoformat()
+    cached = dict(con.execute("SELECT key, checked FROM job_contact"))
+    todo = []
+    for k, name in hiring.items():
+        r = reg.get(k)
+        if r and r[4]:
+            continue  # the registry company already has an email
+        if cached.get(k, "") >= cutoff:
+            continue
+        clean = re.sub(r"\s+", " ", name.split("|")[0]).strip()
+        todo.append((k, clean, r[5] if r else None, r[2] if r else None))
+    print(f"  {len(hiring)} companies hiring for marketing; looking up {len(todo)} of them…")
+    ts = datetime.now(timezone.utc).isoformat()
+    found = 0
+    with ThreadPoolExecutor(8) as ex:
+        for k, site, phones, emails, note in ex.map(lambda r: enrich_one(r, deep=True), todo):
+            ABOUT.pop(k, None)
+            con.execute("INSERT OR REPLACE INTO job_contact VALUES (?,?,?,?,?,?,?)",
+                        (k, hiring[k], site, json.dumps(phones), json.dumps(emails), note, ts))
+            found += bool(emails)
+    con.commit()
+    print(f"  found an email for {found} of {len(todo)} looked up")
+    lookups = {k: (site, json.loads(p or "[]"), json.loads(e or "[]"))
+               for k, site, p, e in con.execute("SELECT key, website, phones, emails FROM job_contact")}
+    out = {}
+    for k, name in hiring.items():
+        r = reg.get(k)
+        if r and r[4]:
+            site, phones, emails = r[2], r[3], r[4]
+        else:
+            site, phones, emails = lookups.get(k, (None, [], []))
+            site, phones = site or (r[2] if r else ""), phones or (r[3] if r else [])
+        if emails or phones:
+            out[name] = {"emails": emails, "phones": phones, "website": site or ""}
+    with open(os.path.join(ROOT, "web", "job-contacts.json"), "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=0)
+    print(f"  wrote web/job-contacts.json: {sum(1 for v in out.values() if v['emails'])} hiring companies with an email")
 
 
 def set_site(cin, url):
@@ -607,6 +688,8 @@ if __name__ == "__main__":
     elif cmd == "about":
         nums = [x for x in a[1:] if x.isdigit()]
         backfill_about(int(nums[0]) if nums else 2000)
+    elif cmd == "job-contacts":
+        job_contacts()
     elif cmd == "build":
         build()
     else:

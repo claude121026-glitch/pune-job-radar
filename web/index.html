@@ -167,8 +167,8 @@ td,th{text-align:left;padding:4px 8px;border-bottom:1px solid var(--line)}
         <button class="primary" id="j_export">⬇ Download selected jobs for the bulk email tool</button>
         <button id="j_appliedall">Mark selected as applied</button>
       </div>
-      <p class="hint"><b>Where the email address comes from:</b> the job posting itself when it lists one, otherwise the company's
-        published address from the directory. If neither is found, type one in or use <b>Job page</b> to apply on the website.
+      <p class="hint"><b>Where the email address comes from:</b> the job posting when it lists one, otherwise the hiring company's
+        website (contact and careers pages, checked automatically) or its address in the directory. If neither is found, type one in or use <b>Job page</b> to apply on the website.
         <b>Bulk sending:</b> download the list and run <code>python mailer.py emails-to-draft.csv --cv "My_CV.pdf" --send</code>
         on the laptop. It attaches your CV and cover letter to every email and sends them all, one every ~45 seconds (see README).</p>
     </div>
@@ -227,7 +227,8 @@ const cm = cin => (cmarks[cin] = cmarks[cin] || {});
 let jmarks = store.get("jmarks", {});      // job id -> {title, company, url, email, source, sel, to, personal, sent}
 const saveJ = () => store.set("jmarks", jmarks);
 const jm = id => (jmarks[id] = jmarks[id] || {});
-let byName = {};                           // normalised company name -> directory company (for job emails)
+let byName = {}, jobContacts = {};   // jobContacts: job-feed company name -> {emails, phones, website}
+let byName_ = null;                           // normalised company name -> directory company (for job emails)
 const norm = s => nice(s).toLowerCase().replace(/\b(india|technologies|technology|solutions|services|pvt|co)\b/g, "").replace(/[^a-z0-9]/g, "");
 const savedJobIds = () => Object.keys(marks).filter(id => marks[id] === "saved" || (marks[id] === "applied" && jmarks[id]?.sent));
 const lastVisit = store.get("lastVisit", null);
@@ -276,6 +277,7 @@ function updatedLine() {
 // ---------- jobs ----------
 async function loadJobs() {
   try { data = await (await fetch("jobs.json?t=" + Date.now())).json(); } catch { data = {jobs: [], sources: []}; }
+  try { jobContacts = await (await fetch("job-contacts.json?t=" + Date.now())).json(); } catch { jobContacts = {}; }
   const names = [...new Set(data.jobs.map(j => j.company))].sort((a, b) => a.localeCompare(b));
   const cur = $("company").value || store.get("f_company", "");
   $("company").innerHTML = '<option value="">All companies</option>' +
@@ -606,14 +608,16 @@ function jobInfo(id) {   // the job, with the latest feed data when it is still 
              closed: live.closed};
   const company = j.company && j.company !== "Unknown" ? j.company : "";
   const dir = company ? byName[norm(company)] : null;
-  const choices = [...new Set([j.email, ...(dir ? dir.emails : [])].filter(Boolean))];
-  return {j, m, dir, choices, company};
+  const look = jobContacts[j.company] || null;
+  const hr = e => /^(careers?|jobs?|hr|talent|recruit|hiring|people)/i.test(e) ? 0 : 1;   // hiring inboxes first
+  const choices = [...new Set([j.email, ...[...(look ? look.emails : []), ...(dir ? dir.emails : [])].sort((a, b) => hr(a) - hr(b))].filter(Boolean))];
+  return {j, m, dir, look, choices, company};
 }
 function jobEmail(id) {
-  const {j, m, dir, choices, company} = jobInfo(id);
+  const {j, m, dir, look, choices, company} = jobInfo(id);
   const c = {nice: company ? nice(company) : "your company", sector: dir?.sector || "", about: dir?.about || ""};
   const mm = Object.assign({}, m, {title: j.title});
-  return {j, m, dir, choices, to: (m.to || choices[0] || "").trim(), subject: fill(jtpl.subject, c, mm), body: fill(jtpl.body, c, mm)};
+  return {j, m, dir, look, choices, to: (m.to || choices[0] || "").trim(), subject: fill(jtpl.subject, c, mm), body: fill(jtpl.body, c, mm)};
 }
 function renderJobMail() {
   const ids = savedJobIds().filter(id => jmarks[id]?.title || data.jobs.some(j => j.id === id));
@@ -627,14 +631,14 @@ function renderJobMail() {
     return;
   }
   $("jlist").innerHTML = ids.map(id => {
-    const {j, m, dir, choices, to, subject, body} = jobEmail(id);
+    const {j, m, dir, look, choices, to, subject, body} = jobEmail(id);
     const custom = m.to && !choices.includes(m.to);
     return `<div class="mrow" data-jrow="${esc(id)}">
       <input type="checkbox" data-jsel="${esc(id)}" ${m.sel !== false && !m.sent ? "checked" : ""} title="Include">
       <div><a class="t" href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
         ${m.sent ? `<span class="tag new">applied ${esc(m.sent)}</span>` : ""}${j.closed ? '<span class="tag warn">closed</span>' : ""}
         <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(j.location)}</span><span class="tag size">${esc(j.source)}</span></div>
-        <div class="about">${j.email ? "Email address from the job posting." : dir ? `Matched to <button class="t" data-open="${esc(dir.cin)}" style="font-size:inherit">${esc(dir.nice)}</button> in the directory${dir.emails.length ? "" : " (no email found for them)"}.` : "No email address found: type one in, or apply on the job page."}</div>
+        <div class="about">${j.email ? "Email address from the job posting." : look?.emails.length ? `Email from the company's website${look.website ? ` (<a href="${esc(look.website)}" target="_blank" rel="noopener">${esc(look.website.replace(/^https?:\/\/(www\.)?/, ""))}</a>)` : ""}.` : dir ? `Matched to <button class="t" data-open="${esc(dir.cin)}" style="font-size:inherit">${esc(dir.nice)}</button> in the directory${dir.emails.length ? "" : " (no email found for them)"}.` : "No email address found: type one in, or apply on the job page."}</div>
         <div class="fields">
           ${choices.length ? `<select data-jto="${esc(id)}">${choices.map(e => `<option${e === to && !custom ? " selected" : ""}>${esc(e)}</option>`).join("")}<option value="__other"${custom ? " selected" : ""}>Other address…</option></select>` : ""}
           ${!choices.length || custom ? `<input data-jtoinput="${esc(id)}" type="email" placeholder="Email address (check the job page)" value="${esc((m.to || "").trim())}">` : ""}
