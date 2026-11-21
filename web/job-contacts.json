@@ -1,4 +1,31 @@
 {
+"Amura Marketing Technologies": {
+"emails": [
+"enquire@amuratech.com"
+],
+"phones": [
+"+91 85302 33394"
+],
+"website": "https://www.amuratech.com"
+},
+"THE IMPACT ENGINE": {
+"emails": [
+"info@theimpactengine.com"
+],
+"phones": [],
+"website": "https://www.theimpactengine.com"
+},
+"3 Dots Design Private Limited": {
+"emails": [
+"contact@3dotsdesign.in",
+"hr@3dotsdesign.in"
+],
+"phones": [
+"+91 95116 96411",
+"+91 20 2566 5266"
+],
+"website": "https://www.3dotsdesign.in"
+},
 "PadCare Labs": {
 "emails": [
 "info@padcarelabs.com",
@@ -146,7 +173,7 @@
 ],
 "website": "https://hmadworld.com"
 },
-"Pattern": {
+"pattern": {
 "emails": [
 "hello@pattern.com"
 ],
@@ -179,15 +206,6 @@
 "+91 92721 95854"
 ],
 "website": "https://stratadigitalgeeks.in"
-},
-"Amura Marketing Technologies": {
-"emails": [
-"enquire@amuratech.com"
-],
-"phones": [
-"+91 85302 33394"
-],
-"website": "https://www.amuratech.com"
 },
 "Gsource Technologies": {
 "emails": [
