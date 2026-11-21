@@ -40,7 +40,8 @@ INCLUDE_REMOTE_INDIA = os.environ.get("INCLUDE_REMOTE_INDIA", "1") == "1"
 MARKETING_RE = re.compile(
     r"marketing|\bbrand|\bseo\b|\bsem\b|\bsmm\b|social media|content (writer|strateg|market|creator|manager)|"
     r"copywrit|growth|communications?\b|public relations|\bpr\b|campaign|demand gen|advertis|media (planner|buyer)|"
-    r"market research|\bevents?\b|influencer|crm executive|e-?mail market|performance market|go-to-market|\bgtm\b",
+    r"market research|\bevents?\b|influencer|crm executive|e-?mail market|performance market|go-to-market|\bgtm\b|"
+    r"\bppc\b|paid (media|ads|social)|creative writer|content (associate|executive|specialist)",
     re.I)
 
 
@@ -81,8 +82,18 @@ def classify(location):
     return None
 
 
+def unmangle(s):
+    """Fix text that was UTF-8 but got decoded as Windows-1252 upstream (e.g. 'â€“' for '–')."""
+    if s and re.search(r"â€|Ã.", s):
+        try:
+            return s.encode("cp1252").decode("utf-8")
+        except UnicodeError:
+            pass
+    return s
+
+
 def job(company, source, jid, title, location, url, posted=None, dept=None, size=None):
-    title, dept = (title or "").strip(), dept or ""
+    title, dept, company = unmangle((title or "").strip()), dept or "", unmangle(company)
     return {
         "id": f"{source}:{jid}", "company": company, "title": title,
         "location": (location or "").strip(), "url": url, "posted": posted,
