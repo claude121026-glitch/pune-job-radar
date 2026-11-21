@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-20T18:37:21+00:00",
- "started": "2026-11-20T18:36:55+00:00",
+ "updated": "2026-11-21T01:30:24+00:00",
+ "started": "2026-11-21T01:30:00+00:00",
  "sources": [
   {
    "key": "greenhouse:pubmatic",
@@ -17,7 +17,7 @@
    "ats": "greenhouse",
    "ok": true,
    "error": null,
-   "total": 28,
+   "total": 29,
    "pune": 9
   },
   {
@@ -26,7 +26,7 @@
    "ats": "greenhouse",
    "ok": true,
    "error": null,
-   "total": 121,
+   "total": 120,
    "pune": 22
   },
   {
@@ -35,7 +35,7 @@
    "ats": "greenhouse",
    "ok": true,
    "error": null,
-   "total": 387,
+   "total": 386,
    "pune": 11
   },
   {
@@ -89,7 +89,7 @@
    "ats": "lever",
    "ok": true,
    "error": null,
-   "total": 43,
+   "total": 42,
    "pune": 3
   },
   {
@@ -98,7 +98,7 @@
    "ats": "ashby",
    "ok": true,
    "error": null,
-   "total": 372,
+   "total": 374,
    "pune": 7
   },
   {
@@ -184,6 +184,7 @@
   }
  ],
  "adzuna_last": "2026-11-20T03:51:40+00:00",
+ "jooble": {},
  "counts": {
   "open": 400,
   "new": 0
@@ -202,7 +203,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T10:00:26+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -218,7 +219,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T10:00:26+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -234,7 +235,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T10:00:26+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -250,7 +251,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T10:00:26+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -266,7 +267,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T10:00:26+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3482,7 +3483,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T00:37:00+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3498,7 +3499,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T00:37:00+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3514,7 +3515,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3530,7 +3531,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3546,7 +3547,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3562,7 +3563,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3578,7 +3579,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3594,7 +3595,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3610,7 +3611,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3626,7 +3627,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3642,7 +3643,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3658,7 +3659,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3674,7 +3675,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3690,7 +3691,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3706,7 +3707,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3722,7 +3723,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3738,7 +3739,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3754,7 +3755,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3770,7 +3771,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3786,7 +3787,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3802,7 +3803,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3818,7 +3819,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3834,7 +3835,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3850,7 +3851,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3866,7 +3867,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3882,7 +3883,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3898,7 +3899,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3914,7 +3915,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3930,7 +3931,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3946,7 +3947,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3962,7 +3963,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3978,7 +3979,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -3994,7 +3995,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4010,7 +4011,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4026,7 +4027,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4042,7 +4043,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4058,7 +4059,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4074,7 +4075,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4090,7 +4091,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4106,7 +4107,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4122,7 +4123,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4138,7 +4139,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4154,7 +4155,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4170,7 +4171,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4186,7 +4187,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4202,7 +4203,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4218,7 +4219,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4234,7 +4235,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4250,7 +4251,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4266,7 +4267,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4282,7 +4283,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4298,7 +4299,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4314,7 +4315,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4330,7 +4331,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4346,7 +4347,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4362,7 +4363,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4378,7 +4379,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4394,7 +4395,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4410,7 +4411,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4426,7 +4427,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4442,7 +4443,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4458,7 +4459,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4474,7 +4475,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4490,7 +4491,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4506,7 +4507,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4522,7 +4523,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4538,7 +4539,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4554,7 +4555,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4570,7 +4571,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4586,7 +4587,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4602,7 +4603,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4618,7 +4619,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4634,7 +4635,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4650,7 +4651,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4666,7 +4667,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4682,7 +4683,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4698,7 +4699,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4714,7 +4715,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4730,7 +4731,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4746,7 +4747,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4762,7 +4763,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4778,7 +4779,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4794,7 +4795,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4810,7 +4811,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4826,7 +4827,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4842,7 +4843,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4858,7 +4859,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4874,7 +4875,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4890,7 +4891,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4906,7 +4907,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4922,7 +4923,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4938,7 +4939,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4954,7 +4955,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4970,7 +4971,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -4986,7 +4987,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5002,7 +5003,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5018,7 +5019,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5034,7 +5035,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5050,7 +5051,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5066,7 +5067,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5082,23 +5083,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
-   "closed": null
-  },
-  {
-   "id": "greenhouse:8814695002",
-   "company": "Druva",
-   "title": "Senior Staff Software Engineer",
-   "location": "Pune, Maharashtra, India",
-   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8814695002/?gh_jid=8814695002",
-   "posted": "2026-11-16T01:05:12-05:00",
-   "dept": "",
-   "source": "greenhouse",
-   "size": "mid",
-   "marketing": false,
-   "where": "pune",
-   "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5114,7 +5099,23 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
+   "closed": null
+  },
+  {
+   "id": "greenhouse:8814695002",
+   "company": "Druva",
+   "title": "Senior Staff Software Engineer",
+   "location": "Pune, Maharashtra, India",
+   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8814695002/?gh_jid=8814695002",
+   "posted": "2026-11-16T01:05:12-05:00",
+   "dept": "",
+   "source": "greenhouse",
+   "size": "mid",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-18T19:00:45+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5130,7 +5131,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5146,7 +5147,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5162,23 +5163,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
-   "closed": null
-  },
-  {
-   "id": "greenhouse:8743690002",
-   "company": "Addepar",
-   "title": "ADM Support Analyst",
-   "location": "Pune, India",
-   "url": "https://job-boards.greenhouse.io/addepar1/jobs/8743690002",
-   "posted": "2026-10-07T11:24:59-04:00",
-   "dept": "",
-   "source": "greenhouse",
-   "size": "mid",
-   "marketing": false,
-   "where": "pune",
-   "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5194,23 +5179,23 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
-   "id": "greenhouse:8852963002",
+   "id": "greenhouse:8743690002",
    "company": "Addepar",
-   "title": "Data Client Support Analyst",
+   "title": "ADM Support Analyst",
    "location": "Pune, India",
-   "url": "https://job-boards.greenhouse.io/addepar1/jobs/8852963002",
-   "posted": "2026-10-14T02:51:06-04:00",
+   "url": "https://job-boards.greenhouse.io/addepar1/jobs/8743690002",
+   "posted": "2026-10-07T11:24:59-04:00",
    "dept": "",
    "source": "greenhouse",
    "size": "mid",
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5226,7 +5211,23 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
+   "closed": null
+  },
+  {
+   "id": "greenhouse:8852963002",
+   "company": "Addepar",
+   "title": "Data Client Support Analyst",
+   "location": "Pune, India",
+   "url": "https://job-boards.greenhouse.io/addepar1/jobs/8852963002",
+   "posted": "2026-10-14T02:51:06-04:00",
+   "dept": "",
+   "source": "greenhouse",
+   "size": "mid",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-18T19:00:45+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5242,7 +5243,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5258,7 +5259,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5274,7 +5275,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5290,7 +5291,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5306,7 +5307,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5322,7 +5323,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5338,7 +5339,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5354,7 +5355,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5370,7 +5371,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5386,7 +5387,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5402,7 +5403,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5418,7 +5419,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5434,7 +5435,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5450,7 +5451,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5466,7 +5467,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5482,7 +5483,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5498,7 +5499,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5514,7 +5515,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5530,7 +5531,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5546,7 +5547,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5562,7 +5563,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5578,7 +5579,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5594,7 +5595,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5610,7 +5611,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5626,7 +5627,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5642,7 +5643,7 @@
    "marketing": true,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5658,7 +5659,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5674,7 +5675,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5690,7 +5691,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5706,7 +5707,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5722,7 +5723,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5738,7 +5739,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5754,7 +5755,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5770,7 +5771,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5786,7 +5787,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5802,7 +5803,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5818,7 +5819,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5834,7 +5835,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5850,7 +5851,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5866,7 +5867,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5882,7 +5883,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5898,7 +5899,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5914,7 +5915,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5930,7 +5931,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5946,7 +5947,7 @@
    "marketing": true,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5962,7 +5963,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5978,7 +5979,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -5994,7 +5995,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6010,7 +6011,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6026,7 +6027,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6042,7 +6043,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6058,7 +6059,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6074,7 +6075,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6090,7 +6091,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6106,7 +6107,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6122,7 +6123,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6138,7 +6139,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6154,7 +6155,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6170,7 +6171,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6186,7 +6187,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6202,7 +6203,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6218,7 +6219,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6234,7 +6235,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6250,7 +6251,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6266,7 +6267,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6282,7 +6283,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6298,7 +6299,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6314,7 +6315,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6330,7 +6331,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6346,7 +6347,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6362,7 +6363,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6378,7 +6379,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6394,7 +6395,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6410,7 +6411,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6426,7 +6427,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6442,7 +6443,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6458,7 +6459,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6474,7 +6475,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6490,7 +6491,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6506,7 +6507,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6522,7 +6523,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6538,7 +6539,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6554,7 +6555,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6570,7 +6571,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
@@ -6586,7 +6587,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-20T18:37:21+00:00",
+   "last_seen": "2026-11-21T01:30:24+00:00",
    "closed": null
   },
   {
