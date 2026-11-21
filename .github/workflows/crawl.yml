@@ -71,4 +71,14 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web
-      - uses: actions/deploy-pages@v4
+
+  # a separate job, so the uploaded site is fully registered before it is deployed
+  deploy:
+    needs: crawl
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
