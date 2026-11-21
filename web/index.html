@@ -230,7 +230,7 @@ for (const id of ["q", "mkt", "age", "company", "where", "view", "cq", "csize", 
 
 function updatedLine() {
   if (!$("jobsView").hidden) {
-    const bad = data.sources.filter(s => !s.ok).length;
+    const bad = data.sources.filter(s => !s.ok && !s.skipped).length;
     $("updated").textContent = data.updated ? `Jobs last checked ${ago(data.updated)} · ${data.sources.length} sources` +
       (bad ? ` · ${bad} failed this round` : "") : "No jobs yet";
   } else if (!$("cosView").hidden) {

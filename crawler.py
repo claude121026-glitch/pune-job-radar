@@ -330,7 +330,7 @@ def crawl():
         az = f_adzuna(adzuna_last)
         if az == ADZUNA_SKIPPED:  # not due yet: keep the Adzuna jobs we already have
             status.append({"key": "adzuna", "name": "Adzuna (aggregator)", "ats": "adzuna", "ok": False,
-                           "error": "not due yet (rationed to save API calls)", "total": 0, "pune": 0})
+                           "error": "not due yet (rationed to save API calls)", "total": 0, "pune": 0, "skipped": True})
             az = None
         elif az is not None:
             adzuna_last = now()
@@ -348,7 +348,7 @@ def crawl():
         jb = f_jooble(jooble_state)
         if jb == ADZUNA_SKIPPED:
             status.append({"key": "jooble", "name": "Jooble (aggregator)", "ats": "jooble", "ok": False,
-                           "error": "daily limit reached; resumes after midnight UTC", "total": 0, "pune": 0})
+                           "error": "daily limit reached; resumes after midnight UTC", "total": 0, "pune": 0, "skipped": True})
         elif jb is not None:
             # the same opening is often on Adzuna and Jooble: keep the first copy
             others = found + [j for j in prev_state.get("jobs", []) if j["source"] != "jooble" and not j.get("closed")]
