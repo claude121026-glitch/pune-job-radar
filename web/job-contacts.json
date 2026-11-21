@@ -1,4 +1,74 @@
 {
+"Tulip Group": {
+"emails": [
+"info@tulipgroup.in",
+"sales@tulipgroup.in"
+],
+"phones": [
+"+91 99991 01493"
+],
+"website": "https://www.tulipgroup.in"
+},
+"pattern": {
+"emails": [
+"hello@pattern.com"
+],
+"phones": [],
+"website": "https://www.pattern.com"
+},
+"Wipro": {
+"emails": [
+"info@wipro.com"
+],
+"phones": [
+"+91 86286 28022",
+"+91 82801 66500",
+"+91 20 4625 6700",
+"+91 20 2293 3700"
+],
+"website": "https://www.wipro.com"
+},
+"LOTL Infra": {
+"emails": [
+"connect@lotlinfra.com",
+"info@liquid-themes.com"
+],
+"phones": [
+"+91 77458 89243"
+],
+"website": "https://lotlinfra.com"
+},
+"TresVista": {
+"emails": [
+"info@tresvista.com"
+],
+"phones": [],
+"website": "https://www.tresvista.com"
+},
+"Muthoot Fincorp": {
+"emails": [],
+"phones": [
+"1800 102 1616"
+],
+"website": "https://muthootfincorp.com:443"
+},
+"Bajaj Finance": {
+"emails": [],
+"phones": [
+"+91 20 6910 5935",
+"+91 96070 25035",
+"+91 20 7187 8321",
+"+91 20 7187 8060"
+],
+"website": "https://www.bajajhousingfinance.in"
+},
+"UA Brands": {
+"emails": [
+"jobs@uabrands.com"
+],
+"phones": [],
+"website": "https://www.uabrandscareers.com"
+},
 "Osumare": {
 "emails": [
 "hello@osumare.com",
@@ -186,36 +256,12 @@
 ],
 "website": "https://hmadworld.com"
 },
-"Pattern": {
-"emails": [
-"hello@pattern.com"
-],
-"phones": [],
-"website": "https://www.pattern.com"
-},
 "Stories BySudhir Private Limited": {
 "emails": [],
 "phones": [
 "+91 96658 56332"
 ],
 "website": "https://storiesbysudhir.com"
-},
-"Birlasoft": {
-"emails": [],
-"phones": [
-"+91 20 2616 0084",
-"+91 20 2616 1629",
-"+91 20 6652 5000",
-"+91 98991 95348"
-],
-"website": "https://www.birlasoft.com"
-},
-"TresVista": {
-"emails": [
-"info@tresvista.com"
-],
-"phones": [],
-"website": "https://www.tresvista.com"
 },
 "Strata Digital Geeks": {
 "emails": [
@@ -227,6 +273,16 @@
 ],
 "website": "https://stratadigitalgeeks.in"
 },
+"Birlasoft": {
+"emails": [],
+"phones": [
+"+91 20 2616 0084",
+"+91 20 2616 1629",
+"+91 20 6652 5000",
+"+91 98991 95348"
+],
+"website": "https://www.birlasoft.com"
+},
 "Gsource Technologies": {
 "emails": [
 "info@gsourcedata.com"
@@ -235,28 +291,6 @@
 "+91 20 6744 4000"
 ],
 "website": "https://www.gsourcedata.com"
-},
-"Wipro": {
-"emails": [
-"info@wipro.com"
-],
-"phones": [
-"+91 86286 28022",
-"+91 82801 66500",
-"+91 20 4625 6700",
-"+91 20 2293 3700"
-],
-"website": "https://www.wipro.com"
-},
-"Tulip Group": {
-"emails": [
-"info@tulipgroup.in",
-"sales@tulipgroup.in"
-],
-"phones": [
-"+91 99991 01493"
-],
-"website": "https://www.tulipgroup.in"
 },
 "Payatu": {
 "emails": [
