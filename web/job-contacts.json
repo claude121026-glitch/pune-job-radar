@@ -1,4 +1,17 @@
 {
+"Osumare": {
+"emails": [
+"hello@osumare.com",
+"hello@osumare.in",
+"hr@osumare.in"
+],
+"phones": [
+"+91 84598 76226",
+"+91 98904 00646",
+"+91 96041 53943"
+],
+"website": "https://osumare.com"
+},
 "Amura Marketing Technologies": {
 "emails": [
 "enquire@amuratech.com"
@@ -15,16 +28,47 @@
 "phones": [],
 "website": "https://www.theimpactengine.com"
 },
+"Kotak Mahindra Bank": {
+"emails": [],
+"phones": [
+"1800 209 0000",
+"1800 209 8800",
+"1800 266 4545",
+"1800 209 9191"
+],
+"website": "https://www.kotak.bank.in"
+},
 "3 Dots Design Private Limited": {
 "emails": [
-"contact@3dotsdesign.in",
-"hr@3dotsdesign.in"
+"contact@3dotsdesign.in"
 ],
 "phones": [
 "+91 95116 96411",
 "+91 20 2566 5266"
 ],
 "website": "https://www.3dotsdesign.in"
+},
+"Shri Educare Limited": {
+"emails": [
+"hr@shrieducare.com"
+],
+"phones": [
+"+91 95551 51317",
+"+91 92171 75526",
+"+91 97113 25264",
+"+91 99586 15221"
+],
+"website": "https://shrieducare.com"
+},
+"Aarna Systems | Performance Driven Digital Marketing Agency": {
+"emails": [
+"info@aarnasystems.com"
+],
+"phones": [
+"+91 61798 21744",
+"+91 85529 41234"
+],
+"website": "https://www.aarnasystems.com"
 },
 "PadCare Labs": {
 "emails": [
@@ -36,14 +80,6 @@
 ],
 "website": "https://www.padcarelabs.com"
 },
-"Copods": {
-"emails": [
-"careers@copods.co",
-"hello@copods.co"
-],
-"phones": [],
-"website": "https://www.copods.co"
-},
 "Futurism Technologies": {
 "emails": [],
 "phones": [
@@ -51,16 +87,6 @@
 "+91 20 6712 0700"
 ],
 "website": "https://www.futurismtechnologies.com"
-},
-"Aarna Systems | Performance Driven Digital Marketing Agency": {
-"emails": [
-"info@aarnasystems.com"
-],
-"phones": [
-"+91 61798 21744",
-"+91 85529 41234"
-],
-"website": "https://www.aarnasystems.com"
 },
 "Codiastic Soft Private Limited": {
 "emails": [
@@ -97,18 +123,12 @@
 "phones": [],
 "website": "https://workerstown.com"
 },
-"Osumare": {
+"ProcDNA": {
 "emails": [
-"hello@osumare.com",
-"hello@osumare.in",
-"hr@osumare.in"
+"info@procdna.com"
 ],
-"phones": [
-"+91 84598 76226",
-"+91 98904 00646",
-"+91 96041 53943"
-],
-"website": "https://osumare.com"
+"phones": [],
+"website": "https://www.procdna.com"
 },
 "Sistema.bio": {
 "emails": [
@@ -120,13 +140,6 @@
 "+91 96076 06660"
 ],
 "website": "https://sistema.bio"
-},
-"ProcDNA": {
-"emails": [
-"info@procdna.com"
-],
-"phones": [],
-"website": "https://www.procdna.com"
 },
 "Arting Digital": {
 "emails": [
@@ -173,7 +186,7 @@
 ],
 "website": "https://hmadworld.com"
 },
-"pattern": {
+"Pattern": {
 "emails": [
 "hello@pattern.com"
 ],
@@ -196,6 +209,13 @@
 "+91 98991 95348"
 ],
 "website": "https://www.birlasoft.com"
+},
+"TresVista": {
+"emails": [
+"info@tresvista.com"
+],
+"phones": [],
+"website": "https://www.tresvista.com"
 },
 "Strata Digital Geeks": {
 "emails": [
@@ -269,6 +289,13 @@
 ],
 "website": "https://www.kirloskaroilengines.com"
 },
+"CrelioHealth": {
+"emails": [
+"info@creliohealth.com"
+],
+"phones": [],
+"website": "https://creliohealth.com"
+},
 "Benchmarkit": {
 "emails": [
 "info@benchmarkit.solutions"
@@ -278,12 +305,13 @@
 ],
 "website": "https://www.benchmarkit.solutions"
 },
-"TresVista": {
+"StoneX": {
 "emails": [
-"info@tresvista.com"
+"hr@stonex.it",
+"info@stonex.it"
 ],
 "phones": [],
-"website": "https://www.tresvista.com"
+"website": "https://www.stonex.it"
 },
 "Echo Booom": {
 "emails": [
@@ -308,12 +336,79 @@
 ],
 "website": "https://baxture.com"
 },
+"Copods": {
+"emails": [
+"careers@copods.co",
+"hello@copods.co"
+],
+"phones": [],
+"website": "https://www.copods.co"
+},
+"QuinStreet": {
+"emails": [],
+"phones": [
+"+91 20 4010 4200",
+"+91 65057 87632"
+],
+"website": "https://www.quinstreet.com"
+},
+"Zensar Technologies": {
+"emails": [
+"careers@zensar.com",
+"info@zensar.com"
+],
+"phones": [],
+"website": "https://www.zensar.com"
+},
 "HyrEzy Talent Solutions": {
 "emails": [],
 "phones": [
 "+91 99990 13222"
 ],
 "website": "https://hyrezy.com"
+},
+"Bynry": {
+"emails": [
+"contact@bynry.io"
+],
+"phones": [
+"+91 93252 51217"
+],
+"website": "https://www.bynry.com"
+},
+"TYZER TECHNOLOGIES": {
+"emails": [
+"careers@tyzergroup.com",
+"info@tyzergroup.com"
+],
+"phones": [],
+"website": "https://tyzergroup.com"
+},
+"2coms": {
+"emails": [],
+"phones": [
+"+91 80487 66688",
+"+91 81011 22022",
+"+91 91473 33168"
+],
+"website": "https://2coms.com"
+},
+"nCircle Tech Pvt. Ltd.": {
+"emails": [
+"info@ncircletech.com"
+],
+"phones": [
+"+91 20 6694 1900"
+],
+"website": "https://ncircletech.com"
+},
+"GE HealthCare": {
+"emails": [],
+"phones": [
+"1800 437 1171",
+"1800 668 0732"
+],
+"website": "https://www.gehealthcare.com"
 },
 "Tata Teleservices": {
 "emails": [],
@@ -323,6 +418,13 @@
 "1800 266 1515"
 ],
 "website": "https://www.tatatelebusiness.com"
+},
+"HSBC": {
+"emails": [],
+"phones": [
+"+91 20 7991 8888"
+],
+"website": "https://www.hsbc.com"
 },
 "Indovance Private Limited": {
 "emails": [
@@ -335,6 +437,72 @@
 ],
 "website": "https://indovance.com"
 },
+"Suncorp Solutions": {
+"emails": [],
+"phones": [
+"+91 93231 25404"
+],
+"website": "https://www.suncorpsolutions.in"
+},
+"UniAthena": {
+"emails": [],
+"phones": [
+"+91 97155 87954"
+],
+"website": "https://uniathena.com"
+},
+"Toprankers": {
+"emails": [
+"support@toprankers.com"
+],
+"phones": [
+"+91 63632 86363",
+"+91 61646 65752"
+],
+"website": "https://www.toprankers.com:443"
+},
+"Ugaoo": {
+"emails": [
+"support@ugaoo.com"
+],
+"phones": [
+"+91 80870 87224"
+],
+"website": "https://www.ugaoo.com"
+},
+"Bright Future India": {
+"emails": [
+"info@brightfutureas.com",
+"support@brightfutureas.com"
+],
+"phones": [
+"+91 77018 82533",
+"+91 89207 97870",
+"+91 92116 22303"
+],
+"website": "https://brightfutureas.com"
+},
+"Infinite Uptime": {
+"emails": [],
+"phones": [
+"+91 99100 32297"
+],
+"website": "https://www.infinite-uptime.com"
+},
+"Dhyey Consulting Services": {
+"emails": [
+"careers@dhyey.com",
+"enquiry@dhyey.com",
+"support@dhyey.com"
+],
+"phones": [
+"+91 95376 48999",
+"+91 83284 73789",
+"+91 75730 81999",
+"+91 75730 55999"
+],
+"website": "https://dhyey.com"
+},
 "Acuiti Labs": {
 "emails": [
 "info@acuitilabs.com"
@@ -344,14 +512,14 @@
 ],
 "website": "https://www.acuitilabs.com"
 },
-"2coms": {
-"emails": [],
-"phones": [
-"+91 80487 66688",
-"+91 81011 22022",
-"+91 91473 33168"
+"Shubham EPC Private": {
+"emails": [
+"info@shubham.biz"
 ],
-"website": "https://2coms.com"
+"phones": [
+"+91 20 2566 6863"
+],
+"website": "https://shubham.biz"
 },
 "eClerx": {
 "emails": [
@@ -360,6 +528,23 @@
 "phones": [],
 "website": "https://eclerx.com"
 },
+"NVIDIA": {
+"emails": [
+"sales@alignedenergy.com",
+"sales@atnorth.com",
+"sales@bdc.is",
+"sales@digitalrealty.com"
+],
+"phones": [],
+"website": "https://www.nvidia.com"
+},
+"Druva": {
+"emails": [],
+"phones": [
+"+91 20 6726 3300"
+],
+"website": "https://www.druva.com"
+},
 "Zscaler": {
 "emails": [],
 "phones": [
@@ -367,5 +552,12 @@
 "+91 70872 16963"
 ],
 "website": "https://www.zscaler.com:443"
+},
+"Sutherland": {
+"emails": [],
+"phones": [
+"+91 93702 67019"
+],
+"website": "https://sutherlandtechnologies.in"
 }
 }
