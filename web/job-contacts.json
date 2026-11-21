@@ -1,21 +1,4 @@
 {
-"Tulip Group": {
-"emails": [
-"info@tulipgroup.in",
-"sales@tulipgroup.in"
-],
-"phones": [
-"+91 99991 01493"
-],
-"website": "https://www.tulipgroup.in"
-},
-"pattern": {
-"emails": [
-"hello@pattern.com"
-],
-"phones": [],
-"website": "https://www.pattern.com"
-},
 "Wipro": {
 "emails": [
 "info@wipro.com"
@@ -28,6 +11,22 @@
 ],
 "website": "https://www.wipro.com"
 },
+"Amura Marketing Technologies": {
+"emails": [
+"enquire@amuratech.com"
+],
+"phones": [
+"+91 85302 33394"
+],
+"website": "https://www.amuratech.com"
+},
+"pattern": {
+"emails": [
+"hello@pattern.com"
+],
+"phones": [],
+"website": "https://www.pattern.com"
+},
 "LOTL Infra": {
 "emails": [
 "connect@lotlinfra.com",
@@ -38,19 +37,22 @@
 ],
 "website": "https://lotlinfra.com"
 },
+"Tulip Group": {
+"emails": [
+"info@tulipgroup.in",
+"sales@tulipgroup.in"
+],
+"phones": [
+"+91 99991 01493"
+],
+"website": "https://www.tulipgroup.in"
+},
 "TresVista": {
 "emails": [
 "info@tresvista.com"
 ],
 "phones": [],
 "website": "https://www.tresvista.com"
-},
-"Muthoot Fincorp": {
-"emails": [],
-"phones": [
-"1800 102 1616"
-],
-"website": "https://muthootfincorp.com:443"
 },
 "Bajaj Finance": {
 "emails": [],
@@ -69,6 +71,13 @@
 "phones": [],
 "website": "https://www.uabrandscareers.com"
 },
+"Muthoot Fincorp": {
+"emails": [],
+"phones": [
+"1800 102 1616"
+],
+"website": "https://muthootfincorp.com:443"
+},
 "Osumare": {
 "emails": [
 "hello@osumare.com",
@@ -81,15 +90,6 @@
 "+91 96041 53943"
 ],
 "website": "https://osumare.com"
-},
-"Amura Marketing Technologies": {
-"emails": [
-"enquire@amuratech.com"
-],
-"phones": [
-"+91 85302 33394"
-],
-"website": "https://www.amuratech.com"
 },
 "THE IMPACT ENGINE": {
 "emails": [
@@ -193,13 +193,6 @@
 "phones": [],
 "website": "https://workerstown.com"
 },
-"ProcDNA": {
-"emails": [
-"info@procdna.com"
-],
-"phones": [],
-"website": "https://www.procdna.com"
-},
 "Sistema.bio": {
 "emails": [
 "info@biosostenible.ar",
@@ -210,6 +203,13 @@
 "+91 96076 06660"
 ],
 "website": "https://sistema.bio"
+},
+"ProcDNA": {
+"emails": [
+"info@procdna.com"
+],
+"phones": [],
+"website": "https://www.procdna.com"
 },
 "Arting Digital": {
 "emails": [
@@ -263,16 +263,6 @@
 ],
 "website": "https://storiesbysudhir.com"
 },
-"Strata Digital Geeks": {
-"emails": [
-"hr@stratadigitalgeeks.com",
-"info@stratadigitalgeeks.in"
-],
-"phones": [
-"+91 92721 95854"
-],
-"website": "https://stratadigitalgeeks.in"
-},
 "Birlasoft": {
 "emails": [],
 "phones": [
@@ -282,6 +272,16 @@
 "+91 98991 95348"
 ],
 "website": "https://www.birlasoft.com"
+},
+"Strata Digital Geeks": {
+"emails": [
+"hr@stratadigitalgeeks.com",
+"info@stratadigitalgeeks.in"
+],
+"phones": [
+"+91 92721 95854"
+],
+"website": "https://stratadigitalgeeks.in"
 },
 "Gsource Technologies": {
 "emails": [
@@ -313,6 +313,13 @@
 ],
 "website": "https://vidushiinfotech.com"
 },
+"CrelioHealth": {
+"emails": [
+"info@creliohealth.com"
+],
+"phones": [],
+"website": "https://creliohealth.com"
+},
 "Kirloskar Oil Engines": {
 "emails": [],
 "phones": [
@@ -322,13 +329,6 @@
 "+91 94809 48290"
 ],
 "website": "https://www.kirloskaroilengines.com"
-},
-"CrelioHealth": {
-"emails": [
-"info@creliohealth.com"
-],
-"phones": [],
-"website": "https://creliohealth.com"
 },
 "Benchmarkit": {
 "emails": [
@@ -412,7 +412,6 @@
 },
 "TYZER TECHNOLOGIES": {
 "emails": [
-"careers@tyzergroup.com",
 "info@tyzergroup.com"
 ],
 "phones": [],
