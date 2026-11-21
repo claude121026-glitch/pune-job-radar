@@ -1,4 +1,34 @@
 {
+"TresVista": {
+"emails": [
+"info@tresvista.com"
+],
+"phones": [],
+"website": "https://www.tresvista.com"
+},
+"Make My interiors": {
+"emails": [],
+"phones": [
+"+91 89831 25579",
+"+91 98343 75579",
+"+91 98819 51312"
+],
+"website": "https://makemyinteriors.in"
+},
+"pattern": {
+"emails": [
+"hello@pattern.com"
+],
+"phones": [],
+"website": "https://www.pattern.com"
+},
+"Pericles Ventures Private Limited": {
+"emails": [
+"info@periclesventures.com"
+],
+"phones": [],
+"website": "https://periclesventures.com"
+},
 "Wipro": {
 "emails": [
 "info@wipro.com"
@@ -20,23 +50,6 @@
 ],
 "website": "https://www.amuratech.com"
 },
-"pattern": {
-"emails": [
-"hello@pattern.com"
-],
-"phones": [],
-"website": "https://www.pattern.com"
-},
-"LOTL Infra": {
-"emails": [
-"connect@lotlinfra.com",
-"info@liquid-themes.com"
-],
-"phones": [
-"+91 77458 89243"
-],
-"website": "https://lotlinfra.com"
-},
 "Tulip Group": {
 "emails": [
 "info@tulipgroup.in",
@@ -47,12 +60,15 @@
 ],
 "website": "https://www.tulipgroup.in"
 },
-"TresVista": {
+"LOTL Infra": {
 "emails": [
-"info@tresvista.com"
+"connect@lotlinfra.com",
+"info@liquid-themes.com"
 ],
-"phones": [],
-"website": "https://www.tresvista.com"
+"phones": [
+"+91 77458 89243"
+],
+"website": "https://lotlinfra.com"
 },
 "Bajaj Finance": {
 "emails": [],
