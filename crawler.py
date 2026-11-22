@@ -149,7 +149,8 @@ _N = r"(\d{1,2}(?:\.\d)?)"
 _YRS = r"\s*\+?\s*(?:years?|yrs?)\b"
 EXP_RANGE = re.compile(_N + r"\s*\+?\s*(?:-|–|—|to)\s*" + _N + _YRS, re.I)
 EXP_MIN = re.compile(_N + r"\s*\+?" + _YRS, re.I)
-EXP_CONTEXT = re.compile(r"experience|\bexp\b|\bexp\.|\byrs?\b|work(ed|ing)? (in|with|as)|background in|relevant", re.I)
+EXP_CONTEXT = re.compile(r"experience|\bexp\b|\bexp\.|\byrs?\b|work(ed|ing)? (in|with|as)|background in|relevant|"
+                         r"\bneeds?\b|requir|minimum|at least|\bmin\.?\b", re.I)
 NOT_EXP = re.compile(r"founded|established|history|legacy|since \d{4}|serving|anniversary|in business|old\b|"
                      r"warranty|contract (of|for)|tenure|age\b|aged\b|bond|notice period|ago\b", re.I)
 FRESHER_RE = re.compile(r"\bfreshers?\b|\bintern(ship)?s?\b|\btrainee\b|entry[- ]level|\bapprentice|"
