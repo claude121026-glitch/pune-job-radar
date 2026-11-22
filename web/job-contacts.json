@@ -100,6 +100,15 @@
 "phones": [],
 "website": "https://periclesventures.com"
 },
+"Amura Marketing Technologies": {
+"emails": [
+"enquire@amuratech.com"
+],
+"phones": [
+"+91 85302 33394"
+],
+"website": "https://www.amuratech.com"
+},
 "Wipro": {
 "emails": [
 "info@wipro.com"
@@ -112,14 +121,15 @@
 ],
 "website": "https://www.wipro.com"
 },
-"Amura Marketing Technologies": {
+"Tulip Group": {
 "emails": [
-"enquire@amuratech.com"
+"info@tulipgroup.in",
+"sales@tulipgroup.in"
 ],
 "phones": [
-"+91 85302 33394"
+"+91 99991 01493"
 ],
-"website": "https://www.amuratech.com"
+"website": "https://www.tulipgroup.in"
 },
 "LOTL Infra": {
 "emails": [
@@ -130,16 +140,6 @@
 "+91 77458 89243"
 ],
 "website": "https://lotlinfra.com"
-},
-"Tulip Group": {
-"emails": [
-"info@tulipgroup.in",
-"sales@tulipgroup.in"
-],
-"phones": [
-"+91 99991 01493"
-],
-"website": "https://www.tulipgroup.in"
 },
 "UA Brands": {
 "emails": [

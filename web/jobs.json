@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-22T06:44:41+00:00",
- "started": "2026-11-22T06:44:00+00:00",
+ "updated": "2026-11-22T07:38:42+00:00",
+ "started": "2026-11-22T07:38:06+00:00",
  "sources": [
   {
    "key": "greenhouse:pubmatic",
@@ -189,20 +189,241 @@
    "ats": "jooble",
    "ok": true,
    "error": null,
-   "total": 214,
-   "pune": 201
+   "total": 199,
+   "pune": 186
   }
  ],
  "adzuna_last": "2026-11-21T09:47:00+00:00",
  "jooble": {
   "day": "2026-11-22",
-  "calls": 7
+  "calls": 14
  },
  "counts": {
-  "open": 763,
-  "new": 57
+  "open": 774,
+  "new": 11
  },
  "jobs": [
+  {
+   "id": "jooble:-7251161288298176281",
+   "company": "INZT BP Business Solutions",
+   "title": "Micro Space Planner",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-7251161288298176281",
+   "posted": "2026-10-29T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T07:38:42+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-6797075784831727261",
+   "company": "Jones Lang LaSalle Building Operations",
+   "title": "Guest Relations Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-6797075784831727261",
+   "posted": "2026-11-13T23:00:41.2498685+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T07:38:42+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:803027175071740658",
+   "company": "EXL",
+   "title": "Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/803027175071740658",
+   "posted": "2026-10-09T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T07:38:42+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-6234021937359208676",
+   "company": "EXL",
+   "title": "Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-6234021937359208676",
+   "posted": "2026-10-26T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T07:38:42+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:3064811881322213442",
+   "company": "JLL",
+   "title": "Technical Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/3064811881322213442",
+   "posted": "2026-11-21T11:56:56.6749656+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T07:38:42+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:5052044857005919845",
+   "company": "Thinkster",
+   "title": "Growth Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/5052044857005919845",
+   "posted": "2026-10-30T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T07:38:42+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-1145985910538867442",
+   "company": "Career Site",
+   "title": "Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-1145985910538867442",
+   "posted": "2026-11-11T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T07:38:42+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:8868860937634448201",
+   "company": "EXL",
+   "title": "Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/8868860937634448201",
+   "posted": "2026-10-12T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T07:38:42+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-927292068810180278",
+   "company": "EXL",
+   "title": "Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-927292068810180278",
+   "posted": "2026-10-20T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T07:38:42+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-2716338720369171259",
+   "company": "Marriott",
+   "title": "F&B Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-2716338720369171259",
+   "posted": "2026-11-22T05:00:39.8080552+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T07:38:42+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-1564403506780387874",
+   "company": "DBS Bank India",
+   "title": "Associate, Specialist, Credit Analysis, Middle Market",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-1564403506780387874",
+   "posted": "2026-11-04T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T07:38:42+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-665595765271526881",
+   "company": "insiderOne AI",
+   "title": "AI Content Creator Intern",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-665595765271526881",
+   "posted": "2026-11-22T06:07:49.8104280+00:00",
+   "dept": "Internship",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-3893105748772153991",
+   "company": "Generac Captiva",
+   "title": "Technical Writer III",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-3893105748772153991",
+   "posted": "2026-11-13T23:00:39.0192181+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
   {
    "id": "jooble:3670259863109385381",
    "company": "Manipal Hospitals",
@@ -595,23 +816,6 @@
    "closed": null
   },
   {
-   "id": "jooble:-665595765271526881",
-   "company": "insiderOne AI",
-   "title": "AI Content Creator Intern",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-665595765271526881",
-   "posted": "2026-11-22T06:07:49.8104280+00:00",
-   "dept": "Internship",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-22T06:44:41+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
    "id": "jooble:-8650090704447940686",
    "company": "Bajaj Finance",
    "title": "Cluster Manager Capital MarketsSenior Cluster Manager Capital Markets",
@@ -788,23 +992,6 @@
    "location": "Pune",
    "url": "https://in.jooble.org/jdp/2072812800141585332",
    "posted": "2026-11-10T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-22T06:44:41+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-3893105748772153991",
-   "company": "Generac Captiva",
-   "title": "Technical Writer III",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-3893105748772153991",
-   "posted": "2026-11-13T23:00:39.0192181+00:00",
    "dept": "Full-time",
    "source": "jooble",
    "size": "",
@@ -1186,7 +1373,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T23:14:22+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1203,7 +1390,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T23:14:22+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1220,24 +1407,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T23:14:22+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-3075049201847678759",
-   "company": "Fidel Softech",
-   "title": "Marketing Intern",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-3075049201847678759",
-   "posted": "2026-10-30T00:00:00.0000000",
-   "dept": "Internship",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T23:14:22+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1254,7 +1424,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T23:14:22+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-3075049201847678759",
+   "company": "Fidel Softech",
+   "title": "Marketing Intern",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-3075049201847678759",
+   "posted": "2026-10-30T00:00:00.0000000",
+   "dept": "Internship",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T23:14:22+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1271,7 +1458,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T23:14:22+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1441,7 +1628,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1458,41 +1645,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:3352223832806435676",
-   "company": "Randstad",
-   "title": "Technical writer",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/3352223832806435676",
-   "posted": "2026-10-12T00:00:00.0000000",
-   "dept": "Temporary",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:2048626188769635817",
-   "company": "Bosch Group",
-   "title": "Technical Illustrator",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/2048626188769635817",
-   "posted": "2026-11-09T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1509,7 +1662,41 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:2048626188769635817",
+   "company": "Bosch Group",
+   "title": "Technical Illustrator",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/2048626188769635817",
+   "posted": "2026-11-09T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T20:08:16+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:3352223832806435676",
+   "company": "Randstad",
+   "title": "Technical writer",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/3352223832806435676",
+   "posted": "2026-10-12T00:00:00.0000000",
+   "dept": "Temporary",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T20:08:16+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1526,7 +1713,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:2154740855624048219",
+   "company": "Bosch Group",
+   "title": "Technical Illustrator",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/2154740855624048219",
+   "posted": "2026-11-09T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T20:08:16+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1543,7 +1747,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1560,7 +1764,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1577,41 +1781,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:7266732804873968529",
-   "company": "Aspentech",
-   "title": "Sr. Technical Writer",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/7266732804873968529",
-   "posted": "2026-11-11T11:52:59.0586687+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:3660978589492373725",
-   "company": "DDN",
-   "title": "Senior Technical Writer",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/3660978589492373725",
-   "posted": "2026-11-02T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1628,7 +1798,41 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:3660978589492373725",
+   "company": "DDN",
+   "title": "Senior Technical Writer",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/3660978589492373725",
+   "posted": "2026-11-02T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T20:08:16+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:7266732804873968529",
+   "company": "Aspentech",
+   "title": "Sr. Technical Writer",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/7266732804873968529",
+   "posted": "2026-11-11T11:52:59.0586687+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T20:08:16+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1645,7 +1849,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1662,7 +1866,92 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-5850027780888552872",
+   "company": "Make My interiors",
+   "title": "Interior Designer",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-5850027780888552872",
+   "posted": "2026-11-18T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T20:08:16+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-3043191988292508061",
+   "company": "pattern",
+   "title": "Digital Advertising Strategist -AU..",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-3043191988292508061",
+   "posted": "2026-10-06T19:32:48.4400000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T20:08:16+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:7695590842863378275",
+   "company": "MANOHAR SPACEWORKS Private Limited",
+   "title": "Senior Interior Designer",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/7695590842863378275",
+   "posted": "2026-10-17T16:57:53.3500000",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T20:08:16+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-1261196785092204890",
+   "company": "Nature & Roots Interior Design Studio Private Limited",
+   "title": "Interior Designer - Fresher",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-1261196785092204890",
+   "posted": "2026-11-20T00:00:00.0000000",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T20:08:16+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-2334199039839101913",
+   "company": "Pericles Ventures Private Limited",
+   "title": "Video Editor",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-2334199039839101913",
+   "posted": "2026-11-02T17:54:45.1870000",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T20:08:16+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1683,114 +1972,12 @@
    "closed": null
   },
   {
-   "id": "jooble:-5850027780888552872",
-   "company": "Make My interiors",
-   "title": "Interior Designer",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-5850027780888552872",
-   "posted": "2026-11-18T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-3043191988292508061",
-   "company": "pattern",
-   "title": "Digital Advertising Strategist -AU..",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-3043191988292508061",
-   "posted": "2026-10-06T19:32:48.4400000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-1261196785092204890",
-   "company": "Nature & Roots Interior Design Studio Private Limited",
-   "title": "Interior Designer - Fresher",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-1261196785092204890",
-   "posted": "2026-11-20T00:00:00.0000000",
-   "dept": "",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:7695590842863378275",
-   "company": "MANOHAR SPACEWORKS Private Limited",
-   "title": "Senior Interior Designer",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/7695590842863378275",
-   "posted": "2026-10-17T16:57:53.3500000",
-   "dept": "",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-2334199039839101913",
-   "company": "Pericles Ventures Private Limited",
-   "title": "Video Editor",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-2334199039839101913",
-   "posted": "2026-11-02T17:54:45.1870000",
-   "dept": "",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
    "id": "jooble:-8968027083334549255",
    "company": "Generac Captiva",
    "title": "Technical Writer II",
    "location": "Pune",
    "url": "https://in.jooble.org/jdp/-8968027083334549255",
    "posted": "2026-10-22T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T20:08:16+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:2154740855624048219",
-   "company": "Bosch Group",
-   "title": "Technical Illustrator",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/2154740855624048219",
-   "posted": "2026-11-09T00:00:00.0000000",
    "dept": "Full-time",
    "source": "jooble",
    "size": "",
@@ -1819,6 +2006,23 @@
    "closed": null
   },
   {
+   "id": "jooble:3176056630630162845",
+   "company": "Amura Marketing Technologies",
+   "title": "Trainee - SEO",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/3176056630630162845",
+   "posted": "2026-11-17T05:00:40.9737048+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T18:26:24+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
    "id": "jooble:756925914356160910",
    "company": "Davies",
    "title": "Lead Associate - Marketing",
@@ -1832,7 +2036,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T18:26:24+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1849,7 +2053,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T18:26:24+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -1887,23 +2091,6 @@
    "closed": null
   },
   {
-   "id": "jooble:3176056630630162845",
-   "company": "Amura Marketing Technologies",
-   "title": "Trainee - SEO",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/3176056630630162845",
-   "posted": "2026-11-17T05:00:40.9737048+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T18:26:24+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
    "id": "jooble:-7141052914388589504",
    "company": "Principal Global Services",
    "title": "Lead Analyst - Content Producer",
@@ -1917,7 +2104,41 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T16:44:09+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:1107072338265703841",
+   "company": "Tulip Group",
+   "title": "Social Media Video Editor for Real estate Group",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/1107072338265703841",
+   "posted": "2026-10-29T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T16:44:09+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:8391648824885434510",
+   "company": "Capgemini",
+   "title": "Senior Brand & Creative Talent",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/8391648824885434510",
+   "posted": "2026-10-22T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T16:44:09+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -2499,23 +2720,6 @@
    "closed": null
   },
   {
-   "id": "jooble:8391648824885434510",
-   "company": "Capgemini",
-   "title": "Senior Brand & Creative Talent",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/8391648824885434510",
-   "posted": "2026-10-22T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T16:44:09+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
    "id": "jooble:-8198308083423858979",
    "company": "pattern",
    "title": "Associate Manager - Instock",
@@ -2547,23 +2751,6 @@
    "where": "pune",
    "first_seen": "2026-11-21T16:44:09+00:00",
    "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:1107072338265703841",
-   "company": "Tulip Group",
-   "title": "Social Media Video Editor for Real estate Group",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/1107072338265703841",
-   "posted": "2026-10-29T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T16:44:09+00:00",
-   "last_seen": "2026-11-21T20:08:16+00:00",
    "closed": null
   },
   {
@@ -2614,7 +2801,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T14:40:57+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -2631,7 +2818,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T14:40:57+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -2648,41 +2835,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T14:40:57+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
-   "id": "jooble:2159019504860817964",
-   "company": "Aditya Vastu Studio",
-   "title": "Video Editor",
+   "id": "jooble:-6089245952296406715",
+   "company": "TIAA",
+   "title": "Analyst II - Proofreader",
    "location": "Pune",
-   "url": "https://in.jooble.org/jdp/2159019504860817964",
-   "posted": "2026-10-23T00:00:00.0000000",
-   "dept": "",
+   "url": "https://in.jooble.org/jdp/-6089245952296406715",
+   "posted": "2026-11-21T17:00:36.7276421+00:00",
+   "dept": "Full-time",
    "source": "jooble",
    "size": "",
    "marketing": false,
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T14:40:57+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:5883121985267695619",
-   "company": "Amura Marketing Technologies",
-   "title": "Sr. Executive - Social Media",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/5883121985267695619",
-   "posted": "2026-11-17T05:00:40.9798341+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T14:40:57+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -2699,7 +2869,41 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T14:40:57+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:2159019504860817964",
+   "company": "Aditya Vastu Studio",
+   "title": "Video Editor",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/2159019504860817964",
+   "posted": "2026-10-23T00:00:00.0000000",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T14:40:57+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:5883121985267695619",
+   "company": "Amura Marketing Technologies",
+   "title": "Sr. Executive - Social Media",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/5883121985267695619",
+   "posted": "2026-11-17T05:00:40.9798341+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T14:40:57+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -2958,23 +3162,6 @@
    "closed": null
   },
   {
-   "id": "jooble:-6089245952296406715",
-   "company": "TIAA",
-   "title": "Analyst II - Proofreader",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-6089245952296406715",
-   "posted": "2026-11-21T17:00:36.7276421+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T14:40:57+00:00",
-   "last_seen": "2026-11-21T20:08:16+00:00",
-   "closed": null
-  },
-  {
    "id": "jooble:4278347985783457639",
    "company": "Shri Educare Limited",
    "title": "PGT - Mass Media Studies - The Kalyani School, Pune",
@@ -3090,7 +3277,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T13:44:47+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3107,7 +3294,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3124,7 +3311,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3141,7 +3328,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3158,7 +3345,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3175,7 +3362,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3192,7 +3379,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3209,7 +3396,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3226,7 +3413,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3243,7 +3430,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3260,7 +3447,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3277,7 +3464,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3294,7 +3481,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3311,7 +3498,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3328,7 +3515,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3345,7 +3532,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3362,7 +3549,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3379,7 +3566,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3396,7 +3583,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3413,7 +3600,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3430,7 +3617,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3447,7 +3634,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3464,7 +3651,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3481,7 +3668,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3498,41 +3685,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:8334299633923870310",
-   "company": "PassionMojo",
-   "title": "Marketing Manager",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/8334299633923870310",
-   "posted": "2026-10-30T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:5621350073331025800",
-   "company": "Unknown",
-   "title": "Digital Marketing Manager",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/5621350073331025800",
-   "posted": "2026-11-08T18:07:18.7130000",
-   "dept": "",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3549,7 +3702,41 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:5621350073331025800",
+   "company": "Unknown",
+   "title": "Digital Marketing Manager",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/5621350073331025800",
+   "posted": "2026-11-08T18:07:18.7130000",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:8334299633923870310",
+   "company": "PassionMojo",
+   "title": "Marketing Manager",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/8334299633923870310",
+   "posted": "2026-10-30T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3566,7 +3753,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3583,7 +3770,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3600,7 +3787,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3617,7 +3804,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3634,7 +3821,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3651,7 +3838,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3668,24 +3855,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-622893772423331907",
-   "company": "Metro/makro",
-   "title": "Sr. Analyst - Digital Marketing",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-622893772423331907",
-   "posted": "2026-11-18T11:00:39.2007329+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3702,7 +3872,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-622893772423331907",
+   "company": "Metro/makro",
+   "title": "Sr. Analyst - Digital Marketing",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-622893772423331907",
+   "posted": "2026-11-18T11:00:39.2007329+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3719,7 +3906,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3736,7 +3923,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3753,7 +3940,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3770,7 +3957,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3787,7 +3974,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-3827834462722430408",
+   "company": "Dentsu",
+   "title": "Senior Content Strategist",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-3827834462722430408",
+   "posted": "2026-11-17T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3804,16 +4008,16 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
-   "id": "jooble:-8391936283545615727",
-   "company": "Codebase",
-   "title": "Marketing Executive / Marketing Manager",
+   "id": "jooble:5492972970594422670",
+   "company": "Dentsu",
+   "title": "Lead Content Strategist",
    "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-8391936283545615727",
-   "posted": "2026-11-01T00:00:00.0000000",
+   "url": "https://in.jooble.org/jdp/5492972970594422670",
+   "posted": "2026-11-16T00:00:00.0000000",
    "dept": "Full-time",
    "source": "jooble",
    "size": "",
@@ -3821,7 +4025,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3838,24 +4042,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:1427103682283266900",
-   "company": "PadCare Labs",
-   "title": "Content & Social Media Executive",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/1427103682283266900",
-   "posted": "2026-11-15T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3872,7 +4059,58 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-8391936283545615727",
+   "company": "Codebase",
+   "title": "Marketing Executive / Marketing Manager",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-8391936283545615727",
+   "posted": "2026-11-01T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:1216986932229093577",
+   "company": "Leapswitch Networks Pvt Ltd",
+   "title": "Performance Marketing Lead",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/1216986932229093577",
+   "posted": "2026-11-03T21:50:46.4170000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:1427103682283266900",
+   "company": "PadCare Labs",
+   "title": "Content & Social Media Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/1427103682283266900",
+   "posted": "2026-11-15T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3889,7 +4127,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3906,7 +4144,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3923,7 +4161,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3940,7 +4178,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3957,7 +4195,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3974,7 +4212,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -3991,7 +4229,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4008,7 +4246,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4025,7 +4263,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4042,7 +4280,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4059,7 +4297,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4076,7 +4314,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4093,7 +4331,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-8800356680864696763",
+   "company": "METRO Global Solution Center IN",
+   "title": "Sr. Analyst - Digital Marketing",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-8800356680864696763",
+   "posted": "2026-11-17T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4110,58 +4365,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
-   "id": "jooble:-1807978934400073527",
-   "company": "Atfem KhetiGaadi Private Limited",
-   "title": "Junior Social Media Marketing Executive",
+   "id": "jooble:-8721141430579726861",
+   "company": "Aarna Systems | Performance Driven Digital Marketing Agency",
+   "title": "Demand Generation Executive",
    "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-1807978934400073527",
-   "posted": "2026-11-12T00:00:00.0000000",
-   "dept": "",
+   "url": "https://in.jooble.org/jdp/-8721141430579726861",
+   "posted": "2026-11-04T00:00:00.0000000",
+   "dept": "Full-time",
    "source": "jooble",
    "size": "",
    "marketing": true,
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-1666425800538934025",
-   "company": "AGCO",
-   "title": "Aftersales Parts Manager II, eCommerce & Merchandising",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-1666425800538934025",
-   "posted": "2026-09-16T00:00:00.0000000",
-   "dept": "",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-8648750079651415504",
-   "company": "Osumare",
-   "title": "Junior Creative Writer",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-8648750079651415504",
-   "posted": "2026-10-28T00:00:00.0000000",
-   "dept": "",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4178,7 +4399,75 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-1807978934400073527",
+   "company": "Atfem KhetiGaadi Private Limited",
+   "title": "Junior Social Media Marketing Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-1807978934400073527",
+   "posted": "2026-11-12T00:00:00.0000000",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-1666425800538934025",
+   "company": "AGCO",
+   "title": "Aftersales Parts Manager II, eCommerce & Merchandising",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-1666425800538934025",
+   "posted": "2026-09-16T00:00:00.0000000",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-8279164870949776206",
+   "company": "TransPerfect",
+   "title": "Senior Performance Marketing Manager",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-8279164870949776206",
+   "posted": "2026-11-20T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-8648750079651415504",
+   "company": "Osumare",
+   "title": "Junior Creative Writer",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-8648750079651415504",
+   "posted": "2026-10-28T00:00:00.0000000",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4195,24 +4484,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-7247274640183360830",
-   "company": "Cisco",
-   "title": "Mid Market Account Executive Pune",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-7247274640183360830",
-   "posted": "2026-10-30T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4229,7 +4501,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-7247274640183360830",
+   "company": "Cisco",
+   "title": "Mid Market Account Executive Pune",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-7247274640183360830",
+   "posted": "2026-10-30T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4246,24 +4535,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:3014480987190344098",
-   "company": "TresVista",
-   "title": "Content Lead",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/3014480987190344098",
-   "posted": "2026-10-26T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4280,24 +4552,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
-   "id": "jooble:5423648188800952854",
-   "company": "CDM Smith",
-   "title": "Intermediate Marketing and Proposal Specialist",
+   "id": "jooble:3014480987190344098",
+   "company": "TresVista",
+   "title": "Content Lead",
    "location": "Pune",
-   "url": "https://in.jooble.org/jdp/5423648188800952854",
-   "posted": "2026-10-07T00:00:00.0000000",
-   "dept": "",
+   "url": "https://in.jooble.org/jdp/3014480987190344098",
+   "posted": "2026-10-26T00:00:00.0000000",
+   "dept": "Full-time",
    "source": "jooble",
    "size": "",
-   "marketing": true,
+   "marketing": false,
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4314,16 +4586,33 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
-   "id": "jooble:-6944780818622087183",
-   "company": "A global drone-autonomy software company",
-   "title": "Product Marketing Manager - B2B SaaS",
+   "id": "jooble:5423648188800952854",
+   "company": "CDM Smith",
+   "title": "Intermediate Marketing and Proposal Specialist",
    "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-6944780818622087183",
-   "posted": "2026-10-26T00:00:00.0000000",
+   "url": "https://in.jooble.org/jdp/5423648188800952854",
+   "posted": "2026-10-07T00:00:00.0000000",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-6719673539559543811",
+   "company": "Drishti Group",
+   "title": "Marketing Executive - Pune",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-6719673539559543811",
+   "posted": "2026-11-02T15:53:54.3796719+00:00",
    "dept": "Full-time",
    "source": "jooble",
    "size": "",
@@ -4331,7 +4620,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4348,7 +4637,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4365,7 +4654,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4382,41 +4671,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
-   "id": "jooble:-3827734911514565913",
-   "company": "Covelnt Apex Technology Private Limited",
-   "title": "Field Marketing Executive",
+   "id": "jooble:-6944780818622087183",
+   "company": "A global drone-autonomy software company",
+   "title": "Product Marketing Manager - B2B SaaS",
    "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-3827734911514565913",
-   "posted": "2026-10-19T16:50:21.1370000",
-   "dept": "",
+   "url": "https://in.jooble.org/jdp/-6944780818622087183",
+   "posted": "2026-10-26T00:00:00.0000000",
+   "dept": "Full-time",
    "source": "jooble",
    "size": "",
    "marketing": true,
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:2082924573235497063",
-   "company": "PriMove Infrastructure Development Consultants Pvt Ltd",
-   "title": "Agri Marketing Expert.",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/2082924573235497063",
-   "posted": "2026-11-20T21:56:07.4257911+00:00",
-   "dept": "",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4433,7 +4705,41 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:2082924573235497063",
+   "company": "PriMove Infrastructure Development Consultants Pvt Ltd",
+   "title": "Agri Marketing Expert.",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/2082924573235497063",
+   "posted": "2026-11-20T21:56:07.4257911+00:00",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-3827734911514565913",
+   "company": "Covelnt Apex Technology Private Limited",
+   "title": "Field Marketing Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-3827734911514565913",
+   "posted": "2026-10-19T16:50:21.1370000",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4450,7 +4756,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4467,24 +4773,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-5863505083079591037",
-   "company": "Gsource Technologies",
-   "title": "Intern - Digital Marketing",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-5863505083079591037",
-   "posted": "2026-10-29T00:00:00.0000000",
-   "dept": "Internship",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4501,7 +4790,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-5863505083079591037",
+   "company": "Gsource Technologies",
+   "title": "Intern - Digital Marketing",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-5863505083079591037",
+   "posted": "2026-10-29T00:00:00.0000000",
+   "dept": "Internship",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4518,7 +4824,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4535,7 +4841,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4552,7 +4858,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:3159119462091560002",
+   "company": "NielsenIQ",
+   "title": "Digital Content & Learning Technology Specialist",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/3159119462091560002",
+   "posted": "2026-11-19T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4569,24 +4892,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-4505857811852899645",
-   "company": "Aera Technology",
-   "title": "Marketing Ops Manager",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-4505857811852899645",
-   "posted": "2026-11-21T11:00:39.3332165+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4603,7 +4909,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-4505857811852899645",
+   "company": "Aera Technology",
+   "title": "Marketing Ops Manager",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-4505857811852899645",
+   "posted": "2026-11-21T11:00:39.3332165+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4620,7 +4943,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4637,7 +4960,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-2785362986042370336",
+   "company": "Leapswitch Networks Pvt Ltd",
+   "title": "Content Writer",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-2785362986042370336",
+   "posted": "2026-11-12T15:50:49.2900000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4654,7 +4994,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:4301963651746463216",
+   "company": "Alpha Solution",
+   "title": "Sales And Marketing Specialist",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/4301963651746463216",
+   "posted": "2026-10-14T12:50:47.0752048+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4671,7 +5028,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4688,7 +5045,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4705,58 +5062,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-6956535662446619063",
-   "company": "Kirloskar Oil Engines",
-   "title": "Assistant General Manager (AGM) - Marketing Department",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-6956535662446619063",
-   "posted": "2026-11-05T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:7534070855679222629",
-   "company": "Forvis Mazars India",
-   "title": "Audit Non-FS Mid Markets (Assistant Manager)",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/7534070855679222629",
-   "posted": "2026-10-29T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:8193490990053611501",
-   "company": "AGCO",
-   "title": "Aftersales Parts Manager II, eCommerce & Merchandising",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/8193490990053611501",
-   "posted": "2026-10-29T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4773,24 +5079,24 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
-   "id": "jooble:-6935833487048732673",
-   "company": "CrelioHealth",
-   "title": "SME Sales Manager - Domestic Market",
+   "id": "jooble:-6956535662446619063",
+   "company": "Kirloskar Oil Engines",
+   "title": "Assistant General Manager (AGM) - Marketing Department",
    "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-6935833487048732673",
-   "posted": "2026-10-29T00:00:00.0000000",
+   "url": "https://in.jooble.org/jdp/-6956535662446619063",
+   "posted": "2026-11-05T00:00:00.0000000",
    "dept": "Full-time",
    "source": "jooble",
    "size": "",
-   "marketing": false,
+   "marketing": true,
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4807,41 +5113,58 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
-   "id": "jooble:8264581163592734224",
-   "company": "Thinkster",
-   "title": "Freelance Technical Copywriter",
+   "id": "jooble:7534070855679222629",
+   "company": "Forvis Mazars India",
+   "title": "Audit Non-FS Mid Markets (Assistant Manager)",
    "location": "Pune",
-   "url": "https://in.jooble.org/jdp/8264581163592734224",
-   "posted": "2026-10-22T00:00:00.0000000",
-   "dept": "Temporary",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-2129010674601592193",
-   "company": "Tata Motors",
-   "title": "Executive-Zonal Technical Support-Sales, Marketing & Customer Care-TMPV",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-2129010674601592193",
-   "posted": "2026-09-08T00:00:00.0000000",
+   "url": "https://in.jooble.org/jdp/7534070855679222629",
+   "posted": "2026-10-29T00:00:00.0000000",
    "dept": "Full-time",
    "source": "jooble",
    "size": "",
-   "marketing": true,
+   "marketing": false,
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:8193490990053611501",
+   "company": "AGCO",
+   "title": "Aftersales Parts Manager II, eCommerce & Merchandising",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/8193490990053611501",
+   "posted": "2026-10-29T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-6935833487048732673",
+   "company": "CrelioHealth",
+   "title": "SME Sales Manager - Domestic Market",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-6935833487048732673",
+   "posted": "2026-10-29T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4858,7 +5181,41 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-2129010674601592193",
+   "company": "Tata Motors",
+   "title": "Executive-Zonal Technical Support-Sales, Marketing & Customer Care-TMPV",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-2129010674601592193",
+   "posted": "2026-09-08T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:8264581163592734224",
+   "company": "Thinkster",
+   "title": "Freelance Technical Copywriter",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/8264581163592734224",
+   "posted": "2026-10-22T00:00:00.0000000",
+   "dept": "Temporary",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4875,92 +5232,7 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:1125913115661692280",
-   "company": "Laksh Consultants",
-   "title": "Website Manager - eCommerce Domain",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/1125913115661692280",
-   "posted": "2026-11-20T03:54:15.1851166+00:00",
-   "dept": "",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-3261885687765480935",
-   "company": "Randstad",
-   "title": "Marketing Content Writer",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-3261885687765480935",
-   "posted": "2026-11-17T17:00:33.4634344+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-9068643167880832615",
-   "company": "pattern",
-   "title": "Digital Advertising Strategist..",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-9068643167880832615",
-   "posted": "2026-10-15T19:36:42.7700000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-2188448768185307829",
-   "company": "Calderys Career Opportunities",
-   "title": "Internal Communication Officer - TEMP",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-2188448768185307829",
-   "posted": "2026-10-26T00:00:00.0000000",
-   "dept": "Temporary",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:1649618467927865497",
-   "company": "TresVista",
-   "title": "Vice President Brand Strategy and Corporate Communications",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/1649618467927865497",
-   "posted": "2026-10-26T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4977,7 +5249,177 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-9068643167880832615",
+   "company": "pattern",
+   "title": "Digital Advertising Strategist..",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-9068643167880832615",
+   "posted": "2026-10-15T19:36:42.7700000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-7551915752741868424",
+   "company": "EY",
+   "title": "Senior Manager - Markets",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-7551915752741868424",
+   "posted": "2026-10-26T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-2188448768185307829",
+   "company": "Calderys Career Opportunities",
+   "title": "Internal Communication Officer - TEMP",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-2188448768185307829",
+   "posted": "2026-10-26T00:00:00.0000000",
+   "dept": "Temporary",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-1381863108308223148",
+   "company": "RARR TECHNOLOGIES PRIVATE LIMITED",
+   "title": "RARR Technologies - Senior Braze Campaign Specialist - Marketing Automation",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-1381863108308223148",
+   "posted": "2026-10-27T03:54:14.4455233+00:00",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-5362898199039399542",
+   "company": "ProcDNA",
+   "title": "[India] Marketing Mix - Engagement Lead",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-5362898199039399542",
+   "posted": "2026-11-05T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-7648400749656322134",
+   "company": "Philips",
+   "title": "Commercial Insights Manager",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-7648400749656322134",
+   "posted": "2026-11-18T11:59:32.5679143+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-7461659962368410980",
+   "company": "WTW External Careers Site",
+   "title": "AVP/VP/Sr - VP Techno Marketing Professionals",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-7461659962368410980",
+   "posted": "2026-11-17T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-3261885687765480935",
+   "company": "Randstad",
+   "title": "Marketing Content Writer",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-3261885687765480935",
+   "posted": "2026-11-17T17:00:33.4634344+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:1649618467927865497",
+   "company": "TresVista",
+   "title": "Vice President Brand Strategy and Corporate Communications",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/1649618467927865497",
+   "posted": "2026-10-26T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-8235044653882076904",
+   "company": "aeratechnology",
+   "title": "Marketing Ops Manager",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-8235044653882076904",
+   "posted": "2026-11-20T18:52:12.7415710+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -4994,7 +5436,109 @@
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:1125913115661692280",
+   "company": "Laksh Consultants",
+   "title": "Website Manager - eCommerce Domain",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/1125913115661692280",
+   "posted": "2026-11-20T03:54:15.1851166+00:00",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-1573474228827606765",
+   "company": "StoneX",
+   "title": "Director, Pricing and Market Data Technology",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-1573474228827606765",
+   "posted": "2026-10-30T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-1785470905445046005",
+   "company": "Atlas Copco",
+   "title": "Business Marketing Manager Othe",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-1785470905445046005",
+   "posted": "2026-11-11T00:00:00.0000000",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:5598697605557300168",
+   "company": "JLL",
+   "title": "Client Visit Experience - Executive",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/5598697605557300168",
+   "posted": "2026-11-21T11:56:58.0017920+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:-3796876994509477214",
+   "company": "Philips",
+   "title": "Senior Product Manager",
+   "location": "Pune",
+   "url": "https://in.jooble.org/jdp/-3796876994509477214",
+   "posted": "2026-11-19T11:56:19.5931731+00:00",
+   "dept": "Full-time",
+   "source": "jooble",
+   "size": "",
+   "marketing": false,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "jooble:8114989851412410867",
+   "company": "Baxture technologies",
+   "title": "Marketing Associate( IT Services and Consulting, US Market)",
+   "location": "Pimpri",
+   "url": "https://in.jooble.org/jdp/8114989851412410867",
+   "posted": "2026-11-16T11:57:14.4246518+00:00",
+   "dept": "",
+   "source": "jooble",
+   "size": "",
+   "marketing": true,
+   "email": "",
+   "where": "pune",
+   "first_seen": "2026-11-21T12:56:36+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -5032,108 +5576,6 @@
    "closed": null
   },
   {
-   "id": "jooble:-3827834462722430408",
-   "company": "Dentsu",
-   "title": "Senior Content Strategist",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-3827834462722430408",
-   "posted": "2026-11-17T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:5492972970594422670",
-   "company": "Dentsu",
-   "title": "Lead Content Strategist",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/5492972970594422670",
-   "posted": "2026-11-16T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:1216986932229093577",
-   "company": "Leapswitch Networks Pvt Ltd",
-   "title": "Performance Marketing Lead",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/1216986932229093577",
-   "posted": "2026-11-03T21:50:46.4170000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-8721141430579726861",
-   "company": "Aarna Systems | Performance Driven Digital Marketing Agency",
-   "title": "Demand Generation Executive",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-8721141430579726861",
-   "posted": "2026-11-04T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-8800356680864696763",
-   "company": "METRO Global Solution Center IN",
-   "title": "Sr. Analyst - Digital Marketing",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-8800356680864696763",
-   "posted": "2026-11-17T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-8279164870949776206",
-   "company": "TransPerfect",
-   "title": "Senior Performance Marketing Manager",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-8279164870949776206",
-   "posted": "2026-11-20T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
    "id": "jooble:7963364733540376465",
    "company": "CDM Smith",
    "title": "Intermediate Marketing and Proposal Specialist",
@@ -5151,193 +5593,6 @@
    "closed": null
   },
   {
-   "id": "jooble:-6719673539559543811",
-   "company": "Drishti Group",
-   "title": "Marketing Executive - Pune",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-6719673539559543811",
-   "posted": "2026-11-02T15:53:54.3796719+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:3159119462091560002",
-   "company": "NielsenIQ",
-   "title": "Digital Content & Learning Technology Specialist",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/3159119462091560002",
-   "posted": "2026-11-19T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-2785362986042370336",
-   "company": "Leapswitch Networks Pvt Ltd",
-   "title": "Content Writer",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-2785362986042370336",
-   "posted": "2026-11-12T15:50:49.2900000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:4301963651746463216",
-   "company": "Alpha Solution",
-   "title": "Sales And Marketing Specialist",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/4301963651746463216",
-   "posted": "2026-10-14T12:50:47.0752048+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-7551915752741868424",
-   "company": "EY",
-   "title": "Senior Manager - Markets",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-7551915752741868424",
-   "posted": "2026-10-26T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-7461659962368410980",
-   "company": "WTW External Careers Site",
-   "title": "AVP/VP/Sr - VP Techno Marketing Professionals",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-7461659962368410980",
-   "posted": "2026-11-17T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-5362898199039399542",
-   "company": "ProcDNA",
-   "title": "[India] Marketing Mix - Engagement Lead",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-5362898199039399542",
-   "posted": "2026-11-05T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-1381863108308223148",
-   "company": "RARR TECHNOLOGIES PRIVATE LIMITED",
-   "title": "RARR Technologies - Senior Braze Campaign Specialist - Marketing Automation",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-1381863108308223148",
-   "posted": "2026-10-27T03:54:14.4455233+00:00",
-   "dept": "",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-7648400749656322134",
-   "company": "Philips",
-   "title": "Commercial Insights Manager",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-7648400749656322134",
-   "posted": "2026-11-18T11:59:32.5679143+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-8235044653882076904",
-   "company": "aeratechnology",
-   "title": "Marketing Ops Manager",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-8235044653882076904",
-   "posted": "2026-11-20T18:52:12.7415710+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-1573474228827606765",
-   "company": "StoneX",
-   "title": "Director, Pricing and Market Data Technology",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-1573474228827606765",
-   "posted": "2026-10-30T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
    "id": "jooble:-3526409082944300822",
    "company": "Aristok Technologies",
    "title": "Jr. Finance Executive",
@@ -5348,74 +5603,6 @@
    "source": "jooble",
    "size": "",
    "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-1785470905445046005",
-   "company": "Atlas Copco",
-   "title": "Business Marketing Manager Othe",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-1785470905445046005",
-   "posted": "2026-11-11T00:00:00.0000000",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:-3796876994509477214",
-   "company": "Philips",
-   "title": "Senior Product Manager",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/-3796876994509477214",
-   "posted": "2026-11-19T11:56:19.5931731+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:5598697605557300168",
-   "company": "JLL",
-   "title": "Client Visit Experience - Executive",
-   "location": "Pune",
-   "url": "https://in.jooble.org/jdp/5598697605557300168",
-   "posted": "2026-11-21T11:56:58.0017920+00:00",
-   "dept": "Full-time",
-   "source": "jooble",
-   "size": "",
-   "marketing": false,
-   "email": "",
-   "where": "pune",
-   "first_seen": "2026-11-21T12:56:36+00:00",
-   "last_seen": "2026-11-21T23:14:22+00:00",
-   "closed": null
-  },
-  {
-   "id": "jooble:8114989851412410867",
-   "company": "Baxture technologies",
-   "title": "Marketing Associate( IT Services and Consulting, US Market)",
-   "location": "Pimpri",
-   "url": "https://in.jooble.org/jdp/8114989851412410867",
-   "posted": "2026-11-16T11:57:14.4246518+00:00",
-   "dept": "",
-   "source": "jooble",
-   "size": "",
-   "marketing": true,
    "email": "",
    "where": "pune",
    "first_seen": "2026-11-21T12:56:36+00:00",
@@ -6357,7 +6544,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T10:00:26+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -6373,7 +6560,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T10:00:26+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -6389,7 +6576,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T10:00:26+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -6405,7 +6592,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T10:00:26+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -6421,7 +6608,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T10:00:26+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9637,7 +9824,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T00:37:00+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9653,7 +9840,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-20T00:37:00+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9669,7 +9856,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9685,7 +9872,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9701,7 +9888,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9717,7 +9904,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9733,7 +9920,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9749,7 +9936,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9765,7 +9952,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9781,7 +9968,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9797,7 +9984,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9813,7 +10000,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9829,7 +10016,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9845,7 +10032,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9861,7 +10048,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9877,7 +10064,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9893,7 +10080,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9909,7 +10096,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9925,7 +10112,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9941,7 +10128,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9957,7 +10144,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9973,7 +10160,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -9989,7 +10176,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10005,7 +10192,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10021,7 +10208,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10037,7 +10224,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10053,7 +10240,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10069,7 +10256,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10085,7 +10272,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10101,7 +10288,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10117,7 +10304,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10133,7 +10320,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10149,7 +10336,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10165,7 +10352,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10181,7 +10368,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10197,7 +10384,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10213,7 +10400,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10229,7 +10416,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10245,7 +10432,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10261,7 +10448,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10277,7 +10464,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10293,7 +10480,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10309,7 +10496,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10325,7 +10512,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10341,7 +10528,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10357,7 +10544,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10373,7 +10560,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10389,7 +10576,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10405,7 +10592,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10421,7 +10608,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10437,7 +10624,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10453,7 +10640,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10469,7 +10656,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10485,7 +10672,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10501,7 +10688,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10517,7 +10704,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10533,7 +10720,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10549,7 +10736,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10565,7 +10752,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10581,7 +10768,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10597,7 +10784,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10613,7 +10800,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10629,7 +10816,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10645,7 +10832,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10661,7 +10848,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10677,7 +10864,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10693,7 +10880,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10709,7 +10896,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10725,7 +10912,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10741,7 +10928,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10757,7 +10944,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10773,7 +10960,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10789,7 +10976,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10805,7 +10992,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10821,7 +11008,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10837,7 +11024,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10853,7 +11040,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-19T17:10:32+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10869,7 +11056,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10885,7 +11072,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10901,7 +11088,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10917,7 +11104,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10933,7 +11120,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10949,7 +11136,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10965,7 +11152,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10981,7 +11168,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -10997,7 +11184,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11013,7 +11200,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11029,7 +11216,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11045,7 +11232,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11061,7 +11248,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11077,7 +11264,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11093,7 +11280,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11109,7 +11296,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11125,7 +11312,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11141,7 +11328,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11157,7 +11344,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11173,7 +11360,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11189,7 +11376,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11205,7 +11392,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11221,39 +11408,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "greenhouse:8598308002",
-   "company": "Druva",
-   "title": "Senior Staff Software Engineer",
-   "location": "Pune, Maharashtra, India",
-   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8598308002/?gh_jid=8598308002",
-   "posted": "2026-11-04T16:41:46-05:00",
-   "dept": "",
-   "source": "greenhouse",
-   "size": "mid",
-   "marketing": false,
-   "where": "pune",
-   "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "greenhouse:8814695002",
-   "company": "Druva",
-   "title": "Senior Staff Software Engineer",
-   "location": "Pune, Maharashtra, India",
-   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8814695002/?gh_jid=8814695002",
-   "posted": "2026-11-16T01:05:12-05:00",
-   "dept": "",
-   "source": "greenhouse",
-   "size": "mid",
-   "marketing": false,
-   "where": "pune",
-   "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11269,7 +11424,39 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "greenhouse:8598308002",
+   "company": "Druva",
+   "title": "Senior Staff Software Engineer",
+   "location": "Pune, Maharashtra, India",
+   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8598308002/?gh_jid=8598308002",
+   "posted": "2026-11-04T16:41:46-05:00",
+   "dept": "",
+   "source": "greenhouse",
+   "size": "mid",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-18T19:00:45+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "greenhouse:8814695002",
+   "company": "Druva",
+   "title": "Senior Staff Software Engineer",
+   "location": "Pune, Maharashtra, India",
+   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8814695002/?gh_jid=8814695002",
+   "posted": "2026-11-16T01:05:12-05:00",
+   "dept": "",
+   "source": "greenhouse",
+   "size": "mid",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-18T19:00:45+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11285,7 +11472,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11301,7 +11488,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11317,23 +11504,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
-   "closed": null
-  },
-  {
-   "id": "greenhouse:8743690002",
-   "company": "Addepar",
-   "title": "ADM Support Analyst",
-   "location": "Pune, India",
-   "url": "https://job-boards.greenhouse.io/addepar1/jobs/8743690002",
-   "posted": "2026-10-07T11:24:59-04:00",
-   "dept": "",
-   "source": "greenhouse",
-   "size": "mid",
-   "marketing": false,
-   "where": "pune",
-   "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11349,7 +11520,23 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
+   "closed": null
+  },
+  {
+   "id": "greenhouse:8743690002",
+   "company": "Addepar",
+   "title": "ADM Support Analyst",
+   "location": "Pune, India",
+   "url": "https://job-boards.greenhouse.io/addepar1/jobs/8743690002",
+   "posted": "2026-10-07T11:24:59-04:00",
+   "dept": "",
+   "source": "greenhouse",
+   "size": "mid",
+   "marketing": false,
+   "where": "pune",
+   "first_seen": "2026-11-18T19:00:45+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11365,7 +11552,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11381,7 +11568,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11397,7 +11584,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11413,7 +11600,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11429,7 +11616,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11445,7 +11632,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11461,7 +11648,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11477,7 +11664,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11493,7 +11680,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11509,7 +11696,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11525,7 +11712,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11541,7 +11728,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11557,7 +11744,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11573,7 +11760,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11589,7 +11776,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11605,7 +11792,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11621,7 +11808,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11637,7 +11824,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11653,7 +11840,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11669,7 +11856,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11685,7 +11872,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11701,7 +11888,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11717,7 +11904,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11733,7 +11920,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11749,7 +11936,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11765,7 +11952,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11781,7 +11968,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11797,7 +11984,7 @@
    "marketing": true,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11813,7 +12000,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11829,7 +12016,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11845,7 +12032,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11861,7 +12048,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11877,7 +12064,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11893,7 +12080,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11909,7 +12096,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11925,7 +12112,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11941,7 +12128,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11957,7 +12144,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11973,7 +12160,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -11989,7 +12176,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12005,7 +12192,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12021,7 +12208,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12037,7 +12224,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12053,7 +12240,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12069,7 +12256,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12085,7 +12272,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12101,7 +12288,7 @@
    "marketing": true,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12117,7 +12304,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12133,7 +12320,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12149,7 +12336,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12165,7 +12352,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12181,7 +12368,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12197,7 +12384,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12213,7 +12400,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12229,7 +12416,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12245,7 +12432,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12261,7 +12448,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12277,7 +12464,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12293,7 +12480,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12309,7 +12496,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12325,7 +12512,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12341,7 +12528,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12357,7 +12544,7 @@
    "marketing": false,
    "where": "remote-india",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12373,7 +12560,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12389,7 +12576,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12405,7 +12592,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12421,7 +12608,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12437,7 +12624,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12453,7 +12640,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12469,7 +12656,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12485,7 +12672,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12501,7 +12688,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12517,7 +12704,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12533,7 +12720,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12549,7 +12736,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12565,7 +12752,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12581,7 +12768,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12597,7 +12784,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12613,7 +12800,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12629,7 +12816,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12645,7 +12832,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12661,7 +12848,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12677,7 +12864,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12693,7 +12880,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12709,7 +12896,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12725,7 +12912,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
@@ -12741,7 +12928,7 @@
    "marketing": false,
    "where": "pune",
    "first_seen": "2026-11-18T19:00:45+00:00",
-   "last_seen": "2026-11-22T06:44:41+00:00",
+   "last_seen": "2026-11-22T07:38:42+00:00",
    "closed": null
   },
   {
