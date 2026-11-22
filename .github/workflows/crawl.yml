@@ -49,8 +49,12 @@ jobs:
           python-version: "3.12"
       - name: Crawl jobs
         run: python crawler.py
+      # data.gov.in often doesn't answer GitHub's (non-Indian) servers; then the import is run on the PC
+      # instead, and the rest of this run carries on
       - name: Import company registry (Pune and Mumbai)
         if: ${{ env.DATA_GOV_API_KEY != '' && (github.event.schedule == '40 2 1 * *' || inputs.import_registry || hashFiles('data/companies.sqlite') == '' || hashFiles('data/companies-mumbai.sqlite') == '') }}
+        continue-on-error: true
+        timeout-minutes: 120
         run: python directory.py import-api
       - name: Find contact details (300 more companies per city per scheduled run)
         env:
