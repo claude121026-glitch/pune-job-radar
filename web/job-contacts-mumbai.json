@@ -1,4 +1,184 @@
 {
+"Rajasthan Royals": {
+"emails": [
+"hr@rajasthanroyals.com"
+],
+"phones": [],
+"website": "https://www.rajasthanroyals.com"
+},
+"WPP Media": {
+"emails": [
+"contact.thailand@groupm.com",
+"hello.groupmsweden@groupm.com",
+"marketing@wppmedia.com"
+],
+"phones": [
+"+91 96265 85800",
+"+91 20 1149 9987",
+"+91 97440 32477",
+"+91 96522 26078"
+],
+"website": "https://www.wppmedia.com"
+},
+"Quality HR India": {
+"emails": [
+"info@qualityhr.co.in"
+],
+"phones": [
+"+91 96249 99100",
+"+91 99249 99100",
+"+91 74349 99100",
+"+91 72039 99100"
+],
+"website": "https://qualityhr.co.in"
+},
+"Servify": {
+"emails": [
+"support@servify.com"
+],
+"phones": [],
+"website": "https://servify.com:443"
+},
+"Finnovate": {
+"emails": [
+"hello@finnovate.in"
+],
+"phones": [],
+"website": "https://www.finnovate.in"
+},
+"HSBC": {
+"emails": [],
+"phones": [
+"+91 20 7991 8888"
+],
+"website": "https://www.hsbc.com"
+},
+"Primum Talent": {
+"emails": [
+"info@primumtalent.com"
+],
+"phones": [],
+"website": "https://primumtalent.com"
+},
+"communicateindia": {
+"emails": [
+"info@communicateindia.com"
+],
+"phones": [
+"+91 98198 61124"
+],
+"website": "https://www.communicateindia.com"
+},
+"BC Web Wise Pvt Ltd": {
+"emails": [
+"info@bcwebwise.com"
+],
+"phones": [
+"+91 93216 99422",
+"+91 22 6767 4000"
+],
+"website": "https://www.bcwebwise.com"
+},
+"SyncUp": {
+"emails": [
+"support@syncup.in"
+],
+"phones": [],
+"website": "https://www.syncup.in"
+},
+"2coms": {
+"emails": [],
+"phones": [
+"+91 80487 66688",
+"+91 81011 22022",
+"+91 91473 33168"
+],
+"website": "https://2coms.com"
+},
+"Fairdeal Realtors Pvt.ltd": {
+"emails": [
+"enquiry@frpl.in",
+"hello@themenectar.com"
+],
+"phones": [
+"+91 80804 00500"
+],
+"website": "https://frpl.in"
+},
+"IIDE": {
+"emails": [],
+"phones": [
+"+91 96199 58615",
+"+91 81083 08300",
+"+91 99673 44387",
+"+91 70457 84741"
+],
+"website": "https://iide.co"
+},
+"Russell Investments": {
+"emails": [],
+"phones": [
+"1800 426 7969",
+"1800 787 7354"
+],
+"website": "https://russellinvestments.com"
+},
+"Medtronic": {
+"emails": [],
+"phones": [
+"1800 551 5544",
+"1800 929 4043"
+],
+"website": "https://www.medtronic.com"
+},
+"Dynatrace": {
+"emails": [
+"sales@dynatrace.com"
+],
+"phones": [],
+"website": "https://www.dynatrace.com"
+},
+"Mitr HR Private Limited": {
+"emails": [
+"contact@mitrhr.com"
+],
+"phones": [
+"+91 98184 34567"
+],
+"website": "https://www.mitrhr.com"
+},
+"Kuche7": {
+"emails": [
+"info@kuche7.com"
+],
+"phones": [
+"+91 98177 76776"
+],
+"website": "https://kuche7.com"
+},
+"Workers Town": {
+"emails": [
+"info@workerstown.com"
+],
+"phones": [],
+"website": "https://workerstown.com"
+},
+"Headsup Corporation": {
+"emails": [
+"info@headsupcorporation.com"
+],
+"phones": [],
+"website": "https://headsupcorporation.com"
+},
+"aleph": {
+"emails": [],
+"phones": [
+"+91 98185 71192",
+"+91 99901 36656",
+"+91 80480 36869"
+],
+"website": "https://alephindia.in"
+},
 "Zscaler": {
 "emails": [],
 "phones": [
@@ -80,6 +260,15 @@
 ],
 "website": "https://www.tulum.coffee"
 },
+"Purple Flicks": {
+"emails": [
+"info@purpleflicks.com"
+],
+"phones": [
+"+91 99671 54869"
+],
+"website": "https://purpleflicks.com"
+},
 "Hdb Financial Services": {
 "emails": [],
 "phones": [
@@ -90,15 +279,6 @@
 ],
 "website": "https://www.hdbfs.com"
 },
-"Purple Flicks": {
-"emails": [
-"info@purpleflicks.com"
-],
-"phones": [
-"+91 99671 54869"
-],
-"website": "https://purpleflicks.com"
-},
 "Adbizit": {
 "emails": [
 "info@adbizit.com",
@@ -108,6 +288,15 @@
 "+91 81690 04863"
 ],
 "website": "https://adbizit.com"
+},
+"Digitally Bugged LLP": {
+"emails": [
+"info@digitallybugged.com"
+],
+"phones": [
+"+91 99200 35756"
+],
+"website": "https://digitallybugged.com"
 },
 "Trip Jack": {
 "emails": [],
@@ -127,15 +316,6 @@
 "+91 22 6741 1191"
 ],
 "website": "https://www.unifyndlabs.com"
-},
-"Digitally Bugged LLP": {
-"emails": [
-"info@digitallybugged.com"
-],
-"phones": [
-"+91 99200 35756"
-],
-"website": "https://digitallybugged.com"
 },
 "Ease My Expo": {
 "emails": [
@@ -164,30 +344,6 @@
 ],
 "website": "https://michewa.in"
 },
-"Workers Town": {
-"emails": [
-"info@workerstown.com"
-],
-"phones": [],
-"website": "https://workerstown.com"
-},
-"Velocity Consultancy": {
-"emails": [
-"info@velocityconsultancy.com"
-],
-"phones": [
-"+91 93215 92734"
-],
-"website": "https://www.velocityconsultancy.com"
-},
-"Prime Star Hr": {
-"emails": [],
-"phones": [
-"+91 98697 84909",
-"+91 90041 18289"
-],
-"website": "https://www.primestarhr.com"
-},
 "Asian Heart Institute": {
 "emails": [
 "info@ahirc.com"
@@ -200,15 +356,22 @@
 ],
 "website": "https://asianheartinstitute.org"
 },
-"IIDE": {
+"Prime Star Hr": {
 "emails": [],
 "phones": [
-"+91 96199 58615",
-"+91 81083 08300",
-"+91 99673 44387",
-"+91 70457 84741"
+"+91 98697 84909",
+"+91 90041 18289"
 ],
-"website": "https://iide.co"
+"website": "https://www.primestarhr.com"
+},
+"Velocity Consultancy": {
+"emails": [
+"info@velocityconsultancy.com"
+],
+"phones": [
+"+91 93215 92734"
+],
+"website": "https://www.velocityconsultancy.com"
 },
 "First Economy": {
 "emails": [],
@@ -219,13 +382,6 @@
 ],
 "website": "https://firsteconomy.com"
 },
-"Finnovate": {
-"emails": [
-"hello@finnovate.in"
-],
-"phones": [],
-"website": "https://www.finnovate.in"
-},
 "TeamNest": {
 "emails": [
 "sales@teamnest.com"
@@ -234,6 +390,13 @@
 "+91 91378 66322"
 ],
 "website": "https://www.teamnest.com"
+},
+"Kerten Hospitality": {
+"emails": [
+"info@kertenhospitality.com"
+],
+"phones": [],
+"website": "https://www.kertenhospitality.com"
 },
 "Team Pumpkin": {
 "emails": [
@@ -265,14 +428,7 @@
 ],
 "website": "https://www.fruitbowldigital.com"
 },
-"Kerten Hospitality": {
-"emails": [
-"info@kertenhospitality.com"
-],
-"phones": [],
-"website": "https://www.kertenhospitality.com"
-},
-"Axis My India Limited": {
+"Axis My India": {
 "emails": [
 "info@axismyindia.org"
 ],
@@ -287,119 +443,6 @@
 ],
 "phones": [],
 "website": "https://elchemy.com"
-},
-"WPP Media": {
-"emails": [
-"contact.thailand@groupm.com",
-"hello.groupmsweden@groupm.com",
-"marketing@wppmedia.com"
-],
-"phones": [
-"+91 96265 85800",
-"+91 20 1149 9987",
-"+91 97440 32477",
-"+91 96522 26078"
-],
-"website": "https://www.wppmedia.com"
-},
-"Mitr HR Private Limited": {
-"emails": [
-"contact@mitrhr.com"
-],
-"phones": [
-"+91 98184 34567"
-],
-"website": "https://www.mitrhr.com"
-},
-"Redragaa": {
-"emails": [
-"sales@redragaa.com"
-],
-"phones": [
-"+91 89768 18567"
-],
-"website": "https://redragaa.com"
-},
-"Leapswitch Networks Pvt Ltd": {
-"emails": [
-"sales@leapswitch.com",
-"support@leapswitch.com"
-],
-"phones": [
-"+91 95996 56657"
-],
-"website": "https://www.leapswitch.com"
-},
-"Simit Bhagat Studios": {
-"emails": [
-"hello@simitbhagatstudios.com"
-],
-"phones": [],
-"website": "https://simitbhagatstudios.com"
-},
-"Dhan (Raise)": {
-"emails": [],
-"phones": [
-"+91 86557 40961"
-],
-"website": "https://dhan.co"
-},
-"BTW VISA SERVICES (INDIA) PRIVATE LIMITED": {
-"emails": [
-"info@btwvisas.com",
-"inquiry@btwvisas.com"
-],
-"phones": [
-"+91 20 4902 7000",
-"+91 22 4583 0600"
-],
-"website": "https://btwvisas.com"
-},
-"3 Dots Design Private Limited": {
-"emails": [
-"contact@3dotsdesign.in",
-"hr@3dotsdesign.in"
-],
-"phones": [
-"+91 95116 96411",
-"+91 20 2566 5266"
-],
-"website": "https://www.3dotsdesign.in"
-},
-"Havas": {
-"emails": [
-"connect@havas.com"
-],
-"phones": [],
-"website": "https://www.havas.com"
-},
-"Acetech Ecommerce Limited": {
-"emails": [
-"info@acetechcommerce.com",
-"info@acetechecommerce.com"
-],
-"phones": [
-"+91 70662 63636",
-"+91 84849 93426"
-],
-"website": "https://acetechecommerce.com"
-},
-"one75mbhrm pvt ltd": {
-"emails": [
-"info@domainname.com",
-"support@one75mbhrm.com"
-],
-"phones": [
-"+91 93184 34913"
-],
-"website": "https://www.one75mbhrm.com"
-},
-"PRAGMATIKE": {
-"emails": [
-"info@techinnovations.com"
-],
-"phones": [],
-"website": "https://www.pragmatike.com"
 },
 "Viewpoint Public Relations": {
 "emails": [
@@ -435,6 +478,13 @@
 "+91 90826 28964"
 ],
 "website": "https://nabhyaayurveda.com"
+},
+"Havas": {
+"emails": [
+"connect@havas.com"
+],
+"phones": [],
+"website": "https://www.havas.com"
 },
 "Interactive Skills": {
 "emails": [],
@@ -484,6 +534,15 @@
 ],
 "website": "https://merakie.in"
 },
+"Redragaa": {
+"emails": [
+"sales@redragaa.com"
+],
+"phones": [
+"+91 89768 18567"
+],
+"website": "https://redragaa.com"
+},
 "Dr.Dento": {
 "emails": [],
 "phones": [
@@ -502,6 +561,13 @@
 "+91 98706 58578"
 ],
 "website": "https://filmymantra.com"
+},
+"Dhan (Raise)": {
+"emails": [],
+"phones": [
+"+91 86557 40961"
+],
+"website": "https://dhan.co"
 },
 "CATKing Educare": {
 "emails": [
@@ -523,15 +589,6 @@
 ],
 "website": "https://dentathome.com"
 },
-"communicateindia": {
-"emails": [
-"info@communicateindia.com"
-],
-"phones": [
-"+91 98198 61124"
-],
-"website": "https://www.communicateindia.com"
-},
 "Proximity Works": {
 "emails": [
 "hello@proximity.tech"
@@ -547,5 +604,72 @@
 "+91 73046 11336"
 ],
 "website": "https://www.sdscents.com"
+},
+"Leapswitch Networks Pvt Ltd": {
+"emails": [
+"sales@leapswitch.com",
+"support@leapswitch.com"
+],
+"phones": [
+"+91 95996 56657"
+],
+"website": "https://www.leapswitch.com"
+},
+"Simit Bhagat Studios": {
+"emails": [
+"hello@simitbhagatstudios.com"
+],
+"phones": [],
+"website": "https://simitbhagatstudios.com"
+},
+"BTW VISA SERVICES (INDIA) PRIVATE LIMITED": {
+"emails": [
+"info@btwvisas.com",
+"inquiry@btwvisas.com"
+],
+"phones": [
+"+91 20 4902 7000",
+"+91 22 4583 0600"
+],
+"website": "https://btwvisas.com"
+},
+"3 Dots Design Private Limited": {
+"emails": [
+"contact@3dotsdesign.in",
+"hr@3dotsdesign.in"
+],
+"phones": [
+"+91 95116 96411",
+"+91 20 2566 5266"
+],
+"website": "https://www.3dotsdesign.in"
+},
+"Acetech Ecommerce Limited": {
+"emails": [
+"info@acetechcommerce.com",
+"info@acetechecommerce.com"
+],
+"phones": [
+"+91 70662 63636",
+"+91 84849 93426"
+],
+"website": "https://acetechecommerce.com"
+},
+"one75mbhrm pvt ltd": {
+"emails": [
+"info@domainname.com",
+"support@one75mbhrm.com"
+],
+"phones": [
+"+91 93184 34913"
+],
+"website": "https://www.one75mbhrm.com"
+},
+"PRAGMATIKE": {
+"emails": [
+"info@techinnovations.com"
+],
+"phones": [],
+"website": "https://www.pragmatike.com"
 }
 }
