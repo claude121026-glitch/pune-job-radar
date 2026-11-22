@@ -1,4 +1,4 @@
-name: Crawl Pune jobs and companies
+name: Crawl Pune and Mumbai jobs and companies
 
 on:
   schedule:
@@ -49,31 +49,41 @@ jobs:
           python-version: "3.12"
       - name: Crawl jobs
         run: python crawler.py
-      - name: Import company registry
-        if: ${{ env.DATA_GOV_API_KEY != '' && (github.event.schedule == '40 2 1 * *' || inputs.import_registry || hashFiles('data/companies.sqlite') == '') }}
+      - name: Import company registry (Pune and Mumbai)
+        if: ${{ env.DATA_GOV_API_KEY != '' && (github.event.schedule == '40 2 1 * *' || inputs.import_registry || hashFiles('data/companies.sqlite') == '' || hashFiles('data/companies-mumbai.sqlite') == '') }}
         run: python directory.py import-api
-      - name: Find contact details (300 more companies per scheduled run)
+      - name: Find contact details (300 more companies per city per scheduled run)
         env:
           LIMIT: ${{ inputs.enrich_limit || '300' }}
           SIZES: ${{ inputs.enrich_sizes || '' }}
           MINUTES: ${{ inputs.enrich_minutes || '' }}
         run: |
-          if [ -f data/companies.sqlite ]; then
-            echo "UNCHECKED_BEFORE=$(python directory.py unchecked)" >> "$GITHUB_ENV"
+          echo "UNCHECKED_BEFORE=$(python directory.py unchecked all)" >> "$GITHUB_ENV"
+          start=$(date +%s)
+          for city in pune mumbai; do
+            db=data/companies.sqlite; [ "$city" = mumbai ] && db=data/companies-mumbai.sqlite
+            [ -f "$db" ] || continue
             args="$LIMIT"
             if [ -n "$SIZES" ]; then args="$args --sizes $SIZES"; fi
-            if [ -n "$MINUTES" ]; then args="$args --minutes $MINUTES"; fi
-            python directory.py enrich $args
-            python directory.py about 1500
-            python directory.py job-contacts
-            python directory.py build
-          fi
+            if [ -n "$MINUTES" ]; then
+              # long batches share one time budget across the cities
+              left=$(( MINUTES - ( $(date +%s) - start ) / 60 ))
+              if [ "$left" -lt 2 ]; then left=1; fi
+              args="$args --minutes $left"
+            fi
+            echo "== $city"
+            python directory.py --city $city enrich $args
+            python directory.py --city $city about 1500
+            python directory.py --city $city job-contacts
+            python directory.py --city $city build
+          done
       - name: Save results
         run: |
           git config user.name "job-crawler"
           git config user.email "job-crawler@users.noreply.github.com"
           git add web/jobs.json web/job-details.json
           if [ -f data/companies.sqlite ]; then git add data/companies.sqlite web/companies.json web/pune-companies-with-contacts.csv web/job-contacts.json; fi
+          if [ -f data/companies-mumbai.sqlite ]; then git add data/companies-mumbai.sqlite web/companies-mumbai.json web/mumbai-companies-with-contacts.csv web/job-contacts-mumbai.json; fi
           git diff --cached --quiet || git commit -m "crawl $(date -u +%FT%TZ)"
           git pull --rebase -X theirs || true
           git push
@@ -82,7 +92,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          left=$(python directory.py unchecked)
+          left=$(python directory.py unchecked all)
           echo "unchecked before: $UNCHECKED_BEFORE, after: $left"
           if [ "$left" -gt 0 ] && [ "$left" -lt "${UNCHECKED_BEFORE:-0}" ]; then
             gh workflow run crawl.yml --ref main -f enrich_limit="${{ inputs.enrich_limit }}" -f enrich_minutes="${{ inputs.enrich_minutes }}"

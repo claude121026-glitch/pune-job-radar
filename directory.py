@@ -1,4 +1,4 @@
-"""Pune company directory: every registered company in Pune, with size, industry,
+"""Pune and Mumbai company directory: registered companies with size, industry,
 marketing fit, public contact details and open marketing jobs.
 
 Data sources
@@ -12,7 +12,8 @@ Data sources
   3. Open jobs from crawler.py (web/jobs.json), matched by company name.
 
 Usage
-  python directory.py import-api              # pull Pune companies from the registry
+  python directory.py import-api              # pull Pune and Mumbai companies from the registry
+  python directory.py --city mumbai build     # any command can take --city (default: pune)
   python directory.py import-csv file.csv     # same, from a downloaded CSV
   python directory.py enrich 300              # find websites/phones for 300 more companies
   python directory.py job-contacts            # find emails for companies with open marketing jobs
@@ -34,13 +35,39 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-DB = os.path.join(ROOT, "data", "companies.sqlite")
-OUT = os.path.join(ROOT, "web", "companies.json")
 JOBS = os.path.join(ROOT, "web", "jobs.json")
 UA = "PuneJobCrawler/1.0 (personal job search; polite, low volume)"
 RESOURCE = "4dbe5667-7b6b-41d7-82af-211562424d9a"  # data.gov.in: RoC-wise Company Master Data
 
 PUNE_ADDR = re.compile(r"\bpune\b|\bpimpri\b|\bchinchwad\b|\bhinj[ae]wadi\b|\b41[12]\s?\d{3}\b", re.I)
+# Mumbai city and suburbs (400 001-400 104), Thane and Navi Mumbai (400 6xx/7xx), Mira-Bhayandar (401 10x)
+MUMBAI_ADDR = re.compile(r"\bmumbai\b|\bbombay\b|\bthane\b|\b400\s?(0\d\d|10[0-4]|6[01]\d|70\d)\b|\b401\s?10[1-7]\b", re.I)
+
+# Each city has its own database and files. Mumbai has about three times as many companies as Pune,
+# so its list keeps active companies with at least Rs 10 lakh paid-up capital (small, mid, large, listed):
+# the ones that realistically employ marketing staff. That keeps the site fast on a phone and the
+# database under GitHub's 100 MB file limit. Companies hiring in Mumbai are added from the job feeds anyway.
+CITIES = {
+    "pune": {"label": "Pune", "addr": PUNE_ADDR, "roc": "pune", "db": "companies.sqlite",
+             "out": "companies.json", "csv": "pune-companies-with-contacts.csv",
+             "contacts": "job-contacts.json", "where": ("pune", "remote-india"), "all_sizes": True},
+    "mumbai": {"label": "Mumbai", "addr": MUMBAI_ADDR, "roc": "mumbai", "db": "companies-mumbai.sqlite",
+               "out": "companies-mumbai.json", "csv": "mumbai-companies-with-contacts.csv",
+               "contacts": "job-contacts-mumbai.json", "where": ("mumbai",), "all_sizes": False},
+}
+CITY = "pune"
+C = CITIES[CITY]
+DB = os.path.join(ROOT, "data", C["db"])
+OUT = os.path.join(ROOT, "web", C["out"])
+
+
+def set_city(name):
+    global CITY, C, DB, OUT
+    if name not in CITIES:
+        sys.exit(f"Unknown city {name!r}; choose from {', '.join(CITIES)}")
+    CITY, C = name, CITIES[name]
+    DB = os.path.join(ROOT, "data", C["db"])
+    OUT = os.path.join(ROOT, "web", C["out"])
 FREEMAIL = {"gmail.com", "yahoo.com", "yahoo.co.in", "hotmail.com", "rediffmail.com", "outlook.com",
             "live.com", "ymail.com", "icloud.com", "rediff.com", "aol.com", "protonmail.com", "in.com",
             "zoho.com", "msn.com", "yahoo.in", "gmai.com", "vsnl.net", "vsnl.com", "sify.com", "mail.com"}
@@ -197,16 +224,35 @@ def to_num(s):
         return None
 
 
-def upsert(con, rows):
+def mumbai_or_pune(addr):
+    """Which city an address is in, going by its PIN code first, then by the last city name in it."""
+    pins = re.findall(r"\b(4\d\d)\s?(\d{3})\b", addr)
+    if pins:
+        pin = "".join(pins[-1])
+        return "pune" if pin[:3] in ("411", "412") else "mumbai" if MUMBAI_ADDR.search(pin) else None
+    m = list(re.finditer(r"\b(mumbai|bombay|thane|pune|pimpri|chinchwad)\b", addr, re.I))
+    if not m:
+        return None
+    return "pune" if m[-1].group(1).lower() in ("pune", "pimpri", "chinchwad") else "mumbai"
+
+
+def upsert(con, rows, city=None):
+    cfg = CITIES[city or CITY]
     n = 0
     for r in rows:
         cin = pick(r, "CORPORATE_IDENTIFICATION_NUMBER", "CompanyCIN", "CIN", "cin")
         addr = pick(r, "REGISTERED_OFFICE_ADDRESS", "Registered_Office_Address", "CompanyRegisteredOfficeAddress",
                     "registeredofficeaddress", "address")
         roc = pick(r, "REGISTRAR_OF_COMPANIES", "CompanyROCcode", "ROC", "roc")
-        if not cin or not (PUNE_ADDR.search(addr) or ("pune" in roc.lower() and not addr)):
+        if not cin or not (cfg["addr"].search(addr) or (cfg["roc"] in roc.lower() and not addr)):
             continue
+        if cfg is CITIES["mumbai"] and addr and mumbai_or_pune(addr) != "mumbai":
+            continue  # e.g. a Pune address on the "Mumbai-Bangalore Highway"
         status = pick(r, "COMPANY_STATUS", "CompanyStatus", "status")
+        if not cfg["all_sizes"]:
+            paid = to_num(pick(r, "PAIDUP_CAPITAL", "PaidupCapital", "paidupcapital"))
+            if not status.lower().startswith("activ") or size_band(paid, cin) not in ("small", "mid", "large", "unknown"):
+                continue
         pin = re.findall(r"\b4\d{2}\s?\d{3}\b", addr)
         con.execute("""INSERT INTO company (cin,name,status,class,category,registered,paidup,address,pincode,email)
             VALUES (?,?,?,?,?,?,?,?,?,?) ON CONFLICT(cin) DO UPDATE SET name=excluded.name,
@@ -240,7 +286,13 @@ def import_api():
     key = os.environ.get("DATA_GOV_API_KEY")
     if not key:
         sys.exit("Set DATA_GOV_API_KEY (free from https://data.gov.in -> My Account -> API key).")
-    con, offset, kept, limit = db(), int(os.environ.get("IMPORT_OFFSET", "0")), 0, 1000
+    # one pass over every Maharashtra company fills each city's database
+    cons = {}
+    for name in (os.environ.get("IMPORT_CITIES") or ",".join(CITIES)).split(","):
+        set_city(name.strip())
+        cons[CITY] = db()
+    kept = dict.fromkeys(cons, 0)
+    offset, limit = int(os.environ.get("IMPORT_OFFSET", "0")), 1000
     while True:
         q = urllib.parse.urlencode({"api-key": key, "format": "json", "limit": limit, "offset": offset,
                                     "filters[CompanyStateCode]": "maharashtra"})
@@ -255,12 +307,14 @@ def import_api():
                 time.sleep(10 * (attempt + 1))
         recs = d.get("records", [])
         try:
-            kept += upsert(con, recs)
+            for city, con in cons.items():
+                kept[city] += upsert(con, recs, city)
         except sqlite3.OperationalError as e:
             sys.exit(f"Saving failed at offset {offset} ({e}). Run again with IMPORT_OFFSET={offset} to resume.")
         total = int(d.get("total", 0) or 0)
         offset += len(recs)
-        print(f"\r  {offset}/{total} Maharashtra records read, {kept} in Pune", end="", flush=True)
+        print(f"\r  {offset}/{total} Maharashtra records read, " +
+              ", ".join(f"{n} in {CITIES[c]['label']}" for c, n in kept.items()), end="", flush=True)
         if not recs or offset >= total:
             break
         time.sleep(0.5)
@@ -271,12 +325,12 @@ def import_csv(path):
     con = db()
     with open(path, encoding="utf-8-sig", errors="replace", newline="") as f:
         n = upsert(con, csv.DictReader(f))
-    print(f"  {n} Pune companies imported from {path}")
+    print(f"  {n} {C['label']} companies imported from {path}")
 
 
 # ---------- enrichment: website + public contact details ----------
 
-PHONE_RE = re.compile(r"(?:\+?91[\s\-.]?|0)?(?:\(?0?20\)?[\s\-.]?\d{4}[\s\-.]?\d{4}|[6-9]\d{4}[\s\-.]?\d{5}|"
+PHONE_RE = re.compile(r"(?:\+?91[\s\-.]?|0)?(?:\(?0?2[02]\)?[\s\-.]?\d{4}[\s\-.]?\d{4}|[6-9]\d{4}[\s\-.]?\d{5}|"
                       r"1800[\s\-.]?\d{3}[\s\-.]?\d{4})")
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 GENERIC = re.compile(r"^(info|contact|hello|hr|careers?|jobs|recruit\w*|talent|marketing|sales|enquir\w*|"
@@ -310,8 +364,8 @@ def clean_phone(p):
     if d.startswith("91") and len(d) == 12:
         d = d[2:]
     d = d.lstrip("0") if len(d) == 11 else d
-    if len(d) == 10 and d.startswith("20"):
-        return f"+91 20 {d[2:6]} {d[6:]}"          # Pune landline
+    if len(d) == 10 and d[:2] in ("20", "22"):
+        return f"+91 {d[:2]} {d[2:6]} {d[6:]}"     # Pune (020) or Mumbai (022) landline
     if len(d) == 10 and d[0] in "6789":
         return f"+91 {d[:5]} {d[5:]}"
     if d.startswith("1800") and len(d) == 11:
@@ -432,7 +486,7 @@ def enrich_one(row, deep=False):
             return cin, None, [], [], f"site unverified: {host}"
         # a same-named company abroad (e.g. studiomars.si) is not ours: want an Indian domain or an India mention
         if looked_up and not host.endswith(".in") and \
-                not re.search(r"\bindia\b|\bpune\b|maharashtra|\+91|\b0?20[\s-]?\d{4}[\s-]?\d{4}", home, re.I):
+                not re.search(r"\bindia\b|\bpune\b|\bmumbai\b|\bbombay\b|maharashtra|\+91|\b0?2[02][\s-]?\d{4}[\s-]?\d{4}", home, re.I):
             return cin, None, [], [], f"site not Indian: {host}"
         phones, emails = contacts(home)
         pat = r"contact|reach|locat|office" + (r"|career|jobs|join|hiring|work-with" if deep else "")
@@ -575,6 +629,8 @@ def hiring_companies(marketing_only=True):
     out = {}
     for j in jobs:
         name = (j.get("company") or "").strip()
+        if j.get("where", "pune") not in C["where"]:
+            continue  # a job in the other city
         if (j.get("marketing") or not marketing_only) and not j.get("closed") and name and name.lower() != "unknown":
             k = job_key(name)
             if len(k) > 3:
@@ -611,7 +667,7 @@ def job_contacts(recheck_days=14):
             continue
         clean = re.sub(r"\s+", " ", name.split("|")[0]).strip()
         todo.append((k, clean, r[5] if r else None, r[2] if r else None))
-    print(f"  {len(hiring)} companies hiring in Pune; looking up {len(todo)} of them…")
+    print(f"  {len(hiring)} companies hiring in {C['label']}; looking up {len(todo)} of them…")
     ts = datetime.now(timezone.utc).isoformat()
     found = 0
     with ThreadPoolExecutor(8) as ex:
@@ -634,9 +690,9 @@ def job_contacts(recheck_days=14):
             site, phones = site or (r[2] if r else ""), phones or (r[3] if r else [])
         if emails or phones:
             out[name] = {"emails": emails, "phones": phones, "website": site or ""}
-    with open(os.path.join(ROOT, "web", "job-contacts.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(ROOT, "web", C["contacts"]), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=0)
-    print(f"  wrote web/job-contacts.json: {sum(1 for v in out.values() if v['emails'])} hiring companies with an email")
+    print(f"  wrote web/{C['contacts']}: {sum(1 for v in out.values() if v['emails'])} hiring companies with an email")
 
 
 def set_site(cin, url):
@@ -655,7 +711,7 @@ def build():
         jobs = []
     open_jobs = {}
     for j in jobs:
-        if not j.get("closed"):
+        if not j.get("closed") and j.get("where", "pune") in C["where"]:
             open_jobs.setdefault(job_key(j["company"]), []).append(j)
     sizes = {"large": 3, "mid": 2, "small": 1, "micro": 0, "llp": 0, "unknown": 0}
     out, registry_keys = [], set()
@@ -697,7 +753,7 @@ def build():
                     len(js), len(mkt_jobs), min(10, 6 + (3 if mkt_jobs else 0) + (1 if emails else 0)),
                     " / ".join(places)[:160], about])
         extra += 1
-    print(f"  added {extra} companies hiring in Pune that aren't registered here")
+    print(f"  added {extra} companies hiring in {C['label']} that aren't registered here")
     out.sort(key=lambda r: (-r[12], -r[6]))
     data = {"updated": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
             "fields": ["cin", "name", "size", "sector", "pincode", "registered", "paidup", "website",
@@ -705,21 +761,31 @@ def build():
             "companies": out}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
-    print(f"  wrote {len(out)} active Pune companies to {OUT}")
+    print(f"  wrote {len(out)} active {C['label']} companies to {OUT}")
     # ready-to-use spreadsheet of every company we have a phone number or email for
     rows = [r for r in out if r[8] or r[9]]
-    with open(os.path.join(ROOT, "web", "pune-companies-with-contacts.csv"), "w", encoding="utf-8-sig", newline="") as f:
+    with open(os.path.join(ROOT, "web", C["csv"]), "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f)
         w.writerow(["Company", "What they do", "Industry", "Size", "Phones", "Emails", "Website",
                     "Open marketing jobs", "Pincode", "Registered", "Address", "CIN"])
         for r in rows:
             w.writerow([r[1], r[14], r[3], r[2], " / ".join(r[8]), " / ".join(r[9]), r[7], r[11], r[4],
                         r[5][:4], r[13], r[0]])
-    print(f"  wrote {len(rows)} companies with contacts to web/pune-companies-with-contacts.csv")
+    print(f"  wrote {len(rows)} companies with contacts to web/{C['csv']}")
+
+
+def unchecked_count():
+    if not os.path.exists(DB):
+        return 0
+    return db().execute("SELECT COUNT(*) FROM company WHERE enriched IS NULL AND status LIKE 'activ%'").fetchone()[0]
 
 
 if __name__ == "__main__":
     a = sys.argv[1:]
+    if "--city" in a:  # e.g. python directory.py --city mumbai build
+        i = a.index("--city")
+        set_city(a[i + 1] if i + 1 < len(a) else "")
+        del a[i:i + 2]
     cmd = a[0] if a else ""
     if cmd == "import-api":
         import_api()
@@ -736,8 +802,15 @@ if __name__ == "__main__":
     elif cmd == "about":
         nums = [x for x in a[1:] if x.isdigit()]
         backfill_about(int(nums[0]) if nums else 2000)
-    elif cmd == "unchecked":  # how many active companies still need a contact check
-        print(db().execute("SELECT COUNT(*) FROM company WHERE enriched IS NULL AND status LIKE 'activ%'").fetchone()[0])
+    elif cmd == "unchecked":  # how many active companies still need a contact check (all cities with "all")
+        if "all" in a[1:]:
+            total = 0
+            for name in CITIES:
+                set_city(name)
+                total += unchecked_count()
+            print(total)
+        else:
+            print(unchecked_count())
     elif cmd == "job-contacts":
         job_contacts()
     elif cmd == "build":

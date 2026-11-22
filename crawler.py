@@ -1,8 +1,8 @@
-"""Pune job crawler.
+"""Pune + Mumbai job crawler.
 
 Pulls openings from employers' public job-board APIs (Greenhouse, Lever, Ashby,
 SmartRecruiters, Workday) plus, optionally, the Jooble and Adzuna aggregator APIs for broad
-coverage of small and mid-size companies. Keeps only Pune-area roles (and,
+coverage of small and mid-size companies. Keeps only Pune- and Mumbai-area roles (and,
 optionally, remote-India roles), flags marketing roles, and writes web/jobs.json.
 
 Usage:
@@ -40,6 +40,13 @@ PUNE_RE = re.compile(
     r"\b(pune|poona|hinjewadi|hinjawadi|kharadi|magarpatta|baner|hadapsar|viman ?nagar|"
     r"yerwada|yerawada|pimpri|chinchwad|chakan|talegaon|wakad|aundh|balewadi|"
     r"kalyani ?nagar|bavdhan|ranjangaon|kothrud|shivajinagar)\b", re.I)
+# Mumbai, incl. Thane and Navi Mumbai (the Mumbai Metropolitan Region where most office jobs are)
+MUMBAI_RE = re.compile(
+    r"\b(mumbai|bombay|thane|navi ?mumbai|vashi|airoli|belapur|nerul|kharghar|ghansoli|rabale|turbhe|"
+    r"andheri|powai|bandra|bkc|lower parel|worli|goregaon|malad|vikhroli|kurla|santacruz|vile parle|"
+    r"borivali|kandivali|dadar|prabhadevi|chembur|ghatkopar|mulund|bhandup|nariman point|fort|colaba|"
+    r"mahalaxmi|jogeshwari|mira road|bhayandar|marol|saki ?naka|chandivali|wadala|sion)\b", re.I)
+CITIES = {"pune": ("Pune", PUNE_RE), "mumbai": ("Mumbai", MUMBAI_RE)}
 INCLUDE_REMOTE_INDIA = os.environ.get("INCLUDE_REMOTE_INDIA", "1") == "1"
 MARKETING_RE = re.compile(
     r"marketing|\bbrand|\bseo\b|\bsem\b|\bsmm\b|social media|content (writer|strateg|market|creator|manager)|"
@@ -77,10 +84,12 @@ def http_json(url, body=None, retries=2):
 
 
 def classify(location):
-    """Return 'pune', 'remote-india' or None."""
+    """Return 'pune', 'mumbai', 'remote-india' or None."""
     loc = location or ""
     if PUNE_RE.search(loc):
         return "pune"
+    if MUMBAI_RE.search(loc) and not re.search(r"\bfort (worth|lauderdale|collins|myers|wayne)\b", loc, re.I):
+        return "mumbai"
     if INCLUDE_REMOTE_INDIA and re.search(r"india", loc, re.I) and re.search(r"remote|anywhere", loc, re.I):
         return "remote-india"
     return None
@@ -318,13 +327,22 @@ def f_ashby(c):
 
 
 def f_smartrecruiters(c):
+    out = []
+    for city in ("Pune", "Mumbai"):
+        out += sr_city(c, city)
+    return out
+
+
+def sr_city(c, city):
     out, offset = [], 0
     while True:
         d = http_json(f"https://api.smartrecruiters.com/v1/companies/{c['slug']}/postings"
-                      f"?limit=100&offset={offset}&city=Pune")
+                      f"?limit=100&offset={offset}&city={city}")
         for j in d.get("content", []):
             l = j.get("location") or {}
             loc = ", ".join(x for x in [l.get("city"), l.get("region"), l.get("country", "").upper()] if x)
+            if not classify(loc):
+                loc = f"{loc} ({city})" if loc else city
             jb = job(c["name"], "smartrecruiters", j["id"], j["name"], loc,
                      f"https://jobs.smartrecruiters.com/{c['slug']}/{j['id']}",
                      j.get("releasedDate"), (j.get("department") or {}).get("label"), c.get("size"))
@@ -350,19 +368,25 @@ def sr_detail(slug, jid):
 
 def f_workday(c):
     host, tenant, site = c["slug"].split("|")
-    out, offset = [], 0
-    while offset < 200:
-        d = http_json(f"https://{host}/wday/cxs/{tenant}/{site}/jobs",
-                      {"searchText": "Pune", "limit": 20, "offset": offset, "appliedFacets": {}})
-        posts = d.get("jobPostings", [])
-        for j in posts:
-            path = j.get("externalPath", "")
-            jb = job(c["name"], "workday", f"{tenant}{path}", j.get("title"), j.get("locationsText"),
-                     f"https://{host}/en-US/{site}{path}", j.get("postedOn"), None, c.get("size"))
-            out.append(jb)
-        offset += 20
-        if offset >= d.get("total", 0) or not posts:
-            break
+    out, seen = [], set()
+    for city in ("Pune", "Mumbai"):
+        offset = 0
+        while offset < 200:
+            d = http_json(f"https://{host}/wday/cxs/{tenant}/{site}/jobs",
+                          {"searchText": city, "limit": 20, "offset": offset, "appliedFacets": {}})
+            posts = d.get("jobPostings", [])
+            for j in posts:
+                path = j.get("externalPath", "")
+                if path in seen:
+                    continue
+                seen.add(path)
+                jb = job(c["name"], "workday", f"{tenant}{path}", j.get("title"), j.get("locationsText"),
+                         f"https://{host}/en-US/{site}{path}", j.get("postedOn"), None, c.get("size"))
+                out.append(jb)
+            offset += 20
+            if offset >= d.get("total", 0) or not posts:
+                break
+            time.sleep(2)
         time.sleep(2)
     # full text needs one request per job (Workday rate-limits): marketing roles only, a few per run
     budget = 12
@@ -405,13 +429,15 @@ def f_adzuna(last_run=None):
     if last_run and datetime.now(timezone.utc) - datetime.fromisoformat(last_run) < timedelta(hours=every):
         return ADZUNA_SKIPPED
     out, seen = [], set()
-    # marketing jobs first; general Pune jobs only if calls are left over
-    for what in ("marketing", None):
+    # marketing jobs in each city first; general jobs only if calls are left over
+    for what, city in (("marketing", "Pune"), ("marketing", "Mumbai"), (None, "Pune"), (None, "Mumbai")):
         for page in range(1, 100):
             if budget <= 0:
                 break
+            if page > 1 and what == "marketing" and city == "Pune" and budget <= 2:
+                break  # leave a call for the Mumbai search
             budget -= 1
-            params = {"app_id": app_id, "app_key": key, "where": "Pune",
+            params = {"app_id": app_id, "app_key": key, "where": city,
                       "results_per_page": 50, "max_days_old": 30, "sort_by": "date"}
             if what:
                 params["what"] = what
@@ -422,8 +448,11 @@ def f_adzuna(last_run=None):
                     continue
                 seen.add(j["id"])
                 jb = job((j.get("company") or {}).get("display_name") or "Unknown", "adzuna", j["id"],
-                         j.get("title"), (j.get("location") or {}).get("display_name") or "Pune",
+                         j.get("title"), (j.get("location") or {}).get("display_name") or city,
                          j.get("redirect_url"), j.get("created"), (j.get("category") or {}).get("label"))
+                jb["where"] = city.lower()
+                if not CITIES[jb["where"]][1].search(jb["location"]):
+                    jb["location"] += f" ({city} area)"
                 if "marketing" in jb["dept"].lower():  # Adzuna category "PR, Advertising & Marketing Jobs"
                     jb["marketing"] = True
                 jb["email"] = posting_email(j.get("description"))
@@ -437,8 +466,6 @@ def f_adzuna(last_run=None):
             if len(res) < 50:
                 break
             time.sleep(1)
-    for j in out:  # Adzuna already filtered by where=Pune
-        j["location"] = j["location"] if PUNE_RE.search(j["location"]) else j["location"] + " (Pune area)"
     return out
 
 
@@ -450,8 +477,9 @@ def f_jooble(state):
     """Aggregator with a free key: 100 requests a day per key, reset at midnight UTC.
 
     `state` is {"day": "YYYY-MM-DD", "calls": n}, carried in jobs.json so the daily limit holds
-    across runs. Each run spends at most JOOBLE_MAX_CALLS (default 7): the "marketing" search
-    first, then one page each of a few related searches that rotate from run to run.
+    across runs. Each run spends at most JOOBLE_MAX_CALLS (default 20): the "marketing" search
+    in Pune and Mumbai first, then one page each of a few related searches that rotate from run
+    to run. (Scheduled runs actually happen every few hours, so this stays well under 90 a day.)
     """
     key = os.environ.get("JOOBLE_API_KEY")
     if not key:
@@ -461,22 +489,23 @@ def f_jooble(state):
         state.clear()
         state.update(day=day, calls=0)
     daily = int(os.environ.get("JOOBLE_DAILY") or 90)
-    budget = min(int(os.environ.get("JOOBLE_MAX_CALLS") or 7), daily - state["calls"])
+    budget = min(int(os.environ.get("JOOBLE_MAX_CALLS") or 20), daily - state["calls"])
     if budget <= 0:
         return ADZUNA_SKIPPED
     host = os.environ.get("JOOBLE_HOST") or "in.jooble.org"
     turn = datetime.now(timezone.utc).hour // 2
     extras = JOOBLE_EXTRA[turn % len(JOOBLE_EXTRA):] + JOOBLE_EXTRA[:turn % len(JOOBLE_EXTRA)]
-    plan = [("marketing", p) for p in (1, 2, 3)] + [(q, 1) for q in extras]
+    cities = ("Pune", "Mumbai")
+    plan = [("marketing", p, c) for p in (1, 2, 3) for c in cities] + [(q, 1, c) for q in extras for c in cities]
     out, seen, done = [], set(), set()
-    for kw, page in plan:
+    for kw, page, city in plan:
         if budget <= 0:
             break
-        if kw in done:
+        if (kw, city) in done:
             continue  # the previous page of this search was the last one
         budget -= 1
         state["calls"] += 1
-        body = {"keywords": kw, "location": "Pune", "radius": "40", "page": str(page), "ResultOnPage": 50}
+        body = {"keywords": kw, "location": city, "radius": "40", "page": str(page), "ResultOnPage": 50}
         try:
             d = http_json(f"https://{host}/api/{key}", body, retries=0)
         except urllib.error.HTTPError as e:
@@ -486,16 +515,17 @@ def f_jooble(state):
             raise
         res = d.get("jobs", [])
         if len(res) < 20:  # fewer than any sensible page size: no more pages
-            done.add(kw)
+            done.add((kw, city))
         for j in res:
             if j.get("id") in seen:
                 continue
             seen.add(j.get("id"))
-            loc = (j.get("location") or "Pune").strip()
-            if not PUNE_RE.search(loc):
-                loc += " (Pune area)"
+            loc = (j.get("location") or city).strip()
+            if not CITIES[city.lower()][1].search(loc):
+                loc += f" ({city} area)"
             jb = job((j.get("company") or "").strip() or "Unknown", "jooble", j.get("id"),
                      j.get("title"), loc, j.get("link"), j.get("updated"), j.get("type"))
+            jb["where"] = city.lower()
             jb["email"] = posting_email(j.get("snippet"))
             jb["_desc"] = html_text(j.get("snippet"))
             jb["jtype"] = (j.get("type") or "").strip()
@@ -569,7 +599,7 @@ def crawl():
         elif az is not None:
             adzuna_last = now()
             for j in az:
-                j["where"] = "pune"
+                j.setdefault("where", "pune")
             found += az
             status.append({"key": "adzuna", "name": "Adzuna (aggregator)", "ats": "adzuna", "ok": True,
                            "error": None, "total": len(az), "pune": len(az)})
@@ -589,7 +619,7 @@ def crawl():
             have = {(j["company"].lower(), j["title"].lower()) for j in others}
             fresh = [j for j in jb if (j["company"].lower(), j["title"].lower()) not in have]
             for j in fresh:
-                j["where"] = "pune"
+                j.setdefault("where", "pune")
             found += fresh
             status.append({"key": "jooble", "name": "Jooble (aggregator)", "ats": "jooble", "ok": True,
                            "error": None, "total": len(jb), "pune": len(fresh)})
@@ -657,7 +687,7 @@ def crawl():
     os.replace(tmp, OUT)
 
     ok = sum(1 for s in status if s["ok"])
-    print(f"[{ts}] {out['counts']['open']} open Pune jobs, {len(new)} new, sources ok {ok}/{len(status)}")
+    print(f"[{ts}] {out['counts']['open']} open Pune + Mumbai jobs, {len(new)} new, sources ok {ok}/{len(status)}")
     for s in status:
         if not s["ok"]:
             print(f"   ! {s['name']}: {s['error']}")
@@ -674,7 +704,7 @@ def notify(new):
     kws = [k.strip().lower() for k in os.environ.get("KEYWORDS", "").split(",") if k.strip()]
     hits = [j for j in new if not kws or any(k in (j["title"] + " " + j["dept"]).lower() for k in kws)]
     for j in hits[:20]:
-        text = f"New in Pune: {j['title']}\n{j['company']} - {j['location']}\n{j['url']}"
+        text = f"New: {j['title']}\n{j['company']} - {j['location']}\n{j['url']}"
         try:
             urllib.request.urlopen(urllib.request.Request(
                 f"https://api.telegram.org/bot{token}/sendMessage",

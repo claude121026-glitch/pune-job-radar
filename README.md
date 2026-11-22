@@ -1,11 +1,11 @@
-# Pune Job Radar
+# Pune & Mumbai Job Radar
 
-A job-search tool for marketing roles in Pune. Two parts:
+A job-search tool for marketing roles in Pune and Mumbai (incl. Thane and Navi Mumbai). Two parts:
 
 - **Jobs**: a crawler checks employers' public job boards (and, with a free key, the
   Jooble and Adzuna aggregators) around the clock and flags marketing openings.
-- **Companies**: a directory of every active company registered in Pune (from the
-  official Ministry of Corporate Affairs registry), with size, industry, a
+- **Companies**: a directory of every active company registered in Pune, and of Mumbai companies
+  with at least ₹10 lakh paid-up capital (from the official Ministry of Corporate Affairs registry), with size, industry, a
   "marketing fit" ranking, public office phone numbers and emails from each
   company's own website, and any open jobs. Track each company as To contact /
   Contacted / Applied with notes, and download the list as a CSV.
@@ -16,7 +16,7 @@ A job-search tool for marketing roles in Pune. Two parts:
    My Account → Generate API key. Then in PowerShell:
    ```
    $env:DATA_GOV_API_KEY="your-key"
-   python directory.py import-api       # reads all Maharashtra companies, keeps Pune ones
+   python directory.py import-api       # reads all Maharashtra companies, keeps Pune and Mumbai ones
    ```
    If it stops partway, it prints an offset; resume with `$env:IMPORT_OFFSET="<offset>"`.
 2. **Jooble key (free, 100 searches a day; marketing jobs at small and mid-size firms):**
@@ -33,6 +33,7 @@ A job-search tool for marketing roles in Pune. Two parts:
 python crawler.py               # crawl jobs
 python directory.py enrich 300  # find phones/emails for 300 more companies (largest first)
 python directory.py build       # refresh the Companies view
+python directory.py --city mumbai build   # the same for Mumbai (enrich, job-contacts etc. take --city too)
 python crawler.py serve         # open the dashboard at http://localhost:8765
 ```
 
@@ -89,13 +90,15 @@ lists are never uploaded to GitHub (they're in `.gitignore`).
 - **Contacts** are only the company's own published office numbers and generic
   addresses (info@, hr@, careers@…). Personal mailboxes from the registry are hidden.
   Websites' robots.txt rules are respected.
-- The registry data currently runs to November 2023.
+- Mumbai's list leaves out micro companies (< ₹10 L capital) and LLPs: Mumbai has about three times
+  as many companies as Pune, and these rarely employ marketing staff. Companies hiring in Mumbai are
+  added from the job listings whatever their size.
 
 ## Run 24/7 on GitHub
 
 `.github/workflows/crawl.yml` crawls jobs every 2 hours, finds contacts for 300 more
 companies each run, refreshes the registry monthly, and publishes the dashboard to
-GitHub Pages. Add `DATA_GOV_API_KEY`, `JOOBLE_API_KEY`, `ADZUNA_APP_ID`, `ADZUNA_APP_KEY` as repo secrets.
+GitHub Pages. Add `DATA_GOV_API_KEY` (needed for the registry import and its monthly refresh), `JOOBLE_API_KEY`, `ADZUNA_APP_ID`, `ADZUNA_APP_KEY` as repo secrets.
 
 Or only on this PC: `powershell -ExecutionPolicy Bypass -File schedule_windows.ps1`.
 

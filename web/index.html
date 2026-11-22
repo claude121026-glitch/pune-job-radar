@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pune Job Radar</title>
+<title>Pune & Mumbai Job Radar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta name="theme-color" content="#e23e7b">
@@ -141,9 +141,9 @@ a.btn.primary{background:linear-gradient(100deg,var(--acc),var(--acc2));color:va
 <body>
 <header><div class="wrap">
   <div class="top">
-    <h1>Pune Job Radar</h1>
+    <h1>Pune &amp; Mumbai Job Radar</h1>
     <div class="tabs"><button id="tabJobs" class="on">Jobs</button><button id="tabCos">Companies</button><button id="tabMail">✉ Email <span id="mailCount"></span></button></div>
-    <a class="dl" href="pune-companies-with-contacts.csv" download>⬇ Companies with phone/email (Excel/CSV)</a>
+    <a class="dl" id="dlcsv" href="pune-companies-with-contacts.csv" download>⬇ Companies with phone/email (Excel/CSV)</a>
   </div>
   <div class="sub" id="updated">Loading…</div>
 
@@ -152,11 +152,12 @@ a.btn.primary{background:linear-gradient(100deg,var(--acc),var(--acc2));color:va
     <label class="chk"><input type="checkbox" id="mkt" checked> Marketing only</label>
     <select id="age"><option value="0">Any time</option><option value="1">New in 24h</option><option value="3">New in 3 days</option><option value="7">New in 7 days</option></select>
     <select id="company"><option value="">All companies</option></select>
-    <select id="where"><option value="">Pune + remote India</option><option value="pune">Pune only</option><option value="remote-india">Remote India only</option></select>
+    <select id="where"><option value="">Pune + Mumbai + remote</option><option value="pune">Pune only</option><option value="mumbai">Mumbai only</option><option value="remote-india">Remote India only</option></select>
     <select id="view"><option value="open">Open</option><option value="saved">Saved</option><option value="applied">Applied</option><option value="hidden">Hidden</option><option value="closed">Recently closed</option></select>
   </div>
 
   <div class="bar" id="coBar" hidden>
+    <select id="ccity" aria-label="City"><option value="pune">Pune companies</option><option value="mumbai">Mumbai companies</option></select>
     <input type="search" id="cq" placeholder="Search companies: name, what they do, area pincode…">
     <select id="csize"><option value="">All sizes</option><option value="large">Large</option><option value="mid">Mid</option><option value="small">Small</option><option value="micro">Micro</option><option value="llp">LLP (partnership)</option></select>
     <select id="csector"><option value="">All industries</option></select>
@@ -302,11 +303,11 @@ function nice(name) {
 }
 function oneLiner(c) {   // a plain-language summary when the company's own description is unknown
   if (String(c.cin).startsWith("job:"))
-    return `Hiring in Pune now: ${c.jobs} open job${c.jobs === 1 ? "" : "s"}` + (c.mkt_jobs ? `, ${c.mkt_jobs} in marketing` : "") +
-      ". Found through job listings (registered outside Pune, or not a registered company).";
+    return `Hiring in ${cityName()} now: ${c.jobs} open job${c.jobs === 1 ? "" : "s"}` + (c.mkt_jobs ? `, ${c.mkt_jobs} in marketing` : "") +
+      `. Found through job listings (registered outside ${cityName()}, or not a registered company).`;
   const since = (c.registered || "").slice(0, 4);
   return `${SIZE_LABEL[c.size] || "Company"} in ${c.sector.toLowerCase()}` + (since ? `, registered ${since}` : "") +
-    (c.pincode ? `, Pune ${c.pincode}` : "") + ".";
+    (c.pincode ? `, ${cityName()} ${c.pincode}` : "") + ".";
 }
 
 let data = {jobs: [], sources: []}, cos = [], byCin = {}, F = [], page = 0, cosUpdated = null;
@@ -358,9 +359,9 @@ function updatedLine() {
       (bad ? ` · ${bad} failed this round` : "") : "No jobs yet";
   } else if (!$("cosView").hidden) {
     const fromJobs = cos.filter(c => String(c.cin).startsWith("job:")).length;
-    $("updated").textContent = cos.length ? `${(cos.length - fromJobs).toLocaleString()} companies registered in Pune` +
+    $("updated").textContent = cos.length ? `${(cos.length - fromJobs).toLocaleString()} companies registered in ${cityName()}` +
       (fromJobs ? ` + ${fromJobs} more hiring here` : "") + ` · updated ${ago(cosUpdated)}`
-      : "Loading company directory…";
+      : cosMissing ? `${cityName()} companies: coming soon` : "Loading company directory…";
   } else {
     $("updated").textContent = "Apply to your saved jobs and email your saved companies: one template each, sent all at once with your CV.";
   }
@@ -371,12 +372,15 @@ function updatedLine() {
 // ---------- jobs ----------
 async function loadJobs() {
   try { data = await (await fetch("jobs.json?t=" + Date.now())).json(); } catch { data = {jobs: [], sources: []}; }
-  try { jobContacts = await (await fetch("job-contacts.json?t=" + Date.now())).json(); } catch { jobContacts = {}; }
+  jobContacts = {};
+  for (const f of ["job-contacts.json", "job-contacts-mumbai.json"]) {
+    try { const r = await fetch(f + "?t=" + Date.now()); if (r.ok) Object.assign(jobContacts, await r.json()); } catch {}
+  }
   const names = [...new Set(data.jobs.map(j => j.company))].sort((a, b) => a.localeCompare(b));
   const cur = $("company").value || store.get("f_company", "");
   $("company").innerHTML = '<option value="">All companies</option>' +
     names.map(c => `<option${c === cur ? " selected" : ""}>${esc(c)}</option>`).join("");
-  $("src").innerHTML = "<tr><th>Source</th><th>Board</th><th>All jobs</th><th>Pune</th><th>Status</th></tr>" +
+  $("src").innerHTML = "<tr><th>Source</th><th>Board</th><th>All jobs</th><th>Pune/Mumbai</th><th>Status</th></tr>" +
     data.sources.map(s => `<tr><td>${esc(s.name)}</td><td>${esc(s.ats)}</td><td>${s.total}</td><td>${s.pune}</td>
       <td>${s.ok ? "ok" : '<span class="tag warn">' + esc(s.error) + "</span>"}</td></tr>`).join("");
   updatedLine(); renderJobs(); if (!$("mailView").hidden) renderJobMail();
@@ -542,9 +546,30 @@ async function openJob(id) {
 
 // ---------- companies ----------
 const FIELDS = ["cin", "name", "size", "sector", "pincode", "registered", "paidup", "website", "phones", "emails", "jobs", "mkt_jobs", "fit", "address", "about"];
+// one city's company list is loaded at a time (each is tens of MB); saved companies keep a copy of
+// their details, so the Email tab still has them after switching city
+const CITY_FILES = {pune: ["Pune", "companies.json", "pune-companies-with-contacts.csv"],
+                    mumbai: ["Mumbai", "companies-mumbai.json", "mumbai-companies-with-contacts.csv"]};
+let city = CITY_FILES[store.get("f_ccity", "pune")] ? store.get("f_ccity", "pune") : "pune", cosMissing = false;
+const cityName = () => CITY_FILES[city][0];
+const SNAP = ["cin", "name", "size", "sector", "pincode", "website", "phones", "emails", "about", "address", "paidup", "jobs", "mkt_jobs"];
+function addSnapshots() {
+  for (const [cin, m] of Object.entries(cmarks)) {
+    if (!m.star) continue;
+    if (byCin[cin] && !byCin[cin].snap) { m.snap = Object.fromEntries(SNAP.map(f => [f, byCin[cin][f]])); m.snap.city = city; }
+    else if (!byCin[cin] && m.snap) byCin[cin] = {...m.snap, nice: nice(m.snap.name), snap: true};
+  }
+  saveC();
+}
 async function loadCos() {
+  $("ccity").value = city;
+  $("dlcsv").href = CITY_FILES[city][2];
+  $("dlcsv").textContent = `⬇ ${cityName()} companies with phone/email (Excel/CSV)`;
+  cos = []; byCin = {}; byName = {}; cosMissing = false; renderCos();
   try {
-    const d = await (await fetch("companies.json?t=" + Date.now())).json();
+    const res = await fetch(CITY_FILES[city][1] + "?t=" + Date.now());
+    if (!res.ok) throw new Error(res.status);
+    const d = await res.json();
     const idx = Object.fromEntries(d.fields.map((f, i) => [f, i]));
     cos = d.companies.map(r => Object.fromEntries(FIELDS.map(f => [f, idx[f] === undefined ? "" : r[idx[f]]])));
     for (const c of cos) { c.phones = c.phones || []; c.emails = c.emails || []; c.nice = nice(c.name); byCin[c.cin] = c; }
@@ -553,7 +578,8 @@ async function loadCos() {
       if (k.length > 3 && (!byName[k] || (!byName[k].emails.length && c.emails.length))) byName[k] = c;
     }
     cosUpdated = d.updated;
-  } catch { cos = []; }
+  } catch { cos = []; cosMissing = true; }
+  addSnapshots();
   const counts = {};
   for (const c of cos) counts[c.sector] = (counts[c.sector] || 0) + 1;
   const sectors = Object.keys(counts).sort();
@@ -600,7 +626,10 @@ function filterCos() {
 function renderCos() {
   for (const b of $("chips").children) b.classList.toggle("on", b.dataset.sector === $("csector").value);
   if (!cos.length) {
-    $("cstats").innerHTML = ""; $("clist").innerHTML = '<div class="empty">Loading company directory…</div>'; $("pager").innerHTML = ""; return;
+    $("cstats").innerHTML = ""; $("pager").innerHTML = "";
+    $("clist").innerHTML = `<div class="empty">${cosMissing ? `The ${cityName()} company list isn't ready yet. It's being built from the official company registry; check back in a few hours.`
+      : `Loading ${cityName()} companies…`}</div>`;
+    return;
   }
   F = filterCos();
   const per = 50, pages = Math.ceil(F.length / per);
@@ -616,7 +645,7 @@ function renderCos() {
       <div><button class="t" data-open="${esc(c.cin)}">${esc(c.nice || c.name)}</button>
         <div class="about">${esc(c.about || oneLiner(c))}</div>
         <div class="meta"><span class="tag size">${String(c.cin).startsWith("job:") ? "from job listings" : esc(c.size)}${c.paidup ? " · " + crore(c.paidup) + " capital" : ""}</span>
-          <span class="co">${esc(c.sector)}</span>${c.pincode ? `<span>Pune ${esc(c.pincode)}</span>` : ""}
+          <span class="co">${esc(c.sector)}</span>${c.pincode ? `<span>${cityName()} ${esc(c.pincode)}</span>` : ""}
           ${c.mkt_jobs ? `<span class="tag new">${c.mkt_jobs} marketing opening${c.mkt_jobs > 1 ? "s" : ""}</span>` : ""}
           ${c.phones.slice(0, 2).map(p => `<a href="tel:${esc(p.replace(/\s/g, ""))}">📞 ${esc(p)}</a>`).join("")}
           ${c.emails.slice(0, 1).map(e => `<a href="mailto:${esc(e)}">✉ ${esc(e)}</a>`).join("")}
@@ -637,8 +666,14 @@ function toggleStar(cin) {
   const m = cm(cin);
   m.star = !m.star;
   if (m.star && m.sel === undefined) m.sel = true;
+  if (m.star && byCin[cin] && !byCin[cin].snap) { m.snap = Object.fromEntries(SNAP.map(f => [f, byCin[cin][f]])); m.snap.city = city; }
   saveC(); updatedLine();
 }
+$("ccity").addEventListener("change", () => {
+  city = $("ccity").value; store.set("f_ccity", city); page = 0;
+  $("csector").value = ""; store.set("f_csector", "");
+  loadCos();
+});
 $("clist").addEventListener("click", e => {
   const s = e.target.closest("[data-star]");
   if (s) { toggleStar(s.dataset.star); renderCos(); return; }
@@ -656,7 +691,7 @@ function openDrawer(cin) {
   const c = byCin[cin];
   if (!c) return;
   const m = cmarks[cin] || {};
-  const q = encodeURIComponent(c.nice + " Pune");
+  const q = encodeURIComponent(c.nice + " " + cityName());
   const fromJobs = String(cin).startsWith("job:");
   const jobs = fromJobs ? data.jobs.filter(j => !j.closed && j.company.split("|")[0].replace(/\s+/g, " ").trim() === c.name)
     : data.jobs.filter(j => !j.closed && c.nice && j.company.toLowerCase().includes(c.nice.toLowerCase().split(" ")[0]) &&
@@ -674,13 +709,13 @@ function openDrawer(cin) {
       <div>Phone</div><div>${c.phones.map(p => `<a href="tel:${esc(p.replace(/\s/g, ""))}">${esc(p)}</a>`).join("<br>") || "—"}</div>
       <div>Email</div><div>${c.emails.map(e => `<a href="mailto:${esc(e)}">${esc(e)}</a>`).join("<br>") || "—"}</div>
       <div>Website</div><div>${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website.replace(/^https?:\/\//, ""))}</a>` : "—"}</div>
-      ${fromJobs ? "<div>Source</div><div>Job listings (not in the Pune company registry)</div>" : `<div>Company ID</div><div>${esc(c.cin)}</div>`}
+      ${fromJobs ? `<div>Source</div><div>Job listings (not in the ${cityName()} company registry)</div>` :`<div>Company ID</div><div>${esc(c.cin)}</div>`}
     </div>
     <div class="links">
       <a href="https://www.google.com/search?q=${q}" target="_blank" rel="noopener">Google</a>
       <a href="https://www.linkedin.com/search/results/companies/?keywords=${encodeURIComponent(c.nice)}" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.google.com/maps/search/${encodeURIComponent(c.address || c.nice + " Pune")}" target="_blank" rel="noopener">Map</a>
-      <a href="https://www.google.com/search?q=${encodeURIComponent(c.nice + " Pune marketing jobs")}" target="_blank" rel="noopener">Search their jobs</a>
+      <a href="https://www.google.com/maps/search/${encodeURIComponent(c.address || c.nice + " " + cityName())}" target="_blank" rel="noopener">Map</a>
+      <a href="https://www.google.com/search?q=${encodeURIComponent(c.nice + " " + cityName() + " marketing jobs")}" target="_blank" rel="noopener">Search their jobs</a>
     </div>
     ${jobs.length ? `<h2>Open jobs</h2>${jobs.slice(0, 8).map(j => `<div><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a> <span class="hint">${esc(j.location)}</span></div>`).join("")}` : ""}
     <div class="bar">
