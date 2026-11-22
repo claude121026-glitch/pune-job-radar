@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#e23e7b">
 <style>
 :root{--bg:#fff6f9;--bg2:#ffe9f1;--card:#ffffff;--ink:#3b1d2c;--mute:#8d6577;--line:#f5d5e1;--acc:#e23e7b;--acc2:#a64bd8;--accbg:#ffe6ef;--onacc:#fff;--new:#178a5e;--newbg:#e0f5ea;--warn:#c2410c;--warnbg:#fff0e2;--star:#f2a516;--shade:rgba(59,29,44,.35);--hdr:rgba(255,246,249,.82);--glow:rgba(226,62,123,.18);--shadow:0 1px 2px rgba(162,40,90,.05),0 10px 28px -16px rgba(162,40,90,.35)}
-@media (prefers-color-scheme:dark){:root{--bg:#1c0e17;--bg2:#3a1430;--card:#22131d;--ink:#fbe8f0;--mute:#c69bb0;--line:#3e2333;--acc:#ff77a8;--acc2:#cf8cff;--accbg:#3a1a2c;--onacc:#2a0f1d;--new:#5fdca4;--newbg:#123026;--warn:#ffb17a;--warnbg:#3a2213;--star:#ffc85e;--shade:rgba(0,0,0,.6);--hdr:rgba(26,14,21,.8);--glow:rgba(255,119,168,.16);--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 30px -18px rgba(0,0,0,.8)}}
+@media (prefers-color-scheme:dark){:root{--bg:#2b0d22;--bg2:#5a1a45;--card:#3a1430;--ink:#ffeef7;--mute:#e7a9c9;--line:#5e2550;--acc:#ff86b6;--acc2:#e19bff;--accbg:#561d47;--onacc:#2b0d22;--new:#6be6b0;--newbg:#173a32;--warn:#ffc08f;--warnbg:#4a2626;--star:#ffd36e;--shade:rgba(20,0,14,.6);--hdr:rgba(43,13,34,.82);--glow:rgba(255,119,168,.16);--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 30px -18px rgba(0,0,0,.8)}}
 *{box-sizing:border-box}
 html{accent-color:var(--acc)}
 ::selection{background:var(--acc);color:var(--onacc)}
@@ -105,6 +105,34 @@ td,th{text-align:left;padding:5px 8px;border-bottom:1px solid var(--line)}
 .kv div:nth-child(odd){color:var(--mute)}
 .links{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
 .links a{font-size:13px;color:var(--acc)}
+.levels{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:2px 0 8px}
+.levels button{display:flex;flex-direction:column;align-items:flex-start;gap:1px;padding:10px 12px;border-radius:16px;text-align:left;box-shadow:var(--shadow)}
+.levels button b{font-size:14px;font-weight:700;color:var(--ink)}
+.levels button small{font-size:11.5px;color:var(--mute)}
+.levels button .n{font:600 20px/1.1 Fraunces,Georgia,serif;color:var(--acc)}
+.levels button.on{background:linear-gradient(120deg,var(--acc),var(--acc2));border-color:transparent}
+.levels button.on b,.levels button.on small,.levels button.on .n{color:var(--onacc)}
+.lvhint{margin:0 0 10px}
+.lvhint a{font-weight:600}
+.tag.lv-fresher{background:var(--newbg);color:var(--new)}
+.tag.lv-mid{background:var(--warnbg);color:var(--warn)}
+.tag.lv-senior{background:var(--accbg);color:var(--acc)}
+.tag.lv-unknown{background:transparent;border:1px dashed var(--line);color:var(--mute)}
+.sal{color:var(--ink);font-weight:600}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+.facts div{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:9px 12px}
+.facts small{display:block;color:var(--mute);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em}
+.facts span{font-weight:600}
+.facts .na{font-weight:400;color:var(--mute)}
+.desc{font-size:13.5px;line-height:1.6}
+.desc h4{margin:14px 0 4px;font-size:13.5px;color:var(--acc)}
+.desc p{margin:4px 0}
+.desc ul{margin:4px 0;padding-left:20px}
+.desc li{margin:2px 0}
+.reqbox{background:var(--accbg);border-radius:16px;padding:4px 14px 10px;margin:10px 0}
+.drawer h3{font:600 16px/1.3 Fraunces,Georgia,serif;margin:18px 0 6px}
+a.btn.primary{background:linear-gradient(100deg,var(--acc),var(--acc2));color:var(--onacc);border-color:transparent;font-weight:600;padding:8px 14px;box-shadow:0 6px 18px -8px var(--acc)}
+@media (max-width:760px){.levels{grid-template-columns:repeat(2,minmax(0,1fr))}.levels button:first-child{grid-column:1/-1}.facts{grid-template-columns:1fr}}
 [hidden]{display:none!important}
 @media (max-width:640px){header{position:static}h1{font-size:21px}.bar select{flex:1 1 45%}.card{grid-template-columns:1fr}.acts{justify-content:flex-start}.grid2{grid-template-columns:1fr}.dl{margin-left:0}.drawer .box{border-radius:0}}
 </style>
@@ -140,6 +168,8 @@ td,th{text-align:left;padding:5px 8px;border-bottom:1px solid var(--line)}
 
 <main><div class="wrap">
   <section id="jobsView">
+    <div class="levels" id="levels" role="tablist" aria-label="Experience needed"></div>
+    <div class="hint lvhint" id="levelHint"></div>
     <div class="stats" id="stats"></div>
     <div id="list"></div>
     <details><summary>Job sources and crawl health</summary><table id="src"></table></details>
@@ -352,11 +382,28 @@ async function loadJobs() {
   updatedLine(); renderJobs(); if (!$("mailView").hidden) renderJobMail();
 }
 
+// experience needed, worked out by the crawler from the listing ("0–2 yrs", "intern", job-board level, title)
+const LV = {
+  all: ["All jobs", "every level"],
+  fresher: ["🌱 Fresher", "no experience · interns"],
+  mid: ["🌿 Intermediate", "1–2 years"],
+  senior: ["🌳 Experienced", "3+ years"],
+  unknown: ["❔ Not stated", "listing doesn't say"],
+};
+let level = store.get("f_level", "fresher");
+if (!LV[level]) level = "fresher";
+const lvOf = j => LV[j.level] ? j.level : "unknown";
+function lvTag(j) {
+  const l = lvOf(j);
+  const exp = j.exp && j.exp !== "Fresher" ? " · " + j.exp : "";
+  return `<span class="tag lv-${l}">${esc(LV[l][0].replace(/^\S+\s/, ""))}${esc(exp)}</span>`;
+}
+
 function renderJobs() {
   const q = $("q").value.trim().toLowerCase().split(/\s+/).filter(Boolean);
   const age = +$("age").value, co = $("company").value, where = $("where").value, view = $("view").value, mkt = $("mkt").checked;
   const since = age ? Date.now() - age * 86400000 : 0;
-  const list = data.jobs.filter(j => {
+  const before = data.jobs.filter(j => {
     const m = marks[j.id];
     if (mkt && !j.marketing) return false;
     if (view === "open" && (j.closed || m === "hidden")) return false;
@@ -365,9 +412,18 @@ function renderJobs() {
     if (co && j.company !== co) return false;
     if (where && j.where !== where) return false;
     if (since && new Date(j.first_seen) < since) return false;
-    const hay = (j.title + " " + j.company + " " + j.dept + " " + j.location).toLowerCase();
+    const hay = (j.title + " " + j.company + " " + j.dept + " " + j.location + " " + (j.jtype || "")).toLowerCase();
     return q.every(w => hay.includes(w));
   });
+  const count = {all: before.length, fresher: 0, mid: 0, senior: 0, unknown: 0};
+  for (const j of before) count[lvOf(j)]++;
+  const list = level === "all" ? before : before.filter(j => lvOf(j) === level);
+  $("levels").innerHTML = Object.entries(LV).map(([k, [name, sub]]) =>
+    `<button role="tab" aria-selected="${k === level}" data-lv="${k}" class="${k === level ? "on" : ""}">
+      <span class="n">${count[k]}</span><b>${esc(name)}</b><small>${esc(sub)}</small></button>`).join("");
+  $("levelHint").innerHTML = level === "fresher" && count.unknown
+    ? `${count.unknown} more job${count.unknown > 1 ? "s don't" : " doesn't"} say how much experience is needed. Many of those take freshers too: <a href="#" data-lv="unknown">have a look</a>.`
+    : level === "unknown" ? "These listings don't mention years of experience. Open one to read what it asks for." : "";
   const open = data.jobs.filter(j => !j.closed), openM = open.filter(j => j.marketing);
   const fresh = lastVisit ? (mkt ? openM : open).filter(j => j.first_seen > lastVisit).length : 0;
   const nSaved = Object.values(marks).filter(v => v === "saved").length;
@@ -380,22 +436,35 @@ function renderJobs() {
   $("list").innerHTML = list.length ? list.slice(0, 500).map(j => {
     const m = marks[j.id], isNew = Date.now() - new Date(j.first_seen) < 86400000;
     return `<div class="card${j.closed ? " closed" : ""}${m === "applied" ? " applied" : ""}">
-      <div><a class="t" href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
+      <div><button class="t" data-open="${esc(j.id)}">${esc(j.title)}</button>
         <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(j.location)}</span>
-        ${j.dept ? `<span>${esc(j.dept)}</span>` : ""}<span>found ${ago(j.first_seen)}</span>
+        ${j.salary ? `<span class="sal">💰 ${esc(j.salary)}</span>` : ""}${j.jtype ? `<span>${esc(j.jtype)}</span>` : ""}
+        <span>found ${ago(j.first_seen)}</span></div>
+        <div class="meta" style="margin-top:4px">${lvTag(j)}
         ${isNew ? '<span class="tag new">new</span>' : ""}${j.marketing ? '<span class="tag">marketing</span>' : ""}
         ${j.where === "remote-india" ? '<span class="tag">remote</span>' : ""}
         ${j.closed ? `<span class="tag warn">closed ${ago(j.closed)}</span>` : ""}<span class="tag size">${esc(j.source)}</span></div></div>
-      <div class="acts">${["saved", "applied", "hidden"].map(k =>
+      <div class="acts"><button data-open="${esc(j.id)}">Details</button>${["saved", "applied", "hidden"].map(k =>
         `<button data-id="${esc(j.id)}" data-m="${k}" class="${m === k ? "on" : ""}">${{saved: "Save", applied: "Applied", hidden: "Hide"}[k]}</button>`).join("")}</div></div>`;
   }).join("") : `<div class="empty">No jobs match these filters.${mkt && !openM.length ?
      "<br><br>Most marketing openings come from the Jooble and Adzuna job feeds once their keys are added." : ""}</div>`;
 }
 
+$("levels").addEventListener("click", e => setLevel(e.target.closest("[data-lv]")));
+$("levelHint").addEventListener("click", e => { e.preventDefault(); setLevel(e.target.closest("[data-lv]")); });
+function setLevel(b) {
+  if (!b) return;
+  level = b.dataset.lv; store.set("f_level", level); renderJobs();
+}
+
 $("list").addEventListener("click", e => {
+  const o = e.target.closest("[data-open]");
+  if (o) return openJob(o.dataset.open);
   const b = e.target.closest("button[data-id]");
   if (!b) return;
-  const {id, m} = b.dataset;
+  toggleMark(b.dataset.id, b.dataset.m);
+});
+function toggleMark(id, m) {
   marks[id] === m ? delete marks[id] : (marks[id] = m);
   const j = data.jobs.find(x => x.id === id);
   if (marks[id] === "saved" && j) {   // keep a copy, so the job stays in the Email tab after it leaves the feed
@@ -404,7 +473,72 @@ $("list").addEventListener("click", e => {
     saveJ();
   }
   store.set("marks", marks); renderJobs(); updatedLine();
-});
+}
+
+// ---------- job details panel ----------
+let details = null;   // job id -> description text (job-details.json, loaded the first time a job is opened)
+async function jobDesc(id) {
+  if (!details) { try { details = await (await fetch("job-details.json?t=" + Date.now())).json(); } catch { details = {}; } }
+  return details[id] || "";
+}
+const REQ_HEAD = /^(minimum |basic |preferred |key |job |technical |desired |required |additional )?(requirements?|qualifications?|skills?( required| needed| and experience| & experience| we look for| set)?|eligibility( criteria)?|experience( required| needed)?|must[- ]haves?|nice[- ]to[- ]haves?|what you('|’)ll (need|bring)|what we('|’)re looking for|what (you need|you bring|you have|we need|we expect)|who you are|about you|you (have|bring|are|will need|should have)|your profile|candidate profile|desired (profile|candidate)|ideal candidate|competencies|education)\b/i;
+const isHeading = l => !!l && !l.startsWith("• ") && l.length <= 80 && (/:$/.test(l) || (!/[.!?,;]$/.test(l) && l.split(/\s+/).length <= 7));
+function sections(desc) {
+  const out = []; let cur = {h: "", lines: []};
+  for (const l of desc.split("\n")) {
+    if (isHeading(l)) { if (cur.h || cur.lines.some(Boolean)) out.push(cur); cur = {h: l.replace(/:$/, ""), lines: []}; }
+    else cur.lines.push(l);
+  }
+  out.push(cur);
+  return out;
+}
+function fmtDesc(text) {
+  let h = "", ul = false;
+  for (const l of text.split("\n")) {
+    if (l.startsWith("• ")) { if (!ul) { h += "<ul>"; ul = true; } h += `<li>${esc(l.slice(2))}</li>`; continue; }
+    if (ul) { h += "</ul>"; ul = false; }
+    if (l.trim()) h += isHeading(l) ? `<h4>${esc(l.replace(/:$/, ""))}</h4>` : `<p>${esc(l)}</p>`;
+  }
+  return h + (ul ? "</ul>" : "");
+}
+const WHY = {
+  years: j => `Sorted as <b>${LV[lvOf(j)][0].replace(/^\S+\s/, "")}</b> because the listing asks for ${esc(j.exp)} of experience.`,
+  title: j => `Sorted as <b>${LV[lvOf(j)][0].replace(/^\S+\s/, "")}</b> from the job title; the listing doesn't give years.`,
+  board: j => `Sorted as <b>${LV[lvOf(j)][0].replace(/^\S+\s/, "")}</b> from the level the company set on its job board.`,
+  text: j => `Sorted as <b>Fresher</b> because the listing mentions freshers, interns or entry level.`,
+  "": () => "The listing doesn't say how much experience is needed. Read the description, or the job page, to judge.",
+};
+async function openJob(id) {
+  const j = data.jobs.find(x => x.id === id);
+  if (!j) return;
+  const desc = await jobDesc(id), m = marks[id];
+  const reqs = desc ? sections(desc).filter(s => REQ_HEAD.test(s.h) && s.lines.some(l => l.trim())) : [];
+  const fact = (k, v, na) => `<div><small>${k}</small>${v ? `<span>${esc(v)}</span>` : `<span class="na">${na}</span>`}</div>`;
+  $("dbox").innerHTML = `<button class="close" id="dclose">✕</button>
+    <div class="meta">${lvTag(j)}${j.marketing ? '<span class="tag">marketing</span>' : ""}${j.closed ? `<span class="tag warn">closed ${ago(j.closed)}</span>` : ""}</div>
+    <h2 style="font-size:20px;margin:8px 40px 4px 0">${esc(j.title)}</h2>
+    <div class="meta"><span class="co">${esc(j.company)}</span><span>${esc(j.location)}</span></div>
+    <div class="facts">
+      ${fact("Experience needed", j.exp, lvOf(j) === "unknown" ? "Not stated" : LV[lvOf(j)][1])}
+      ${fact("Salary", j.salary, "Not mentioned")}
+      ${fact("Job type", j.jtype, "Not mentioned")}
+      ${fact("Posted", j.posted ? ago(j.posted) : "", "—")}
+    </div>
+    <p class="hint">${(WHY[j.level_by || ""] || WHY[""])(j)}</p>
+    <div class="bar">
+      <a class="btn primary" href="${esc(j.url)}" target="_blank" rel="noopener">Open job page &amp; apply ↗</a>
+      ${["saved", "applied", "hidden"].map(k => `<button data-jm="${k}" class="${m === k ? "on" : ""}">${{saved: "Save", applied: "Applied", hidden: "Hide"}[k]}</button>`).join("")}
+    </div>
+    ${reqs.length ? `<h3>Requirements</h3><div class="reqbox desc">${reqs.map(s => `<h4>${esc(s.h)}</h4>${fmtDesc(s.lines.join("\n"))}`).join("")}</div>` : ""}
+    ${desc ? `<h3>${j.has_desc ? "Full job description" : "Summary from the job feed"}</h3><div class="desc">${fmtDesc(desc)}</div>
+      ${j.has_desc ? "" : '<p class="hint">This job feed only shares a short summary. The full requirements are on the job page.</p>'}`
+      : '<p class="hint" style="margin-top:16px">This listing came without a description. Open the job page to see what they ask for.</p>'}
+    <p class="hint" style="margin-top:18px">Found ${ago(j.first_seen)} via ${esc(j.source)}${j.dept ? " · " + esc(j.dept) : ""}</p>`;
+  $("drawer").hidden = false;
+  $("dbox").scrollTop = 0;
+  $("dclose").onclick = closeDrawer;
+  for (const b of $("dbox").querySelectorAll("[data-jm]")) b.onclick = () => { toggleMark(id, b.dataset.jm); openJob(id); };
+}
 
 // ---------- companies ----------
 const FIELDS = ["cin", "name", "size", "sector", "pincode", "registered", "paidup", "website", "phones", "emails", "jobs", "mkt_jobs", "fit", "address", "about"];

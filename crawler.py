@@ -13,6 +13,7 @@ Usage:
 
 Only standard-library Python is needed.
 """
+import html
 import json
 import os
 import re
@@ -27,6 +28,9 @@ from datetime import datetime, timedelta, timezone
 ROOT = os.path.dirname(os.path.abspath(__file__))
 COMPANIES = os.path.join(ROOT, "companies.json")
 OUT = os.path.join(ROOT, "web", "jobs.json")
+DETAILS = os.path.join(ROOT, "web", "job-details.json")   # full descriptions, loaded by the site on demand
+DESC_MAX = 7000
+DETAIL_CACHE = {}   # job id -> description from the previous run (so per-job detail pages aren't refetched)
 UA = "PuneJobCrawler/1.0 (personal job search; polite, low volume)"
 KEEP_CLOSED_DAYS = 14
 AGGREGATORS = {"adzuna", "jooble"}
@@ -104,6 +108,151 @@ def unmangle(s):
     return s
 
 
+def html_text(h):
+    """HTML job description -> plain text, keeping bullet points and paragraph breaks."""
+    if not h:
+        return ""
+    if "&lt;" in h:  # Greenhouse sends the HTML escaped
+        h = html.unescape(h)
+    h = re.sub(r"(?is)<(script|style)\b.*?</\1>", " ", h)
+    h = re.sub(r"(?i)<li[^>]*>", "\n• ", h)
+    h = re.sub(r"(?i)<br\s*/?>|</(p|div|li|ul|ol|h[1-6]|tr|section)>", "\n", h)
+    h = re.sub(r"(?i)<(p|div|h[1-6]|ul|ol|tr|section)\b[^>]*>", "\n", h)
+    return tidy(html.unescape(re.sub(r"<[^>]+>", "", h)))
+
+
+# bullet marks seen in job posts, incl. Word's private-use symbol bullets (U+F0B7 etc.)
+BULLET = re.compile(r"^(?:(?:[•·▪■□●◦○➢➤►▶✓✔✦❖→]|[-*–](?=\s)|-(?=[A-Z]))\s*)+")
+
+
+def tidy(text):
+    """Plain-text description: one bullet style ("• "), single spaces, no runs of blank lines."""
+    out = []
+    for line in (text or "").replace("\r", "").replace("\xa0", " ").replace("​", "").split("\n"):
+        line = re.sub(r"^#{1,6}\s+", "", re.sub(r"\s+", " ", line).strip())   # markdown "## Heading"
+        if re.fullmatch(r"(#LI-\S+\s*)+", line):   # LinkedIn tracking tags
+            continue
+        if BULLET.match(line):
+            line = BULLET.sub("", line)
+            if not line:
+                continue
+            line = "• " + line
+        if not line and (not out or not out[-1]):
+            continue
+        out.append(line)
+    return unmangle(re.sub(r"\n\n+(?=• )", "\n", "\n".join(out)).strip())
+
+
+# ----- experience, level and salary, read from the title and description -----
+
+_N = r"(\d{1,2}(?:\.\d)?)"
+_YRS = r"\s*\+?\s*(?:years?|yrs?)\b"
+EXP_RANGE = re.compile(_N + r"\s*\+?\s*(?:-|–|—|to)\s*" + _N + _YRS, re.I)
+EXP_MIN = re.compile(_N + r"\s*\+?" + _YRS, re.I)
+EXP_CONTEXT = re.compile(r"experience|\bexp\b|\bexp\.|\byrs?\b|work(ed|ing)? (in|with|as)|background in|relevant", re.I)
+NOT_EXP = re.compile(r"founded|established|history|legacy|since \d{4}|serving|anniversary|in business|old\b|"
+                     r"warranty|contract (of|for)|tenure|age\b|aged\b|bond|notice period|ago\b", re.I)
+FRESHER_RE = re.compile(r"\bfreshers?\b|\bintern(ship)?s?\b|\btrainee\b|entry[- ]level|\bapprentice|"
+                        r"(recent|fresh) graduates?|no (prior |previous )?experience|campus (hire|hiring|recruit)|"
+                        r"graduate (trainee|program|programme|role)|0 ?(-|–|to) ?\d ?(years?|yrs?)", re.I)
+NOT_FRESHER = re.compile(r"freshers? (need not|should not|cannot|can't|not eligible|please don)|no freshers?", re.I)
+# Only titles that settle it: "Executive", "Associate", "Analyst" etc. can be anything from fresher to 5 years,
+# so without stated experience those stay "not stated" rather than being guessed.
+SENIOR_TITLE = re.compile(r"\bsenior\b|\bsr\.?\b|\blead\b(?!\s*gen)|\bhead\b|director|\bvp\b|vice president|principal|"
+                          r"\bchief\b|\bcmo\b|\bavp\b|\bgm\b|general manager|\bmanager\b", re.I)
+MID_TITLE = re.compile(r"assistant manager|deputy manager|associate (\w+ ){0,2}manager|\bmanager\s*[-–]?\s*i\b", re.I)
+JUNIOR_TITLE = re.compile(r"\bjunior\b|\bjr\.?\b|\bintern(ship)?\b|\btrainee\b|\bfreshers?\b|\bapprentice\b|graduate", re.I)
+BOARD_LEVEL = {"internship": "fresher", "entry_level": "fresher", "associate": "mid",
+               "mid_senior_level": "senior", "director": "senior", "executive": "senior"}
+
+
+def experience(text):
+    """(min, max) years of experience asked for, or None. Reads only lines that talk about experience."""
+    for line in re.split(r"\n|(?<=[.;!?])\s+|•", text or ""):
+        if not EXP_CONTEXT.search(line) or NOT_EXP.search(line):
+            continue
+        m = EXP_RANGE.search(line)
+        if m:
+            lo, hi = float(m.group(1)), float(m.group(2))
+            if lo <= hi <= 30:
+                return lo, hi
+        m = EXP_MIN.search(line)
+        if m and float(m.group(1)) <= 25:
+            return float(m.group(1)), None
+    return None
+
+
+def years_text(lo, hi):
+    f = lambda x: str(int(x)) if x == int(x) else str(x)
+    if hi is None:
+        return f"{f(lo)}+ yrs" if lo else "Fresher"
+    return f"{f(lo)}–{f(hi)} yrs"
+
+
+def assess(j, desc):
+    """Set j['level'] (fresher / mid / senior / unknown), j['level_by'] and j['exp'] from what the posting says."""
+    title = j["title"]
+    exp = experience(title) or experience(desc)
+    j["exp"] = years_text(*exp) if exp else ""
+    if exp:
+        lo = exp[0]
+        j["level"], j["level_by"] = ("fresher" if lo < 1 else "mid" if lo < 3 else "senior"), "years"
+    elif JUNIOR_TITLE.search(title) or (j.get("jtype") or "").lower().startswith("intern"):
+        j["level"], j["level_by"] = "fresher", "title"
+    elif BOARD_LEVEL.get(j.get("board_level")):
+        j["level"], j["level_by"] = BOARD_LEVEL[j["board_level"]], "board"
+    elif FRESHER_RE.search(desc) and not NOT_FRESHER.search(desc):
+        j["level"], j["level_by"] = "fresher", "text"
+    elif MID_TITLE.search(title):
+        j["level"], j["level_by"] = "mid", "title"
+    elif SENIOR_TITLE.search(title):
+        j["level"], j["level_by"] = "senior", "title"
+    else:
+        j["level"], j["level_by"] = "unknown", ""
+    if not j["exp"] and j["level"] == "fresher" and j["level_by"] in ("title", "text"):
+        j["exp"] = "Fresher"
+
+
+SALARY_RE = re.compile(
+    r"(?:(?:₹|inr|rs\.?)\s?\d[\d,.]*\s*(?:k|l|lpa|lakhs?|cr)?\s*(?:-|–|to)\s*(?:₹|inr|rs\.?)?\s?\d[\d,.]*"
+    r"|\d+(?:\.\d+)?\s*(?:-|–|to)\s*\d+(?:\.\d+)?\s*(?:lpa|lakhs?|l\b)"
+    r"|(?:₹|inr|rs\.?)\s?\d[\d,.]*|\d+(?:\.\d+)?\s*(?:lpa|lakhs?))"
+    r"(?:\s*(?:lpa|lakhs?|l\b|k\b|cr\b))?(?:\s*(?:per|/|a)\s*(?:annum|year|month|yr|mo|p\.?a\.?))?(?:\s*p\.?a\.?)?", re.I)
+
+
+def salary_from_text(text):
+    for line in (text or "").split("\n"):
+        if re.search(r"salary|ctc|stipend|compensation|package|pay\b|₹|lpa|lakh|inr|rs\.", line, re.I):
+            m = SALARY_RE.search(line)
+            if m and re.search(r"\d", m.group(0)) and len(re.sub(r"\D", "", m.group(0))) >= 2:
+                return m.group(0).strip(" ,.;")
+    return ""
+
+
+def lakh(n):
+    s = f"{n / 1e5:.1f}"
+    return s[:-2] if s.endswith(".0") else s
+
+
+def inr(n):
+    return f"₹{lakh(n)} L" if n >= 1e5 else f"₹{n:,.0f}"
+
+
+def money_range(lo, hi, currency="INR", per="year"):
+    """'₹3–5 L a year' (Indian lakhs) or 'USD 15–24 a hour'."""
+    lo, hi = float(lo or 0), float(hi or 0)
+    if not (lo or hi):
+        return ""
+    if currency == "INR":
+        if lo and hi and lo != hi:
+            s = f"₹{lakh(lo)}–{lakh(hi)} L" if lo >= 1e5 else f"₹{lo:,.0f}–{hi:,.0f}"
+        else:
+            s = ("up to " if hi and not lo else "") + inr(lo or hi)
+    else:
+        s = f"{currency} {lo:,.0f}" + (f"–{hi:,.0f}" if hi and hi != lo else "")
+    return f"{s} a {per}"
+
+
 def job(company, source, jid, title, location, url, posted=None, dept=None, size=None):
     title, dept, company = unmangle((title or "").strip()), dept or "", unmangle(company)
     return {
@@ -118,9 +267,14 @@ def job(company, source, jid, title, location, url, posted=None, dept=None, size
 # ---------- fetchers: each returns a list of job dicts (unfiltered) ----------
 
 def f_greenhouse(c):
-    d = http_json(f"https://boards-api.greenhouse.io/v1/boards/{c['slug']}/jobs")
-    return [job(c["name"], "greenhouse", j["id"], j["title"], (j.get("location") or {}).get("name"),
-                j["absolute_url"], j.get("updated_at"), None, c.get("size")) for j in d["jobs"]]
+    d = http_json(f"https://boards-api.greenhouse.io/v1/boards/{c['slug']}/jobs?content=true")
+    out = []
+    for j in d["jobs"]:
+        jb = job(c["name"], "greenhouse", j["id"], j["title"], (j.get("location") or {}).get("name"),
+                 j["absolute_url"], j.get("updated_at"), None, c.get("size"))
+        jb["_desc"] = html_text(j.get("content"))
+        out.append(jb)
+    return out
 
 
 def f_lever(c):
@@ -130,21 +284,35 @@ def f_lever(c):
         cat = j.get("categories") or {}
         locs = cat.get("allLocations") or [cat.get("location") or ""]
         posted = datetime.fromtimestamp(j["createdAt"] / 1000, timezone.utc).isoformat() if j.get("createdAt") else None
-        out.append(job(c["name"], "lever", j["id"], j["text"], " / ".join(l for l in locs if l),
-                       j["hostedUrl"], posted, cat.get("team"), c.get("size")))
+        jb = job(c["name"], "lever", j["id"], j["text"], " / ".join(l for l in locs if l),
+                 j["hostedUrl"], posted, cat.get("team"), c.get("size"))
+        parts = [j.get("descriptionPlain") or ""]
+        parts += [f"{l.get('text', '')}\n{html_text(l.get('content'))}" for l in j.get("lists") or []]
+        parts.append(j.get("additionalPlain") or "")
+        jb["_desc"] = "\n\n".join(p.strip() for p in parts if p and p.strip())
+        jb["jtype"] = cat.get("commitment") or ""
+        sr = j.get("salaryRange") or {}
+        if sr.get("min") or sr.get("max"):
+            per = {"per-year-salary": "year", "per-month-salary": "month", "per-hour-wage": "hour"}.get(sr.get("interval"), "year")
+            jb["salary"] = money_range(sr.get("min"), sr.get("max"), sr.get("currency") or "INR", per)
+        out.append(jb)
     return out
 
 
 def f_ashby(c):
-    d = http_json(f"https://api.ashbyhq.com/posting-api/job-board/{c['slug']}")
+    d = http_json(f"https://api.ashbyhq.com/posting-api/job-board/{c['slug']}?includeCompensation=true")
     out = []
     for j in d.get("jobs", []):
         locs = [j.get("location") or ""] + [s.get("location", "") for s in j.get("secondaryLocations") or []]
         loc = " / ".join(l for l in locs if l)
         if j.get("isRemote") and "remote" not in loc.lower():
             loc += " (Remote)"
-        out.append(job(c["name"], "ashby", j["id"], j["title"], loc, j["jobUrl"],
-                       j.get("publishedAt"), j.get("department"), c.get("size")))
+        jb = job(c["name"], "ashby", j["id"], j["title"], loc, j["jobUrl"],
+                 j.get("publishedAt"), j.get("department"), c.get("size"))
+        jb["_desc"] = j.get("descriptionPlain") or html_text(j.get("descriptionHtml"))
+        jb["jtype"] = re.sub(r"(?<=[a-z])(?=[A-Z])", "-", j.get("employmentType") or "")
+        jb["salary"] = ((j.get("compensation") or {}).get("scrapeableCompensationSalarySummary") or "").strip()
+        out.append(jb)
     return out
 
 
@@ -156,12 +324,27 @@ def f_smartrecruiters(c):
         for j in d.get("content", []):
             l = j.get("location") or {}
             loc = ", ".join(x for x in [l.get("city"), l.get("region"), l.get("country", "").upper()] if x)
-            out.append(job(c["name"], "smartrecruiters", j["id"], j["name"], loc,
-                           f"https://jobs.smartrecruiters.com/{c['slug']}/{j['id']}",
-                           j.get("releasedDate"), (j.get("department") or {}).get("label"), c.get("size")))
+            jb = job(c["name"], "smartrecruiters", j["id"], j["name"], loc,
+                     f"https://jobs.smartrecruiters.com/{c['slug']}/{j['id']}",
+                     j.get("releasedDate"), (j.get("department") or {}).get("label"), c.get("size"))
+            jb["jtype"] = (j.get("typeOfEmployment") or {}).get("label") or ""
+            jb["board_level"] = (j.get("experienceLevel") or {}).get("id") or ""
+            if jb["marketing"]:  # full text needs one more request per job: only for marketing roles
+                jb["_desc"] = DETAIL_CACHE.get(jb["id"]) or sr_detail(c["slug"], j["id"])
+            out.append(jb)
         offset += 100
         if offset >= d.get("totalFound", 0) or offset >= 500:
             return out
+
+
+def sr_detail(slug, jid):
+    try:
+        d = http_json(f"https://api.smartrecruiters.com/v1/companies/{slug}/postings/{jid}", retries=0)
+    except Exception:
+        return ""
+    sec = (d.get("jobAd") or {}).get("sections") or {}
+    parts = [(sec.get(k) or {}) for k in ("jobDescription", "qualifications", "additionalInformation")]
+    return "\n\n".join(f"{p.get('title') or ''}\n{html_text(p.get('text'))}".strip() for p in parts if p.get("text"))
 
 
 def f_workday(c):
@@ -173,11 +356,31 @@ def f_workday(c):
         posts = d.get("jobPostings", [])
         for j in posts:
             path = j.get("externalPath", "")
-            out.append(job(c["name"], "workday", f"{tenant}{path}", j.get("title"), j.get("locationsText"),
-                           f"https://{host}/en-US/{site}{path}", j.get("postedOn"), None, c.get("size")))
+            jb = job(c["name"], "workday", f"{tenant}{path}", j.get("title"), j.get("locationsText"),
+                     f"https://{host}/en-US/{site}{path}", j.get("postedOn"), None, c.get("size"))
+            out.append(jb)
         offset += 20
         if offset >= d.get("total", 0) or not posts:
             break
+        time.sleep(2)
+    # full text needs one request per job (Workday rate-limits): marketing roles only, a few per run
+    budget = 12
+    for jb in out:
+        if not jb["marketing"] or not classify(jb["location"]):
+            continue
+        if jb["id"] in DETAIL_CACHE:
+            jb["_desc"] = DETAIL_CACHE[jb["id"]]
+            continue
+        if budget <= 0:
+            break
+        budget -= 1
+        try:
+            path = jb["id"][len(tenant):]
+            info = http_json(f"https://{host}/wday/cxs/{tenant}/{site}{path}", retries=0).get("jobPostingInfo") or {}
+            jb["_desc"] = html_text(info.get("jobDescription"))
+            jb["jtype"] = info.get("timeType") or ""
+        except Exception:
+            pass
         time.sleep(2)
     return out
 
@@ -223,6 +426,12 @@ def f_adzuna(last_run=None):
                 if "marketing" in jb["dept"].lower():  # Adzuna category "PR, Advertising & Marketing Jobs"
                     jb["marketing"] = True
                 jb["email"] = posting_email(j.get("description"))
+                jb["_desc"] = html_text(j.get("description"))
+                jb["jtype"] = " ".join(x.replace("_", "-").capitalize() for x in
+                                       (j.get("contract_time"), j.get("contract_type")) if x)
+                if j.get("salary_min") or j.get("salary_max"):
+                    est = str(j.get("salary_is_predicted")) == "1"
+                    jb["salary"] = money_range(j.get("salary_min"), j.get("salary_max")) + (" (Adzuna's estimate)" if est else "")
                 out.append(jb)
             if len(res) < 50:
                 break
@@ -287,6 +496,9 @@ def f_jooble(state):
             jb = job((j.get("company") or "").strip() or "Unknown", "jooble", j.get("id"),
                      j.get("title"), loc, j.get("link"), j.get("updated"), j.get("type"))
             jb["email"] = posting_email(j.get("snippet"))
+            jb["_desc"] = html_text(j.get("snippet"))
+            jb["jtype"] = (j.get("type") or "").strip()
+            jb["salary"] = html.unescape((j.get("salary") or "").strip())
             out.append(jb)
         time.sleep(1)
     return out
@@ -311,6 +523,12 @@ def crawl():
         companies = json.load(f)["companies"]
     started = now()
     found, status = [], []
+    try:
+        with open(DETAILS, encoding="utf-8") as f:
+            DETAIL_CACHE.clear()
+            DETAIL_CACHE.update(json.load(f))
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
 
     def run(c):
         t = time.time()
@@ -411,6 +629,23 @@ def crawl():
 
     jobs = sorted(merged.values(), key=lambda j: j["first_seen"], reverse=True)
     jobs.sort(key=lambda j: j["closed"] is not None)  # stable: open jobs first, newest first
+
+    # descriptions go to a separate file the site loads only when a job is opened
+    details = {}
+    for j in jobs:
+        desc = tidy(j.pop("_desc", None) or DETAIL_CACHE.get(j["id"]) or "")[:DESC_MAX]
+        if desc:
+            details[j["id"]] = desc
+        j.setdefault("salary", "")
+        j.setdefault("jtype", "")
+        if not j["salary"]:
+            j["salary"] = salary_from_text(j["title"] + "\n" + desc)
+        assess(j, desc)
+        j["has_desc"] = len(desc) > 300   # a full description, not just a feed's two-line summary
+    tmp = DETAILS + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(details, f, ensure_ascii=False, separators=(",", ":"))
+    os.replace(tmp, DETAILS)
     out = {"updated": ts, "started": started, "sources": status, "adzuna_last": adzuna_last,
            "jooble": jooble_state,
            "counts": {"open": sum(1 for j in jobs if not j["closed"]), "new": len(new)}, "jobs": jobs}

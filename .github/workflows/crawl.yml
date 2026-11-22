@@ -72,7 +72,7 @@ jobs:
         run: |
           git config user.name "job-crawler"
           git config user.email "job-crawler@users.noreply.github.com"
-          git add web/jobs.json
+          git add web/jobs.json web/job-details.json
           if [ -f data/companies.sqlite ]; then git add data/companies.sqlite web/companies.json web/pune-companies-with-contacts.csv web/job-contacts.json; fi
           git diff --cached --quiet || git commit -m "crawl $(date -u +%FT%TZ)"
           git pull --rebase -X theirs || true
