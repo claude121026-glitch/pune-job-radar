@@ -1,12 +1,5 @@
 {
-"Rajasthan Royals": {
-"emails": [
-"hr@rajasthanroyals.com"
-],
-"phones": [],
-"website": "https://www.rajasthanroyals.com"
-},
-"WPP Media": {
+"wppmedia": {
 "emails": [
 "contact.thailand@groupm.com",
 "hello.groupmsweden@groupm.com",
@@ -19,6 +12,13 @@
 "+91 96522 26078"
 ],
 "website": "https://www.wppmedia.com"
+},
+"Rajasthan Royals": {
+"emails": [
+"hr@rajasthanroyals.com"
+],
+"phones": [],
+"website": "https://www.rajasthanroyals.com"
 },
 "Quality HR India": {
 "emails": [
@@ -260,15 +260,6 @@
 ],
 "website": "https://www.tulum.coffee"
 },
-"Purple Flicks": {
-"emails": [
-"info@purpleflicks.com"
-],
-"phones": [
-"+91 99671 54869"
-],
-"website": "https://purpleflicks.com"
-},
 "Hdb Financial Services": {
 "emails": [],
 "phones": [
@@ -278,6 +269,15 @@
 "+91 70072 56603"
 ],
 "website": "https://www.hdbfs.com"
+},
+"Purple Flicks": {
+"emails": [
+"info@purpleflicks.com"
+],
+"phones": [
+"+91 99671 54869"
+],
+"website": "https://purpleflicks.com"
 },
 "Adbizit": {
 "emails": [
@@ -289,15 +289,6 @@
 ],
 "website": "https://adbizit.com"
 },
-"Digitally Bugged LLP": {
-"emails": [
-"info@digitallybugged.com"
-],
-"phones": [
-"+91 99200 35756"
-],
-"website": "https://digitallybugged.com"
-},
 "Trip Jack": {
 "emails": [],
 "phones": [
@@ -307,6 +298,15 @@
 "+91 86570 34897"
 ],
 "website": "https://tripjack.com:443"
+},
+"Digitally Bugged LLP": {
+"emails": [
+"info@digitallybugged.com"
+],
+"phones": [
+"+91 99200 35756"
+],
+"website": "https://digitallybugged.com"
 },
 "Unifynd Labs (U.LABS)": {
 "emails": [
@@ -356,14 +356,6 @@
 ],
 "website": "https://asianheartinstitute.org"
 },
-"Prime Star Hr": {
-"emails": [],
-"phones": [
-"+91 98697 84909",
-"+91 90041 18289"
-],
-"website": "https://www.primestarhr.com"
-},
 "Velocity Consultancy": {
 "emails": [
 "info@velocityconsultancy.com"
@@ -372,6 +364,14 @@
 "+91 93215 92734"
 ],
 "website": "https://www.velocityconsultancy.com"
+},
+"Prime Star Hr": {
+"emails": [],
+"phones": [
+"+91 98697 84909",
+"+91 90041 18289"
+],
+"website": "https://www.primestarhr.com"
 },
 "First Economy": {
 "emails": [],
@@ -444,48 +444,6 @@
 "phones": [],
 "website": "https://elchemy.com"
 },
-"Viewpoint Public Relations": {
-"emails": [
-"hello@inuvikhub.com"
-],
-"phones": [
-"+91 22 6501 0895"
-],
-"website": "https://viewpointpublicrelations.com"
-},
-"Royal Dental Clinics Private Limited": {
-"emails": [
-"info@royaldentalclinics.com"
-],
-"phones": [
-"+91 98204 46633",
-"+91 96944 46633"
-],
-"website": "https://royalimplant.com"
-},
-"TimesPro": {
-"emails": [],
-"phones": [
-"1800 120 2020"
-],
-"website": "https://timespro.com"
-},
-"Nabhya Ayurveda": {
-"emails": [
-"support@nabhyaayurveda.com"
-],
-"phones": [
-"+91 90826 28964"
-],
-"website": "https://nabhyaayurveda.com"
-},
-"Havas": {
-"emails": [
-"connect@havas.com"
-],
-"phones": [],
-"website": "https://www.havas.com"
-},
 "Interactive Skills": {
 "emails": [],
 "phones": [
@@ -533,6 +491,48 @@
 "+91 98198 26698"
 ],
 "website": "https://merakie.in"
+},
+"Viewpoint Public Relations": {
+"emails": [
+"hello@inuvikhub.com"
+],
+"phones": [
+"+91 22 6501 0895"
+],
+"website": "https://viewpointpublicrelations.com"
+},
+"Royal Dental Clinics Private Limited": {
+"emails": [
+"info@royaldentalclinics.com"
+],
+"phones": [
+"+91 98204 46633",
+"+91 96944 46633"
+],
+"website": "https://royalimplant.com"
+},
+"TimesPro": {
+"emails": [],
+"phones": [
+"1800 120 2020"
+],
+"website": "https://timespro.com"
+},
+"Nabhya Ayurveda": {
+"emails": [
+"support@nabhyaayurveda.com"
+],
+"phones": [
+"+91 90826 28964"
+],
+"website": "https://nabhyaayurveda.com"
+},
+"Havas": {
+"emails": [
+"connect@havas.com"
+],
+"phones": [],
+"website": "https://www.havas.com"
 },
 "Redragaa": {
 "emails": [

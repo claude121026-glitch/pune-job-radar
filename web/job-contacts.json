@@ -283,6 +283,13 @@
 ],
 "website": "https://www.codiasticsoft.com"
 },
+"Workers Town": {
+"emails": [
+"info@workerstown.com"
+],
+"phones": [],
+"website": "https://workerstown.com"
+},
 "NuageCX Consulting Pvt Ltd": {
 "emails": [
 "contact@nuagecx.com"
@@ -300,13 +307,6 @@
 "+91 99943 43544"
 ],
 "website": "https://www.teamplus.in"
-},
-"Workers Town": {
-"emails": [
-"info@workerstown.com"
-],
-"phones": [],
-"website": "https://workerstown.com"
 },
 "Sistema.bio": {
 "emails": [
@@ -397,16 +397,6 @@
 ],
 "website": "https://www.gsourcedata.com"
 },
-"Vidushi Infotech": {
-"emails": [
-"info@vidushiinfotech.com"
-],
-"phones": [
-"+91 90215 40540",
-"+91 90850 41974"
-],
-"website": "https://vidushiinfotech.com"
-},
 "Payatu": {
 "emails": [
 "hr@payatu.ai",
@@ -417,6 +407,16 @@
 "+91 83198 12123"
 ],
 "website": "https://payatu.ai"
+},
+"Vidushi Infotech": {
+"emails": [
+"info@vidushiinfotech.com"
+],
+"phones": [
+"+91 90215 40540",
+"+91 90850 41974"
+],
+"website": "https://vidushiinfotech.com"
 },
 "Kirloskar Oil Engines": {
 "emails": [],
