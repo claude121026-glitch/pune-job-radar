@@ -1,4 +1,33 @@
 {
+"Wipro": {
+"emails": [
+"info@wipro.com"
+],
+"phones": [
+"+91 86286 28022",
+"+91 82801 66500",
+"+91 20 4625 6700",
+"+91 20 2293 3700"
+],
+"website": "https://www.wipro.com"
+},
+"LOTL Infra": {
+"emails": [
+"connect@lotlinfra.com",
+"info@liquid-themes.com"
+],
+"phones": [
+"+91 77458 89243"
+],
+"website": "https://lotlinfra.com"
+},
+"TresVista": {
+"emails": [
+"info@tresvista.com"
+],
+"phones": [],
+"website": "https://www.tresvista.com"
+},
 "Citigroup": {
 "emails": [],
 "phones": [
@@ -28,35 +57,6 @@
 "+91 87999 62270"
 ],
 "website": "https://www.benchmarkit.solutions"
-},
-"Wipro": {
-"emails": [
-"info@wipro.com"
-],
-"phones": [
-"+91 86286 28022",
-"+91 82801 66500",
-"+91 20 4625 6700",
-"+91 20 2293 3700"
-],
-"website": "https://www.wipro.com"
-},
-"LOTL Infra": {
-"emails": [
-"connect@lotlinfra.com",
-"info@liquid-themes.com"
-],
-"phones": [
-"+91 77458 89243"
-],
-"website": "https://lotlinfra.com"
-},
-"TresVista": {
-"emails": [
-"info@tresvista.com"
-],
-"phones": [],
-"website": "https://www.tresvista.com"
 },
 "PaperTrue": {
 "emails": [
@@ -283,22 +283,6 @@
 ],
 "website": "https://www.codiasticsoft.com"
 },
-"Workers Town": {
-"emails": [
-"info@workerstown.com"
-],
-"phones": [],
-"website": "https://workerstown.com"
-},
-"NuageCX Consulting Pvt Ltd": {
-"emails": [
-"contact@nuagecx.com"
-],
-"phones": [
-"+91 99603 99941"
-],
-"website": "https://nuagecx.com"
-},
 "TeamPlus": {
 "emails": [
 "info@teampluz.com"
@@ -307,6 +291,13 @@
 "+91 99943 43544"
 ],
 "website": "https://www.teamplus.in"
+},
+"Workers Town": {
+"emails": [
+"info@workerstown.com"
+],
+"phones": [],
+"website": "https://workerstown.com"
 },
 "Sistema.bio": {
 "emails": [
@@ -368,16 +359,6 @@
 ],
 "website": "https://storiesbysudhir.com"
 },
-"Strata Digital Geeks": {
-"emails": [
-"hr@stratadigitalgeeks.com",
-"info@stratadigitalgeeks.in"
-],
-"phones": [
-"+91 92721 95854"
-],
-"website": "https://stratadigitalgeeks.in"
-},
 "Birlasoft": {
 "emails": [],
 "phones": [
@@ -387,6 +368,16 @@
 "+91 98991 95348"
 ],
 "website": "https://www.birlasoft.com"
+},
+"Strata Digital Geeks": {
+"emails": [
+"hr@stratadigitalgeeks.com",
+"info@stratadigitalgeeks.in"
+],
+"phones": [
+"+91 92721 95854"
+],
+"website": "https://stratadigitalgeeks.in"
 },
 "Gsource Technologies": {
 "emails": [
@@ -458,6 +449,15 @@
 "+91 70281 11820"
 ],
 "website": "https://baxture.com"
+},
+"NuageCX Consulting Pvt Ltd": {
+"emails": [
+"contact@nuagecx.com"
+],
+"phones": [
+"+91 99603 99941"
+],
+"website": "https://nuagecx.com"
 },
 "QuinStreet": {
 "emails": [],
