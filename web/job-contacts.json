@@ -1,32 +1,31 @@
 {
-"Wipro": {
+"Cytel": {
 "emails": [
-"info@wipro.com"
+"support@cytel.com"
 ],
 "phones": [
-"+91 86286 28022",
-"+91 82801 66500",
-"+91 20 4625 6700",
-"+91 20 2293 3700"
+"+91 20 6709 0100",
+"+91 73873 51127"
 ],
-"website": "https://www.wipro.com"
+"website": "https://cytel.com"
 },
-"LOTL Infra": {
+"Aarna Systems | Performance Driven Digital Marketing Agency": {
 "emails": [
-"connect@lotlinfra.com",
-"info@liquid-themes.com"
+"info@aarnasystems.com"
 ],
 "phones": [
-"+91 77458 89243"
+"+91 61798 21744",
+"+91 85529 41234"
 ],
-"website": "https://lotlinfra.com"
+"website": "https://www.aarnasystems.com"
 },
-"TresVista": {
+"Zensar": {
 "emails": [
-"info@tresvista.com"
+"careers@zensar.com",
+"info@zensar.com"
 ],
 "phones": [],
-"website": "https://www.tresvista.com"
+"website": "https://www.zensar.com"
 },
 "Citigroup": {
 "emails": [],
@@ -58,12 +57,34 @@
 ],
 "website": "https://www.benchmarkit.solutions"
 },
-"PaperTrue": {
+"Wipro": {
 "emails": [
-"support@papertrue.com"
+"info@wipro.com"
+],
+"phones": [
+"+91 86286 28022",
+"+91 82801 66500",
+"+91 20 4625 6700",
+"+91 20 2293 3700"
+],
+"website": "https://www.wipro.com"
+},
+"LOTL Infra": {
+"emails": [
+"connect@lotlinfra.com",
+"info@liquid-themes.com"
+],
+"phones": [
+"+91 77458 89243"
+],
+"website": "https://lotlinfra.com"
+},
+"TresVista": {
+"emails": [
+"info@tresvista.com"
 ],
 "phones": [],
-"website": "https://www.papertrue.com"
+"website": "https://www.tresvista.com"
 },
 "Unbore Foods Pvt. Ltd.": {
 "emails": [
@@ -74,6 +95,13 @@
 "+91 76187 83680"
 ],
 "website": "https://www.unborefoods.com"
+},
+"PaperTrue": {
+"emails": [
+"support@papertrue.com"
+],
+"phones": [],
+"website": "https://www.papertrue.com"
 },
 "CrelioHealth": {
 "emails": [
@@ -91,16 +119,6 @@
 "+91 95996 56657"
 ],
 "website": "https://www.leapswitch.com"
-},
-"Aarna Systems | Performance Driven Digital Marketing Agency": {
-"emails": [
-"info@aarnasystems.com"
-],
-"phones": [
-"+91 61798 21744",
-"+91 85529 41234"
-],
-"website": "https://www.aarnasystems.com"
 },
 "Bajaj Finance": {
 "emails": [],
@@ -359,16 +377,6 @@
 ],
 "website": "https://storiesbysudhir.com"
 },
-"Birlasoft": {
-"emails": [],
-"phones": [
-"+91 20 2616 0084",
-"+91 20 2616 1629",
-"+91 20 6652 5000",
-"+91 98991 95348"
-],
-"website": "https://www.birlasoft.com"
-},
 "Strata Digital Geeks": {
 "emails": [
 "hr@stratadigitalgeeks.com",
@@ -379,6 +387,16 @@
 ],
 "website": "https://stratadigitalgeeks.in"
 },
+"Birlasoft": {
+"emails": [],
+"phones": [
+"+91 20 2616 0084",
+"+91 20 2616 1629",
+"+91 20 6652 5000",
+"+91 98991 95348"
+],
+"website": "https://www.birlasoft.com"
+},
 "Gsource Technologies": {
 "emails": [
 "info@gsourcedata.com"
@@ -387,6 +405,16 @@
 "+91 20 6744 4000"
 ],
 "website": "https://www.gsourcedata.com"
+},
+"Vidushi Infotech": {
+"emails": [
+"info@vidushiinfotech.com"
+],
+"phones": [
+"+91 90215 40540",
+"+91 90850 41974"
+],
+"website": "https://vidushiinfotech.com"
 },
 "Payatu": {
 "emails": [
@@ -398,16 +426,6 @@
 "+91 83198 12123"
 ],
 "website": "https://payatu.ai"
-},
-"Vidushi Infotech": {
-"emails": [
-"info@vidushiinfotech.com"
-],
-"phones": [
-"+91 90215 40540",
-"+91 90850 41974"
-],
-"website": "https://vidushiinfotech.com"
 },
 "Kirloskar Oil Engines": {
 "emails": [],
@@ -466,14 +484,6 @@
 "+91 65057 87632"
 ],
 "website": "https://www.quinstreet.com"
-},
-"Zensar Technologies": {
-"emails": [
-"careers@zensar.com",
-"info@zensar.com"
-],
-"phones": [],
-"website": "https://www.zensar.com"
 },
 "HyrEzy Talent Solutions": {
 "emails": [],
