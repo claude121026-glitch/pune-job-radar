@@ -1,13 +1,19 @@
 {
-"Aarna Systems | Performance Driven Digital Marketing Agency": {
+"Bynry": {
 "emails": [
-"info@aarnasystems.com"
+"contact@bynry.io"
 ],
 "phones": [
-"+91 61798 21744",
-"+91 85529 41234"
+"+91 93252 51217"
 ],
-"website": "https://www.aarnasystems.com"
+"website": "https://www.bynry.com"
+},
+"TYZER TECHNOLOGIES": {
+"emails": [
+"info@tyzergroup.com"
+],
+"phones": [],
+"website": "https://tyzergroup.com"
 },
 "Cytel": {
 "emails": [
@@ -19,6 +25,16 @@
 ],
 "website": "https://cytel.com"
 },
+"Aarna Systems | Performance Driven Digital Marketing Agency": {
+"emails": [
+"info@aarnasystems.com"
+],
+"phones": [
+"+91 61798 21744",
+"+91 85529 41234"
+],
+"website": "https://www.aarnasystems.com"
+},
 "Zensar": {
 "emails": [
 "careers@zensar.com",
@@ -26,18 +42,6 @@
 ],
 "phones": [],
 "website": "https://www.zensar.com"
-},
-"Wipro": {
-"emails": [
-"info@wipro.com"
-],
-"phones": [
-"+91 86286 28022",
-"+91 82801 66500",
-"+91 20 4625 6700",
-"+91 20 2293 3700"
-],
-"website": "https://www.wipro.com"
 },
 "Citigroup": {
 "emails": [],
@@ -69,6 +73,18 @@
 ],
 "website": "https://www.benchmarkit.solutions"
 },
+"Wipro": {
+"emails": [
+"info@wipro.com"
+],
+"phones": [
+"+91 86286 28022",
+"+91 82801 66500",
+"+91 20 4625 6700",
+"+91 20 2293 3700"
+],
+"website": "https://www.wipro.com"
+},
 "LOTL Infra": {
 "emails": [
 "connect@lotlinfra.com",
@@ -86,6 +102,13 @@
 "phones": [],
 "website": "https://www.tresvista.com"
 },
+"PaperTrue": {
+"emails": [
+"support@papertrue.com"
+],
+"phones": [],
+"website": "https://www.papertrue.com"
+},
 "Unbore Foods Pvt. Ltd.": {
 "emails": [
 "info@unborefoods.com",
@@ -95,13 +118,6 @@
 "+91 76187 83680"
 ],
 "website": "https://www.unborefoods.com"
-},
-"PaperTrue": {
-"emails": [
-"support@papertrue.com"
-],
-"phones": [],
-"website": "https://www.papertrue.com"
 },
 "CrelioHealth": {
 "emails": [
@@ -275,6 +291,14 @@
 ],
 "website": "https://www.padcarelabs.com"
 },
+"Copods": {
+"emails": [
+"careers@copods.co",
+"hello@copods.co"
+],
+"phones": [],
+"website": "https://www.copods.co"
+},
 "Futurism Technologies": {
 "emails": [],
 "phones": [
@@ -369,16 +393,6 @@
 ],
 "website": "https://storiesbysudhir.com"
 },
-"Strata Digital Geeks": {
-"emails": [
-"hr@stratadigitalgeeks.com",
-"info@stratadigitalgeeks.in"
-],
-"phones": [
-"+91 92721 95854"
-],
-"website": "https://stratadigitalgeeks.in"
-},
 "Birlasoft": {
 "emails": [],
 "phones": [
@@ -388,6 +402,16 @@
 "+91 98991 95348"
 ],
 "website": "https://www.birlasoft.com"
+},
+"Strata Digital Geeks": {
+"emails": [
+"hr@stratadigitalgeeks.com",
+"info@stratadigitalgeeks.in"
+],
+"phones": [
+"+91 92721 95854"
+],
+"website": "https://stratadigitalgeeks.in"
 },
 "Gsource Technologies": {
 "emails": [
@@ -460,14 +484,6 @@
 ],
 "website": "https://baxture.com"
 },
-"Copods": {
-"emails": [
-"careers@copods.co",
-"hello@copods.co"
-],
-"phones": [],
-"website": "https://www.copods.co"
-},
 "NuageCX Consulting Pvt Ltd": {
 "emails": [
 "contact@nuagecx.com"
@@ -491,22 +507,6 @@
 "+91 99990 13222"
 ],
 "website": "https://hyrezy.com"
-},
-"Bynry": {
-"emails": [
-"contact@bynry.io"
-],
-"phones": [
-"+91 93252 51217"
-],
-"website": "https://www.bynry.com"
-},
-"TYZER TECHNOLOGIES": {
-"emails": [
-"info@tyzergroup.com"
-],
-"phones": [],
-"website": "https://tyzergroup.com"
 },
 "2coms": {
 "emails": [],
@@ -560,90 +560,6 @@
 "+91 91754 46719"
 ],
 "website": "https://indovance.com"
-},
-"Suncorp Solutions": {
-"emails": [],
-"phones": [
-"+91 93231 25404"
-],
-"website": "https://www.suncorpsolutions.in"
-},
-"UniAthena": {
-"emails": [],
-"phones": [
-"+91 97155 87954"
-],
-"website": "https://uniathena.com"
-},
-"Toprankers": {
-"emails": [
-"support@toprankers.com"
-],
-"phones": [
-"+91 63632 86363",
-"+91 61646 65752"
-],
-"website": "https://www.toprankers.com:443"
-},
-"Ugaoo": {
-"emails": [
-"support@ugaoo.com"
-],
-"phones": [
-"+91 80870 87224"
-],
-"website": "https://www.ugaoo.com"
-},
-"Bright Future India": {
-"emails": [
-"info@brightfutureas.com",
-"support@brightfutureas.com"
-],
-"phones": [
-"+91 77018 82533",
-"+91 89207 97870",
-"+91 92116 22303"
-],
-"website": "https://brightfutureas.com"
-},
-"Infinite Uptime": {
-"emails": [],
-"phones": [
-"+91 99100 32297"
-],
-"website": "https://www.infinite-uptime.com"
-},
-"Dhyey Consulting Services": {
-"emails": [
-"careers@dhyey.com",
-"enquiry@dhyey.com",
-"support@dhyey.com"
-],
-"phones": [
-"+91 95376 48999",
-"+91 83284 73789",
-"+91 75730 81999",
-"+91 75730 55999"
-],
-"website": "https://dhyey.com"
-},
-"Acuiti Labs": {
-"emails": [
-"info@acuitilabs.com"
-],
-"phones": [
-"+91 20 7101 9405"
-],
-"website": "https://www.acuitilabs.com"
-},
-"Shubham EPC Private": {
-"emails": [
-"info@shubham.biz"
-],
-"phones": [
-"+91 20 2566 6863"
-],
-"website": "https://shubham.biz"
 },
 "NVIDIA": {
 "emails": [
