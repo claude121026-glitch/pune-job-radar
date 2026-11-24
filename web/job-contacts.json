@@ -1,14 +1,4 @@
 {
-"Cytel": {
-"emails": [
-"support@cytel.com"
-],
-"phones": [
-"+91 20 6709 0100",
-"+91 73873 51127"
-],
-"website": "https://cytel.com"
-},
 "Aarna Systems | Performance Driven Digital Marketing Agency": {
 "emails": [
 "info@aarnasystems.com"
@@ -19,6 +9,16 @@
 ],
 "website": "https://www.aarnasystems.com"
 },
+"Cytel": {
+"emails": [
+"support@cytel.com"
+],
+"phones": [
+"+91 20 6709 0100",
+"+91 73873 51127"
+],
+"website": "https://cytel.com"
+},
 "Zensar": {
 "emails": [
 "careers@zensar.com",
@@ -26,6 +26,18 @@
 ],
 "phones": [],
 "website": "https://www.zensar.com"
+},
+"Wipro": {
+"emails": [
+"info@wipro.com"
+],
+"phones": [
+"+91 86286 28022",
+"+91 82801 66500",
+"+91 20 4625 6700",
+"+91 20 2293 3700"
+],
+"website": "https://www.wipro.com"
 },
 "Citigroup": {
 "emails": [],
@@ -56,18 +68,6 @@
 "+91 87999 62270"
 ],
 "website": "https://www.benchmarkit.solutions"
-},
-"Wipro": {
-"emails": [
-"info@wipro.com"
-],
-"phones": [
-"+91 86286 28022",
-"+91 82801 66500",
-"+91 20 4625 6700",
-"+91 20 2293 3700"
-],
-"website": "https://www.wipro.com"
 },
 "LOTL Infra": {
 "emails": [
@@ -199,19 +199,19 @@
 ],
 "website": "https://www.tulipgroup.in"
 },
-"Muthoot Fincorp": {
-"emails": [],
-"phones": [
-"1800 102 1616"
-],
-"website": "https://muthootfincorp.com:443"
-},
 "UA Brands": {
 "emails": [
 "jobs@uabrands.com"
 ],
 "phones": [],
 "website": "https://www.uabrandscareers.com"
+},
+"Muthoot Fincorp": {
+"emails": [],
+"phones": [
+"1800 102 1616"
+],
+"website": "https://muthootfincorp.com:443"
 },
 "Osumare": {
 "emails": [
@@ -274,14 +274,6 @@
 "+91 90228 22458"
 ],
 "website": "https://www.padcarelabs.com"
-},
-"Copods": {
-"emails": [
-"careers@copods.co",
-"hello@copods.co"
-],
-"phones": [],
-"website": "https://www.copods.co"
 },
 "Futurism Technologies": {
 "emails": [],
@@ -406,16 +398,6 @@
 ],
 "website": "https://www.gsourcedata.com"
 },
-"Vidushi Infotech": {
-"emails": [
-"info@vidushiinfotech.com"
-],
-"phones": [
-"+91 90215 40540",
-"+91 90850 41974"
-],
-"website": "https://vidushiinfotech.com"
-},
 "Payatu": {
 "emails": [
 "hr@payatu.ai",
@@ -426,6 +408,16 @@
 "+91 83198 12123"
 ],
 "website": "https://payatu.ai"
+},
+"Vidushi Infotech": {
+"emails": [
+"info@vidushiinfotech.com"
+],
+"phones": [
+"+91 90215 40540",
+"+91 90850 41974"
+],
+"website": "https://vidushiinfotech.com"
 },
 "Kirloskar Oil Engines": {
 "emails": [],
@@ -467,6 +459,14 @@
 "+91 70281 11820"
 ],
 "website": "https://baxture.com"
+},
+"Copods": {
+"emails": [
+"careers@copods.co",
+"hello@copods.co"
+],
+"phones": [],
+"website": "https://www.copods.co"
 },
 "NuageCX Consulting Pvt Ltd": {
 "emails": [
