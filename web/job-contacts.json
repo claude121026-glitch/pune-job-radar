@@ -32,6 +32,14 @@
 ],
 "website": "https://www.aarnasystems.com"
 },
+"Zensar": {
+"emails": [
+"careers@zensar.com",
+"info@zensar.com"
+],
+"phones": [],
+"website": "https://www.zensar.com"
+},
 "Cytel": {
 "emails": [
 "support@cytel.com"
@@ -41,14 +49,6 @@
 "+91 73873 51127"
 ],
 "website": "https://cytel.com"
-},
-"Zensar": {
-"emails": [
-"careers@zensar.com",
-"info@zensar.com"
-],
-"phones": [],
-"website": "https://www.zensar.com"
 },
 "Wipro": {
 "emails": [
@@ -62,6 +62,13 @@
 ],
 "website": "https://www.wipro.com"
 },
+"TresVista": {
+"emails": [
+"info@tresvista.com"
+],
+"phones": [],
+"website": "https://www.tresvista.com"
+},
 "LOTL Infra": {
 "emails": [
 "connect@lotlinfra.com",
@@ -71,13 +78,6 @@
 "+91 77458 89243"
 ],
 "website": "https://lotlinfra.com"
-},
-"TresVista": {
-"emails": [
-"info@tresvista.com"
-],
-"phones": [],
-"website": "https://www.tresvista.com"
 },
 "Citigroup": {
 "emails": [],
@@ -102,6 +102,16 @@
 ],
 "website": "https://www.benchmarkit.solutions"
 },
+"Unbore Foods Pvt. Ltd.": {
+"emails": [
+"info@unborefoods.com",
+"sales@unborefoods.com"
+],
+"phones": [
+"+91 76187 83680"
+],
+"website": "https://www.unborefoods.com"
+},
 "CrelioHealth": {
 "emails": [
 "info@creliohealth.com"
@@ -115,52 +125,6 @@
 ],
 "phones": [],
 "website": "https://www.papertrue.com"
-},
-"Unbore Foods Pvt. Ltd.": {
-"emails": [
-"info@unborefoods.com",
-"sales@unborefoods.com"
-],
-"phones": [
-"+91 76187 83680"
-],
-"website": "https://www.unborefoods.com"
-},
-"Leapswitch Networks Pvt Ltd": {
-"emails": [
-"sales@leapswitch.com",
-"support@leapswitch.com"
-],
-"phones": [
-"+91 95996 56657"
-],
-"website": "https://www.leapswitch.com"
-},
-"Bajaj Finance": {
-"emails": [],
-"phones": [
-"+91 20 6910 5935",
-"+91 96070 25035",
-"+91 20 7187 8321",
-"+91 20 7187 8060"
-],
-"website": "https://www.bajajhousingfinance.in"
-},
-"Abmiro": {
-"emails": [
-"info@abmiro.com"
-],
-"phones": [
-"+91 70208 25494"
-],
-"website": "https://abmiro.com"
-},
-"PrimeTalentBridge": {
-"emails": [
-"hr@primetalentbridge.com"
-],
-"phones": [],
-"website": "https://primetalentbridge.com"
 },
 "Fidel Softech": {
 "emails": [
@@ -228,6 +192,16 @@
 "1800 102 1616"
 ],
 "website": "https://muthootfincorp.com:443"
+},
+"Bajaj Finance": {
+"emails": [],
+"phones": [
+"+91 20 6910 5935",
+"+91 96070 25035",
+"+91 20 7187 8321",
+"+91 20 7187 8060"
+],
+"website": "https://www.bajajhousingfinance.in"
 },
 "Osumare": {
 "emails": [
@@ -393,16 +367,6 @@
 ],
 "website": "https://storiesbysudhir.com"
 },
-"Birlasoft": {
-"emails": [],
-"phones": [
-"+91 20 2616 0084",
-"+91 20 2616 1629",
-"+91 20 6652 5000",
-"+91 98991 95348"
-],
-"website": "https://www.birlasoft.com"
-},
 "Strata Digital Geeks": {
 "emails": [
 "hr@stratadigitalgeeks.com",
@@ -412,6 +376,16 @@
 "+91 92721 95854"
 ],
 "website": "https://stratadigitalgeeks.in"
+},
+"Birlasoft": {
+"emails": [],
+"phones": [
+"+91 20 2616 0084",
+"+91 20 2616 1629",
+"+91 20 6652 5000",
+"+91 98991 95348"
+],
+"website": "https://www.birlasoft.com"
 },
 "Gsource Technologies": {
 "emails": [
@@ -442,6 +416,16 @@
 "+91 90850 41974"
 ],
 "website": "https://vidushiinfotech.com"
+},
+"Leapswitch Networks Pvt Ltd": {
+"emails": [
+"sales@leapswitch.com",
+"support@leapswitch.com"
+],
+"phones": [
+"+91 95996 56657"
+],
+"website": "https://www.leapswitch.com"
 },
 "Kirloskar Oil Engines": {
 "emails": [],
