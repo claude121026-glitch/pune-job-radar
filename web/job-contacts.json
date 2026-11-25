@@ -1,4 +1,11 @@
 {
+"pattern": {
+"emails": [
+"hello@pattern.com"
+],
+"phones": [],
+"website": "https://www.pattern.com"
+},
 "Bynry": {
 "emails": [
 "contact@bynry.io"
@@ -15,16 +22,6 @@
 "phones": [],
 "website": "https://tyzergroup.com"
 },
-"Cytel": {
-"emails": [
-"support@cytel.com"
-],
-"phones": [
-"+91 20 6709 0100",
-"+91 73873 51127"
-],
-"website": "https://cytel.com"
-},
 "Aarna Systems | Performance Driven Digital Marketing Agency": {
 "emails": [
 "info@aarnasystems.com"
@@ -35,6 +32,16 @@
 ],
 "website": "https://www.aarnasystems.com"
 },
+"Cytel": {
+"emails": [
+"support@cytel.com"
+],
+"phones": [
+"+91 20 6709 0100",
+"+91 73873 51127"
+],
+"website": "https://cytel.com"
+},
 "Zensar": {
 "emails": [
 "careers@zensar.com",
@@ -42,36 +49,6 @@
 ],
 "phones": [],
 "website": "https://www.zensar.com"
-},
-"Citigroup": {
-"emails": [],
-"phones": [
-"+91 75769 27164"
-],
-"website": "https://www.citigroup.com"
-},
-"Pattern": {
-"emails": [
-"hello@pattern.com"
-],
-"phones": [],
-"website": "https://www.pattern.com"
-},
-"eClerx": {
-"emails": [
-"info@eclerx.com"
-],
-"phones": [],
-"website": "https://eclerx.com"
-},
-"Benchmark IT Solutions India Pvt Ltd": {
-"emails": [
-"info@benchmarkit.solutions"
-],
-"phones": [
-"+91 87999 62270"
-],
-"website": "https://www.benchmarkit.solutions"
 },
 "Wipro": {
 "emails": [
@@ -102,6 +79,36 @@
 "phones": [],
 "website": "https://www.tresvista.com"
 },
+"Citigroup": {
+"emails": [],
+"phones": [
+"+91 75769 27164"
+],
+"website": "https://www.citigroup.com"
+},
+"eClerx": {
+"emails": [
+"info@eclerx.com"
+],
+"phones": [],
+"website": "https://eclerx.com"
+},
+"Benchmark IT Solutions India Pvt Ltd": {
+"emails": [
+"info@benchmarkit.solutions"
+],
+"phones": [
+"+91 87999 62270"
+],
+"website": "https://www.benchmarkit.solutions"
+},
+"CrelioHealth": {
+"emails": [
+"info@creliohealth.com"
+],
+"phones": [],
+"website": "https://creliohealth.com"
+},
 "PaperTrue": {
 "emails": [
 "support@papertrue.com"
@@ -118,13 +125,6 @@
 "+91 76187 83680"
 ],
 "website": "https://www.unborefoods.com"
-},
-"CrelioHealth": {
-"emails": [
-"info@creliohealth.com"
-],
-"phones": [],
-"website": "https://creliohealth.com"
 },
 "Leapswitch Networks Pvt Ltd": {
 "emails": [
@@ -453,14 +453,6 @@
 ],
 "website": "https://www.kirloskaroilengines.com"
 },
-"StoneX": {
-"emails": [
-"hr@stonex.it",
-"info@stonex.it"
-],
-"phones": [],
-"website": "https://www.stonex.it"
-},
 "Echo Booom": {
 "emails": [
 "contact@echobooom.com",
@@ -473,6 +465,14 @@
 "+91 85911 94032"
 ],
 "website": "https://echobooom.com"
+},
+"StoneX": {
+"emails": [
+"hr@stonex.it",
+"info@stonex.it"
+],
+"phones": [],
+"website": "https://www.stonex.it"
 },
 "Baxture technologies": {
 "emails": [
