@@ -1,4 +1,41 @@
 {
+"Ugaoo": {
+"emails": [
+"support@ugaoo.com"
+],
+"phones": [
+"+91 80870 87224"
+],
+"website": "https://www.ugaoo.com"
+},
+"Zensar Technologies": {
+"emails": [
+"careers@zensar.com",
+"info@zensar.com"
+],
+"phones": [],
+"website": "https://www.zensar.com"
+},
+"Enlyft": {
+"emails": [
+"sales@enlyft.com"
+],
+"phones": [],
+"website": "https://enlyft.com"
+},
+"Echo Booom": {
+"emails": [
+"contact@echobooom.com",
+"info@echobooom.com"
+],
+"phones": [
+"1800 267 4999",
+"+91 60033 68630",
+"+91 93245 81564",
+"+91 85911 94032"
+],
+"website": "https://echobooom.com"
+},
 "pattern": {
 "emails": [
 "hello@pattern.com"
@@ -32,14 +69,6 @@
 ],
 "website": "https://www.aarnasystems.com"
 },
-"Zensar": {
-"emails": [
-"careers@zensar.com",
-"info@zensar.com"
-],
-"phones": [],
-"website": "https://www.zensar.com"
-},
 "Cytel": {
 "emails": [
 "support@cytel.com"
@@ -49,6 +78,29 @@
 "+91 73873 51127"
 ],
 "website": "https://cytel.com"
+},
+"Citigroup": {
+"emails": [],
+"phones": [
+"+91 75769 27164"
+],
+"website": "https://www.citigroup.com"
+},
+"eClerx": {
+"emails": [
+"info@eclerx.com"
+],
+"phones": [],
+"website": "https://eclerx.com"
+},
+"Benchmark IT Solutions India Pvt Ltd": {
+"emails": [
+"info@benchmarkit.solutions"
+],
+"phones": [
+"+91 87999 62270"
+],
+"website": "https://www.benchmarkit.solutions"
 },
 "Wipro": {
 "emails": [
@@ -79,28 +131,12 @@
 ],
 "website": "https://lotlinfra.com"
 },
-"Citigroup": {
-"emails": [],
-"phones": [
-"+91 75769 27164"
-],
-"website": "https://www.citigroup.com"
-},
-"eClerx": {
+"CrelioHealth": {
 "emails": [
-"info@eclerx.com"
+"info@creliohealth.com"
 ],
 "phones": [],
-"website": "https://eclerx.com"
-},
-"Benchmark IT Solutions India Pvt Ltd": {
-"emails": [
-"info@benchmarkit.solutions"
-],
-"phones": [
-"+91 87999 62270"
-],
-"website": "https://www.benchmarkit.solutions"
+"website": "https://creliohealth.com"
 },
 "Unbore Foods Pvt. Ltd.": {
 "emails": [
@@ -111,13 +147,6 @@
 "+91 76187 83680"
 ],
 "website": "https://www.unborefoods.com"
-},
-"CrelioHealth": {
-"emails": [
-"info@creliohealth.com"
-],
-"phones": [],
-"website": "https://creliohealth.com"
 },
 "PaperTrue": {
 "emails": [
@@ -169,6 +198,13 @@
 ],
 "website": "https://www.amuratech.com"
 },
+"Muthoot Fincorp": {
+"emails": [],
+"phones": [
+"1800 102 1616"
+],
+"website": "https://muthootfincorp.com:443"
+},
 "Tulip Group": {
 "emails": [
 "info@tulipgroup.in",
@@ -185,13 +221,6 @@
 ],
 "phones": [],
 "website": "https://www.uabrandscareers.com"
-},
-"Muthoot Fincorp": {
-"emails": [],
-"phones": [
-"1800 102 1616"
-],
-"website": "https://muthootfincorp.com:443"
 },
 "Bajaj Finance": {
 "emails": [],
@@ -264,14 +293,6 @@
 "+91 90228 22458"
 ],
 "website": "https://www.padcarelabs.com"
-},
-"Copods": {
-"emails": [
-"careers@copods.co",
-"hello@copods.co"
-],
-"phones": [],
-"website": "https://www.copods.co"
 },
 "Futurism Technologies": {
 "emails": [],
@@ -437,19 +458,6 @@
 ],
 "website": "https://www.kirloskaroilengines.com"
 },
-"Echo Booom": {
-"emails": [
-"contact@echobooom.com",
-"info@echobooom.com"
-],
-"phones": [
-"1800 267 4999",
-"+91 60033 68630",
-"+91 93245 81564",
-"+91 85911 94032"
-],
-"website": "https://echobooom.com"
-},
 "StoneX": {
 "emails": [
 "hr@stonex.it",
@@ -457,6 +465,14 @@
 ],
 "phones": [],
 "website": "https://www.stonex.it"
+},
+"Copods": {
+"emails": [
+"careers@copods.co",
+"hello@copods.co"
+],
+"phones": [],
+"website": "https://www.copods.co"
 },
 "Baxture technologies": {
 "emails": [
@@ -467,15 +483,6 @@
 "+91 70281 11820"
 ],
 "website": "https://baxture.com"
-},
-"NuageCX Consulting Pvt Ltd": {
-"emails": [
-"contact@nuagecx.com"
-],
-"phones": [
-"+91 99603 99941"
-],
-"website": "https://nuagecx.com"
 },
 "QuinStreet": {
 "emails": [],
@@ -492,15 +499,6 @@
 ],
 "website": "https://hyrezy.com"
 },
-"2coms": {
-"emails": [],
-"phones": [
-"+91 80487 66688",
-"+91 81011 22022",
-"+91 91473 33168"
-],
-"website": "https://2coms.com"
-},
 "nCircle Tech Pvt. Ltd.": {
 "emails": [
 "info@ncircletech.com"
@@ -509,6 +507,15 @@
 "+91 20 6694 1900"
 ],
 "website": "https://ncircletech.com"
+},
+"2coms": {
+"emails": [],
+"phones": [
+"+91 80487 66688",
+"+91 81011 22022",
+"+91 91473 33168"
+],
+"website": "https://2coms.com"
 },
 "GE HealthCare": {
 "emails": [],
