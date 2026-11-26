@@ -1,4 +1,93 @@
 {
+"Cybage Software Pvt. Ltd": {
+"emails": [
+"business@cybage.com"
+],
+"phones": [
+"+91 85301 09729",
+"+91 20 6604 1700"
+],
+"website": "https://www.cybage.com"
+},
+"Pattern": {
+"emails": [
+"hello@pattern.com"
+],
+"phones": [],
+"website": "https://www.pattern.com"
+},
+"Bajaj Finance": {
+"emails": [],
+"phones": [
+"+91 20 6910 5935",
+"+91 96070 25035",
+"+91 20 7187 8321",
+"+91 20 7187 8060"
+],
+"website": "https://www.bajajhousingfinance.in"
+},
+"Wipro": {
+"emails": [
+"info@wipro.com"
+],
+"phones": [
+"+91 86286 28022",
+"+91 82801 66500",
+"+91 20 4625 6700",
+"+91 20 2293 3700"
+],
+"website": "https://www.wipro.com"
+},
+"Nitrous": {
+"emails": [
+"info@nitrous.tv"
+],
+"phones": [],
+"website": "https://www.nitrous.tv"
+},
+"CrelioHealth": {
+"emails": [
+"info@creliohealth.com"
+],
+"phones": [],
+"website": "https://creliohealth.com"
+},
+"Unbore Foods Pvt. Ltd.": {
+"emails": [
+"info@unborefoods.com",
+"sales@unborefoods.com"
+],
+"phones": [
+"+91 76187 83680"
+],
+"website": "https://www.unborefoods.com"
+},
+"CrowdStrike": {
+"emails": [
+"info@crowdstrike.com",
+"recruiting@crowdstrike.com"
+],
+"phones": [
+"+91 88851 28906",
+"+91 80092 50324",
+"+91 80086 53222",
+"+91 64987 17815"
+],
+"website": "https://www.crowdstrike.com"
+},
+"Echo Booom": {
+"emails": [
+"contact@echobooom.com",
+"info@echobooom.com"
+],
+"phones": [
+"1800 267 4999",
+"+91 60033 68630",
+"+91 93245 81564",
+"+91 85911 94032"
+],
+"website": "https://echobooom.com"
+},
 "Ugaoo": {
 "emails": [
 "support@ugaoo.com"
@@ -22,26 +111,6 @@
 ],
 "phones": [],
 "website": "https://enlyft.com"
-},
-"Echo Booom": {
-"emails": [
-"contact@echobooom.com",
-"info@echobooom.com"
-],
-"phones": [
-"1800 267 4999",
-"+91 60033 68630",
-"+91 93245 81564",
-"+91 85911 94032"
-],
-"website": "https://echobooom.com"
-},
-"pattern": {
-"emails": [
-"hello@pattern.com"
-],
-"phones": [],
-"website": "https://www.pattern.com"
 },
 "Bynry": {
 "emails": [
@@ -102,18 +171,6 @@
 ],
 "website": "https://www.benchmarkit.solutions"
 },
-"Wipro": {
-"emails": [
-"info@wipro.com"
-],
-"phones": [
-"+91 86286 28022",
-"+91 82801 66500",
-"+91 20 4625 6700",
-"+91 20 2293 3700"
-],
-"website": "https://www.wipro.com"
-},
 "TresVista": {
 "emails": [
 "info@tresvista.com"
@@ -131,29 +188,38 @@
 ],
 "website": "https://lotlinfra.com"
 },
-"CrelioHealth": {
-"emails": [
-"info@creliohealth.com"
-],
-"phones": [],
-"website": "https://creliohealth.com"
-},
-"Unbore Foods Pvt. Ltd.": {
-"emails": [
-"info@unborefoods.com",
-"sales@unborefoods.com"
-],
-"phones": [
-"+91 76187 83680"
-],
-"website": "https://www.unborefoods.com"
-},
 "PaperTrue": {
 "emails": [
 "support@papertrue.com"
 ],
 "phones": [],
 "website": "https://www.papertrue.com"
+},
+"Leapswitch Networks Pvt Ltd": {
+"emails": [
+"sales@leapswitch.com",
+"support@leapswitch.com"
+],
+"phones": [
+"+91 95996 56657"
+],
+"website": "https://www.leapswitch.com"
+},
+"Abmiro": {
+"emails": [
+"info@abmiro.com"
+],
+"phones": [
+"+91 70208 25494"
+],
+"website": "https://abmiro.com"
+},
+"PrimeTalentBridge": {
+"emails": [
+"hr@primetalentbridge.com"
+],
+"phones": [],
+"website": "https://primetalentbridge.com"
 },
 "Fidel Softech": {
 "emails": [
@@ -198,13 +264,6 @@
 ],
 "website": "https://www.amuratech.com"
 },
-"Muthoot Fincorp": {
-"emails": [],
-"phones": [
-"1800 102 1616"
-],
-"website": "https://muthootfincorp.com:443"
-},
 "Tulip Group": {
 "emails": [
 "info@tulipgroup.in",
@@ -215,6 +274,13 @@
 ],
 "website": "https://www.tulipgroup.in"
 },
+"Muthoot Fincorp": {
+"emails": [],
+"phones": [
+"1800 102 1616"
+],
+"website": "https://muthootfincorp.com:443"
+},
 "UA Brands": {
 "emails": [
 "jobs@uabrands.com"
@@ -222,15 +288,15 @@
 "phones": [],
 "website": "https://www.uabrandscareers.com"
 },
-"Bajaj Finance": {
-"emails": [],
-"phones": [
-"+91 20 6910 5935",
-"+91 96070 25035",
-"+91 20 7187 8321",
-"+91 20 7187 8060"
+"3 Dots Design Private Limited": {
+"emails": [
+"contact@3dotsdesign.in"
 ],
-"website": "https://www.bajajhousingfinance.in"
+"phones": [
+"+91 95116 96411",
+"+91 20 2566 5266"
+],
+"website": "https://www.3dotsdesign.in"
 },
 "Osumare": {
 "emails": [
@@ -261,16 +327,6 @@
 "1800 209 9191"
 ],
 "website": "https://www.kotak.bank.in"
-},
-"3 Dots Design Private Limited": {
-"emails": [
-"contact@3dotsdesign.in"
-],
-"phones": [
-"+91 95116 96411",
-"+91 20 2566 5266"
-],
-"website": "https://www.3dotsdesign.in"
 },
 "Shri Educare Limited": {
 "emails": [
@@ -312,6 +368,13 @@
 ],
 "website": "https://www.codiasticsoft.com"
 },
+"Workers Town": {
+"emails": [
+"info@workerstown.com"
+],
+"phones": [],
+"website": "https://workerstown.com"
+},
 "TeamPlus": {
 "emails": [
 "info@teampluz.com"
@@ -321,12 +384,12 @@
 ],
 "website": "https://www.teamplus.in"
 },
-"Workers Town": {
+"ProcDNA": {
 "emails": [
-"info@workerstown.com"
+"info@procdna.com"
 ],
 "phones": [],
-"website": "https://workerstown.com"
+"website": "https://www.procdna.com"
 },
 "Sistema.bio": {
 "emails": [
@@ -338,13 +401,6 @@
 "+91 96076 06660"
 ],
 "website": "https://sistema.bio"
-},
-"ProcDNA": {
-"emails": [
-"info@procdna.com"
-],
-"phones": [],
-"website": "https://www.procdna.com"
 },
 "Arting Digital": {
 "emails": [
@@ -417,17 +473,6 @@
 ],
 "website": "https://www.gsourcedata.com"
 },
-"Payatu": {
-"emails": [
-"hr@payatu.ai",
-"info@payatu.ai",
-"info@payatu.io"
-],
-"phones": [
-"+91 83198 12123"
-],
-"website": "https://payatu.ai"
-},
 "Vidushi Infotech": {
 "emails": [
 "info@vidushiinfotech.com"
@@ -438,15 +483,16 @@
 ],
 "website": "https://vidushiinfotech.com"
 },
-"Leapswitch Networks Pvt Ltd": {
+"Payatu": {
 "emails": [
-"sales@leapswitch.com",
-"support@leapswitch.com"
+"hr@payatu.ai",
+"info@payatu.ai",
+"info@payatu.io"
 ],
 "phones": [
-"+91 95996 56657"
+"+91 83198 12123"
 ],
-"website": "https://www.leapswitch.com"
+"website": "https://payatu.ai"
 },
 "Kirloskar Oil Engines": {
 "emails": [],
