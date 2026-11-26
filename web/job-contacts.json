@@ -1,4 +1,13 @@
 {
+"HM Ad-World": {
+"emails": [
+"marketing@hmadworld.com"
+],
+"phones": [
+"+91 70830 63378"
+],
+"website": "https://hmadworld.com"
+},
 "Cybage Software Pvt. Ltd": {
 "emails": [
 "business@cybage.com"
@@ -288,16 +297,6 @@
 "phones": [],
 "website": "https://www.uabrandscareers.com"
 },
-"3 Dots Design Private Limited": {
-"emails": [
-"contact@3dotsdesign.in"
-],
-"phones": [
-"+91 95116 96411",
-"+91 20 2566 5266"
-],
-"website": "https://www.3dotsdesign.in"
-},
 "Osumare": {
 "emails": [
 "hello@osumare.com",
@@ -328,6 +327,16 @@
 ],
 "website": "https://www.kotak.bank.in"
 },
+"3 Dots Design Private Limited": {
+"emails": [
+"contact@3dotsdesign.in"
+],
+"phones": [
+"+91 95116 96411",
+"+91 20 2566 5266"
+],
+"website": "https://www.3dotsdesign.in"
+},
 "Shri Educare Limited": {
 "emails": [
 "hr@shrieducare.com"
@@ -350,6 +359,14 @@
 ],
 "website": "https://www.padcarelabs.com"
 },
+"Copods": {
+"emails": [
+"careers@copods.co",
+"hello@copods.co"
+],
+"phones": [],
+"website": "https://www.copods.co"
+},
 "Futurism Technologies": {
 "emails": [],
 "phones": [
@@ -368,13 +385,6 @@
 ],
 "website": "https://www.codiasticsoft.com"
 },
-"Workers Town": {
-"emails": [
-"info@workerstown.com"
-],
-"phones": [],
-"website": "https://workerstown.com"
-},
 "TeamPlus": {
 "emails": [
 "info@teampluz.com"
@@ -384,12 +394,12 @@
 ],
 "website": "https://www.teamplus.in"
 },
-"ProcDNA": {
+"Workers Town": {
 "emails": [
-"info@procdna.com"
+"info@workerstown.com"
 ],
 "phones": [],
-"website": "https://www.procdna.com"
+"website": "https://workerstown.com"
 },
 "Sistema.bio": {
 "emails": [
@@ -401,6 +411,13 @@
 "+91 96076 06660"
 ],
 "website": "https://sistema.bio"
+},
+"ProcDNA": {
+"emails": [
+"info@procdna.com"
+],
+"phones": [],
+"website": "https://www.procdna.com"
 },
 "Arting Digital": {
 "emails": [
@@ -511,14 +528,6 @@
 ],
 "phones": [],
 "website": "https://www.stonex.it"
-},
-"Copods": {
-"emails": [
-"careers@copods.co",
-"hello@copods.co"
-],
-"phones": [],
-"website": "https://www.copods.co"
 },
 "Baxture technologies": {
 "emails": [
