@@ -1,4 +1,51 @@
 {
+"NVIDIA": {
+"emails": [
+"sales@alignedenergy.com",
+"sales@atnorth.com",
+"sales@bdc.is",
+"sales@digitalrealty.com"
+],
+"phones": [],
+"website": "https://www.nvidia.com"
+},
+"Sid's Farm": {
+"emails": [],
+"phones": [
+"+91 80080 02152"
+],
+"website": "https://sidsfarm.com"
+},
+"Abmiro Solutions": {
+"emails": [
+"info@abmiro.com"
+],
+"phones": [
+"+91 70208 25494"
+],
+"website": "https://abmiro.com"
+},
+"wppmedia": {
+"emails": [
+"contact.thailand@groupm.com",
+"hello.groupmsweden@groupm.com",
+"marketing@wppmedia.com"
+],
+"phones": [
+"+91 96265 85800",
+"+91 20 1149 9987",
+"+91 97440 32477",
+"+91 96522 26078"
+],
+"website": "https://www.wppmedia.com"
+},
+"pattern": {
+"emails": [
+"hello@pattern.com"
+],
+"phones": [],
+"website": "https://www.pattern.com"
+},
 "HM Ad-World": {
 "emails": [
 "marketing@hmadworld.com"
@@ -17,13 +64,6 @@
 "+91 20 6604 1700"
 ],
 "website": "https://www.cybage.com"
-},
-"Pattern": {
-"emails": [
-"hello@pattern.com"
-],
-"phones": [],
-"website": "https://www.pattern.com"
 },
 "Bajaj Finance": {
 "emails": [],
@@ -84,19 +124,6 @@
 ],
 "website": "https://www.crowdstrike.com"
 },
-"Echo Booom": {
-"emails": [
-"contact@echobooom.com",
-"info@echobooom.com"
-],
-"phones": [
-"1800 267 4999",
-"+91 60033 68630",
-"+91 93245 81564",
-"+91 85911 94032"
-],
-"website": "https://echobooom.com"
-},
 "Ugaoo": {
 "emails": [
 "support@ugaoo.com"
@@ -120,6 +147,19 @@
 ],
 "phones": [],
 "website": "https://enlyft.com"
+},
+"Echo Booom": {
+"emails": [
+"contact@echobooom.com",
+"info@echobooom.com"
+],
+"phones": [
+"1800 267 4999",
+"+91 60033 68630",
+"+91 93245 81564",
+"+91 85911 94032"
+],
+"website": "https://echobooom.com"
 },
 "Bynry": {
 "emails": [
@@ -213,15 +253,6 @@
 "+91 95996 56657"
 ],
 "website": "https://www.leapswitch.com"
-},
-"Abmiro": {
-"emails": [
-"info@abmiro.com"
-],
-"phones": [
-"+91 70208 25494"
-],
-"website": "https://abmiro.com"
 },
 "PrimeTalentBridge": {
 "emails": [
@@ -428,16 +459,6 @@
 ],
 "website": "https://artingdigital.com"
 },
-"Sellability": {
-"emails": [
-"career@sellability.in",
-"connect@sellability.in"
-],
-"phones": [
-"+91 92091 95848"
-],
-"website": "https://sellability.in"
-},
 "Blue Atom OPC Private Limited": {
 "emails": [
 "info@blueatom.co"
@@ -529,6 +550,16 @@
 "phones": [],
 "website": "https://www.stonex.it"
 },
+"Sellability": {
+"emails": [
+"career@sellability.in",
+"connect@sellability.in"
+],
+"phones": [
+"+91 92091 95848"
+],
+"website": "https://sellability.in"
+},
 "Baxture technologies": {
 "emails": [
 "hr@baxture.com",
@@ -606,16 +637,6 @@
 "+91 91754 46719"
 ],
 "website": "https://indovance.com"
-},
-"NVIDIA": {
-"emails": [
-"sales@alignedenergy.com",
-"sales@atnorth.com",
-"sales@bdc.is",
-"sales@digitalrealty.com"
-],
-"phones": [],
-"website": "https://www.nvidia.com"
 },
 "Druva": {
 "emails": [],

@@ -1,4 +1,62 @@
 {
+"WPP Media": {
+"emails": [
+"contact.thailand@groupm.com",
+"hello.groupmsweden@groupm.com",
+"marketing@wppmedia.com"
+],
+"phones": [
+"+91 96265 85800",
+"+91 20 1149 9987",
+"+91 97440 32477",
+"+91 96522 26078"
+],
+"website": "https://www.wppmedia.com"
+},
+"Kotak Mahindra Bank": {
+"emails": [],
+"phones": [
+"1800 209 0000",
+"+91 22 6204 2001",
+"1800 209 8800",
+"1800 266 4545"
+],
+"website": "https://www.kotak.bank.in"
+},
+"Growisto": {
+"emails": [],
+"phones": [
+"+91 88282 72657"
+],
+"website": "https://www.growisto.com"
+},
+"Nexdigm": {
+"emails": [],
+"phones": [
+"+91 22 6730 9000",
+"+91 20 6720 3800",
+"+91 80427 77800"
+],
+"website": "https://www.nexdigm.com"
+},
+"Kuku FM": {
+"emails": [
+"support@kukufm.com"
+],
+"phones": [
+"+91 79491 07812"
+],
+"website": "https://kukufm.com"
+},
+"communicateindia": {
+"emails": [
+"info@communicateindia.com"
+],
+"phones": [
+"+91 98198 61124"
+],
+"website": "https://www.communicateindia.com"
+},
 "United Way Mumbai": {
 "emails": [
 "contact@unitedwaymumbai.org"
@@ -109,40 +167,6 @@
 ],
 "website": "https://www.crowdstrike.com"
 },
-"Motilal Oswal Financial Services Ltd": {
-"emails": [],
-"phones": [
-"+91 22 4054 8000",
-"+91 22 6749 0600",
-"+91 22 4054 8082",
-"+91 22 4054 8085"
-],
-"website": "https://www.motilaloswal.com"
-},
-"Fruitbowl Digital": {
-"emails": [
-"careers@fruitbowldigital.com",
-"hello@fruitbowldigital.com"
-],
-"phones": [
-"+91 80698 57850"
-],
-"website": "https://www.fruitbowldigital.com"
-},
-"WPP Media": {
-"emails": [
-"contact.thailand@groupm.com",
-"hello.groupmsweden@groupm.com",
-"marketing@wppmedia.com"
-],
-"phones": [
-"+91 96265 85800",
-"+91 20 1149 9987",
-"+91 97440 32477",
-"+91 96522 26078"
-],
-"website": "https://www.wppmedia.com"
-},
 "Lattice Technologies": {
 "emails": [
 "mail@latticetechnologies.in"
@@ -171,14 +195,15 @@
 ],
 "website": "https://www.ketto.org"
 },
-"communicateindia": {
+"Fruitbowl Digital": {
 "emails": [
-"info@communicateindia.com"
+"careers@fruitbowldigital.com",
+"hello@fruitbowldigital.com"
 ],
 "phones": [
-"+91 98198 61124"
+"+91 80698 57850"
 ],
-"website": "https://www.communicateindia.com"
+"website": "https://www.fruitbowldigital.com"
 },
 "SyncUp": {
 "emails": [
@@ -209,22 +234,22 @@
 ],
 "website": "https://iide.co"
 },
+"Motilal Oswal Financial Services Ltd": {
+"emails": [],
+"phones": [
+"+91 22 4054 8000",
+"+91 22 6749 0600",
+"+91 22 4054 8082",
+"+91 22 4054 8085"
+],
+"website": "https://www.motilaloswal.com"
+},
 "eClerx": {
 "emails": [
 "info@eclerx.com"
 ],
 "phones": [],
 "website": "https://eclerx.com"
-},
-"Kotak Mahindra Bank": {
-"emails": [],
-"phones": [
-"1800 209 0000",
-"+91 22 6204 2001",
-"1800 209 8800",
-"1800 266 4545"
-],
-"website": "https://www.kotak.bank.in"
 },
 "Leading Edge": {
 "emails": [
@@ -299,15 +324,6 @@
 "+91 22 6767 4000"
 ],
 "website": "https://www.bcwebwise.com"
-},
-"Kuku FM": {
-"emails": [
-"support@kukufm.com"
-],
-"phones": [
-"+91 79491 07812"
-],
-"website": "https://kukufm.com"
 },
 "Daily Shipping Times": {
 "emails": [],
@@ -478,25 +494,6 @@
 "phones": [],
 "website": "https://primumtalent.com"
 },
-"2coms": {
-"emails": [],
-"phones": [
-"+91 80487 66688",
-"+91 81011 22022",
-"+91 91473 33168"
-],
-"website": "https://2coms.com"
-},
-"Fairdeal Realtors Pvt.ltd": {
-"emails": [
-"enquiry@frpl.in",
-"hello@themenectar.com"
-],
-"phones": [
-"+91 80804 00500"
-],
-"website": "https://frpl.in"
-},
 "Zscaler": {
 "emails": [],
 "phones": [
@@ -544,15 +541,6 @@
 ],
 "website": "https://content-whale.com"
 },
-"Tulum Coffee": {
-"emails": [
-"business@tulum.coffee"
-],
-"phones": [
-"+91 85910 61071"
-],
-"website": "https://www.tulum.coffee"
-},
 "Purple Flicks": {
 "emails": [
 "info@purpleflicks.com"
@@ -561,15 +549,6 @@
 "+91 99671 54869"
 ],
 "website": "https://purpleflicks.com"
-},
-"Digitally Bugged LLP": {
-"emails": [
-"info@digitallybugged.com"
-],
-"phones": [
-"+91 99200 35756"
-],
-"website": "https://digitallybugged.com"
 },
 "Trip Jack": {
 "emails": [],
@@ -581,6 +560,15 @@
 ],
 "website": "https://tripjack.com:443"
 },
+"Digitally Bugged LLP": {
+"emails": [
+"info@digitallybugged.com"
+],
+"phones": [
+"+91 99200 35756"
+],
+"website": "https://digitallybugged.com"
+},
 "Unifynd Labs (U.LABS)": {
 "emails": [
 "hello@unifyndlabs.com"
@@ -589,15 +577,6 @@
 "+91 22 6741 1191"
 ],
 "website": "https://www.unifyndlabs.com"
-},
-"Ease My Expo": {
-"emails": [
-"hello@easemyexpo.in"
-],
-"phones": [
-"+91 78998 70113"
-],
-"website": "https://www.easemyexpo.com"
 },
 "Crizzen": {
 "emails": [
@@ -609,17 +588,14 @@
 ],
 "website": "https://crizzen.com"
 },
-"Asian Heart Institute": {
+"Ease My Expo": {
 "emails": [
-"info@ahirc.com"
+"hello@easemyexpo.in"
 ],
 "phones": [
-"+91 22 6698 6666",
-"+91 98200 27691",
-"+91 99208 00600",
-"+91 22 6698 6536"
+"+91 78998 70113"
 ],
-"website": "https://asianheartinstitute.org"
+"website": "https://www.easemyexpo.com"
 },
 "Michewa": {
 "emails": [],
@@ -638,6 +614,18 @@
 ],
 "website": "https://www.velocityconsultancy.com"
 },
+"Asian Heart Institute": {
+"emails": [
+"info@ahirc.com"
+],
+"phones": [
+"+91 22 6698 6666",
+"+91 98200 27691",
+"+91 99208 00600",
+"+91 22 6698 6536"
+],
+"website": "https://asianheartinstitute.org"
+},
 "Prime Star Hr": {
 "emails": [],
 "phones": [
@@ -655,13 +643,6 @@
 ],
 "website": "https://www.teamnest.com"
 },
-"Kerten Hospitality": {
-"emails": [
-"info@kertenhospitality.com"
-],
-"phones": [],
-"website": "https://www.kertenhospitality.com"
-},
 "Hudson Manpower": {
 "emails": [
 "hr@hudsonmanpower.com",
@@ -671,6 +652,13 @@
 "+91 80874 51874"
 ],
 "website": "https://hudsonmanpower.com"
+},
+"Kerten Hospitality": {
+"emails": [
+"info@kertenhospitality.com"
+],
+"phones": [],
+"website": "https://www.kertenhospitality.com"
 },
 "Elchemy": {
 "emails": [
@@ -687,6 +675,95 @@
 "+91 98184 34567"
 ],
 "website": "https://www.mitrhr.com"
+},
+"Redragaa": {
+"emails": [
+"sales@redragaa.com"
+],
+"phones": [
+"+91 89768 18567"
+],
+"website": "https://redragaa.com"
+},
+"Simit Bhagat Studios": {
+"emails": [
+"hello@simitbhagatstudios.com"
+],
+"phones": [],
+"website": "https://simitbhagatstudios.com"
+},
+"Leapswitch Networks Pvt Ltd": {
+"emails": [
+"sales@leapswitch.com",
+"support@leapswitch.com"
+],
+"phones": [
+"+91 95996 56657"
+],
+"website": "https://www.leapswitch.com"
+},
+"Havas": {
+"emails": [
+"connect@havas.com"
+],
+"phones": [],
+"website": "https://www.havas.com"
+},
+"Acetech Ecommerce Limited": {
+"emails": [
+"info@acetechcommerce.com",
+"info@acetechecommerce.com"
+],
+"phones": [
+"+91 70662 63636",
+"+91 84849 93426"
+],
+"website": "https://acetechecommerce.com"
+},
+"one75mbhrm pvt ltd": {
+"emails": [
+"info@domainname.com",
+"support@one75mbhrm.com"
+],
+"phones": [
+"+91 93184 34913"
+],
+"website": "https://www.one75mbhrm.com"
+},
+"Royal Dental Clinics Private Limited": {
+"emails": [
+"info@royaldentalclinics.com"
+],
+"phones": [
+"+91 98204 46633",
+"+91 96944 46633"
+],
+"website": "https://royalimplant.com"
+},
+"TimesPro": {
+"emails": [],
+"phones": [
+"1800 120 2020"
+],
+"website": "https://timespro.com"
+},
+"Nabhya Ayurveda": {
+"emails": [
+"support@nabhyaayurveda.com"
+],
+"phones": [
+"+91 90826 28964"
+],
+"website": "https://nabhyaayurveda.com"
+},
+"SD Scents": {
+"emails": [
+"sales@sdscents.com"
+],
+"phones": [
+"+91 73046 11336"
+],
+"website": "https://www.sdscents.com"
 },
 "CyberFrat": {
 "emails": [
@@ -710,6 +787,15 @@
 "+91 99675 81110"
 ],
 "website": "https://www.bookeventz.com"
+},
+"Tulum Coffee": {
+"emails": [
+"business@tulum.coffee"
+],
+"phones": [
+"+91 85910 61071"
+],
+"website": "https://www.tulum.coffee"
 },
 "Merakie Experiential Solutions": {
 "emails": [],
@@ -757,45 +843,12 @@
 ],
 "website": "https://dentathome.com"
 },
-"Havas": {
-"emails": [
-"connect@havas.com"
-],
-"phones": [],
-"website": "https://www.havas.com"
-},
 "Proximity Works": {
 "emails": [
 "hello@proximity.tech"
 ],
 "phones": [],
 "website": "https://proximity.tech"
-},
-"SD Scents": {
-"emails": [
-"sales@sdscents.com"
-],
-"phones": [
-"+91 73046 11336"
-],
-"website": "https://www.sdscents.com"
-},
-"Leapswitch Networks Pvt Ltd": {
-"emails": [
-"sales@leapswitch.com",
-"support@leapswitch.com"
-],
-"phones": [
-"+91 95996 56657"
-],
-"website": "https://www.leapswitch.com"
-},
-"Simit Bhagat Studios": {
-"emails": [
-"hello@simitbhagatstudios.com"
-],
-"phones": [],
-"website": "https://simitbhagatstudios.com"
 },
 "3 Dots Design Private Limited": {
 "emails": [
@@ -807,62 +860,6 @@
 "+91 20 2566 5266"
 ],
 "website": "https://www.3dotsdesign.in"
-},
-"Acetech Ecommerce Limited": {
-"emails": [
-"info@acetechcommerce.com",
-"info@acetechecommerce.com"
-],
-"phones": [
-"+91 70662 63636",
-"+91 84849 93426"
-],
-"website": "https://acetechecommerce.com"
-},
-"one75mbhrm pvt ltd": {
-"emails": [
-"info@domainname.com",
-"support@one75mbhrm.com"
-],
-"phones": [
-"+91 93184 34913"
-],
-"website": "https://www.one75mbhrm.com"
-},
-"TimesPro": {
-"emails": [],
-"phones": [
-"1800 120 2020"
-],
-"website": "https://timespro.com"
-},
-"Royal Dental Clinics Private Limited": {
-"emails": [
-"info@royaldentalclinics.com"
-],
-"phones": [
-"+91 98204 46633",
-"+91 96944 46633"
-],
-"website": "https://royalimplant.com"
-},
-"Nabhya Ayurveda": {
-"emails": [
-"support@nabhyaayurveda.com"
-],
-"phones": [
-"+91 90826 28964"
-],
-"website": "https://nabhyaayurveda.com"
-},
-"Redragaa": {
-"emails": [
-"sales@redragaa.com"
-],
-"phones": [
-"+91 89768 18567"
-],
-"website": "https://redragaa.com"
 },
 "PRAGMATIKE": {
 "emails": [
