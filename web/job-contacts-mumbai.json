@@ -1,4 +1,103 @@
 {
+"CliqHR Recruitment Services": {
+"emails": [
+"careers@cliqhr.co.in",
+"careers@cliqhr.com",
+"inquiry@cliqhr.com"
+],
+"phones": [
+"+91 80569 69674"
+],
+"website": "https://www.cliqhr.com"
+},
+"Arting Digital": {
+"emails": [
+"info@artingdigital.com"
+],
+"phones": [
+"+91 84274 18828"
+],
+"website": "https://artingdigital.com"
+},
+"Aurum PropTech": {
+"emails": [
+"contact@aurumproptech.in"
+],
+"phones": [
+"+91 22 6911 1800",
+"+91 22 3000 1700"
+],
+"website": "https://www.aurumproptech.in"
+},
+"Bright Future": {
+"emails": [
+"info@brightfutureas.com",
+"support@brightfutureas.com"
+],
+"phones": [
+"+91 77018 82533",
+"+91 89207 97870",
+"+91 92116 22303"
+],
+"website": "https://brightfutureas.com"
+},
+"Tripjack": {
+"emails": [],
+"phones": [
+"+91 22 6250 6250",
+"+91 95132 32372",
+"+91 98849 86039",
+"+91 86570 34897"
+],
+"website": "https://tripjack.com:443"
+},
+"Expertrons": {
+"emails": [
+"support@expertrons.com"
+],
+"phones": [
+"+91 72087 60080"
+],
+"website": "https://www.expertrons.com"
+},
+"Kuku FM": {
+"emails": [
+"support@kukufm.com"
+],
+"phones": [
+"+91 79491 07812"
+],
+"website": "https://kukufm.com"
+},
+"JioStar": {
+"emails": [
+"hello@jiostar.com"
+],
+"phones": [
+"+91 22 6630 5555",
+"+91 22 6265 4451",
+"+91 22 6265 4040"
+],
+"website": "https://www.jiostar.com"
+},
+"Talent Linked Consultancy": {
+"emails": [
+"hr@talentlinkedconsultancy.com"
+],
+"phones": [
+"+91 72083 14993"
+],
+"website": "https://talentlinkedconsultancy.com"
+},
+"Capes India": {
+"emails": [
+"hello@capesindia.com"
+],
+"phones": [
+"+91 93266 39530"
+],
+"website": "https://www.capesindia.com"
+},
 "Zscaler": {
 "emails": [],
 "phones": [
@@ -63,15 +162,6 @@
 "+91 80427 77800"
 ],
 "website": "https://www.nexdigm.com"
-},
-"Kuku FM": {
-"emails": [
-"support@kukufm.com"
-],
-"phones": [
-"+91 79491 07812"
-],
-"website": "https://kukufm.com"
 },
 "communicateindia": {
 "emails": [
@@ -153,17 +243,6 @@
 "+91 95600 01527"
 ],
 "website": "https://hellokindred.com"
-},
-"JioStar": {
-"emails": [
-"hello@jiostar.com"
-],
-"phones": [
-"+91 22 6630 5555",
-"+91 22 6265 4451",
-"+91 22 6265 4040"
-],
-"website": "https://www.jiostar.com"
 },
 "NR Consulting": {
 "emails": [
@@ -360,15 +439,6 @@
 ],
 "website": "https://gujaratstarawards.com"
 },
-"Expertrons": {
-"emails": [
-"support@expertrons.com"
-],
-"phones": [
-"+91 72087 60080"
-],
-"website": "https://www.expertrons.com"
-},
 "Salesforce": {
 "emails": [],
 "phones": [
@@ -431,13 +501,6 @@
 ],
 "website": "https://www.citigroup.com"
 },
-"Workers Town": {
-"emails": [
-"info@workerstown.com"
-],
-"phones": [],
-"website": "https://workerstown.com"
-},
 "Hdb Financial Services": {
 "emails": [],
 "phones": [
@@ -454,6 +517,13 @@
 "+91 86557 40961"
 ],
 "website": "https://dhan.co"
+},
+"Workers Town": {
+"emails": [
+"info@workerstown.com"
+],
+"phones": [],
+"website": "https://workerstown.com"
 },
 "PLabs Ventures Pvt Ltd": {
 "emails": [
@@ -567,50 +637,24 @@
 ],
 "website": "https://purpleflicks.com"
 },
-"Digitally Bugged LLP": {
+"Crizzen": {
 "emails": [
-"info@digitallybugged.com"
+"info@crizzen.com"
 ],
 "phones": [
-"+91 99200 35756"
+"+91 85050 55225",
+"+91 70195 80822"
 ],
-"website": "https://digitallybugged.com"
+"website": "https://crizzen.com"
 },
-"Trip Jack": {
-"emails": [],
-"phones": [
-"+91 22 6250 6250",
-"+91 95132 32372",
-"+91 98849 86039",
-"+91 86570 34897"
-],
-"website": "https://tripjack.com:443"
-},
-"Unifynd Labs (U.LABS)": {
+"Ease My Expo": {
 "emails": [
-"hello@unifyndlabs.com"
+"hello@easemyexpo.in"
 ],
 "phones": [
-"+91 22 6741 1191"
+"+91 78998 70113"
 ],
-"website": "https://www.unifyndlabs.com"
-},
-"Velocity Consultancy": {
-"emails": [
-"info@velocityconsultancy.com"
-],
-"phones": [
-"+91 93215 92734"
-],
-"website": "https://www.velocityconsultancy.com"
-},
-"Prime Star Hr": {
-"emails": [],
-"phones": [
-"+91 98697 84909",
-"+91 90041 18289"
-],
-"website": "https://www.primestarhr.com"
+"website": "https://www.easemyexpo.com"
 },
 "Asian Heart Institute": {
 "emails": [
@@ -624,24 +668,14 @@
 ],
 "website": "https://asianheartinstitute.org"
 },
-"Ease My Expo": {
+"Velocity Consultancy": {
 "emails": [
-"hello@easemyexpo.in"
+"info@velocityconsultancy.com"
 ],
 "phones": [
-"+91 78998 70113"
+"+91 93215 92734"
 ],
-"website": "https://www.easemyexpo.com"
-},
-"Crizzen": {
-"emails": [
-"info@crizzen.com"
-],
-"phones": [
-"+91 85050 55225",
-"+91 70195 80822"
-],
-"website": "https://crizzen.com"
+"website": "https://www.velocityconsultancy.com"
 },
 "Michewa": {
 "emails": [],
@@ -650,6 +684,14 @@
 "+91 61996 94031"
 ],
 "website": "https://michewa.in"
+},
+"Prime Star Hr": {
+"emails": [],
+"phones": [
+"+91 98697 84909",
+"+91 90041 18289"
+],
+"website": "https://www.primestarhr.com"
 },
 "TeamNest": {
 "emails": [
@@ -684,40 +726,35 @@
 "phones": [],
 "website": "https://elchemy.com"
 },
-"Mitr HR Private Limited": {
+"Dr.Dento": {
+"emails": [],
+"phones": [
+"+91 70455 19999"
+],
+"website": "https://drdento.com"
+},
+"Filmymantra": {
 "emails": [
-"contact@mitrhr.com"
+"info@filmymantra.com"
 ],
 "phones": [
-"+91 98184 34567"
+"+91 70422 54318",
+"+91 22 4924 4678",
+"+91 99305 69752",
+"+91 98706 58578"
 ],
-"website": "https://www.mitrhr.com"
+"website": "https://filmymantra.com"
 },
-"Redragaa": {
+"CATKing Educare": {
 "emails": [
-"sales@redragaa.com"
+"enquire@catking.in",
+"hr@catking.in",
+"support@catking.in"
 ],
 "phones": [
-"+91 89768 18567"
+"+91 74788 82888"
 ],
-"website": "https://redragaa.com"
-},
-"Simit Bhagat Studios": {
-"emails": [
-"hello@simitbhagatstudios.com"
-],
-"phones": [],
-"website": "https://simitbhagatstudios.com"
-},
-"Leapswitch Networks Pvt Ltd": {
-"emails": [
-"sales@leapswitch.com",
-"support@leapswitch.com"
-],
-"phones": [
-"+91 95996 56657"
-],
-"website": "https://www.leapswitch.com"
+"website": "https://catking.in"
 },
 "Havas": {
 "emails": [
@@ -725,6 +762,38 @@
 ],
 "phones": [],
 "website": "https://www.havas.com"
+},
+"DENTATHOME PRIVATE LIMITED": {
+"emails": [
+"info@dentathome.com"
+],
+"phones": [
+"+91 87880 21573"
+],
+"website": "https://dentathome.com"
+},
+"Proximity Works": {
+"emails": [
+"hello@proximity.tech"
+],
+"phones": [],
+"website": "https://proximity.tech"
+},
+"SD Scents": {
+"emails": [
+"sales@sdscents.com"
+],
+"phones": [
+"+91 73046 11336"
+],
+"website": "https://www.sdscents.com"
+},
+"Simit Bhagat Studios": {
+"emails": [
+"hello@simitbhagatstudios.com"
+],
+"phones": [],
+"website": "https://simitbhagatstudios.com"
 },
 "Acetech Ecommerce Limited": {
 "emails": [
@@ -746,6 +815,22 @@
 "+91 93184 34913"
 ],
 "website": "https://www.one75mbhrm.com"
+},
+"PRAGMATIKE": {
+"emails": [
+"info@techinnovations.com"
+],
+"phones": [],
+"website": "https://www.pragmatike.com"
+},
+"Viewpoint Public Relations": {
+"emails": [
+"hello@inuvikhub.com"
+],
+"phones": [
+"+91 22 6501 0895"
+],
+"website": "https://viewpointpublicrelations.com"
 },
 "Royal Dental Clinics Private Limited": {
 "emails": [
@@ -773,14 +858,51 @@
 ],
 "website": "https://nabhyaayurveda.com"
 },
-"SD Scents": {
+"Digitally Bugged LLP": {
 "emails": [
-"sales@sdscents.com"
+"info@digitallybugged.com"
 ],
 "phones": [
-"+91 73046 11336"
+"+91 99200 35756"
 ],
-"website": "https://www.sdscents.com"
+"website": "https://digitallybugged.com"
+},
+"Unifynd Labs (U.LABS)": {
+"emails": [
+"hello@unifyndlabs.com"
+],
+"phones": [
+"+91 22 6741 1191"
+],
+"website": "https://www.unifyndlabs.com"
+},
+"Mitr HR Private Limited": {
+"emails": [
+"contact@mitrhr.com"
+],
+"phones": [
+"+91 98184 34567"
+],
+"website": "https://www.mitrhr.com"
+},
+"Redragaa": {
+"emails": [
+"sales@redragaa.com"
+],
+"phones": [
+"+91 89768 18567"
+],
+"website": "https://redragaa.com"
+},
+"Leapswitch Networks Pvt Ltd": {
+"emails": [
+"sales@leapswitch.com",
+"support@leapswitch.com"
+],
+"phones": [
+"+91 95996 56657"
+],
+"website": "https://www.leapswitch.com"
 },
 "CyberFrat": {
 "emails": [
@@ -814,52 +936,6 @@
 ],
 "website": "https://www.triangulardots.com"
 },
-"Filmymantra": {
-"emails": [
-"info@filmymantra.com"
-],
-"phones": [
-"+91 70422 54318",
-"+91 22 4924 4678",
-"+91 99305 69752",
-"+91 98706 58578"
-],
-"website": "https://filmymantra.com"
-},
-"Dr.Dento": {
-"emails": [],
-"phones": [
-"+91 70455 19999"
-],
-"website": "https://drdento.com"
-},
-"CATKing Educare": {
-"emails": [
-"enquire@catking.in",
-"hr@catking.in",
-"support@catking.in"
-],
-"phones": [
-"+91 74788 82888"
-],
-"website": "https://catking.in"
-},
-"DENTATHOME PRIVATE LIMITED": {
-"emails": [
-"info@dentathome.com"
-],
-"phones": [
-"+91 87880 21573"
-],
-"website": "https://dentathome.com"
-},
-"Proximity Works": {
-"emails": [
-"hello@proximity.tech"
-],
-"phones": [],
-"website": "https://proximity.tech"
-},
 "Tulum Coffee": {
 "emails": [
 "business@tulum.coffee"
@@ -887,22 +963,6 @@
 ],
 "website": "https://www.3dotsdesign.in"
 },
-"PRAGMATIKE": {
-"emails": [
-"info@techinnovations.com"
-],
-"phones": [],
-"website": "https://www.pragmatike.com"
-},
-"Arting Digital": {
-"emails": [
-"info@artingdigital.com"
-],
-"phones": [
-"+91 84274 18828"
-],
-"website": "https://artingdigital.com"
-},
 "Adbizit": {
 "emails": [
 "info@adbizit.com",
@@ -921,15 +981,6 @@
 "+91 99870 22040"
 ],
 "website": "https://firsteconomy.com"
-},
-"Viewpoint Public Relations": {
-"emails": [
-"hello@inuvikhub.com"
-],
-"phones": [
-"+91 22 6501 0895"
-],
-"website": "https://viewpointpublicrelations.com"
 },
 "BTW VISA SERVICES (INDIA) PRIVATE LIMITED": {
 "emails": [

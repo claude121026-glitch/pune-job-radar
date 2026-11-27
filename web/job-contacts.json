@@ -1,4 +1,51 @@
 {
+"PadCare Labs": {
+"emails": [
+"info@padcarelabs.com",
+"talent@padcarelabs.com"
+],
+"phones": [
+"+91 90228 22458"
+],
+"website": "https://www.padcarelabs.com"
+},
+"Sellability": {
+"emails": [
+"career@sellability.in",
+"connect@sellability.in"
+],
+"phones": [
+"+91 92091 95848"
+],
+"website": "https://sellability.in"
+},
+"Arting Digital": {
+"emails": [
+"info@artingdigital.com"
+],
+"phones": [
+"+91 84274 18828"
+],
+"website": "https://artingdigital.com"
+},
+"Purple Corp": {
+"emails": [
+"info@purplecorp.in"
+],
+"phones": [
+"+91 92281 72966"
+],
+"website": "https://purplecorp.in"
+},
+"Amura Marketing": {
+"emails": [
+"enquire@amuratech.com"
+],
+"phones": [
+"+91 85302 33394"
+],
+"website": "https://www.amuratech.com"
+},
 "Cybage Software Pvt. Ltd": {
 "emails": [
 "business@cybage.com"
@@ -25,6 +72,13 @@
 ],
 "phones": [],
 "website": "https://www.nvidia.com"
+},
+"pattern": {
+"emails": [
+"hello@pattern.com"
+],
+"phones": [],
+"website": "https://www.pattern.com"
 },
 "Sid's Farm": {
 "emails": [],
@@ -55,13 +109,6 @@
 "+91 96522 26078"
 ],
 "website": "https://www.wppmedia.com"
-},
-"pattern": {
-"emails": [
-"hello@pattern.com"
-],
-"phones": [],
-"website": "https://www.pattern.com"
 },
 "HM Ad-World": {
 "emails": [
@@ -204,6 +251,16 @@
 ],
 "website": "https://cytel.com"
 },
+"LOTL Infra": {
+"emails": [
+"connect@lotlinfra.com",
+"info@liquid-themes.com"
+],
+"phones": [
+"+91 77458 89243"
+],
+"website": "https://lotlinfra.com"
+},
 "Citigroup": {
 "emails": [],
 "phones": [
@@ -233,16 +290,6 @@
 ],
 "phones": [],
 "website": "https://www.tresvista.com"
-},
-"LOTL Infra": {
-"emails": [
-"connect@lotlinfra.com",
-"info@liquid-themes.com"
-],
-"phones": [
-"+91 77458 89243"
-],
-"website": "https://lotlinfra.com"
 },
 "PaperTrue": {
 "emails": [
@@ -293,14 +340,12 @@
 "phones": [],
 "website": "https://periclesventures.com"
 },
-"Amura Marketing Technologies": {
-"emails": [
-"enquire@amuratech.com"
-],
+"Muthoot Fincorp": {
+"emails": [],
 "phones": [
-"+91 85302 33394"
+"1800 102 1616"
 ],
-"website": "https://www.amuratech.com"
+"website": "https://muthootfincorp.com:443"
 },
 "Tulip Group": {
 "emails": [
@@ -311,13 +356,6 @@
 "+91 99991 01493"
 ],
 "website": "https://www.tulipgroup.in"
-},
-"Muthoot Fincorp": {
-"emails": [],
-"phones": [
-"1800 102 1616"
-],
-"website": "https://muthootfincorp.com:443"
 },
 "UA Brands": {
 "emails": [
@@ -378,16 +416,6 @@
 ],
 "website": "https://www.3dotsdesign.in"
 },
-"PadCare Labs": {
-"emails": [
-"info@padcarelabs.com",
-"talent@padcarelabs.com"
-],
-"phones": [
-"+91 90228 22458"
-],
-"website": "https://www.padcarelabs.com"
-},
 "Futurism Technologies": {
 "emails": [],
 "phones": [
@@ -395,14 +423,6 @@
 "+91 20 6712 0700"
 ],
 "website": "https://www.futurismtechnologies.com"
-},
-"Copods": {
-"emails": [
-"careers@copods.co",
-"hello@copods.co"
-],
-"phones": [],
-"website": "https://www.copods.co"
 },
 "Codiastic Soft Private Limited": {
 "emails": [
@@ -448,15 +468,6 @@
 "phones": [],
 "website": "https://www.procdna.com"
 },
-"Arting Digital": {
-"emails": [
-"info@artingdigital.com"
-],
-"phones": [
-"+91 84274 18828"
-],
-"website": "https://artingdigital.com"
-},
 "Blue Atom OPC Private Limited": {
 "emails": [
 "info@blueatom.co"
@@ -480,16 +491,6 @@
 ],
 "website": "https://storiesbysudhir.com"
 },
-"Birlasoft": {
-"emails": [],
-"phones": [
-"+91 20 2616 0084",
-"+91 20 2616 1629",
-"+91 20 6652 5000",
-"+91 98991 95348"
-],
-"website": "https://www.birlasoft.com"
-},
 "Strata Digital Geeks": {
 "emails": [
 "hr@stratadigitalgeeks.com",
@@ -500,16 +501,15 @@
 ],
 "website": "https://stratadigitalgeeks.in"
 },
-"Payatu": {
-"emails": [
-"hr@payatu.ai",
-"info@payatu.ai",
-"info@payatu.io"
-],
+"Birlasoft": {
+"emails": [],
 "phones": [
-"+91 83198 12123"
+"+91 20 2616 0084",
+"+91 20 2616 1629",
+"+91 20 6652 5000",
+"+91 98991 95348"
 ],
-"website": "https://payatu.ai"
+"website": "https://www.birlasoft.com"
 },
 "Gsource Technologies": {
 "emails": [
@@ -530,6 +530,17 @@
 ],
 "website": "https://vidushiinfotech.com"
 },
+"Payatu": {
+"emails": [
+"hr@payatu.ai",
+"info@payatu.ai",
+"info@payatu.io"
+],
+"phones": [
+"+91 83198 12123"
+],
+"website": "https://payatu.ai"
+},
 "Kirloskar Oil Engines": {
 "emails": [],
 "phones": [
@@ -540,6 +551,14 @@
 ],
 "website": "https://www.kirloskaroilengines.com"
 },
+"Copods": {
+"emails": [
+"careers@copods.co",
+"hello@copods.co"
+],
+"phones": [],
+"website": "https://www.copods.co"
+},
 "StoneX": {
 "emails": [
 "hr@stonex.it",
@@ -547,16 +566,6 @@
 ],
 "phones": [],
 "website": "https://www.stonex.it"
-},
-"Sellability": {
-"emails": [
-"career@sellability.in",
-"connect@sellability.in"
-],
-"phones": [
-"+91 92091 95848"
-],
-"website": "https://sellability.in"
 },
 "QuinStreet": {
 "emails": [],
