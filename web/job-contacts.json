@@ -1,4 +1,21 @@
 {
+"Cybage Software Pvt. Ltd": {
+"emails": [
+"business@cybage.com"
+],
+"phones": [
+"+91 85301 09729",
+"+91 20 6604 1700"
+],
+"website": "https://www.cybage.com"
+},
+"Finnovate": {
+"emails": [
+"hello@finnovate.in"
+],
+"phones": [],
+"website": "https://www.finnovate.in"
+},
 "NVIDIA": {
 "emails": [
 "sales@alignedenergy.com",
@@ -54,16 +71,6 @@
 "+91 70830 63378"
 ],
 "website": "https://hmadworld.com"
-},
-"Cybage Software Pvt. Ltd": {
-"emails": [
-"business@cybage.com"
-],
-"phones": [
-"+91 85301 09729",
-"+91 20 6604 1700"
-],
-"website": "https://www.cybage.com"
 },
 "Bajaj Finance": {
 "emails": [],
@@ -124,6 +131,19 @@
 ],
 "website": "https://www.crowdstrike.com"
 },
+"Echo Booom": {
+"emails": [
+"contact@echobooom.com",
+"info@echobooom.com"
+],
+"phones": [
+"1800 267 4999",
+"+91 60033 68630",
+"+91 93245 81564",
+"+91 85911 94032"
+],
+"website": "https://echobooom.com"
+},
 "Ugaoo": {
 "emails": [
 "support@ugaoo.com"
@@ -147,19 +167,6 @@
 ],
 "phones": [],
 "website": "https://enlyft.com"
-},
-"Echo Booom": {
-"emails": [
-"contact@echobooom.com",
-"info@echobooom.com"
-],
-"phones": [
-"1800 267 4999",
-"+91 60033 68630",
-"+91 93245 81564",
-"+91 85911 94032"
-],
-"website": "https://echobooom.com"
 },
 "Bynry": {
 "emails": [
@@ -270,15 +277,6 @@
 ],
 "website": "https://www.fidelsoftech.com"
 },
-"Lodha": {
-"emails": [
-"careers@lodhagroup.com"
-],
-"phones": [
-"+91 82910 26005"
-],
-"website": "https://www.lodhagroup.com"
-},
 "Make My interiors": {
 "emails": [],
 "phones": [
@@ -358,16 +356,6 @@
 ],
 "website": "https://www.kotak.bank.in"
 },
-"3 Dots Design Private Limited": {
-"emails": [
-"contact@3dotsdesign.in"
-],
-"phones": [
-"+91 95116 96411",
-"+91 20 2566 5266"
-],
-"website": "https://www.3dotsdesign.in"
-},
 "Shri Educare Limited": {
 "emails": [
 "hr@shrieducare.com"
@@ -380,6 +368,16 @@
 ],
 "website": "https://shrieducare.com"
 },
+"3 Dots Design Private Limited": {
+"emails": [
+"contact@3dotsdesign.in"
+],
+"phones": [
+"+91 95116 96411",
+"+91 20 2566 5266"
+],
+"website": "https://www.3dotsdesign.in"
+},
 "PadCare Labs": {
 "emails": [
 "info@padcarelabs.com",
@@ -390,14 +388,6 @@
 ],
 "website": "https://www.padcarelabs.com"
 },
-"Copods": {
-"emails": [
-"careers@copods.co",
-"hello@copods.co"
-],
-"phones": [],
-"website": "https://www.copods.co"
-},
 "Futurism Technologies": {
 "emails": [],
 "phones": [
@@ -405,6 +395,14 @@
 "+91 20 6712 0700"
 ],
 "website": "https://www.futurismtechnologies.com"
+},
+"Copods": {
+"emails": [
+"careers@copods.co",
+"hello@copods.co"
+],
+"phones": [],
+"website": "https://www.copods.co"
 },
 "Codiastic Soft Private Limited": {
 "emails": [
@@ -482,6 +480,16 @@
 ],
 "website": "https://storiesbysudhir.com"
 },
+"Birlasoft": {
+"emails": [],
+"phones": [
+"+91 20 2616 0084",
+"+91 20 2616 1629",
+"+91 20 6652 5000",
+"+91 98991 95348"
+],
+"website": "https://www.birlasoft.com"
+},
 "Strata Digital Geeks": {
 "emails": [
 "hr@stratadigitalgeeks.com",
@@ -492,15 +500,16 @@
 ],
 "website": "https://stratadigitalgeeks.in"
 },
-"Birlasoft": {
-"emails": [],
-"phones": [
-"+91 20 2616 0084",
-"+91 20 2616 1629",
-"+91 20 6652 5000",
-"+91 98991 95348"
+"Payatu": {
+"emails": [
+"hr@payatu.ai",
+"info@payatu.ai",
+"info@payatu.io"
 ],
-"website": "https://www.birlasoft.com"
+"phones": [
+"+91 83198 12123"
+],
+"website": "https://payatu.ai"
 },
 "Gsource Technologies": {
 "emails": [
@@ -520,17 +529,6 @@
 "+91 90850 41974"
 ],
 "website": "https://vidushiinfotech.com"
-},
-"Payatu": {
-"emails": [
-"hr@payatu.ai",
-"info@payatu.ai",
-"info@payatu.io"
-],
-"phones": [
-"+91 83198 12123"
-],
-"website": "https://payatu.ai"
 },
 "Kirloskar Oil Engines": {
 "emails": [],
@@ -559,16 +557,6 @@
 "+91 92091 95848"
 ],
 "website": "https://sellability.in"
-},
-"Baxture technologies": {
-"emails": [
-"hr@baxture.com",
-"sales@baxture.com"
-],
-"phones": [
-"+91 70281 11820"
-],
-"website": "https://baxture.com"
 },
 "QuinStreet": {
 "emails": [],

@@ -1,4 +1,29 @@
 {
+"Zscaler": {
+"emails": [],
+"phones": [
+"+91 72040 52718",
+"+91 70872 16963"
+],
+"website": "https://www.zscaler.com:443"
+},
+"Suncorp Solutions": {
+"emails": [],
+"phones": [
+"+91 93231 25404"
+],
+"website": "https://www.suncorpsolutions.in"
+},
+"Modicle Studios": {
+"emails": [
+"hello@modiclestudios.com"
+],
+"phones": [
+"+91 70218 66225",
+"+91 98675 91630"
+],
+"website": "https://modiclestudios.com"
+},
 "WPP Media": {
 "emails": [
 "contact.thailand@groupm.com",
@@ -167,6 +192,26 @@
 ],
 "website": "https://www.crowdstrike.com"
 },
+"Motilal Oswal Financial Services Ltd": {
+"emails": [],
+"phones": [
+"+91 22 4054 8000",
+"+91 22 6749 0600",
+"+91 22 4054 8082",
+"+91 22 4054 8085"
+],
+"website": "https://www.motilaloswal.com"
+},
+"Fruitbowl Digital": {
+"emails": [
+"careers@fruitbowldigital.com",
+"hello@fruitbowldigital.com"
+],
+"phones": [
+"+91 80698 57850"
+],
+"website": "https://www.fruitbowldigital.com"
+},
 "Lattice Technologies": {
 "emails": [
 "mail@latticetechnologies.in"
@@ -194,16 +239,6 @@
 "+91 99300 88522"
 ],
 "website": "https://www.ketto.org"
-},
-"Fruitbowl Digital": {
-"emails": [
-"careers@fruitbowldigital.com",
-"hello@fruitbowldigital.com"
-],
-"phones": [
-"+91 80698 57850"
-],
-"website": "https://www.fruitbowldigital.com"
 },
 "SyncUp": {
 "emails": [
@@ -234,16 +269,6 @@
 ],
 "website": "https://iide.co"
 },
-"Motilal Oswal Financial Services Ltd": {
-"emails": [],
-"phones": [
-"+91 22 4054 8000",
-"+91 22 6749 0600",
-"+91 22 4054 8082",
-"+91 22 4054 8085"
-],
-"website": "https://www.motilaloswal.com"
-},
 "eClerx": {
 "emails": [
 "info@eclerx.com"
@@ -260,15 +285,6 @@
 ],
 "website": "https://leadingedgeplanning.com"
 },
-"Aditi Tracking": {
-"emails": [
-"info@adititracking.com"
-],
-"phones": [
-"+91 96373 96373"
-],
-"website": "https://www.adititracking.com"
-},
 "Axis My India Limited": {
 "emails": [
 "info@axismyindia.org"
@@ -277,6 +293,15 @@
 "+91 22 4321 8866"
 ],
 "website": "https://axismyindia.org"
+},
+"Aditi Tracking": {
+"emails": [
+"info@adititracking.com"
+],
+"phones": [
+"+91 96373 96373"
+],
+"website": "https://www.adititracking.com"
 },
 "aleph": {
 "emails": [],
@@ -406,6 +431,13 @@
 ],
 "website": "https://www.citigroup.com"
 },
+"Workers Town": {
+"emails": [
+"info@workerstown.com"
+],
+"phones": [],
+"website": "https://workerstown.com"
+},
 "Hdb Financial Services": {
 "emails": [],
 "phones": [
@@ -422,13 +454,6 @@
 "+91 86557 40961"
 ],
 "website": "https://dhan.co"
-},
-"Workers Town": {
-"emails": [
-"info@workerstown.com"
-],
-"phones": [],
-"website": "https://workerstown.com"
 },
 "PLabs Ventures Pvt Ltd": {
 "emails": [
@@ -494,14 +519,6 @@
 "phones": [],
 "website": "https://primumtalent.com"
 },
-"Zscaler": {
-"emails": [],
-"phones": [
-"+91 72040 52718",
-"+91 70872 16963"
-],
-"website": "https://www.zscaler.com:443"
-},
 "NVIDIA": {
 "emails": [
 "sales@alignedenergy.com",
@@ -550,6 +567,15 @@
 ],
 "website": "https://purpleflicks.com"
 },
+"Digitally Bugged LLP": {
+"emails": [
+"info@digitallybugged.com"
+],
+"phones": [
+"+91 99200 35756"
+],
+"website": "https://digitallybugged.com"
+},
 "Trip Jack": {
 "emails": [],
 "phones": [
@@ -560,15 +586,6 @@
 ],
 "website": "https://tripjack.com:443"
 },
-"Digitally Bugged LLP": {
-"emails": [
-"info@digitallybugged.com"
-],
-"phones": [
-"+91 99200 35756"
-],
-"website": "https://digitallybugged.com"
-},
 "Unifynd Labs (U.LABS)": {
 "emails": [
 "hello@unifyndlabs.com"
@@ -578,33 +595,6 @@
 ],
 "website": "https://www.unifyndlabs.com"
 },
-"Crizzen": {
-"emails": [
-"info@crizzen.com"
-],
-"phones": [
-"+91 85050 55225",
-"+91 70195 80822"
-],
-"website": "https://crizzen.com"
-},
-"Ease My Expo": {
-"emails": [
-"hello@easemyexpo.in"
-],
-"phones": [
-"+91 78998 70113"
-],
-"website": "https://www.easemyexpo.com"
-},
-"Michewa": {
-"emails": [],
-"phones": [
-"+91 96190 44733",
-"+91 61996 94031"
-],
-"website": "https://michewa.in"
-},
 "Velocity Consultancy": {
 "emails": [
 "info@velocityconsultancy.com"
@@ -613,6 +603,14 @@
 "+91 93215 92734"
 ],
 "website": "https://www.velocityconsultancy.com"
+},
+"Prime Star Hr": {
+"emails": [],
+"phones": [
+"+91 98697 84909",
+"+91 90041 18289"
+],
+"website": "https://www.primestarhr.com"
 },
 "Asian Heart Institute": {
 "emails": [
@@ -626,13 +624,32 @@
 ],
 "website": "https://asianheartinstitute.org"
 },
-"Prime Star Hr": {
+"Ease My Expo": {
+"emails": [
+"hello@easemyexpo.in"
+],
+"phones": [
+"+91 78998 70113"
+],
+"website": "https://www.easemyexpo.com"
+},
+"Crizzen": {
+"emails": [
+"info@crizzen.com"
+],
+"phones": [
+"+91 85050 55225",
+"+91 70195 80822"
+],
+"website": "https://crizzen.com"
+},
+"Michewa": {
 "emails": [],
 "phones": [
-"+91 98697 84909",
-"+91 90041 18289"
+"+91 96190 44733",
+"+91 61996 94031"
 ],
-"website": "https://www.primestarhr.com"
+"website": "https://michewa.in"
 },
 "TeamNest": {
 "emails": [
@@ -788,21 +805,14 @@
 ],
 "website": "https://www.bookeventz.com"
 },
-"Tulum Coffee": {
+"Triangular Dots": {
 "emails": [
-"business@tulum.coffee"
+"contact@triangulardots.com"
 ],
 "phones": [
-"+91 85910 61071"
+"+91 98923 23460"
 ],
-"website": "https://www.tulum.coffee"
-},
-"Merakie Experiential Solutions": {
-"emails": [],
-"phones": [
-"+91 98198 26698"
-],
-"website": "https://merakie.in"
+"website": "https://www.triangulardots.com"
 },
 "Filmymantra": {
 "emails": [
@@ -849,6 +859,22 @@
 ],
 "phones": [],
 "website": "https://proximity.tech"
+},
+"Tulum Coffee": {
+"emails": [
+"business@tulum.coffee"
+],
+"phones": [
+"+91 85910 61071"
+],
+"website": "https://www.tulum.coffee"
+},
+"Merakie Experiential Solutions": {
+"emails": [],
+"phones": [
+"+91 98198 26698"
+],
+"website": "https://merakie.in"
 },
 "3 Dots Design Private Limited": {
 "emails": [
@@ -905,15 +931,6 @@
 ],
 "website": "https://viewpointpublicrelations.com"
 },
-"Triangular Dots": {
-"emails": [
-"contact@triangulardots.com"
-],
-"phones": [
-"+91 98923 23460"
-],
-"website": "https://www.triangulardots.com"
-},
 "BTW VISA SERVICES (INDIA) PRIVATE LIMITED": {
 "emails": [
 "info@btwvisas.com",
@@ -924,14 +941,5 @@
 "+91 22 4583 0600"
 ],
 "website": "https://btwvisas.com"
-},
-"Interactive Skills": {
-"emails": [],
-"phones": [
-"+91 89760 61414",
-"+91 89763 60021",
-"+91 89763 50021"
-],
-"website": "https://www.interactiveskills.in"
 }
 }
