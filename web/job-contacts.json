@@ -1,13 +1,38 @@
 {
-"PadCare Labs": {
+"Highrise Solutions LLP": {
 "emails": [
-"info@padcarelabs.com",
-"talent@padcarelabs.com"
+"info@highrisesolutions.in"
+],
+"phones": [],
+"website": "https://www.highrisesolutions.in"
+},
+"Monsoonfish": {
+"emails": [
+"hello@monsoonfish.com"
 ],
 "phones": [
-"+91 90228 22458"
+"+91 98903 88405",
+"+91 98908 51978"
 ],
-"website": "https://www.padcarelabs.com"
+"website": "https://monsoonfish.com"
+},
+"HM AD World P Ltd": {
+"emails": [
+"marketing@hmadworld.com"
+],
+"phones": [
+"+91 70830 63378"
+],
+"website": "https://hmadworld.com"
+},
+"Purple Corp": {
+"emails": [
+"info@purplecorp.in"
+],
+"phones": [
+"+91 92281 72966"
+],
+"website": "https://purplecorp.in"
 },
 "Sellability": {
 "emails": [
@@ -19,6 +44,16 @@
 ],
 "website": "https://sellability.in"
 },
+"PadCare Labs": {
+"emails": [
+"info@padcarelabs.com",
+"talent@padcarelabs.com"
+],
+"phones": [
+"+91 90228 22458"
+],
+"website": "https://www.padcarelabs.com"
+},
 "Arting Digital": {
 "emails": [
 "info@artingdigital.com"
@@ -27,15 +62,6 @@
 "+91 84274 18828"
 ],
 "website": "https://artingdigital.com"
-},
-"Purple Corp": {
-"emails": [
-"info@purplecorp.in"
-],
-"phones": [
-"+91 92281 72966"
-],
-"website": "https://purplecorp.in"
 },
 "Amura Marketing": {
 "emails": [
@@ -73,13 +99,6 @@
 "phones": [],
 "website": "https://www.nvidia.com"
 },
-"pattern": {
-"emails": [
-"hello@pattern.com"
-],
-"phones": [],
-"website": "https://www.pattern.com"
-},
 "Sid's Farm": {
 "emails": [],
 "phones": [
@@ -95,6 +114,13 @@
 "+91 70208 25494"
 ],
 "website": "https://abmiro.com"
+},
+"pattern": {
+"emails": [
+"hello@pattern.com"
+],
+"phones": [],
+"website": "https://www.pattern.com"
 },
 "wppmedia": {
 "emails": [
@@ -178,6 +204,30 @@
 ],
 "website": "https://www.crowdstrike.com"
 },
+"Ugaoo": {
+"emails": [
+"support@ugaoo.com"
+],
+"phones": [
+"+91 80870 87224"
+],
+"website": "https://www.ugaoo.com"
+},
+"Enlyft": {
+"emails": [
+"sales@enlyft.com"
+],
+"phones": [],
+"website": "https://enlyft.com"
+},
+"Zensar Technologies": {
+"emails": [
+"careers@zensar.com",
+"info@zensar.com"
+],
+"phones": [],
+"website": "https://www.zensar.com"
+},
 "Echo Booom": {
 "emails": [
 "contact@echobooom.com",
@@ -190,30 +240,6 @@
 "+91 85911 94032"
 ],
 "website": "https://echobooom.com"
-},
-"Ugaoo": {
-"emails": [
-"support@ugaoo.com"
-],
-"phones": [
-"+91 80870 87224"
-],
-"website": "https://www.ugaoo.com"
-},
-"Zensar Technologies": {
-"emails": [
-"careers@zensar.com",
-"info@zensar.com"
-],
-"phones": [],
-"website": "https://www.zensar.com"
-},
-"Enlyft": {
-"emails": [
-"sales@enlyft.com"
-],
-"phones": [],
-"website": "https://enlyft.com"
 },
 "Bynry": {
 "emails": [
@@ -240,16 +266,6 @@
 "+91 85529 41234"
 ],
 "website": "https://www.aarnasystems.com"
-},
-"Cytel": {
-"emails": [
-"support@cytel.com"
-],
-"phones": [
-"+91 20 6709 0100",
-"+91 73873 51127"
-],
-"website": "https://cytel.com"
 },
 "LOTL Infra": {
 "emails": [
@@ -450,6 +466,13 @@
 "phones": [],
 "website": "https://workerstown.com"
 },
+"ProcDNA": {
+"emails": [
+"info@procdna.com"
+],
+"phones": [],
+"website": "https://www.procdna.com"
+},
 "Sistema.bio": {
 "emails": [
 "info@biosostenible.ar",
@@ -461,13 +484,6 @@
 ],
 "website": "https://sistema.bio"
 },
-"ProcDNA": {
-"emails": [
-"info@procdna.com"
-],
-"phones": [],
-"website": "https://www.procdna.com"
-},
 "Blue Atom OPC Private Limited": {
 "emails": [
 "info@blueatom.co"
@@ -475,31 +491,12 @@
 "phones": [],
 "website": "https://www.blueatom.co"
 },
-"HM AD World P Limited": {
-"emails": [
-"marketing@hmadworld.com"
-],
-"phones": [
-"+91 70830 63378"
-],
-"website": "https://hmadworld.com"
-},
 "Stories BySudhir Private Limited": {
 "emails": [],
 "phones": [
 "+91 96658 56332"
 ],
 "website": "https://storiesbysudhir.com"
-},
-"Strata Digital Geeks": {
-"emails": [
-"hr@stratadigitalgeeks.com",
-"info@stratadigitalgeeks.in"
-],
-"phones": [
-"+91 92721 95854"
-],
-"website": "https://stratadigitalgeeks.in"
 },
 "Birlasoft": {
 "emails": [],
@@ -511,6 +508,16 @@
 ],
 "website": "https://www.birlasoft.com"
 },
+"Strata Digital Geeks": {
+"emails": [
+"hr@stratadigitalgeeks.com",
+"info@stratadigitalgeeks.in"
+],
+"phones": [
+"+91 92721 95854"
+],
+"website": "https://stratadigitalgeeks.in"
+},
 "Gsource Technologies": {
 "emails": [
 "info@gsourcedata.com"
@@ -519,16 +526,6 @@
 "+91 20 6744 4000"
 ],
 "website": "https://www.gsourcedata.com"
-},
-"Vidushi Infotech": {
-"emails": [
-"info@vidushiinfotech.com"
-],
-"phones": [
-"+91 90215 40540",
-"+91 90850 41974"
-],
-"website": "https://vidushiinfotech.com"
 },
 "Payatu": {
 "emails": [
@@ -540,6 +537,16 @@
 "+91 83198 12123"
 ],
 "website": "https://payatu.ai"
+},
+"Vidushi Infotech": {
+"emails": [
+"info@vidushiinfotech.com"
+],
+"phones": [
+"+91 90215 40540",
+"+91 90850 41974"
+],
+"website": "https://vidushiinfotech.com"
 },
 "Kirloskar Oil Engines": {
 "emails": [],
@@ -591,15 +598,6 @@
 ],
 "website": "https://ncircletech.com"
 },
-"2coms": {
-"emails": [],
-"phones": [
-"+91 80487 66688",
-"+91 81011 22022",
-"+91 91473 33168"
-],
-"website": "https://2coms.com"
-},
 "GE HealthCare": {
 "emails": [],
 "phones": [
@@ -607,33 +605,6 @@
 "1800 668 0732"
 ],
 "website": "https://www.gehealthcare.com"
-},
-"Tata Teleservices": {
-"emails": [],
-"phones": [
-"1800 266 1800",
-"1800 410 1800",
-"1800 266 1515"
-],
-"website": "https://www.tatatelebusiness.com"
-},
-"HSBC": {
-"emails": [],
-"phones": [
-"+91 20 7991 8888"
-],
-"website": "https://www.hsbc.com"
-},
-"Indovance Private Limited": {
-"emails": [
-"career@indovance.com",
-"info@indovance.com",
-"support@indovance.com"
-],
-"phones": [
-"+91 91754 46719"
-],
-"website": "https://indovance.com"
 },
 "Druva": {
 "emails": [],

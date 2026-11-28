@@ -1,4 +1,132 @@
 {
+"Growisto": {
+"emails": [],
+"phones": [
+"+91 88282 72657"
+],
+"website": "https://www.growisto.com"
+},
+"Trigent Software Private Limited": {
+"emails": [
+"hr@trigent.com",
+"info@trigent.com",
+"sales@trigent.com"
+],
+"phones": [
+"+91 80222 63000",
+"+91 80221 57000"
+],
+"website": "https://trigent.com"
+},
+"DC Consultants": {
+"emails": [
+"hr@dcglobalworkforce.com",
+"info@dcconsultants.in"
+],
+"phones": [
+"+91 99873 87111",
+"+91 22 4123 4377"
+],
+"website": "https://dcglobalworkforce.com"
+},
+"Kroll": {
+"emails": [],
+"phones": [
+"+91 80003 20833",
+"+91 80010 13633",
+"+91 80076 12318",
+"+91 20 3885 0882"
+],
+"website": "https://www.kroll.com"
+},
+"Russell Investments": {
+"emails": [],
+"phones": [
+"1800 426 7969",
+"1800 787 7354"
+],
+"website": "https://russellinvestments.com"
+},
+"GE HealthCare": {
+"emails": [],
+"phones": [
+"1800 437 1171",
+"1800 668 0732"
+],
+"website": "https://www.gehealthcare.com"
+},
+"Citigroup": {
+"emails": [],
+"phones": [
+"+91 75769 27164"
+],
+"website": "https://www.citigroup.com"
+},
+"BlackRock": {
+"emails": [],
+"phones": [
+"1800 441 7762",
+"1800 882 0052",
+"1800 474 2737"
+],
+"website": "https://www.blackrock.com"
+},
+"SyncUp": {
+"emails": [
+"support@syncup.in"
+],
+"phones": [],
+"website": "https://www.syncup.in"
+},
+"communicateindia": {
+"emails": [
+"info@communicateindia.com"
+],
+"phones": [
+"+91 98198 61124"
+],
+"website": "https://www.communicateindia.com"
+},
+"Kotak Mahindra Bank": {
+"emails": [],
+"phones": [
+"1800 209 0000",
+"+91 22 6204 2001",
+"1800 209 8800",
+"1800 266 4545"
+],
+"website": "https://www.kotak.bank.in"
+},
+"Axis My India Limited": {
+"emails": [
+"info@axismyindia.org"
+],
+"phones": [
+"+91 22 4321 8866"
+],
+"website": "https://axismyindia.org"
+},
+"IIDE": {
+"emails": [],
+"phones": [
+"+91 96199 58615",
+"+91 81083 08300",
+"+91 99673 44387",
+"+91 70457 84741"
+],
+"website": "https://iide.co"
+},
+"Jiostar India Private Limited": {
+"emails": [
+"hello@jiostar.com"
+],
+"phones": [
+"+91 22 6630 5555",
+"+91 22 6265 4451",
+"+91 22 6265 4040"
+],
+"website": "https://www.jiostar.com"
+},
 "CliqHR Recruitment Services": {
 "emails": [
 "careers@cliqhr.co.in",
@@ -51,15 +179,6 @@
 ],
 "website": "https://tripjack.com:443"
 },
-"Expertrons": {
-"emails": [
-"support@expertrons.com"
-],
-"phones": [
-"+91 72087 60080"
-],
-"website": "https://www.expertrons.com"
-},
 "Kuku FM": {
 "emails": [
 "support@kukufm.com"
@@ -69,16 +188,14 @@
 ],
 "website": "https://kukufm.com"
 },
-"JioStar": {
+"Expertrons": {
 "emails": [
-"hello@jiostar.com"
+"support@expertrons.com"
 ],
 "phones": [
-"+91 22 6630 5555",
-"+91 22 6265 4451",
-"+91 22 6265 4040"
+"+91 72087 60080"
 ],
-"website": "https://www.jiostar.com"
+"website": "https://www.expertrons.com"
 },
 "Talent Linked Consultancy": {
 "emails": [
@@ -137,23 +254,6 @@
 ],
 "website": "https://www.wppmedia.com"
 },
-"Kotak Mahindra Bank": {
-"emails": [],
-"phones": [
-"1800 209 0000",
-"+91 22 6204 2001",
-"1800 209 8800",
-"1800 266 4545"
-],
-"website": "https://www.kotak.bank.in"
-},
-"Growisto": {
-"emails": [],
-"phones": [
-"+91 88282 72657"
-],
-"website": "https://www.growisto.com"
-},
 "Nexdigm": {
 "emails": [],
 "phones": [
@@ -162,15 +262,6 @@
 "+91 80427 77800"
 ],
 "website": "https://www.nexdigm.com"
-},
-"communicateindia": {
-"emails": [
-"info@communicateindia.com"
-],
-"phones": [
-"+91 98198 61124"
-],
-"website": "https://www.communicateindia.com"
 },
 "United Way Mumbai": {
 "emails": [
@@ -227,15 +318,6 @@
 "+91 83839 29716"
 ],
 "website": "https://www.booleanstaffing.com"
-},
-"BlackRock": {
-"emails": [],
-"phones": [
-"1800 441 7762",
-"1800 882 0052",
-"1800 474 2737"
-],
-"website": "https://www.blackrock.com"
 },
 "HelloKindred": {
 "emails": [],
@@ -301,14 +383,6 @@
 ],
 "website": "https://www.latticetechnologies.in"
 },
-"Russell Investments": {
-"emails": [],
-"phones": [
-"1800 426 7969",
-"1800 787 7354"
-],
-"website": "https://russellinvestments.com"
-},
 "Ketto": {
 "emails": [
 "info@ketto.org"
@@ -318,13 +392,6 @@
 "+91 99300 88522"
 ],
 "website": "https://www.ketto.org"
-},
-"SyncUp": {
-"emails": [
-"support@syncup.in"
-],
-"phones": [],
-"website": "https://www.syncup.in"
 },
 "Crest Ventures Ltd": {
 "emails": [
@@ -337,16 +404,6 @@
 "+91 98334 20217"
 ],
 "website": "https://www.crest.in"
-},
-"IIDE": {
-"emails": [],
-"phones": [
-"+91 96199 58615",
-"+91 81083 08300",
-"+91 99673 44387",
-"+91 70457 84741"
-],
-"website": "https://iide.co"
 },
 "eClerx": {
 "emails": [
@@ -363,15 +420,6 @@
 "+91 86524 02292"
 ],
 "website": "https://leadingedgeplanning.com"
-},
-"Axis My India Limited": {
-"emails": [
-"info@axismyindia.org"
-],
-"phones": [
-"+91 22 4321 8866"
-],
-"website": "https://axismyindia.org"
 },
 "Aditi Tracking": {
 "emails": [
@@ -456,61 +504,6 @@
 "phones": [],
 "website": "https://www.kgkgroup.com"
 },
-"Flexing It": {
-"emails": [
-"careers@flexingit.in",
-"info@flexingit.com"
-],
-"phones": [],
-"website": "https://www.flexingit.com"
-},
-"Team Pumpkin": {
-"emails": [
-"hr@teampumpkin.com"
-],
-"phones": [
-"+91 22 4149 8285",
-"+91 86866 64066"
-],
-"website": "https://teampumpkin.com"
-},
-"Mintel": {
-"emails": [
-"hello@mintel.com"
-],
-"phones": [
-"+91 82255 47833",
-"+91 22 4445 1045",
-"+91 66282 15122",
-"+91 20 7606 4533"
-],
-"website": "https://www.mintel.com"
-},
-"Creator Engine": {
-"emails": [
-"career@creatorengine.studio",
-"info@creatorengine.studio"
-],
-"phones": [],
-"website": "https://www.creatorengine.studio"
-},
-"Citigroup": {
-"emails": [],
-"phones": [
-"+91 75769 27164"
-],
-"website": "https://www.citigroup.com"
-},
-"Hdb Financial Services": {
-"emails": [],
-"phones": [
-"+91 80698 56108",
-"+91 22 4911 6300",
-"+91 80109 21485",
-"+91 70072 56603"
-],
-"website": "https://www.hdbfs.com"
-},
 "Dhan (Raise)": {
 "emails": [],
 "phones": [
@@ -525,15 +518,15 @@
 "phones": [],
 "website": "https://workerstown.com"
 },
-"PLabs Ventures Pvt Ltd": {
-"emails": [
-"hr@plabsventures.com",
-"info@plabsventures.com"
-],
+"Hdb Financial Services": {
+"emails": [],
 "phones": [
-"+91 90046 88324"
+"+91 80698 56108",
+"+91 22 4911 6300",
+"+91 80109 21485",
+"+91 70072 56603"
 ],
-"website": "https://plabsventures.com"
+"website": "https://www.hdbfs.com"
 },
 "Headsup Corporation": {
 "emails": [
@@ -541,53 +534,6 @@
 ],
 "phones": [],
 "website": "https://headsupcorporation.com"
-},
-"Rajasthan Royals": {
-"emails": [
-"hr@rajasthanroyals.com"
-],
-"phones": [],
-"website": "https://www.rajasthanroyals.com"
-},
-"Quality HR India": {
-"emails": [
-"info@qualityhr.co.in"
-],
-"phones": [
-"+91 96249 99100",
-"+91 99249 99100",
-"+91 74349 99100",
-"+91 72039 99100"
-],
-"website": "https://qualityhr.co.in"
-},
-"Servify": {
-"emails": [
-"support@servify.com"
-],
-"phones": [],
-"website": "https://servify.com:443"
-},
-"Finnovate": {
-"emails": [
-"hello@finnovate.in"
-],
-"phones": [],
-"website": "https://www.finnovate.in"
-},
-"HSBC": {
-"emails": [],
-"phones": [
-"+91 20 7991 8888"
-],
-"website": "https://www.hsbc.com"
-},
-"Primum Talent": {
-"emails": [
-"info@primumtalent.com"
-],
-"phones": [],
-"website": "https://primumtalent.com"
 },
 "NVIDIA": {
 "emails": [
@@ -637,15 +583,22 @@
 ],
 "website": "https://purpleflicks.com"
 },
-"Crizzen": {
+"Velocity Consultancy": {
 "emails": [
-"info@crizzen.com"
+"info@velocityconsultancy.com"
 ],
 "phones": [
-"+91 85050 55225",
-"+91 70195 80822"
+"+91 93215 92734"
 ],
-"website": "https://crizzen.com"
+"website": "https://www.velocityconsultancy.com"
+},
+"Prime Star Hr": {
+"emails": [],
+"phones": [
+"+91 98697 84909",
+"+91 90041 18289"
+],
+"website": "https://www.primestarhr.com"
 },
 "Ease My Expo": {
 "emails": [
@@ -655,6 +608,16 @@
 "+91 78998 70113"
 ],
 "website": "https://www.easemyexpo.com"
+},
+"Crizzen": {
+"emails": [
+"info@crizzen.com"
+],
+"phones": [
+"+91 85050 55225",
+"+91 70195 80822"
+],
+"website": "https://crizzen.com"
 },
 "Asian Heart Institute": {
 "emails": [
@@ -668,30 +631,15 @@
 ],
 "website": "https://asianheartinstitute.org"
 },
-"Velocity Consultancy": {
+"Hudson Manpower": {
 "emails": [
-"info@velocityconsultancy.com"
+"hr@hudsonmanpower.com",
+"info@hudsonmanpower.com"
 ],
 "phones": [
-"+91 93215 92734"
+"+91 80874 51874"
 ],
-"website": "https://www.velocityconsultancy.com"
-},
-"Michewa": {
-"emails": [],
-"phones": [
-"+91 96190 44733",
-"+91 61996 94031"
-],
-"website": "https://michewa.in"
-},
-"Prime Star Hr": {
-"emails": [],
-"phones": [
-"+91 98697 84909",
-"+91 90041 18289"
-],
-"website": "https://www.primestarhr.com"
+"website": "https://hudsonmanpower.com"
 },
 "TeamNest": {
 "emails": [
@@ -702,15 +650,12 @@
 ],
 "website": "https://www.teamnest.com"
 },
-"Hudson Manpower": {
+"Finnovate": {
 "emails": [
-"hr@hudsonmanpower.com",
-"info@hudsonmanpower.com"
+"hello@finnovate.in"
 ],
-"phones": [
-"+91 80874 51874"
-],
-"website": "https://hudsonmanpower.com"
+"phones": [],
+"website": "https://www.finnovate.in"
 },
 "Kerten Hospitality": {
 "emails": [
@@ -725,13 +670,6 @@
 ],
 "phones": [],
 "website": "https://elchemy.com"
-},
-"Dr.Dento": {
-"emails": [],
-"phones": [
-"+91 70455 19999"
-],
-"website": "https://drdento.com"
 },
 "Filmymantra": {
 "emails": [
@@ -832,6 +770,13 @@
 ],
 "website": "https://viewpointpublicrelations.com"
 },
+"TimesPro": {
+"emails": [],
+"phones": [
+"1800 120 2020"
+],
+"website": "https://timespro.com"
+},
 "Royal Dental Clinics Private Limited": {
 "emails": [
 "info@royaldentalclinics.com"
@@ -842,13 +787,6 @@
 ],
 "website": "https://royalimplant.com"
 },
-"TimesPro": {
-"emails": [],
-"phones": [
-"1800 120 2020"
-],
-"website": "https://timespro.com"
-},
 "Nabhya Ayurveda": {
 "emails": [
 "support@nabhyaayurveda.com"
@@ -857,6 +795,21 @@
 "+91 90826 28964"
 ],
 "website": "https://nabhyaayurveda.com"
+},
+"Michewa": {
+"emails": [],
+"phones": [
+"+91 96190 44733",
+"+91 61996 94031"
+],
+"website": "https://michewa.in"
+},
+"Dr.Dento": {
+"emails": [],
+"phones": [
+"+91 70455 19999"
+],
+"website": "https://drdento.com"
 },
 "Digitally Bugged LLP": {
 "emails": [
@@ -982,15 +935,14 @@
 ],
 "website": "https://firsteconomy.com"
 },
-"BTW VISA SERVICES (INDIA) PRIVATE LIMITED": {
+"Team Pumpkin": {
 "emails": [
-"info@btwvisas.com",
-"inquiry@btwvisas.com"
+"hr@teampumpkin.com"
 ],
 "phones": [
-"+91 20 4902 7000",
-"+91 22 4583 0600"
+"+91 22 4149 8285",
+"+91 86866 64066"
 ],
-"website": "https://btwvisas.com"
+"website": "https://teampumpkin.com"
 }
 }
