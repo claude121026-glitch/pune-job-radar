@@ -1,4 +1,31 @@
 {
+"Axium Global": {
+"emails": [
+"info@axiumglobal.com"
+],
+"phones": [
+"+91 73036 56657"
+],
+"website": "https://www.axiumglobal.com"
+},
+"StayVista": {
+"emails": [
+"careers@stayvista.com"
+],
+"phones": [],
+"website": "https://www.stayvista.com"
+},
+"Jiostar India Private Limited": {
+"emails": [
+"hello@jiostar.com"
+],
+"phones": [
+"+91 22 6630 5555",
+"+91 22 6265 4451",
+"+91 22 6265 4040"
+],
+"website": "https://www.jiostar.com"
+},
 "Growisto": {
 "emails": [],
 "phones": [
@@ -116,17 +143,6 @@
 ],
 "website": "https://iide.co"
 },
-"Jiostar India Private Limited": {
-"emails": [
-"hello@jiostar.com"
-],
-"phones": [
-"+91 22 6630 5555",
-"+91 22 6265 4451",
-"+91 22 6265 4040"
-],
-"website": "https://www.jiostar.com"
-},
 "CliqHR Recruitment Services": {
 "emails": [
 "careers@cliqhr.co.in",
@@ -179,15 +195,6 @@
 ],
 "website": "https://tripjack.com:443"
 },
-"Kuku FM": {
-"emails": [
-"support@kukufm.com"
-],
-"phones": [
-"+91 79491 07812"
-],
-"website": "https://kukufm.com"
-},
 "Expertrons": {
 "emails": [
 "support@expertrons.com"
@@ -205,6 +212,15 @@
 "+91 72083 14993"
 ],
 "website": "https://talentlinkedconsultancy.com"
+},
+"Kuku FM": {
+"emails": [
+"support@kukufm.com"
+],
+"phones": [
+"+91 79491 07812"
+],
+"website": "https://kukufm.com"
 },
 "Capes India": {
 "emails": [
@@ -504,6 +520,16 @@
 "phones": [],
 "website": "https://www.kgkgroup.com"
 },
+"Hdb Financial Services": {
+"emails": [],
+"phones": [
+"+91 80698 56108",
+"+91 22 4911 6300",
+"+91 80109 21485",
+"+91 70072 56603"
+],
+"website": "https://www.hdbfs.com"
+},
 "Dhan (Raise)": {
 "emails": [],
 "phones": [
@@ -517,16 +543,6 @@
 ],
 "phones": [],
 "website": "https://workerstown.com"
-},
-"Hdb Financial Services": {
-"emails": [],
-"phones": [
-"+91 80698 56108",
-"+91 22 4911 6300",
-"+91 80109 21485",
-"+91 70072 56603"
-],
-"website": "https://www.hdbfs.com"
 },
 "Headsup Corporation": {
 "emails": [
@@ -583,22 +599,14 @@
 ],
 "website": "https://purpleflicks.com"
 },
-"Velocity Consultancy": {
+"Unifynd Labs (U.LABS)": {
 "emails": [
-"info@velocityconsultancy.com"
+"hello@unifyndlabs.com"
 ],
 "phones": [
-"+91 93215 92734"
+"+91 22 6741 1191"
 ],
-"website": "https://www.velocityconsultancy.com"
-},
-"Prime Star Hr": {
-"emails": [],
-"phones": [
-"+91 98697 84909",
-"+91 90041 18289"
-],
-"website": "https://www.primestarhr.com"
+"website": "https://www.unifyndlabs.com"
 },
 "Ease My Expo": {
 "emails": [
@@ -619,6 +627,15 @@
 ],
 "website": "https://crizzen.com"
 },
+"Velocity Consultancy": {
+"emails": [
+"info@velocityconsultancy.com"
+],
+"phones": [
+"+91 93215 92734"
+],
+"website": "https://www.velocityconsultancy.com"
+},
 "Asian Heart Institute": {
 "emails": [
 "info@ahirc.com"
@@ -630,6 +647,14 @@
 "+91 22 6698 6536"
 ],
 "website": "https://asianheartinstitute.org"
+},
+"Prime Star Hr": {
+"emails": [],
+"phones": [
+"+91 98697 84909",
+"+91 90041 18289"
+],
+"website": "https://www.primestarhr.com"
 },
 "Hudson Manpower": {
 "emails": [
@@ -671,6 +696,45 @@
 "phones": [],
 "website": "https://elchemy.com"
 },
+"Mitr HR Private Limited": {
+"emails": [
+"contact@mitrhr.com"
+],
+"phones": [
+"+91 98184 34567"
+],
+"website": "https://www.mitrhr.com"
+},
+"CyberFrat": {
+"emails": [
+"info@cyberfrat.com"
+],
+"phones": [
+"+91 89270 02700"
+],
+"website": "https://cyberfrat.com"
+},
+"Axis Bank": {
+"emails": [],
+"phones": [
+"+91 70361 65000"
+],
+"website": "https://www.axis.bank.in"
+},
+"BookEventz": {
+"emails": [],
+"phones": [
+"+91 99675 81110"
+],
+"website": "https://www.bookeventz.com"
+},
+"Merakie Experiential Solutions": {
+"emails": [],
+"phones": [
+"+91 98198 26698"
+],
+"website": "https://merakie.in"
+},
 "Filmymantra": {
 "emails": [
 "info@filmymantra.com"
@@ -710,13 +774,6 @@
 ],
 "website": "https://dentathome.com"
 },
-"Proximity Works": {
-"emails": [
-"hello@proximity.tech"
-],
-"phones": [],
-"website": "https://proximity.tech"
-},
 "SD Scents": {
 "emails": [
 "sales@sdscents.com"
@@ -725,6 +782,13 @@
 "+91 73046 11336"
 ],
 "website": "https://www.sdscents.com"
+},
+"Proximity Works": {
+"emails": [
+"hello@proximity.tech"
+],
+"phones": [],
+"website": "https://proximity.tech"
 },
 "Simit Bhagat Studios": {
 "emails": [
@@ -820,24 +884,6 @@
 ],
 "website": "https://digitallybugged.com"
 },
-"Unifynd Labs (U.LABS)": {
-"emails": [
-"hello@unifyndlabs.com"
-],
-"phones": [
-"+91 22 6741 1191"
-],
-"website": "https://www.unifyndlabs.com"
-},
-"Mitr HR Private Limited": {
-"emails": [
-"contact@mitrhr.com"
-],
-"phones": [
-"+91 98184 34567"
-],
-"website": "https://www.mitrhr.com"
-},
 "Redragaa": {
 "emails": [
 "sales@redragaa.com"
@@ -857,29 +903,6 @@
 ],
 "website": "https://www.leapswitch.com"
 },
-"CyberFrat": {
-"emails": [
-"info@cyberfrat.com"
-],
-"phones": [
-"+91 89270 02700"
-],
-"website": "https://cyberfrat.com"
-},
-"Axis Bank": {
-"emails": [],
-"phones": [
-"+91 70361 65000"
-],
-"website": "https://www.axis.bank.in"
-},
-"BookEventz": {
-"emails": [],
-"phones": [
-"+91 99675 81110"
-],
-"website": "https://www.bookeventz.com"
-},
 "Triangular Dots": {
 "emails": [
 "contact@triangulardots.com"
@@ -898,13 +921,6 @@
 ],
 "website": "https://www.tulum.coffee"
 },
-"Merakie Experiential Solutions": {
-"emails": [],
-"phones": [
-"+91 98198 26698"
-],
-"website": "https://merakie.in"
-},
 "3 Dots Design Private Limited": {
 "emails": [
 "contact@3dotsdesign.in",
@@ -915,34 +931,5 @@
 "+91 20 2566 5266"
 ],
 "website": "https://www.3dotsdesign.in"
-},
-"Adbizit": {
-"emails": [
-"info@adbizit.com",
-"info@adbzit.com"
-],
-"phones": [
-"+91 81690 04863"
-],
-"website": "https://adbizit.com"
-},
-"First Economy": {
-"emails": [],
-"phones": [
-"+91 96648 59850",
-"+91 86960 23191",
-"+91 99870 22040"
-],
-"website": "https://firsteconomy.com"
-},
-"Team Pumpkin": {
-"emails": [
-"hr@teampumpkin.com"
-],
-"phones": [
-"+91 22 4149 8285",
-"+91 86866 64066"
-],
-"website": "https://teampumpkin.com"
 }
 }
